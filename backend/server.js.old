@@ -1,0 +1,524 @@
+console.log("🔥 server.js file is being executed");
+// Import required packages
+const express = require('express');
+const cors = require('cors');
+const multer = require('multer');
+const axios = require('axios');
+const path = require('path');
+const fs = require('fs');
+require('dotenv').config();
+
+// Initialize Express app
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors()); // Allow frontend to connect
+app.use(express.json()); // Parse JSON data
+
+// Create uploads folder if it doesn't exist
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
+// Configure file upload
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+
+const upload = multer({ storage: storage });
+
+// In-memory storage for calls (temporary)
+let calls = [];
+let callIdCounter = 1;
+
+// ============================================
+// API ENDPOINTS
+// ============================================
+
+// 1. Health Check
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'Backend is running!', 
+    timestamp: new Date(),
+    totalCalls: calls.length 
+  });
+});
+
+// 2. Upload Audio File
+app.post('/api/upload-audio', upload.single('audio'), (req, res) => {
+  try {
+    const audioFile = req.file;
+    
+    if (!audioFile) {
+      return res.status(400).json({ error: 'No audio file uploaded' });
+    }
+
+    // Create call record
+    const call = {
+      id: callIdCounter++,
+      filename: audioFile.filename,
+      filepath: audioFile.path,
+      originalName: audioFile.originalname,
+      size: audioFile.size,
+      uploadedAt: new Date(),
+      status: 'uploaded',
+      transcription: null,
+      intent: null,
+      analysis: null,
+      report: null
+    };
+
+    calls.push(call);
+
+    console.log(`✅ File uploaded: ${audioFile.originalname} (Call ID: ${call.id})`);
+
+    res.json({
+      success: true,
+      message: 'Audio uploaded successfully',
+      callId: call.id,
+      filename: audioFile.originalname
+    });
+
+  } catch (error) {
+    console.error('Upload error:', error);
+    res.status(500).json({ error: 'Upload failed', details: error.message });
+  }
+});
+
+// 3. Transcribe Audio (Mock - Real API later)
+app.post('/api/transcribe/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    const call = calls.find(c => c.id === callId);
+
+    if (!call) {
+      return res.status(404).json({ error: 'Call not found' });
+    }
+
+    console.log(`📝 Transcribing call ${callId}...`);
+
+    // Mock transcription
+    const mockTranscription = `Customer: Hi, I'm having issues with my account. I can't log in and it's really frustrating.
+Agent: I understand your concern and I'm here to help. Can you please provide your account email address?
+Customer: Yes, it's john.doe@example.com. I've been trying for the past hour.
+Agent: Thank you for that information. Let me check your account... I can see the issue. Your account was temporarily locked due to multiple failed login attempts for security purposes.
+Customer: Oh, I see. I forgot my password and kept trying different ones.
+Agent: That's completely understandable. I've unlocked your account now. I'm also sending a password reset link to your email. Please check your inbox in the next few minutes.
+Customer: Great! Thank you so much for your help.
+Agent: You're very welcome! Once you receive the email, click the link and create a new password. Is there anything else I can help you with today?
+Customer: No, that's all. I really appreciate your quick response.
+Agent: Perfect! Have a great day, and feel free to contact us if you need any further assistance.`;
+
+    call.transcription = mockTranscription.trim();
+    call.status = 'transcribed';
+
+    res.json({
+      success: true,
+      callId: call.id,
+      transcription: call.transcription
+    });
+
+  } catch (error) {
+    console.error('Transcription error:', error);
+    res.status(500).json({ error: 'Transcription failed', details: error.message });
+  }
+});
+
+// 4. Extract Intent (Using DeepSeek or Mock)
+app.post('/api/extract-intent/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    const call = calls.find(c => c.id === callId);
+
+    if (!call || !call.transcription) {
+      return res.status(404).json({ error: 'Call or transcription not found' });
+    }
+
+    console.log(`🎯 Extracting intent for call ${callId}...`);
+
+    // Check if DeepSeek API key exists
+    if (process.env.DEEPSEEK_API_KEY) {
+      try {
+        const intentPrompt = `Analyze this customer service call and extract the following in JSON format:
+{
+  "primary_intent": "Query/Complaint/Request/Feedback",
+  "topics": ["topic1", "topic2"],
+  "sentiment": "Positive/Neutral/Negative",
+  "urgency": "Low/Medium/High/Critical",
+  "entities": ["entity1", "entity2"]
+}
+
+Call Transcription:
+${call.transcription}`;
+
+        const response = await axios.post('https://api.deepseek.com/v1/chat/completions', {
+          model: 'deepseek-chat',
+          messages: [
+            { role: 'system', content: 'You are an expert at analyzing customer service calls. Always respond in valid JSON format.' },
+            { role: 'user', content: intentPrompt }
+          ],
+          temperature: 0.3,
+          response_format: { type: 'json_object' }
+        }, {
+          headers: {
+            'Authorization': `Bearer ${process.env.DEEPSEEK_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const intentData = JSON.parse(response.data.choices[0].message.content);
+        call.intent = intentData;
+        call.status = 'intent_extracted';
+
+        console.log(`✅ Intent extracted using DeepSeek`);
+
+        return res.json({
+          success: true,
+          callId: call.id,
+          intent: intentData
+        });
+
+      } catch (apiError) {
+        console.error('DeepSeek API error:', apiError.message);
+        console.log('Falling back to mock data...');
+      }
+    }
+
+    // Fallback to mock data
+    const mockIntent = {
+      primary_intent: 'Query',
+      topics: ['Account Access', 'Password Reset', 'Login Issues', 'Account Security'],
+      sentiment: 'Positive',
+      urgency: 'Medium',
+      entities: ['john.doe@example.com', 'account locked', 'password reset', 'failed login attempts']
+    };
+
+    call.intent = mockIntent;
+    call.status = 'intent_extracted';
+
+    console.log(`✅ Intent extracted using mock data`);
+
+    res.json({
+      success: true,
+      callId: call.id,
+      intent: mockIntent,
+      note: 'Using mock data (API key not configured)'
+    });
+
+  } catch (error) {
+    console.error('Intent extraction error:', error);
+    res.status(500).json({ error: 'Intent extraction failed', details: error.message });
+  }
+});
+
+// 5. Generate AI Analysis (Using DeepSeek or Mock)
+app.post('/api/analyze/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    const call = calls.find(c => c.id === callId);
+
+    if (!call || !call.transcription || !call.intent) {
+      return res.status(404).json({ error: 'Call data incomplete' });
+    }
+
+    console.log(`🤖 Analyzing call ${callId}...`);
+
+    // Check if DeepSeek API key exists
+    if (process.env.DEEPSEEK_API_KEY) {
+      try {
+        const analysisPrompt = `You are an expert call center analyst. Analyze this customer service call and provide:
+
+1. Call Summary (2-3 sentences)
+2. Customer Pain Points
+3. Agent Performance
+4. Action Items
+5. Recommended Next Steps
+6. Follow-up Requirements
+
+TRANSCRIPTION:
+${call.transcription}
+
+INTENT DATA:
+${JSON.stringify(call.intent, null, 2)}
+
+Provide a detailed, actionable analysis.`;
+
+        const response = await axios.post('https://api.deepseek.com/v1/chat/completions', {
+          model: 'deepseek-chat',
+          messages: [
+            { role: 'system', content: 'You are an expert call center quality analyst.' },
+            { role: 'user', content: analysisPrompt }
+          ],
+          temperature: 0.5,
+          max_tokens: 2000
+        }, {
+          headers: {
+            'Authorization': `Bearer ${process.env.DEEPSEEK_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const analysis = response.data.choices[0].message.content;
+        call.analysis = analysis;
+        call.status = 'analyzed';
+
+        console.log(`✅ Analysis generated using DeepSeek`);
+
+        return res.json({
+          success: true,
+          callId: call.id,
+          analysis: analysis
+        });
+
+      } catch (apiError) {
+        console.error('DeepSeek API error:', apiError.message);
+        console.log('Falling back to mock analysis...');
+      }
+    }
+
+    // Fallback to mock analysis
+    const mockAnalysis = `**Call Summary:**
+The customer contacted support regarding account access issues stemming from multiple failed login attempts. The agent efficiently diagnosed the problem as an account lock due to security protocols, unlocked the account, and initiated a password reset process. The interaction was resolved satisfactorily with positive customer feedback.
+
+**Customer Pain Points:**
+- Unable to access account for over an hour
+- Frustration from repeated failed login attempts
+- Forgot password and uncertainty about recovery process
+- Anxiety about account security
+
+**Agent Performance:**
+- Excellent: Empathetic opening and acknowledgment of customer frustration
+- Strong: Quick problem identification and clear explanation
+- Effective: Proactive solution (account unlock + password reset)
+- Professional: Clear communication throughout the call
+- Good closure: Confirmed resolution and offered additional assistance
+
+**Action Items:**
+1. Account successfully unlocked
+2. Password reset email sent to john.doe@example.com
+3. Customer instructed on next steps for password creation
+4. No escalation required - issue fully resolved
+
+**Recommended Next Steps:**
+- Monitor the account for successful password reset completion within 24 hours
+- If no activity within 24 hours, send follow-up reminder email
+- Add internal note about this incident for future reference
+- Consider sending post-call satisfaction survey
+
+**Follow-up Requirements:**
+- Automated: Password reset confirmation tracking
+- Optional: 24-hour courtesy check-in if password not reset
+- Customer satisfaction survey recommended (likely positive response based on interaction tone)`;
+
+    call.analysis = mockAnalysis;
+    call.status = 'analyzed';
+
+    console.log(`✅ Analysis generated using mock data`);
+
+    res.json({
+      success: true,
+      callId: call.id,
+      analysis: mockAnalysis,
+      note: 'Using mock analysis (API key not configured)'
+    });
+
+  } catch (error) {
+    console.error('Analysis error:', error);
+    res.status(500).json({ error: 'Analysis failed', details: error.message });
+  }
+});
+
+// 6. Generate Final Report
+app.post('/api/generate-report/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    const call = calls.find(c => c.id === callId);
+
+    if (!call) {
+      return res.status(404).json({ error: 'Call not found' });
+    }
+
+    console.log(`📊 Generating report for call ${callId}...`);
+
+    const qualityScore = calculateQualityScore(call);
+    const csatEstimate = estimateCSAT(call);
+
+    const report = {
+      callId: call.id,
+      timestamp: call.uploadedAt,
+      status: 'completed',
+      
+      transcription: {
+        text: call.transcription,
+        wordCount: call.transcription ? call.transcription.split(' ').length : 0
+      },
+      
+      intent: call.intent,
+      
+      sentiment: {
+        overall: call.intent?.sentiment || 'Neutral',
+        score: call.intent?.sentiment === 'Positive' ? 0.85 : 
+               call.intent?.sentiment === 'Negative' ? 0.3 : 0.5
+      },
+      
+      analysis: call.analysis,
+      
+      metrics: {
+        qualityScore: qualityScore,
+        csatEstimate: csatEstimate,
+        resolutionStatus: 'Resolved',
+        urgencyLevel: call.intent?.urgency || 'Medium'
+      },
+      
+      recommendations: generateRecommendations(call)
+    };
+
+    call.report = report;
+    call.status = 'completed';
+
+    console.log(`✅ Report generated successfully`);
+
+    res.json({
+      success: true,
+      report: report
+    });
+
+  } catch (error) {
+    console.error('Report generation error:', error);
+    res.status(500).json({ error: 'Report generation failed', details: error.message });
+  }
+});
+
+// 7. Complete Pipeline (All steps at once)
+app.post('/api/process-complete/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`\n🚀 Starting complete processing for call ${callId}...`);
+    
+    // Run all steps
+    await axios.post(`http://localhost:${PORT}/api/transcribe/${callId}`);
+    await axios.post(`http://localhost:${PORT}/api/extract-intent/${callId}`);
+    await axios.post(`http://localhost:${PORT}/api/analyze/${callId}`);
+    const reportResponse = await axios.post(`http://localhost:${PORT}/api/generate-report/${callId}`);
+    
+    console.log(`✅ Complete processing finished for call ${callId}\n`);
+
+    res.json({
+      success: true,
+      message: 'Complete processing done',
+      report: reportResponse.data.report
+    });
+
+  } catch (error) {
+    console.error('Complete processing error:', error);
+    res.status(500).json({ error: 'Processing failed', details: error.message });
+  }
+});
+
+// 8. Get Call Details
+app.get('/api/call/:callId', (req, res) => {
+  const callId = parseInt(req.params.callId);
+  const call = calls.find(c => c.id === callId);
+
+  if (!call) {
+    return res.status(404).json({ error: 'Call not found' });
+  }
+
+  res.json({ success: true, call: call });
+});
+
+// 9. Get All Calls
+app.get('/api/calls', (req, res) => {
+  res.json({
+    success: true,
+    totalCalls: calls.length,
+    calls: calls.map(c => ({
+      id: c.id,
+      filename: c.originalName,
+      uploadedAt: c.uploadedAt,
+      status: c.status
+    }))
+  });
+});
+
+// ============================================
+// HELPER FUNCTIONS
+// ============================================
+
+function calculateQualityScore(call) {
+  let score = 50;
+  
+  if (call.intent?.sentiment === 'Positive') score += 30;
+  if (call.intent?.sentiment === 'Neutral') score += 15;
+  if (call.intent?.urgency === 'Low') score += 10;
+  if (call.analysis && call.analysis.toLowerCase().includes('resolved')) score += 10;
+  
+  return Math.min(score, 100);
+}
+
+function estimateCSAT(call) {
+  if (call.intent?.sentiment === 'Positive') return 4.5;
+  if (call.intent?.sentiment === 'Neutral') return 3.5;
+  return 2.5;
+}
+
+function generateRecommendations(call) {
+  const recommendations = [];
+  
+  if (call.intent?.urgency === 'High' || call.intent?.urgency === 'Critical') {
+    recommendations.push('Immediate follow-up required within 24 hours');
+    recommendations.push('Escalate to senior support team');
+  }
+  
+  if (call.intent?.sentiment === 'Negative') {
+    recommendations.push('Send customer satisfaction survey');
+    recommendations.push('Assign to quality assurance for review');
+    recommendations.push('Consider offering compensation or service credit');
+  }
+  
+  if (call.intent?.sentiment === 'Positive') {
+    recommendations.push('Request customer testimonial or review');
+    recommendations.push('Note excellent agent performance');
+  }
+  
+  if (call.intent?.topics?.some(topic => topic.toLowerCase().includes('technical'))) {
+    recommendations.push('Create technical support ticket for tracking');
+  }
+  
+  recommendations.push('Archive call for training purposes');
+  recommendations.push('Update knowledge base if new issue identified');
+  
+  return recommendations;
+}
+
+// ============================================
+// START SERVER
+// ============================================
+
+app.listen(PORT, () => {
+  console.log(`
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║   ✅ Avanza Solutions Backend is Running!                ║
+║                                                           ║
+║   🌐 Server: http://localhost:${PORT}                        ║
+║   💚 Health: http://localhost:${PORT}/health                ║
+║                                                           ║
+║   📡 Available Endpoints:                                 ║
+║   • POST /api/upload-audio                                ║
+║   • POST /api/process-complete/:callId                    ║
+║   • GET  /api/calls                                       ║
+║                                                           ║
+║   💡 Tip: Set DEEPSEEK_API_KEY in .env for AI features   ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+  `);
+});

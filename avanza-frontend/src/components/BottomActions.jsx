@@ -1,0 +1,27 @@
+import React from 'react';
+import { PlusCircle, FileText, Download, Share2 } from 'lucide-react';
+
+const BottomActions = ({ onNewAnalysis, onExportPDF, onExportCSV, onShare }) => {
+  return (
+    <div className="bottom-actions">
+      <button className="btn btn-primary" onClick={onNewAnalysis}>
+        <PlusCircle size={18} />
+        Start New Analysis
+      </button>
+      <button className="btn btn-secondary" onClick={onExportPDF}>
+        <FileText size={18} />
+        PDF
+      </button>
+      <button className="btn btn-secondary" onClick={onExportCSV}>
+        <Download size={18} />
+        CSV
+      </button>
+      <button className="btn btn-secondary" onClick={onShare}>
+        <Share2 size={18} />
+        Share
+      </button>
+    </div>
+  );
+};
+
+export default BottomActions;

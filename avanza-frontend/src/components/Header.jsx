@@ -1,0 +1,24 @@
+import React from 'react';
+import { Phone } from 'lucide-react';
+
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="logo">
+        <div className="logo-icon">
+          <Phone size={20} />
+        </div>
+        <div className="logo-text">
+          <h1>Avanza Solutions</h1>
+          <p>AI Call Analytics</p>
+        </div>
+      </div>
+      <div className="status-indicator">
+        <span className="status-dot"></span>
+        System Active
+      </div>
+    </header>
+  );
+};
+
+export default Header;

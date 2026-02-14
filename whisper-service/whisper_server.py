@@ -1,0 +1,81 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import whisper
+import os
+import tempfile
+import time
+
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
+# Load Whisper model (do this once at startup)
+print("🔄 Loading Whisper model... (this takes ~30 seconds first time)")
+model = whisper.load_model("base")  # Options: tiny, base, small, medium, large
+print("✅ Whisper model loaded successfully!")
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({
+        'status': 'Whisper service running',
+        'model': 'base',
+        'ready': True
+    })
+
+@app.route('/transcribe', methods=['POST'])
+def transcribe_audio():
+    try:
+        # Check if file is present
+        if 'audio' not in request.files:
+            return jsonify({'error': 'No audio file provided'}), 400
+        
+        audio_file = request.files['audio']
+        
+        if audio_file.filename == '':
+            return jsonify({'error': 'Empty filename'}), 400
+        
+        print(f"📝 Transcribing: {audio_file.filename}")
+        
+        # Save uploaded file temporarily
+        with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(audio_file.filename)[1]) as temp_file:
+            audio_file.save(temp_file.name)
+            temp_path = temp_file.name
+        
+        try:
+            # Transcribe using Whisper
+            start_time = time.time()
+            result = model.transcribe(temp_path, language='en', fp16=False)
+            duration = time.time() - start_time
+            
+            # Clean up temp file
+            os.unlink(temp_path)
+            
+            print(f"✅ Transcription completed in {duration:.2f}s")
+            
+            return jsonify({
+                'success': True,
+                'transcription': result['text'],
+                'language': result.get('language', 'en'),
+                'duration': duration,
+                'segments': len(result.get('segments', []))
+            })
+            
+        except Exception as e:
+            # Clean up temp file on error
+            if os.path.exists(temp_path):
+                os.unlink(temp_path)
+            raise e
+            
+    except Exception as e:
+        print(f"❌ Transcription error: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    print("\n" + "="*60)
+    print("🎤 Whisper Transcription Service")
+    print("="*60)
+    print("Server: http://localhost:5000")
+    print("Health: http://localhost:5000/health")
+    print("Endpoint: POST /transcribe")
+    print("="*60 + "\n")
+    
+    app.run(host='0.0.0.0', port=5000, debug=False)

@@ -1,0 +1,22 @@
+import React from 'react';
+
+const AnalysisCard = ({ analysis }) => {
+  return (
+    <div className="card">
+      <div className="card-header">
+        <h3>AI Analysis Summary</h3>
+      </div>
+      <div className="card-content">
+        {analysis ? (
+          <div className="analysis-text">{analysis}</div>
+        ) : (
+          <div className="placeholder-text">
+            AI analysis will appear after uploading...
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default AnalysisCard;

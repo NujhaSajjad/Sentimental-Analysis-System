@@ -1,0 +1,41 @@
+import React, { useState } from 'react';
+
+const ActionItemsCard = ({ actionItems }) => {
+  const [checkedItems, setCheckedItems] = useState({});
+
+  const toggleCheck = (index) => {
+    setCheckedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  return (
+    <div className="card">
+      <div className="card-header">
+        <h3>Action Items</h3>
+      </div>
+      <div className="card-content">
+        {actionItems && actionItems.length > 0 ? (
+          <div className="action-items-list">
+            {actionItems.map((item, index) => (
+              <div key={index} className="action-item">
+                <div
+                  className={`action-checkbox ${checkedItems[index] ? 'checked' : ''}`}
+                  onClick={() => toggleCheck(index)}
+                />
+                <div className="action-text">{item}</div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="placeholder-text">
+            Action items will be generated automatically...
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ActionItemsCard;

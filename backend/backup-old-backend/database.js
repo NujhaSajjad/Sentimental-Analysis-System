@@ -1,0 +1,462 @@
+// database.js - PostgreSQL Database Configuration and Helper Functions
+const { Pool } = require('pg');
+
+// Database configuration
+const pool = new Pool({
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'avanza_call_center',
+  password: process.env.DB_PASSWORD || 'avanza2024',
+  port: process.env.DB_PORT || 5432,
+});
+
+// Test database connection
+pool.on('connect', () => {
+  console.log('✅ Connected to PostgreSQL database');
+});
+
+pool.on('error', (err) => {
+  console.error('❌ Unexpected database error:', err);
+  process.exit(-1);
+});
+
+// ============================================
+// CUSTOMER OPERATIONS
+// ============================================
+
+/**
+ * Find or create customer by phone number
+ */
+async function findOrCreateCustomer(phoneNumber, additionalData = {}) {
+  try {
+    // Try to find existing customer
+    const findQuery = 'SELECT * FROM customers WHERE phone_number = $1';
+    const result = await pool.query(findQuery, [phoneNumber]);
+
+    if (result.rows.length > 0) {
+      console.log(`👤 Found existing customer: ${phoneNumber}`);
+      return result.rows[0];
+    }
+
+    // Create new customer
+    const insertQuery = `
+      INSERT INTO customers (phone_number, email, full_name, company_name)
+      VALUES ($1, $2, $3, $4)
+      RETURNING *
+    `;
+    
+    const newCustomer = await pool.query(insertQuery, [
+      phoneNumber,
+      additionalData.email || null,
+      additionalData.full_name || 'Unknown Customer',
+      additionalData.company_name || null
+    ]);
+
+    console.log(`✨ Created new customer: ${phoneNumber}`);
+    return newCustomer.rows[0];
+  } catch (error) {
+    console.error('Error finding/creating customer:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get customer's last call information
+ */
+async function getCustomerLastCall(phoneNumber) {
+  try {
+    const query = 'SELECT * FROM get_customer_last_call($1)';
+    const result = await pool.query(query, [phoneNumber]);
+    
+    if (result.rows.length > 0) {
+      return result.rows[0];
+    }
+    return null;
+  } catch (error) {
+    console.error('Error getting customer last call:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get customer's complete call history
+ */
+async function getCustomerCallHistory(phoneNumber, limit = 10) {
+  try {
+    const query = `
+      SELECT * FROM customer_call_history
+      WHERE phone_number = $1
+      ORDER BY call_date DESC
+      LIMIT $2
+    `;
+    const result = await pool.query(query, [phoneNumber, limit]);
+    return result.rows;
+  } catch (error) {
+    console.error('Error getting customer call history:', error);
+    throw error;
+  }
+}
+
+/**
+ * Update customer churn risk
+ */
+async function updateCustomerChurnRisk(customerId, churnRisk) {
+  try {
+    const query = `
+      UPDATE customers 
+      SET churn_risk = $1, updated_at = CURRENT_TIMESTAMP
+      WHERE customer_id = $2
+      RETURNING *
+    `;
+    const result = await pool.query(query, [churnRisk, customerId]);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error updating churn risk:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// CALL OPERATIONS
+// ============================================
+
+/**
+ * Create a new call record
+ */
+async function createCall(customerId, agentId, audioFileInfo) {
+  try {
+    const query = `
+      INSERT INTO calls (
+        customer_id, agent_id, audio_filename, audio_filepath, 
+        audio_filesize, processing_status
+      )
+      VALUES ($1, $2, $3, $4, $5, 'uploaded')
+      RETURNING *
+    `;
+    
+    const result = await pool.query(query, [
+      customerId,
+      agentId || null,
+      audioFileInfo.filename,
+      audioFileInfo.filepath,
+      audioFileInfo.size
+    ]);
+
+    console.log(`📞 Created call record: ID ${result.rows[0].call_id}`);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error creating call:', error);
+    throw error;
+  }
+}
+
+/**
+ * Update call processing status
+ */
+async function updateCallStatus(callId, status, additionalData = {}) {
+  try {
+    const query = `
+      UPDATE calls 
+      SET processing_status = $1,
+          call_duration = COALESCE($2, call_duration),
+          primary_intent = COALESCE($3, primary_intent),
+          sentiment = COALESCE($4, sentiment),
+          urgency = COALESCE($5, urgency),
+          updated_at = CURRENT_TIMESTAMP
+      WHERE call_id = $6
+      RETURNING *
+    `;
+    
+    const result = await pool.query(query, [
+      status,
+      additionalData.duration || null,
+      additionalData.primary_intent || null,
+      additionalData.sentiment || null,
+      additionalData.urgency || null,
+      callId
+    ]);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error updating call status:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get call by ID
+ */
+async function getCallById(callId) {
+  try {
+    const query = 'SELECT * FROM calls WHERE call_id = $1';
+    const result = await pool.query(query, [callId]);
+    return result.rows[0] || null;
+  } catch (error) {
+    console.error('Error getting call:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// TRANSCRIPTION OPERATIONS
+// ============================================
+
+/**
+ * Save transcription
+ */
+async function saveTranscription(callId, transcriptionData) {
+  try {
+    const query = `
+      INSERT INTO call_transcriptions (
+        call_id, transcription_text, word_count, 
+        transcription_duration, confidence_score
+      )
+      VALUES ($1, $2, $3, $4, $5)
+      RETURNING *
+    `;
+    
+    const wordCount = transcriptionData.text.split(' ').length;
+    
+    const result = await pool.query(query, [
+      callId,
+      transcriptionData.text,
+      wordCount,
+      transcriptionData.duration || null,
+      transcriptionData.confidence || null
+    ]);
+
+    console.log(`📝 Saved transcription for call ${callId}`);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error saving transcription:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// REPORT OPERATIONS
+// ============================================
+
+/**
+ * Save call report with AI analysis
+ */
+async function saveCallReport(callId, reportData) {
+  try {
+    const query = `
+      INSERT INTO call_reports (
+        call_id, intent_data, ai_analysis, call_summary,
+        customer_pain_points, emotional_tone, primary_sensitivity,
+        churn_risk_assessment, recommended_communication_style,
+        escalation_risk, refund_likelihood, quality_score,
+        csat_estimate, resolution_status, agent_opening_line,
+        agent_approach_do, agent_approach_avoid, crm_tags
+      )
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+      RETURNING *
+    `;
+    
+    const result = await pool.query(query, [
+      callId,
+      JSON.stringify(reportData.intent_data || {}),
+      reportData.ai_analysis || null,
+      reportData.call_summary || null,
+      reportData.customer_pain_points || [],
+      reportData.emotional_tone || null,
+      reportData.primary_sensitivity || null,
+      reportData.churn_risk_assessment || 'low',
+      reportData.recommended_communication_style || null,
+      reportData.escalation_risk || 'low',
+      reportData.refund_likelihood || 'low',
+      reportData.quality_score || null,
+      reportData.csat_estimate || null,
+      reportData.resolution_status || 'pending',
+      reportData.agent_opening_line || null,
+      reportData.agent_approach_do || [],
+      reportData.agent_approach_avoid || [],
+      reportData.crm_tags || []
+    ]);
+
+    console.log(`📊 Saved report for call ${callId}`);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error saving report:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get full report for a call
+ */
+async function getCallReport(callId) {
+  try {
+    const query = `
+      SELECT 
+        c.*,
+        ct.transcription_text,
+        cr.*,
+        cust.full_name as customer_name,
+        cust.phone_number,
+        cust.churn_risk as customer_churn_risk,
+        a.agent_name
+      FROM calls c
+      LEFT JOIN call_transcriptions ct ON c.call_id = ct.call_id
+      LEFT JOIN call_reports cr ON c.call_id = cr.call_id
+      LEFT JOIN customers cust ON c.customer_id = cust.customer_id
+      LEFT JOIN agents a ON c.agent_id = a.agent_id
+      WHERE c.call_id = $1
+    `;
+    
+    const result = await pool.query(query, [callId]);
+    return result.rows[0] || null;
+  } catch (error) {
+    console.error('Error getting call report:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// ACTION ITEMS OPERATIONS
+// ============================================
+
+/**
+ * Create action items for a call
+ */
+async function createActionItems(callId, actionItems) {
+  try {
+    const query = `
+      INSERT INTO action_items (
+        call_id, action_type, action_description, priority
+      )
+      VALUES ($1, $2, $3, $4)
+      RETURNING *
+    `;
+    
+    const results = [];
+    for (const item of actionItems) {
+      const result = await pool.query(query, [
+        callId,
+        item.type || 'after_call',
+        item.description,
+        item.priority || 'medium'
+      ]);
+      results.push(result.rows[0]);
+    }
+
+    console.log(`✅ Created ${results.length} action items for call ${callId}`);
+    return results;
+  } catch (error) {
+    console.error('Error creating action items:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// AGENT OPERATIONS
+// ============================================
+
+/**
+ * Get or create agent
+ */
+async function findOrCreateAgent(agentName, agentEmail) {
+  try {
+    // Try to find existing agent
+    const findQuery = 'SELECT * FROM agents WHERE email = $1';
+    const result = await pool.query(findQuery, [agentEmail]);
+
+    if (result.rows.length > 0) {
+      return result.rows[0];
+    }
+
+    // Create new agent
+    const insertQuery = `
+      INSERT INTO agents (agent_name, email, employee_id)
+      VALUES ($1, $2, $3)
+      RETURNING *
+    `;
+    
+    const employeeId = 'AG' + String(Math.floor(Math.random() * 10000)).padStart(4, '0');
+    const newAgent = await pool.query(insertQuery, [agentName, agentEmail, employeeId]);
+
+    console.log(`👨‍💼 Created new agent: ${agentName}`);
+    return newAgent.rows[0];
+  } catch (error) {
+    console.error('Error finding/creating agent:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// ANALYTICS & REPORTING
+// ============================================
+
+/**
+ * Get customer profile with complete stats
+ */
+async function getCustomerProfile(phoneNumber) {
+  try {
+    const query = 'SELECT * FROM customer_profiles WHERE phone_number = $1';
+    const result = await pool.query(query, [phoneNumber]);
+    return result.rows[0] || null;
+  } catch (error) {
+    console.error('Error getting customer profile:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get dashboard statistics
+ */
+async function getDashboardStats() {
+  try {
+    const query = `
+      SELECT 
+        (SELECT COUNT(*) FROM calls) as total_calls,
+        (SELECT COUNT(*) FROM customers) as total_customers,
+        (SELECT COUNT(*) FROM calls WHERE call_date > NOW() - INTERVAL '24 hours') as calls_today,
+        (SELECT AVG(quality_score) FROM call_reports) as avg_quality_score,
+        (SELECT AVG(csat_estimate) FROM call_reports) as avg_csat
+    `;
+    
+    const result = await pool.query(query);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error getting dashboard stats:', error);
+    throw error;
+  }
+}
+
+// ============================================
+// EXPORTS
+// ============================================
+
+module.exports = {
+  pool,
+  
+  // Customer operations
+  findOrCreateCustomer,
+  getCustomerLastCall,
+  getCustomerCallHistory,
+  updateCustomerChurnRisk,
+  getCustomerProfile,
+  
+  // Call operations
+  createCall,
+  updateCallStatus,
+  getCallById,
+  
+  // Transcription operations
+  saveTranscription,
+  
+  // Report operations
+  saveCallReport,
+  getCallReport,
+  
+  // Action items
+  createActionItems,
+  
+  // Agent operations
+  findOrCreateAgent,
+  
+  // Analytics
+  getDashboardStats
+};

@@ -1,0 +1,18 @@
+const db = require('./database');
+
+   async function testConnection() {
+     try {
+       console.log('Testing database connection...');
+       
+       const stats = await db.getDashboardStats();
+       console.log('Dashboard Stats:', stats);
+       
+       console.log('✅ Database connection successful!');
+       process.exit(0);
+     } catch (error) {
+       console.error('❌ Database error:', error);
+       process.exit(1);
+     }
+   }
+
+   testConnection();
