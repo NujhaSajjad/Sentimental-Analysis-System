@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\set-timeout.js
+================================================================================
+
+'use strict';
+var parent = require('../actual/set-timeout');
+
+module.exports = parent;

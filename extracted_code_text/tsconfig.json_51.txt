@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\is-string\tsconfig.json
+================================================================================
+
+{
+  "extends": "@ljharb/tsconfig",
+  "compilerOptions": {
+    "target": "ES2021",
+  },
+  "exclude": [
+    "coverage"
+  ]
+}

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\number\is-finite.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/number/is-finite');
+
+module.exports = parent;

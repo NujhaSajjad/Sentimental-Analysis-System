@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\get-layer-atrule-ancestor.d.ts
+================================================================================
+
+import type { AtRule, Node } from 'postcss';
+export declare function getLayerAtRuleAncestor(node: Node): AtRule | null;

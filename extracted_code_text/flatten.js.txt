@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\array\flatten.js
+================================================================================
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function flatten(matrix) {
+    return matrix.reduce((flatten, array) => flatten.concat(array), []);
+}
+exports.default = flatten;

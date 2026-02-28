@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\get-symbol-description\index.d.ts
+================================================================================
+
+declare function getSymbolDescription(thisArg: symbol | Symbol): string | undefined;
+
+export = getSymbolDescription;

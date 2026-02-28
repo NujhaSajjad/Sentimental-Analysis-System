@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\lodash\date.js
+================================================================================
+
+module.exports = {
+  'now': require('./now')
+};

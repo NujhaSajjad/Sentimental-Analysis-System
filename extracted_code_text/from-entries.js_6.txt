@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\object\from-entries.js
+================================================================================
+
+'use strict';
+require('../../modules/es.array.iterator');
+require('../../modules/es.object.from-entries');
+var path = require('../../internals/path');
+
+module.exports = path.Object.fromEntries;

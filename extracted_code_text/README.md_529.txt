@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\es-array-method-boxes-properly\README.md
+================================================================================
+
+# es-array-method-boxes-properly
+
+Utility package to determine if an `Array.prototype` method properly boxes the callback's receiver and third argument.

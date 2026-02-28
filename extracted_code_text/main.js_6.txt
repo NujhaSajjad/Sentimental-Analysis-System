@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\node_modules\resolve\test\resolver\without_basedir\main.js
+================================================================================
+
+var resolve = require('../../../');
+
+module.exports = function (t, cb) {
+    resolve('mymodule', null, cb);
+};

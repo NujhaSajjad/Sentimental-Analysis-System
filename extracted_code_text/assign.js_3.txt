@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\object\assign.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/object/assign');
+
+module.exports = parent;

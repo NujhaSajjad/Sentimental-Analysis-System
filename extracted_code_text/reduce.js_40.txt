@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\array\reduce.js
+================================================================================
+
+'use strict';
+require('../../modules/es.array.reduce');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Array', 'reduce');

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\src\util\bigSign.js
+================================================================================
+
+export default function bigSign(bigIntValue) {
+  return (bigIntValue > 0n) - (bigIntValue < 0n)
+}

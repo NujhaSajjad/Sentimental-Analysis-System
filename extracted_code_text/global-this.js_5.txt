@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\global-this.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-global
+require('../modules/esnext.global-this');
+var globalThis = require('../internals/global-this');
+
+module.exports = globalThis;

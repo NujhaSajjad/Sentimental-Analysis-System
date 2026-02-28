@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\error\is-error.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/error/is-error');

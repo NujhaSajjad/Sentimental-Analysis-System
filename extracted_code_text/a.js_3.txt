@@ -1,0 +1,15 @@
+Relative path: avanza-frontend\node_modules\@surma\rollup-plugin-off-main-thread\tests\fixtures\import-meta-worker\a.js
+================================================================================
+
+let worker;
+
+if (self.document) {
+  worker = new Worker(import.meta.url);
+}
+if (self.postMessage) {
+  setTimeout(() => {
+    postMessage("a");
+  }, 500);
+}
+
+export { worker };

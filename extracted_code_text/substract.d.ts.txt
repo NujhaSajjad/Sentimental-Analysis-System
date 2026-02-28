@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\array\substract.d.ts
+================================================================================
+
+declare function subtract<T>(arrayA?: T[], arrayB?: T[]): T[];
+export default subtract;

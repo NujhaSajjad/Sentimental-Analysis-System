@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\eslint\lib\rule-tester\index.js
+================================================================================
+
+"use strict";
+
+module.exports = {
+    RuleTester: require("./rule-tester")
+};

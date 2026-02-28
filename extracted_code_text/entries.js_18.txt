@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\array\virtual\entries.js
+================================================================================
+
+'use strict';
+var parent = require('../../../actual/array/virtual/entries');
+
+module.exports = parent;

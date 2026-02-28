@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\every.d.ts
+================================================================================
+
+declare function _exports(obj: object, fn: Function): boolean;
+export = _exports;

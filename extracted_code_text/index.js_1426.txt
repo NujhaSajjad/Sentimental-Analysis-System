@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\mdn-data\index.js
+================================================================================
+
+module.exports = {
+  api: require('./api'),
+  css: require('./css'),
+  l10n: require('./l10n'),
+}

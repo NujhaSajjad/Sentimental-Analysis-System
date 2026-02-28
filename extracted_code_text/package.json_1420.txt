@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_class_private_method_init\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_class_private_method_init.cjs",
+    "module": "../../esm/_class_private_method_init.js"
+}

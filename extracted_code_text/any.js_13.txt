@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\neo-async\any.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./async').any;

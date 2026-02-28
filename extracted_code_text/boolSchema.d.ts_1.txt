@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\compile\validate\boolSchema.d.ts
+================================================================================
+
+import type { SchemaCxt } from "..";
+import { Name } from "../codegen";
+export declare function topBoolOrEmptySchema(it: SchemaCxt): void;
+export declare function boolOrEmptySchema(it: SchemaCxt, valid: Name): void;

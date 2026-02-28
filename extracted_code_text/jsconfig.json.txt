@@ -1,0 +1,16 @@
+Relative path: backend\node_modules\pdfkit\jsconfig.json
+================================================================================
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "allowJs": true,
+    // Don't force external @types; our ambient file is included below
+    "baseUrl": "."
+  },
+  "include": [
+    "tests/**/*.js",
+    "types/**/*.d.ts"
+  ]
+}

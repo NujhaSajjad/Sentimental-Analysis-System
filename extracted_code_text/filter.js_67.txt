@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\iterator\filter.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/iterator/filter');
+
+module.exports = parent;

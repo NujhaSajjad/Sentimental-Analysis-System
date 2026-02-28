@@ -1,0 +1,17 @@
+Relative path: avanza-frontend\node_modules\spdy-transport\.travis.yml
+================================================================================
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - "6"
+  - "8"
+  - "10"
+  - "stable"
+
+script:
+  - npm run lint
+  - npm test
+  - npm run coverage

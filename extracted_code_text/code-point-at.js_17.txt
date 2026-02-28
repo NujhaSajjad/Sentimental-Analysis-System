@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\string\virtual\code-point-at.js
+================================================================================
+
+'use strict';
+var parent = require('../../../stable/string/virtual/code-point-at');
+
+module.exports = parent;

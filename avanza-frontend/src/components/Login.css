@@ -1,0 +1,225 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #eee8ea 0%, #dbd6d9 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  position: relative;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.login-header-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-logo-container {
+  width: 56px;
+  height: 56px;
+  background-color: #a32a68; /* Avanza purple/pink */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 4px 12px rgba(163, 42, 104, 0.3);
+}
+
+.login-company-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: #2b2b2b;
+}
+
+.login-company-subtitle {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0;
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: #2b2b2b;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+}
+
+.login-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: #444;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #999;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: #a32a68;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(163, 42, 104, 0.1);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.toggle-password:hover {
+  color: #666;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: -0.5rem;
+}
+
+.forgot-password a {
+  color: #a32a68;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: #a32a68;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.login-button:hover {
+  background-color: #8b2359;
+}
+
+.login-button:disabled {
+  background-color: #d195b4;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.login-footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.login-footer-links a {
+  color: #777;
+  text-decoration: none;
+}
+
+.login-footer-links a:hover {
+  color: #444;
+}
+
+.dot {
+  color: #bbb;
+}
+
+.help-button {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-button:hover {
+  background-color: #000;
+}

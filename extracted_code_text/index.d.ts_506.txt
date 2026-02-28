@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\queue-microtask\index.d.ts
+================================================================================
+
+declare const queueMicrotask: (cb: () => void) => void
+export = queueMicrotask

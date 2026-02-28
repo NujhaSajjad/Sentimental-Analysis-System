@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@pmmmwh\react-refresh-webpack-plugin\overlay\package.json
+================================================================================
+
+{
+  "type": "commonjs"
+}

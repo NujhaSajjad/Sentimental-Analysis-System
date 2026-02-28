@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\patternRequired.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition, ErrorObject } from "ajv";
+export declare type PatternRequiredError = ErrorObject<"patternRequired", {
+    missingPattern: string;
+}>;
+export default function getDef(): CodeKeywordDefinition;

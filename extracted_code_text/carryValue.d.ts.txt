@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\keyboard\shared\carryValue.d.ts
+================================================================================
+
+import { keyboardState } from '../types';
+export declare function carryValue(element: Element, state: keyboardState, newValue: string): void;

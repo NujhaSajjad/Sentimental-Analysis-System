@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\formatter\WebpackFormatter.d.ts
+================================================================================
+
+import { Formatter } from './Formatter';
+declare function createWebpackFormatter(formatter: Formatter): Formatter;
+export { createWebpackFormatter };

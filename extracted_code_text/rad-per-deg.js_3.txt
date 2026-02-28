@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\math\rad-per-deg.js
+================================================================================
+
+'use strict';
+require('../../modules/esnext.math.rad-per-deg');
+
+module.exports = 180 / Math.PI;

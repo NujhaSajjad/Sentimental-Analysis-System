@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\es-to-primitive\es6.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./es2015')} */
+module.exports = require('./es2015');

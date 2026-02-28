@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\string\pad-start.js
+================================================================================
+
+'use strict';
+require('../../modules/es.string.pad-start');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('String', 'padStart');

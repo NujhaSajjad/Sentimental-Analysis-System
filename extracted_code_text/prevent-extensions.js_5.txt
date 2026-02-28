@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\reflect\prevent-extensions.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/reflect/prevent-extensions');

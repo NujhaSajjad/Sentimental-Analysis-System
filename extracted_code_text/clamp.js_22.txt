@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\clamp.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('clamp', require('../clamp'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

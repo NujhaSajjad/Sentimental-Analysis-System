@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\language-subtag-registry\data\json\meta.json
+================================================================================
+
+{
+	"File-Date": "2024-05-16"
+}

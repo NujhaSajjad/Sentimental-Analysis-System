@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@sinclair\typebox\conditional\index.d.ts
+================================================================================
+
+export * from './conditional';
+export * from './structural';

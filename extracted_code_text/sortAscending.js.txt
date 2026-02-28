@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\postcss-modules-local-by-default\node_modules\postcss-selector-parser\dist\sortAscending.js
+================================================================================
+
+"use strict";
+
+exports.__esModule = true;
+exports["default"] = sortAscending;
+function sortAscending(list) {
+  return list.sort(function (a, b) {
+    return a - b;
+  });
+}
+;
+module.exports = exports.default;

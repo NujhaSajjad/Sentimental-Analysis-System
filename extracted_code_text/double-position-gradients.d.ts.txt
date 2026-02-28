@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-progressive-custom-properties\dist\custom\double-position-gradients.d.ts
+================================================================================
+
+import type { Node } from 'postcss-value-parser';
+export declare function doublePositionGradients(node: Node): Array<string>;

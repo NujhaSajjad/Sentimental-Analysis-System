@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\jpeg-exif\.eslintrc.json
+================================================================================
+
+{
+    "extends": "airbnb-base"
+}

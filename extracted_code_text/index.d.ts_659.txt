@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\bcryptjs\umd\index.d.ts
+================================================================================
+
+import * as bcrypt from "./types.js";
+export = bcrypt;
+export as namespace bcrypt;

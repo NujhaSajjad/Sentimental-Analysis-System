@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\full\set\every.js
+================================================================================
+
+'use strict';
+require('../../modules/es.set');
+require('../../modules/esnext.set.every');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Set', 'every');

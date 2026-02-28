@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\eslint-reporter\issue\EsLintIssueFactory.d.ts
+================================================================================
+
+import { Issue } from '../../issue';
+import { LintResult } from '../types/eslint';
+declare function createIssuesFromEsLintResults(results: LintResult[]): Issue[];
+export { createIssuesFromEsLintResults };

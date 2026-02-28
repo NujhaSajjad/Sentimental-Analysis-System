@@ -1,0 +1,15 @@
+Relative path: avanza-frontend\node_modules\string.prototype.repeat\tests\index.js
+================================================================================
+
+'use strict';
+
+var repeat = require('../');
+var test = require('tape');
+
+var runTests = require('./tests');
+
+test('as a function', function (t) {
+	runTests(repeat, t);
+
+	t.end();
+});

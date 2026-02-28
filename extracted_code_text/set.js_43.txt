@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\yaml\browser\types\set.js
+================================================================================
+
+const legacy = require('../dist/legacy-exports')
+module.exports = legacy.set
+legacy.warnFileDeprecation(__filename)

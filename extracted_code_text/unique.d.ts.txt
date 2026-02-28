@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\array\unique.d.ts
+================================================================================
+
+declare function unique<T>(array: T[]): T[];
+export default unique;

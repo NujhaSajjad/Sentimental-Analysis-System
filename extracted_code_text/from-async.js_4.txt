@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\array\from-async.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/array/from-async');
+
+module.exports = parent;

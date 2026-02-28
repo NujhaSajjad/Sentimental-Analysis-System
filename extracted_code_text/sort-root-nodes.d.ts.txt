@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\sort-root-nodes.d.ts
+================================================================================
+
+import type { Container } from 'postcss';
+import type { Model } from './model';
+export declare function sortRootNodes(root: Container, model: Model): void;

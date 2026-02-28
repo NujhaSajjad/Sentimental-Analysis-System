@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\postcss-merge-longhand\src\lib\mergeValues.js
+================================================================================
+
+'use strict';
+const getValue = require('./getValue.js');
+
+/** @type {(...rules: import('postcss').Declaration[]) => string} */
+module.exports = (...rules) => rules.map(getValue).join(' ');

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\es-abstract\2017\RequireObjectCoercible.js
+================================================================================
+
+'use strict';
+
+module.exports = require('es-object-atoms/RequireObjectCoercible');

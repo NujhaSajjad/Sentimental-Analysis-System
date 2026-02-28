@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\has-own.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/object/has-own');
+
+module.exports = parent;

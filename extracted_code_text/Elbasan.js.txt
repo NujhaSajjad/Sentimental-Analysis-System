@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Elbasan.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x10500, 0x10527);
+exports.characters = set;

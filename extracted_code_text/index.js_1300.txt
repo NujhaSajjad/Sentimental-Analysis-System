@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\isarray\index.js
+================================================================================
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};

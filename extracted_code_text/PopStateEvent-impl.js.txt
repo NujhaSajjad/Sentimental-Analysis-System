@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\events\PopStateEvent-impl.js
+================================================================================
+
+"use strict";
+const EventImpl = require("./Event-impl.js").implementation;
+
+const PopStateEventInit = require("../generated/PopStateEventInit");
+
+class PopStateEventImpl extends EventImpl {}
+PopStateEventImpl.defaultInit = PopStateEventInit.convert(undefined);
+
+exports.implementation = PopStateEventImpl;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\type-utils\_ts3.4\dist\getTokenAtPosition.d.ts
+================================================================================
+
+import * as ts from 'typescript';
+export declare function getTokenAtPosition(sourceFile: ts.SourceFile, position: number): ts.Node;
+//# sourceMappingURL=getTokenAtPosition.d.ts.map

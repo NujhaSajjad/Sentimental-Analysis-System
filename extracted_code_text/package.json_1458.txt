@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_object_spread\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_object_spread.cjs",
+    "module": "../../esm/_object_spread.js"
+}

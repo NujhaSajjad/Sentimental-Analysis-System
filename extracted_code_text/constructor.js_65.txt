@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\error\constructor.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/error/constructor');
+
+module.exports = parent;

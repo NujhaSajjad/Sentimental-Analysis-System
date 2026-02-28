@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\sucrase\register\ts-legacy-module-interop.js
+================================================================================
+
+require("../dist/register").registerTSLegacyModuleInterop();

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-selector-not\dist\index.d.ts
+================================================================================
+
+import type { PluginCreator } from 'postcss';
+declare const creator: PluginCreator<never>;
+export default creator;

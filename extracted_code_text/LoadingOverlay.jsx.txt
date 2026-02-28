@@ -1,0 +1,19 @@
+Relative path: avanza-frontend\src\components\LoadingOverlay.jsx
+================================================================================
+
+import React from 'react';
+
+const LoadingOverlay = ({ isLoading, message }) => {
+  if (!isLoading) return null;
+
+  return (
+    <div className="loading-overlay">
+      <div className="loading-spinner">
+        <div className="spinner"></div>
+        <p className="loading-text">{message || 'Processing...'}</p>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingOverlay;

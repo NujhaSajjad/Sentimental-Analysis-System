@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\negate.js
+================================================================================
+
+// Returns a negated version of the passed-in predicate.
+function negate(predicate) {
+  return function() {
+    return !predicate.apply(this, arguments);
+  };
+}
+
+module.exports = negate;

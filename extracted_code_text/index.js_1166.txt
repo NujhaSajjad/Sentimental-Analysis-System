@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\function-bind\index.js
+================================================================================
+
+'use strict';
+
+var implementation = require('./implementation');
+
+module.exports = Function.prototype.bind || implementation;

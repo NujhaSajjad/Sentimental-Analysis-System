@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\validation\const.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition, ErrorObject } from "../../types";
+export type ConstError = ErrorObject<"const", {
+    allowedValue: any;
+}>;
+declare const def: CodeKeywordDefinition;
+export default def;

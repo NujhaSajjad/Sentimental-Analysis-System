@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\es\typed-array\to-string.js
+================================================================================
+
+'use strict';
+require('../../modules/es.typed-array.to-string');

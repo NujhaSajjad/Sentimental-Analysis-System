@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\error\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/error');
+
+module.exports = parent;

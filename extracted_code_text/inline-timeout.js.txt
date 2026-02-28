@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\clean-css\lib\options\inline-timeout.js
+================================================================================
+
+var DEFAULT_TIMEOUT = 5000;
+
+function inlineTimeoutFrom(option) {
+  return option || DEFAULT_TIMEOUT;
+}
+
+module.exports = inlineTimeoutFrom;

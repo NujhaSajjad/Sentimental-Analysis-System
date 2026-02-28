@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\immer\dist\plugins\mapset.d.ts
+================================================================================
+
+export declare function enableMapSet(): void;
+//# sourceMappingURL=mapset.d.ts.map

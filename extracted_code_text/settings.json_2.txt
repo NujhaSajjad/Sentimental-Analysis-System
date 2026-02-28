@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\rollup-plugin-terser\node_modules\serialize-javascript\.vscode\settings.json
+================================================================================
+
+{
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "javascript"
+  ]
+}

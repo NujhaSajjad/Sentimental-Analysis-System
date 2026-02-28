@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\is-processable-layer-rule.d.ts
+================================================================================
+
+import type { AtRule } from 'postcss';
+export declare function isProcessableLayerRule(atRule: AtRule): boolean;

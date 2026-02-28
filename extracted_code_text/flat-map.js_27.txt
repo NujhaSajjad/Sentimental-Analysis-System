@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\iterator\flat-map.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/iterator/flat-map');
+require('../../modules/esnext.iterator.constructor');
+require('../../modules/esnext.iterator.flat-map');
+
+module.exports = parent;

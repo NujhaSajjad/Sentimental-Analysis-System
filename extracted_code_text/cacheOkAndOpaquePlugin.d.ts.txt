@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\workbox-strategies\plugins\cacheOkAndOpaquePlugin.d.ts
+================================================================================
+
+import { WorkboxPlugin } from 'workbox-core/types.js';
+import '../_version.js';
+export declare const cacheOkAndOpaquePlugin: WorkboxPlugin;

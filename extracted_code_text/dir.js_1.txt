@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\commondir\example\dir.js
+================================================================================
+
+var commondir = require('../');
+var dir = commondir(process.argv.slice(2));
+console.log(dir);

@@ -1,0 +1,18 @@
+Relative path: avanza-frontend\node_modules\@babel\helper-globals\data\builtin-lower.json
+================================================================================
+
+[
+  "decodeURI",
+  "decodeURIComponent",
+  "encodeURI",
+  "encodeURIComponent",
+  "escape",
+  "eval",
+  "globalThis",
+  "isFinite",
+  "isNaN",
+  "parseFloat",
+  "parseInt",
+  "undefined",
+  "unescape"
+]

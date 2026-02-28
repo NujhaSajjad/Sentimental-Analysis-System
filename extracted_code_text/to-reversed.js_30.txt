@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\instance\to-reversed.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/instance/to-reversed');

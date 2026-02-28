@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-cacheable-response\src\_version.ts
+================================================================================
+
+// @ts-ignore
+try{self['workbox:cacheable-response:6.6.0']&&_()}catch(e){}

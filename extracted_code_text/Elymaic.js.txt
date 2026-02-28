@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Elymaic.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x10FE0, 0x10FF6);
+exports.characters = set;

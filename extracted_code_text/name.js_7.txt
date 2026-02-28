@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\function\name.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/function/name');

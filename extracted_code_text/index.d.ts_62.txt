@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\types\index.d.ts
+================================================================================
+
+/// <reference path="jest.d.ts" />

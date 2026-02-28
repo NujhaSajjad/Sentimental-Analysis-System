@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\openai\src\resources\chat.ts
+================================================================================
+
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+export * from './chat/index';

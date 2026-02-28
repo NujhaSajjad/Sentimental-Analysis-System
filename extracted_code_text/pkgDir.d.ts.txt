@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-module-utils\pkgDir.d.ts
+================================================================================
+
+declare function pkgDir(cwd: string): string | null;
+
+export default pkgDir;

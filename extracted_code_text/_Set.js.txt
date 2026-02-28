@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\lodash\_Set.js
+================================================================================
+
+var getNative = require('./_getNative'),
+    root = require('./_root');
+
+/* Built-in method references that are verified to be native. */
+var Set = getNative(root, 'Set');
+
+module.exports = Set;

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@rushstack\eslint-patch\lib\exports\eslint-bulk.d.ts
+================================================================================
+
+import '../eslint-bulk-suppressions/cli/start';
+//# sourceMappingURL=eslint-bulk.d.ts.map

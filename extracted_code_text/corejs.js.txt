@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\is-generator-function\test\corejs.js
+================================================================================
+
+'use strict';
+
+// @ts-ignore
+require('core-js');
+
+require('./');

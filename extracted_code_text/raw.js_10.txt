@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\string\raw.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/string/raw');
+
+module.exports = parent;

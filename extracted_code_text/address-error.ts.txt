@@ -1,0 +1,14 @@
+Relative path: backend\node_modules\ip-address\src\address-error.ts
+================================================================================
+
+export class AddressError extends Error {
+  parseMessage?: string;
+
+  constructor(message: string, parseMessage?: string) {
+    super(message);
+
+    this.name = 'AddressError';
+
+    this.parseMessage = parseMessage;
+  }
+}

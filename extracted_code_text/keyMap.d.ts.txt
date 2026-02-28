@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\keyboard\keyMap.d.ts
+================================================================================
+
+import { keyboardKey } from './types';
+/**
+ * Mapping for a default US-104-QWERTY keyboard
+ */
+export declare const defaultKeyMap: keyboardKey[];

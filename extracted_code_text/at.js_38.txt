@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\array\virtual\at.js
+================================================================================
+
+'use strict';
+require('../../../modules/es.array.at');
+var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
+
+module.exports = getBuiltInPrototypeMethod('Array', 'at');

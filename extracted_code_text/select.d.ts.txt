@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\select.d.ts
+================================================================================
+
+import type { KeywordDefinition, ErrorObject } from "ajv";
+import type { DefinitionOptions } from "./_types";
+export declare type SelectError = ErrorObject<"select", {
+    failingCase?: string;
+    failingDefault?: true;
+}>;
+export default function getDef(opts?: DefinitionOptions): KeywordDefinition[];

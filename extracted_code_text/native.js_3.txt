@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\uuid\dist\native.js
+================================================================================
+
+const randomUUID = typeof crypto !== 'undefined' && crypto.randomUUID && crypto.randomUUID.bind(crypto);
+export default { randomUUID };

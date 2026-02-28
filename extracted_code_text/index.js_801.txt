@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\array-buffer\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/array-buffer');
+
+module.exports = parent;

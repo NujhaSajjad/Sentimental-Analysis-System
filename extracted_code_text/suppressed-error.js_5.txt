@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\suppressed-error.js
+================================================================================
+
+'use strict';
+var parent = require('../stable/suppressed-error');
+require('../modules/esnext.suppressed-error.constructor');
+
+module.exports = parent;

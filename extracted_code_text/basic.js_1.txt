@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@webassemblyjs\ast\lib\types\basic.js
+================================================================================
+
+"use strict";

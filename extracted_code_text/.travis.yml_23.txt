@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\json-stable-stringify-without-jsonify\.travis.yml
+================================================================================
+
+language: node_js
+node_js:
+  - "0.8"
+  - "0.10"

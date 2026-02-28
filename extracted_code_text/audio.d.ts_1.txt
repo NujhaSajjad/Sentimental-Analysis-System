@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\audio.d.ts
+================================================================================
+
+export * from "./audio/index.js";
+//# sourceMappingURL=audio.d.ts.map

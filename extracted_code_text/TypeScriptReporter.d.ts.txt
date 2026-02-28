@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\typescript-reporter\reporter\TypeScriptReporter.d.ts
+================================================================================
+
+import { Reporter } from '../../reporter';
+import { TypeScriptReporterConfiguration } from '../TypeScriptReporterConfiguration';
+declare function createTypeScriptReporter(configuration: TypeScriptReporterConfiguration): Reporter;
+export { createTypeScriptReporter };

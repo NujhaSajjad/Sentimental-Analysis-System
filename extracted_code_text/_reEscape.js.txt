@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\lodash\_reEscape.js
+================================================================================
+
+/** Used to match template delimiters. */
+var reEscape = /<%-([\s\S]+?)%>/g;
+
+module.exports = reEscape;

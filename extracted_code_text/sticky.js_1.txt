@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\core-js\es\regexp\sticky.js
+================================================================================
+
+'use strict';
+require('../../modules/es.regexp.constructor');
+require('../../modules/es.regexp.exec');
+require('../../modules/es.regexp.sticky');
+
+module.exports = function (it) {
+  return it.sticky;
+};

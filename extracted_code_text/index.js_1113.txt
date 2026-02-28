@@ -1,0 +1,20 @@
+Relative path: avanza-frontend\node_modules\file-loader\node_modules\schema-utils\dist\index.js
+================================================================================
+
+"use strict";
+
+const {
+  validate,
+  ValidationError,
+  enableValidation,
+  disableValidation,
+  needValidate
+} = require("./validate");
+
+module.exports = {
+  validate,
+  ValidationError,
+  enableValidation,
+  disableValidation,
+  needValidate
+};

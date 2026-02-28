@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_set\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_set.cjs",
+    "module": "../../esm/_set.js"
+}

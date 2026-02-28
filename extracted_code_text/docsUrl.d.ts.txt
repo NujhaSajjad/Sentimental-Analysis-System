@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\docsUrl.d.ts
+================================================================================
+
+export = docsUrl;
+declare function docsUrl(ruleName: any): string;
+//# sourceMappingURL=docsUrl.d.ts.map

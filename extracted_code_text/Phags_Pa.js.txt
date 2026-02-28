@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Phags_Pa.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0xA840, 0xA877);
+exports.characters = set;

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\array-filtering-stage-1.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-array-filtering
+require('../modules/esnext.array.filter-reject');
+require('../modules/esnext.typed-array.filter-reject');

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\string\repeat.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/string/repeat');
+
+module.exports = parent;

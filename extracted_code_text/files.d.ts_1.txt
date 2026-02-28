@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\containers\files.d.ts
+================================================================================
+
+export * from "./files/index.js";
+//# sourceMappingURL=files.d.ts.map

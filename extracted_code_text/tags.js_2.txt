@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\stylehacks\src\dictionary\tags.js
+================================================================================
+
+'use strict';
+const BODY = 'body';
+const HTML = 'html';
+
+module.exports = { BODY, HTML };

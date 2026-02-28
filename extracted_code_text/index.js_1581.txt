@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\postcss-svgo\node_modules\css-tree\lib\syntax\atrule\index.js
+================================================================================
+
+module.exports = {
+    'font-face': require('./font-face'),
+    'import': require('./import'),
+    'media': require('./media'),
+    'page': require('./page'),
+    'supports': require('./supports')
+};

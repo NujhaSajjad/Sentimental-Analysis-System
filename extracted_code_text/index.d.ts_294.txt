@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\rpc-ipc\index.d.ts
+================================================================================
+
+export * from './RpcIpcMessagePort';
+export * from './RpcIpcMessageChannel';

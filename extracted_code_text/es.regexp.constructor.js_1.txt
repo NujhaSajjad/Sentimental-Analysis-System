@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\modules\es.regexp.constructor.js
+================================================================================
+
+'use strict';
+var setSpecies = require('../internals/set-species');
+
+setSpecies('RegExp');

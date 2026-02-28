@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\emoji-regex\text.d.ts
+================================================================================
+
+declare module 'emoji-regex/text' {
+  function emojiRegex(): RegExp;
+
+  export = emojiRegex;
+}

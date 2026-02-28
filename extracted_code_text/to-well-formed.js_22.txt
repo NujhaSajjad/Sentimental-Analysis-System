@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\string\to-well-formed.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/string/to-well-formed');

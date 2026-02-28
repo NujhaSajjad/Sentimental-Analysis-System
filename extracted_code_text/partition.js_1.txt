@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\partition.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('partition', require('../partition'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

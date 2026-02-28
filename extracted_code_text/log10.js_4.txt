@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\math\log10.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/math/log10');
+
+module.exports = parent;

@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\_escapeMap.js
+================================================================================
+
+// Internal list of HTML entities for escaping.
+var escapeMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#x27;',
+  '`': '&#x60;'
+};
+
+module.exports = escapeMap;

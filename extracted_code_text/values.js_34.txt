@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\object\values.js
+================================================================================
+
+'use strict';
+require('../../modules/es.object.values');
+var path = require('../../internals/path');
+
+module.exports = path.Object.values;

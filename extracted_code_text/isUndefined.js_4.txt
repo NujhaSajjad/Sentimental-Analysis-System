@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\underscore\modules\isUndefined.js
+================================================================================
+
+// Is a given variable undefined?
+export default function isUndefined(obj) {
+  return obj === void 0;
+}

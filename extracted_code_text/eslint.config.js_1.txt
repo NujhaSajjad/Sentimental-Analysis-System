@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\fast-uri\eslint.config.js
+================================================================================
+
+'use strict'
+
+module.exports = require('neostandard')({
+  ignores: require('neostandard').resolveIgnoresFromGitignore(),
+  ts: true
+})

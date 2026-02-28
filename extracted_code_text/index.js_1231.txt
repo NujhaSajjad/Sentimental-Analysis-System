@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\immer\dist\index.js
+================================================================================
+
+
+'use strict'
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./immer.cjs.production.min.js')
+} else {
+  module.exports = require('./immer.cjs.development.js')
+}

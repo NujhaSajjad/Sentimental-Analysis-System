@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\stubs\tailwind.config.ts
+================================================================================
+
+import type { Config } from 'tailwindcss'
+
+export default __CONFIG__ satisfies Config

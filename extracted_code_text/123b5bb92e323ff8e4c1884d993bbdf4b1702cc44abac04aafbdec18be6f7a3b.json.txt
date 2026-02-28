@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\123b5bb92e323ff8e4c1884d993bbdf4b1702cc44abac04aafbdec18be6f7a3b.json
+================================================================================
+
+{"ast":null,"code":"// eslint-disable-next-line strict\nexport default null;","map":{"version":3,"names":[],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/axios/lib/helpers/null.js"],"sourcesContent":["// eslint-disable-next-line strict\nexport default null;\n"],"mappings":"AAAA;AACA,eAAe,IAAI","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

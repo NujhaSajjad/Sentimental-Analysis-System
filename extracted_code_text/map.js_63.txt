@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\virtual\map.js
+================================================================================
+
+'use strict';
+var parent = require('../../../es/array/virtual/map');
+
+module.exports = parent;

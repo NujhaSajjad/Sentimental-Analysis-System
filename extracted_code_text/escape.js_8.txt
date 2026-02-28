@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\escape.js
+================================================================================
+
+'use strict';
+var parent = require('../es/escape');
+
+module.exports = parent;

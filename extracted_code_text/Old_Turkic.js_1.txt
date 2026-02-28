@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Old_Turkic.js
+================================================================================
+
+const set = require('regenerate')(0x205A, 0x2E30);
+set.addRange(0x10C00, 0x10C48);
+exports.characters = set;

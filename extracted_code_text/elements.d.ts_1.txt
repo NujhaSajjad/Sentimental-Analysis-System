@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\jtd\elements.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition, SchemaObject } from "../../types";
+import { _JTDTypeError } from "./error";
+export type JTDElementsError = _JTDTypeError<"elements", "array", SchemaObject>;
+declare const def: CodeKeywordDefinition;
+export default def;

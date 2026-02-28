@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\is-async-function\tsconfig.json
+================================================================================
+
+{
+  "extends": "@ljharb/tsconfig",
+  "compilerOptions": {
+    "target": "ES2021",
+    "maxNodeModuleJsDepth": 0,
+  },
+  "exclude": [
+    "coverage",
+  ],
+}

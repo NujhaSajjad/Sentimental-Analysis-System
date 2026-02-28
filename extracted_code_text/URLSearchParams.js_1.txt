@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\axios\lib\platform\node\classes\URLSearchParams.js
+================================================================================
+
+'use strict';
+
+import url from 'url';
+export default url.URLSearchParams;

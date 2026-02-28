@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\csso\node_modules\css-tree\lib\syntax\config\lexer.js
+================================================================================
+
+var data = require('../../../data');
+
+module.exports = {
+    generic: true,
+    types: data.types,
+    atrules: data.atrules,
+    properties: data.properties,
+    node: require('../node')
+};

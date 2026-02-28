@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\get-own-enumerable-property-symbols\lib\index.d.ts
+================================================================================
+
+declare const _default: (object: object) => symbol[];
+export default _default;

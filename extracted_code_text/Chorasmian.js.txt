@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Chorasmian.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x10FB0, 0x10FCB);
+exports.characters = set;

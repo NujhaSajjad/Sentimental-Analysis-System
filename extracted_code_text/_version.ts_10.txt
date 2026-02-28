@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-routing\src\_version.ts
+================================================================================
+
+// @ts-ignore
+try{self['workbox:routing:6.6.0']&&_()}catch(e){}

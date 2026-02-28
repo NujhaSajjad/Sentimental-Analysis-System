@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\string-padding.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-string-pad-start-end
+require('../modules/es.string.pad-end');
+require('../modules/es.string.pad-start');

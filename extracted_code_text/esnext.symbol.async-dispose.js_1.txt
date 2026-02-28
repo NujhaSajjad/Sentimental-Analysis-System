@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\modules\esnext.symbol.async-dispose.js
+================================================================================
+
+'use strict';
+// TODO: Remove from `core-js@4`
+require('../modules/es.symbol.async-dispose');

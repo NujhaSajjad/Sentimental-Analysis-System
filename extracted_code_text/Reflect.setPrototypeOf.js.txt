@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\set-proto\Reflect.setPrototypeOf.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./Reflect.setPrototypeOf')} */
+module.exports = (typeof Reflect !== 'undefined' && Reflect.setPrototypeOf) || null;

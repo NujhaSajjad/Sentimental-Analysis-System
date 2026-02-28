@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\array-buffer-byte-length\index.d.ts
+================================================================================
+
+declare function arrayBufferByteLength(buffer: ArrayBuffer): number;
+declare function arrayBufferByteLength(buffer: unknown): typeof NaN;
+
+export = arrayBufferByteLength;

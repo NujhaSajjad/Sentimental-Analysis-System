@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_update\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_update.cjs",
+    "module": "../../esm/_update.js"
+}

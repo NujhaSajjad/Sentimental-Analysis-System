@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\workbox-core\_private\getFriendlyURL.d.ts
+================================================================================
+
+import '../_version.js';
+declare const getFriendlyURL: (url: URL | string) => string;
+export { getFriendlyURL };

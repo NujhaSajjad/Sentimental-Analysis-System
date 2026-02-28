@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\eslint-module-utils\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"compilerOptions": {
+		"target": "ES2017",
+		"moduleResolution": "node",
+		"maxNodeModuleJsDepth": 0,
+	},
+	"exclude": [
+		"coverage",
+	],
+}

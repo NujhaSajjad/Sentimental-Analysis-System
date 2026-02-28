@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-merge-longhand\types\lib\colornames.d.ts
+================================================================================
+
+declare const _exports: Set<string>;
+export = _exports;

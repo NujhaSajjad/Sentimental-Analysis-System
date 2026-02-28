@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\instance\fill.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/instance/fill');
+
+module.exports = parent;

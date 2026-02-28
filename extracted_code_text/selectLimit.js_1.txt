@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\neo-async\selectLimit.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./async').selectLimit;

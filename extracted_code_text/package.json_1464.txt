@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_read_only_error\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_read_only_error.cjs",
+    "module": "../../esm/_read_only_error.js"
+}

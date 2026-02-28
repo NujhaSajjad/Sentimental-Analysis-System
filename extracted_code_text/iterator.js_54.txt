@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\typed-array\iterator.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/typed-array/iterator');

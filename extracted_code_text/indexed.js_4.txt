@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\async-iterator\indexed.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/async-iterator/indexed');

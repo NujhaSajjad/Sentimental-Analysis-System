@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\es-abstract\helpers\records\iterator-record-2023.js
+================================================================================
+
+'use strict';
+
+var isIteratorRecordNew = require('./iterator-record');
+
+module.exports = function isIteratorRecord(value) {
+	return isIteratorRecordNew(value) && typeof value['[[NextMethod]]'] === 'function';
+};

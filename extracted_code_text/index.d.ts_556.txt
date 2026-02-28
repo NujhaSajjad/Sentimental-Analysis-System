@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\stop-iteration-iterator\index.d.ts
+================================================================================
+
+declare global {
+    const StopIteration: (object & { readonly __brand__?: unique symbol }) | undefined;
+}
+
+declare function getStopIterationIterator<T>(origIterator: { next(): IteratorResult<T> }): Iterator<T, unknown, T>;
+
+export = getStopIterationIterator;

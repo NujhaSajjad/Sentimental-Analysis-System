@@ -1,0 +1,283 @@
+Relative path: avanza-frontend\src\components\CallHistory.jsx
+================================================================================
+
+import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  Phone, Calendar, Clock, TrendingUp, Download, 
+  ChevronRight, Filter, Search 
+} from 'lucide-react';
+import axios from 'axios';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+
+const CallHistory = ({ customerId, onCallSelect, onClose }) => {
+  const [calls, setCalls] = useState([]);
+  const [filteredCalls, setFilteredCalls] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filterSentiment, setFilterSentiment] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const fetchCallHistory = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(`${API_URL}/api/customers/${customerId}/calls`);
+      
+      if (response.data.success) {
+        setCalls(response.data.calls);
+        setFilteredCalls(response.data.calls);
+      }
+    } catch (error) {
+      console.error('Failed to fetch call history:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const applyFilters = useCallback(() => {
+    let filtered = [...calls];
+
+    // Filter by sentiment
+    if (filterSentiment !== 'all') {
+      filtered = filtered.filter(call => 
+        call.sentiment?.toLowerCase() === filterSentiment.toLowerCase()
+      );
+    }
+
+    // Filter by search term
+    if (searchTerm) {
+      const search = searchTerm.toLowerCase();
+      filtered = filtered.filter(call =>
+        call.primary_intent?.toLowerCase().includes(search) ||
+        call.call_category?.toLowerCase().includes(search) ||
+        call.call_id?.toString().includes(search)
+      );
+    }
+
+    setFilteredCalls(filtered);
+  }, [calls, filterSentiment, searchTerm]);
+
+  useEffect(() => {
+    if (customerId) {
+      fetchCallHistory();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [customerId]);
+
+  useEffect(() => {
+    applyFilters();
+  }, [applyFilters]);
+
+  const formatDate = (date) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+
+  const formatDuration = (seconds) => {
+    if (!seconds) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const getSentimentColor = (sentiment) => {
+    if (!sentiment) return '#6B7280';
+    const lower = sentiment.toLowerCase();
+    if (lower === 'positive') return '#10B981';
+    if (lower === 'negative') return '#EF4444';
+    return '#F59E0B';
+  };
+
+  const getStatusBadgeClass = (status) => {
+    if (!status) return 'status-pending';
+    const lower = status.toLowerCase();
+    if (lower === 'completed' || lower === 'resolved') return 'status-completed';
+    if (lower === 'pending') return 'status-pending';
+    if (lower === 'failed') return 'status-failed';
+    return 'status-pending';
+  };
+
+  const downloadPDF = async (callId, e) => {
+    e.stopPropagation();
+    try {
+      const response = await axios.get(
+        `${API_URL}/api/reports/${callId}/download`,
+        { responseType: 'blob' }
+      );
+      
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `call-report-${callId}.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert('Failed to download PDF report');
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="call-history-modal">
+        <div className="history-loading">
+          <div className="spinner" />
+          <p>Loading call history...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="call-history-modal" onClick={onClose}>
+      <div className="history-content" onClick={(e) => e.stopPropagation()}>
+        {/* Header */}
+        <div className="history-header">
+          <div>
+            <h2>Call History</h2>
+            <p>{calls.length} total calls</p>
+          </div>
+          <button className="close-button" onClick={onClose}>×</button>
+        </div>
+
+        {/* Filters */}
+        <div className="history-filters">
+          <div className="filter-search">
+            <Search size={18} />
+            <input
+              type="text"
+              placeholder="Search by intent, category, or call ID..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="filter-buttons">
+            <Filter size={16} />
+            <button
+              className={filterSentiment === 'all' ? 'active' : ''}
+              onClick={() => setFilterSentiment('all')}
+            >
+              All
+            </button>
+            <button
+              className={filterSentiment === 'positive' ? 'active' : ''}
+              onClick={() => setFilterSentiment('positive')}
+            >
+              Positive
+            </button>
+            <button
+              className={filterSentiment === 'neutral' ? 'active' : ''}
+              onClick={() => setFilterSentiment('neutral')}
+            >
+              Neutral
+            </button>
+            <button
+              className={filterSentiment === 'negative' ? 'active' : ''}
+              onClick={() => setFilterSentiment('negative')}
+            >
+              Negative
+            </button>
+          </div>
+        </div>
+
+        {/* Call List */}
+        <div className="history-list">
+          {filteredCalls.length === 0 ? (
+            <div className="no-calls">
+              <Phone size={48} style={{ color: '#D1D5DB' }} />
+              <p>No calls found</p>
+              <span>Try adjusting your filters</span>
+            </div>
+          ) : (
+            filteredCalls.map((call) => (
+              <div
+                key={call.call_id}
+                className="call-history-item"
+                onClick={() => onCallSelect(call.call_id)}
+              >
+                <div className="call-icon">
+                  <Phone size={20} />
+                </div>
+                
+                <div className="call-details">
+                  <div className="call-header-row">
+                    <h4>Call #{call.call_id}</h4>
+                    <span className={`status-badge ${getStatusBadgeClass(call.processing_status)}`}>
+                      {call.processing_status || 'Pending'}
+                    </span>
+                  </div>
+                  
+                  <div className="call-meta">
+                    <span>
+                      <Calendar size={14} />
+                      {formatDate(call.call_date)}
+                    </span>
+                    <span>
+                      <Clock size={14} />
+                      {formatDuration(call.call_duration)}
+                    </span>
+                    {call.primary_intent && (
+                      <span className="intent-badge">
+                        {call.primary_intent}
+                      </span>
+                    )}
+                  </div>
+
+                  {call.call_summary && (
+                    <p className="call-summary">{call.call_summary}</p>
+                  )}
+                </div>
+
+                <div className="call-metrics">
+                  {call.sentiment && (
+                    <div className="metric-pill">
+                      <TrendingUp size={14} />
+                      <span style={{ color: getSentimentColor(call.sentiment) }}>
+                        {call.sentiment}
+                      </span>
+                    </div>
+                  )}
+                  {call.quality_score && (
+                    <div className="metric-pill">
+                      <span className="metric-label">Quality:</span>
+                      <span className="metric-value">{Math.round(call.quality_score)}/100</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="call-actions">
+                  <button
+                    className="icon-button"
+                    onClick={(e) => downloadPDF(call.call_id, e)}
+                    title="Download PDF Report"
+                  >
+                    <Download size={18} />
+                  </button>
+                  <ChevronRight size={20} className="chevron" />
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* Summary Footer */}
+        {filteredCalls.length > 0 && (
+          <div className="history-footer">
+            <div className="footer-stat">
+              <span>Showing</span>
+              <strong>{filteredCalls.length}</strong>
+              <span>of {calls.length} calls</span>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default CallHistory;

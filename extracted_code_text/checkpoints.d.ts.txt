@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\fine-tuning\checkpoints.d.ts
+================================================================================
+
+export * from "./checkpoints/index.js";
+//# sourceMappingURL=checkpoints.d.ts.map

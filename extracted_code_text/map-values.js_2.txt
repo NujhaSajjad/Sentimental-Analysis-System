@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\map\map-values.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/map/map-values');

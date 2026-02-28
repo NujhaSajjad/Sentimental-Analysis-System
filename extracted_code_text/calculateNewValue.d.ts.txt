@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\calculateNewValue.d.ts
+================================================================================
+
+export declare function calculateNewValue(newEntry: string, element: HTMLElement, value?: string, selectionRange?: {
+    selectionStart: number | null;
+    selectionEnd: number | null;
+}, deleteContent?: 'backward' | 'forward'): {
+    newValue: string;
+    newSelectionStart: number;
+};

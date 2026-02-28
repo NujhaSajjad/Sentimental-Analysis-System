@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_set_prototype_of\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_set_prototype_of.cjs",
+    "module": "../../esm/_set_prototype_of.js"
+}

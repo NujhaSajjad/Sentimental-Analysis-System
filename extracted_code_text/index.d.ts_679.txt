@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\beta\realtime\index.d.ts
+================================================================================
+
+export { OpenAIRealtimeError } from "./internal-base.js";
+//# sourceMappingURL=index.d.ts.map

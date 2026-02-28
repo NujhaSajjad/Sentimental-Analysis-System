@@ -1,0 +1,159 @@
+Relative path: avanza-frontend\src\components\SentimentTimeline.jsx
+================================================================================
+
+import React, { useState, useEffect, useCallback } from 'react';
+import { TrendingUp, TrendingDown, Calendar } from 'lucide-react';
+import axios from 'axios';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+
+const SentimentTimeline = ({ customerId }) => {
+  const [timeline, setTimeline] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchSentimentTimeline = useCallback(async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(
+        `${API_URL}/api/customers/${customerId}/sentiment-timeline`
+      );
+      
+      if (response.data.success) {
+        setTimeline(response.data.timeline);
+      }
+    } catch (error) {
+      console.error('Failed to fetch sentiment timeline:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, [customerId]);
+
+  useEffect(() => {
+    if (customerId) {
+      fetchSentimentTimeline();
+    }
+  }, [customerId, fetchSentimentTimeline]);
+
+  const getSentimentColor = (sentiment) => {
+    if (!sentiment) return '#6B7280';
+    const lower = sentiment.toLowerCase();
+    if (lower === 'positive') return '#10B981';
+    if (lower === 'negative') return '#EF4444';
+    return '#F59E0B';
+  };
+
+  const formatDate = (date) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  };
+
+  const getScorePosition = (score) => {
+    // Map score from -100 to 100 to 0% to 100%
+    return ((score + 100) / 200) * 100;
+  };
+
+  if (loading) {
+    return (
+      <div className="sentiment-timeline-loading">
+        <div className="spinner-small" />
+        <span>Loading sentiment timeline...</span>
+      </div>
+    );
+  }
+
+  if (timeline.length === 0) {
+    return (
+      <div className="sentiment-timeline-empty">
+        <TrendingUp size={32} style={{ color: '#D1D5DB' }} />
+        <p>No sentiment data available yet</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="sentiment-timeline">
+      <div className="timeline-header">
+        <h3>Sentiment Timeline</h3>
+        <span className="timeline-count">{timeline.length} data points</span>
+      </div>
+
+      <div className="timeline-chart">
+        {/* Y-axis labels */}
+        <div className="chart-y-axis">
+          <span>Positive</span>
+          <span>Neutral</span>
+          <span>Negative</span>
+        </div>
+
+        {/* Timeline items */}
+        <div className="timeline-items">
+          {timeline.map((item, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-date">
+                <Calendar size={12} />
+                {formatDate(item.recorded_at)}
+              </div>
+              
+              <div className="timeline-bar">
+                <div 
+                  className="sentiment-marker"
+                  style={{
+                    bottom: `${getScorePosition(item.sentiment_score)}%`,
+                    background: getSentimentColor(item.sentiment_category)
+                  }}
+                  title={`${item.sentiment_category}: ${item.sentiment_score}`}
+                >
+                  <div className="marker-tooltip">
+                    <strong>{item.sentiment_category}</strong>
+                    <span>Score: {item.sentiment_score}</span>
+                  </div>
+                </div>
+                
+                {/* Connect to previous point */}
+                {index > 0 && (
+                  <svg className="timeline-connector">
+                    <line
+                      x1="0"
+                      y1={`${100 - getScorePosition(timeline[index - 1].sentiment_score)}%`}
+                      x2="100%"
+                      y2={`${100 - getScorePosition(item.sentiment_score)}%`}
+                      stroke={getSentimentColor(item.sentiment_category)}
+                      strokeWidth="2"
+                      opacity="0.3"
+                    />
+                  </svg>
+                )}
+              </div>
+
+              <div className="timeline-label">
+                {item.sentiment_category}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Trend Indicator */}
+      {timeline.length >= 2 && (
+        <div className="timeline-trend">
+          {timeline[timeline.length - 1].sentiment_score > timeline[0].sentiment_score ? (
+            <div className="trend-improving">
+              <TrendingUp size={16} />
+              <span>Sentiment improving over time</span>
+            </div>
+          ) : (
+            <div className="trend-declining">
+              <TrendingDown size={16} />
+              <span>Sentiment declining - needs attention</span>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SentimentTimeline;

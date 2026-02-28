@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_to_consumable_array\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_to_consumable_array.cjs",
+    "module": "../../esm/_to_consumable_array.js"
+}

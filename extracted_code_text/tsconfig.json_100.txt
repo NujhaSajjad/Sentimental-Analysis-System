@@ -1,0 +1,13 @@
+Relative path: backend\node_modules\call-bound\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["es2024"],
+	},
+	"exclude": [
+		"coverage",
+	],
+}

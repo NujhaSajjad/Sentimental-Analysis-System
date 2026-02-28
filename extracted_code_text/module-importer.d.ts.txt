@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@humanwhocodes\module-importer\dist\module-importer.d.ts
+================================================================================
+
+export { ModuleImporter };
+import { ModuleImporter } from "./module-importer.cjs";

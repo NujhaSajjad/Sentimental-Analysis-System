@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\postcss-svgo\types\lib\url.d.ts
+================================================================================
+
+/**
+ * @param {string} data
+ * @return {string}
+ */
+export function encode(data: string): string;
+export const decode: typeof decodeURIComponent;

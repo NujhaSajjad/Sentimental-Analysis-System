@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\stubs\.prettierrc.json
+================================================================================
+
+{
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\package.json
+================================================================================
+
+{
+  "type": "module"
+}

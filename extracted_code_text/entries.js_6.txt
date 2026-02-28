@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\typed-array\entries.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/typed-array/entries');
+
+module.exports = parent;

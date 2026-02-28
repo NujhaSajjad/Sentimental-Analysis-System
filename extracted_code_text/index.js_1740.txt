@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\shell-quote\index.js
+================================================================================
+
+'use strict';
+
+exports.quote = require('./quote');
+exports.parse = require('./parse');

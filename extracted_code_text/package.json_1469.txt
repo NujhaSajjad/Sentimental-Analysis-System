@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_sliced_to_array_loose\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_sliced_to_array_loose.cjs",
+    "module": "../../esm/_sliced_to_array_loose.js"
+}

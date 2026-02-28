@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\forOwnRight.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('forOwnRight', require('../forOwnRight'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

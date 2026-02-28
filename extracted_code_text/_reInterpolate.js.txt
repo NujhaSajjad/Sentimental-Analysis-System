@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\lodash\_reInterpolate.js
+================================================================================
+
+/** Used to match template delimiters. */
+var reInterpolate = /<%=([\s\S]+?)%>/g;
+
+module.exports = reInterpolate;

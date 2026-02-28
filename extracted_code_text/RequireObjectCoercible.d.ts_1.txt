@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\es-object-atoms\RequireObjectCoercible.d.ts
+================================================================================
+
+declare function RequireObjectCoercible<T extends {}>(value: T, optMessage?: string): T;
+
+export = RequireObjectCoercible;

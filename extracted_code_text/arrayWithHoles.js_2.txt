@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\arrayWithHoles.js
+================================================================================
+
+function _arrayWithHoles(r) {
+  if (Array.isArray(r)) return r;
+}
+export { _arrayWithHoles as default };

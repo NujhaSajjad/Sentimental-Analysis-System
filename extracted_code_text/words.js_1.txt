@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\words.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('words', require('../words'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

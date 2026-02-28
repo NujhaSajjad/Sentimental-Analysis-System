@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\isValidDateValue.d.ts
+================================================================================
+
+export declare function isValidDateValue(element: HTMLInputElement & {
+    type: 'date';
+}, value: string): boolean;

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\defaultTheme.js
+================================================================================
+
+let defaultTheme = require('./lib/public/default-theme')
+module.exports = (defaultTheme.__esModule ? defaultTheme : { default: defaultTheme }).default

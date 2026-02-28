@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\invertObj.js
+================================================================================
+
+module.exports = require('./invert');

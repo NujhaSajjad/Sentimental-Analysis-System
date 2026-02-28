@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\array\virtual\concat.js
+================================================================================
+
+'use strict';
+var parent = require('../../../stable/array/virtual/concat');
+
+module.exports = parent;

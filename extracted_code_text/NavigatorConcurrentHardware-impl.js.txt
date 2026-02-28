@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\navigator\NavigatorConcurrentHardware-impl.js
+================================================================================
+
+"use strict";
+const os = require("os");
+
+exports.implementation = class NavigatorConcurrentHardwareImpl {
+  get hardwareConcurrency() {
+    return os.cpus().length;
+  }
+};

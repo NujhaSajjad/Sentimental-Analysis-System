@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\node_modules\resolve\index.js
+================================================================================
+
+var async = require('./lib/async');
+async.sync = require('./lib/sync');
+
+module.exports = async;

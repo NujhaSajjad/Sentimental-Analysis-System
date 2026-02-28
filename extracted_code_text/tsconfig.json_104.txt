@@ -1,0 +1,9 @@
+Relative path: backend\node_modules\es-object-atoms\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"compilerOptions": {
+		"target": "es5",
+	},
+}

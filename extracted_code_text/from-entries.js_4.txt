@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\object\from-entries.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/object/from-entries');
+require('../../modules/web.dom-collections.iterator');
+
+module.exports = parent;

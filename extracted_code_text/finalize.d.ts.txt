@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\immer\dist\core\finalize.d.ts
+================================================================================
+
+import { ImmerScope } from "../internal";
+export declare function processResult(result: any, scope: ImmerScope): any;
+//# sourceMappingURL=finalize.d.ts.map

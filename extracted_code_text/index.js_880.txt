@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\css-tree\lib\index.js
+================================================================================
+
+module.exports = require('./syntax');

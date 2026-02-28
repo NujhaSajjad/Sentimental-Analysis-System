@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\es-object-atoms\index.js
+================================================================================
+
+'use strict';
+
+/** @type {import('.')} */
+module.exports = Object;

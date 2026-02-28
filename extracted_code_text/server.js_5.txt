@@ -1,0 +1,860 @@
+Relative path: backend\server.js
+================================================================================
+
+// server.js - Enhanced Avanza Solutions Backend
+// Customer Intelligence Platform with Database Integration
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const multer = require('multer');
+const axios = require('axios');
+const path = require('path');
+const fs = require('fs');
+
+// Import custom modules
+const { requireAuth, registerAuthRoutes } = require('./services/auth');
+const db = require('./database');
+const transcriptionService = require('./services/transcriptionService');
+const analysisService = require('./services/analysisService');
+const { generateReportPDF } = require('./utils/pdfGenerator');
+
+// Initialize Express app
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  credentials: true
+}));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
+// Create uploads folder if it doesn't exist
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+// Configure file upload
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, uploadsDir);
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + '-' + file.originalname);
+  }
+});
+
+const upload = multer({ 
+  storage: storage,
+  limits: {
+    fileSize: 50 * 1024 * 1024 // 50MB
+  },
+  fileFilter: function (req, file, cb) {
+    const allowedMimes = ['audio/mpeg', 'audio/wav', 'audio/mp3', 'audio/m4a', 'audio/x-m4a', 'audio/ogg'];
+    if (allowedMimes.includes(file.mimetype) || file.originalname.match(/\.(mp3|wav|m4a|ogg)$/i)) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only audio files are allowed! (.mp3, .wav, .m4a, .ogg)'));
+    }
+  }
+});
+
+// ============================================
+// HEALTH CHECK
+// ============================================
+app.get('/health', async (req, res) => {
+  const hasOpenRouter = !!process.env.OPENROUTER_API_KEY;
+  
+  // Check Whisper service
+  let whisperStatus = '❌ Not Running';
+  try {
+    await axios.get('http://localhost:5000/health', { timeout: 2000 });
+    whisperStatus = '✅ Ready';
+  } catch (error) {
+    whisperStatus = '❌ Not Running';
+  }
+  
+  // Check database
+  let dbStatus = '❌ Not Connected';
+  try {
+    await db.pool.query('SELECT 1');
+    dbStatus = '✅ Connected';
+  } catch (error) {
+    dbStatus = `❌ Error: ${error.message}`;
+  }
+  
+  res.json({ 
+    status: 'Backend is running!', 
+    timestamp: new Date(),
+    database: dbStatus,
+    whisper: whisperStatus,
+    openrouter: hasOpenRouter ? '✅ Configured' : '❌ Missing',
+    endpoints: {
+      upload: '/api/upload-audio',
+      search: '/api/customers/search?q=...',
+      profile: '/api/customers/:cnic/profile',
+      calls: '/api/customers/:customerId/calls',
+      download: '/api/reports/:callId/download'
+    }
+  });
+});
+
+// ============================================
+// CUSTOMER SEARCH & PROFILE
+// ============================================
+
+/**
+ * Search customers by CNIC, phone, or name
+ * GET /api/customers/search?q=searchTerm
+ */
+app.get('/api/customers/search', async (req, res) => {
+  try {
+    const { q } = req.query;
+    
+    if (!q || q.length < 2) {
+      return res.status(400).json({ 
+        success: false,
+        error: 'Search term must be at least 2 characters' 
+      });
+    }
+    
+    console.log(`🔍 Searching customers: "${q}"`);
+    
+    const results = await db.searchCustomers(q);
+    
+    res.json({
+      success: true,
+      count: results.length,
+      customers: results
+    });
+  } catch (error) {
+    console.error('Search error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Search failed',
+      details: error.message 
+    });
+  }
+});
+
+/**
+ * Get complete customer profile
+ * GET /api/customers/:cnic/profile
+ */
+app.get('/api/customers/:cnic/profile', async (req, res) => {
+  try {
+    const { cnic } = req.params;
+    
+    console.log(`📋 Getting profile for CNIC: ${cnic}`);
+    
+    const profile = await db.getCustomerCompleteProfile(cnic);
+    
+    if (!profile) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Customer not found' 
+      });
+    }
+    
+    res.json({
+      success: true,
+      profile: profile
+    });
+  } catch (error) {
+    console.error('Profile error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to get profile',
+      details: error.message 
+    });
+  }
+});
+
+/**
+ * Get all calls for a customer
+ * GET /api/customers/:customerId/calls
+ */
+app.get('/api/customers/:customerId/calls', async (req, res) => {
+  try {
+    const customerId = parseInt(req.params.customerId);
+    
+    console.log(`📞 Getting calls for customer: ${customerId}`);
+    
+    const calls = await db.getCustomerAllCalls(customerId);
+    
+    res.json({
+      success: true,
+      count: calls.length,
+      calls: calls
+    });
+  } catch (error) {
+    console.error('Calls error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to get calls',
+      details: error.message 
+    });
+  }
+});
+
+/**
+ * Get customer sentiment timeline
+ * GET /api/customers/:customerId/sentiment-timeline
+ */
+app.get('/api/customers/:customerId/sentiment-timeline', async (req, res) => {
+  try {
+    const customerId = parseInt(req.params.customerId);
+    
+    console.log(`📈 Getting sentiment timeline for customer: ${customerId}`);
+    
+    const timeline = await db.getCustomerSentimentTimeline(customerId);
+    
+    res.json({
+      success: true,
+      timeline: timeline
+    });
+  } catch (error) {
+    console.error('Timeline error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to get sentiment timeline',
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// AUDIO UPLOAD
+// ============================================
+
+/**
+ * Upload audio file with customer information
+ * POST /api/upload-audio
+ * Body: FormData with 'audio' file + optional CNIC and phone_number
+ */
+app.post('/api/upload-audio', upload.single('audio'), async (req, res) => {
+  try {
+    const audioFile = req.file;
+    
+    if (!audioFile) {
+      return res.status(400).json({ 
+        success: false,
+        error: 'No audio file uploaded' 
+      });
+    }
+
+    console.log(`\n📤 File uploaded: ${audioFile.originalname}`);
+    
+    // Get customer information from request
+    const cnic = req.body.cnic;
+    const phoneNumber = req.body.phone_number;
+    const customerName = req.body.customer_name;
+    const customerEmail = req.body.customer_email;
+    
+    let customer = null;
+    let customerHistory = null;
+    
+    // If CNIC or phone provided, find/create customer
+    if (cnic || phoneNumber) {
+      try {
+        customer = await db.findOrCreateCustomer(
+          cnic || `TEMP-${Date.now()}`,
+          phoneNumber || `+92${Date.now()}`,
+          {
+            full_name: customerName || 'Unknown Customer',
+            email: customerEmail || null
+          }
+        );
+        
+        console.log(`👤 Customer: ${customer.full_name} (ID: ${customer.customer_id})`);
+        
+        // Get customer's last call for context
+        if (phoneNumber) {
+          customerHistory = await db.getCustomerLastCall(phoneNumber);
+          if (customerHistory) {
+            console.log(`📚 Last call: ${customerHistory.last_call_date}`);
+          }
+        }
+      } catch (customerError) {
+        console.warn('⚠️ Customer lookup failed, continuing without customer link:', customerError.message);
+      }
+    }
+    
+    // Create call record in database
+    const dbCall = await db.createCall(
+      customer?.customer_id || null,
+      null, // agent_id will be set later
+      {
+        filename: audioFile.filename,
+        filepath: audioFile.path,
+        size: audioFile.size,
+        format: audioFile.mimetype.split('/')[1] || 'm4a'
+      }
+    );
+
+    res.json({
+      success: true,
+      message: 'Audio uploaded successfully',
+      callId: dbCall.call_id,
+      filename: audioFile.originalname,
+      size: audioFile.size,
+      customer: customer ? {
+        customer_id: customer.customer_id,
+        cnic: customer.cnic,
+        full_name: customer.full_name,
+        total_calls: customer.total_calls
+      } : null,
+      customerHistory: customerHistory
+    });
+
+  } catch (error) {
+    console.error('Upload error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Upload failed', 
+      details: error.message 
+    });
+  }
+});
+
+// Handle multer errors
+app.use((error, req, res, next) => {
+  if (error instanceof multer.MulterError) {
+    if (error.code === 'LIMIT_FILE_SIZE') {
+      return res.status(400).json({
+        success: false,
+        error: 'File too large',
+        details: 'Maximum file size is 50MB'
+      });
+    }
+    return res.status(400).json({
+      success: false,
+      error: 'File upload error',
+      details: error.message
+    });
+  }
+  next(error);
+});
+
+// ============================================
+// TRANSCRIPTION
+// ============================================
+
+/**
+ * Transcribe audio (handles both short and long calls)
+ * POST /api/transcribe/:callId
+ */
+app.post('/api/transcribe/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`\n🎤 Starting transcription for call ${callId}`);
+    
+    // Get call from database
+    const call = await db.getCallById(callId);
+    
+    if (!call) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Call not found' 
+      });
+    }
+
+    // Check file exists
+    if (!fs.existsSync(call.audio_filepath)) {
+      throw new Error('Audio file not found on disk');
+    }
+
+    // Transcribe (handles both short and long calls automatically)
+    const result = await transcriptionService.transcribeCall(callId, call.audio_filepath);
+    
+    // Save transcription to database
+    await db.saveTranscription(callId, {
+      text: result.transcription,
+      duration: result.totalDuration || result.duration,
+      confidence: 0.95, // Whisper is generally high confidence
+      language: 'en'
+    });
+    
+    // Update call status
+    await db.updateCallStatus(callId, 'transcribed', {
+      duration: Math.floor(result.totalDuration || result.duration || 0)
+    });
+
+    console.log(`✅ Transcription saved to database`);
+
+    res.json({
+      success: true,
+      callId: callId,
+      transcription: result.transcription,
+      duration: result.totalDuration || result.duration,
+      isLongCall: result.isLongCall || false,
+      segments: result.segments || 0
+    });
+
+  } catch (error) {
+    console.error('❌ Transcription error:', error.message);
+    
+    res.status(500).json({ 
+      success: false,
+      error: 'Transcription failed', 
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// INTENT EXTRACTION
+// ============================================
+
+/**
+ * Extract intent using AI
+ * POST /api/extract-intent/:callId
+ */
+app.post('/api/extract-intent/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`\n🎯 Extracting intent for call ${callId}`);
+    
+    // Get call with transcription
+    const call = await db.getCallReport(callId);
+    
+    if (!call || !call.transcription_text) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Call or transcription not found' 
+      });
+    }
+
+    // Extract intent using AI
+    const intentData = await analysisService.extractIntent(call.transcription_text);
+    
+    // Update call with intent data
+    await db.updateCallStatus(callId, 'intent_extracted', {
+      primary_intent: intentData.primary_intent,
+      sentiment: intentData.sentiment,
+      sentiment_score: intentData.sentiment_score || 0,
+      urgency: intentData.urgency
+    });
+
+    console.log(`✅ Intent extracted and saved`);
+
+    res.json({
+      success: true,
+      callId: callId,
+      intent: intentData
+    });
+
+  } catch (error) {
+    console.error('❌ Intent extraction error:', error.message);
+    
+    res.status(500).json({ 
+      success: false,
+      error: 'Intent extraction failed', 
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// AI ANALYSIS
+// ============================================
+
+/**
+ * Generate comprehensive AI analysis
+ * POST /api/analyze/:callId
+ */
+app.post('/api/analyze/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`\n🤖 Analyzing call ${callId}`);
+    
+    // Get call with transcription and intent
+    const call = await db.getCallReport(callId);
+    
+    if (!call || !call.transcription_text) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Call data incomplete' 
+      });
+    }
+
+    // Parse intent data if it's JSON string
+    let intentData;
+    if (typeof call.intent_data === 'string') {
+      intentData = JSON.parse(call.intent_data);
+    } else {
+      // If no intent_data in report yet, extract it from call fields
+      intentData = {
+        primary_intent: call.primary_intent,
+        sentiment: call.sentiment,
+        sentiment_score: call.sentiment_score,
+        urgency: call.urgency,
+        topics: [],
+        entities: []
+      };
+    }
+
+    // Generate AI analysis
+    const analysisText = await analysisService.generateAnalysis(
+      call.transcription_text,
+      intentData
+    );
+    
+    // Parse analysis structure
+    const analysisStructure = analysisService.parseAnalysisStructure(analysisText);
+    
+    // Calculate scores
+    const qualityScore = analysisService.calculateQualityScore(intentData, analysisStructure);
+    const csatEstimate = analysisService.estimateCSAT(intentData, analysisStructure);
+    
+    // Save complete report to database
+    await db.saveCallReport(callId, {
+      intent_data: intentData,
+      ai_analysis: analysisText,
+      call_summary: analysisStructure.call_summary,
+      customer_pain_points: analysisStructure.customer_pain_points,
+      emotional_tone: analysisStructure.emotional_tone,
+      primary_sensitivity: analysisStructure.primary_sensitivity,
+      churn_risk_assessment: analysisStructure.churn_risk_assessment || 'low',
+      churn_risk_score: analysisStructure.churn_risk_score || 0,
+      recommended_communication_style: analysisStructure.recommended_communication_style,
+      escalation_risk: analysisStructure.churn_risk_assessment === 'critical' ? 'high' : 'low',
+      escalation_risk_score: analysisStructure.escalation_risk_score || 0,
+      refund_likelihood: 'low',
+      refund_likelihood_score: analysisStructure.refund_likelihood_score || 0,
+      quality_score: qualityScore,
+      csat_estimate: csatEstimate,
+      resolution_status: 'pending',
+      agent_opening_line: analysisStructure.agent_opening_line,
+      agent_approach_do: analysisStructure.agent_approach_do,
+      agent_approach_avoid: analysisStructure.agent_approach_avoid,
+      crm_tags: analysisStructure.crm_tags,
+      key_insights: [],
+      conversation_highlights: []
+    });
+    
+    // Update call status
+    await db.updateCallStatus(callId, 'analyzed', {
+      quality_score: qualityScore,
+      csat_estimate: csatEstimate,
+      resolution_status: 'pending'
+    });
+    
+    // Update customer sentiment
+    if (call.customer_id) {
+      await db.updateCustomerSentiment(call.customer_id);
+    }
+
+    console.log(`✅ Analysis saved to database`);
+
+    res.json({
+      success: true,
+      callId: callId,
+      analysis: analysisText,
+      qualityScore: qualityScore,
+      csatEstimate: csatEstimate
+    });
+
+  } catch (error) {
+    console.error('❌ Analysis error:', error.message);
+    
+    res.status(500).json({ 
+      success: false,
+      error: 'Analysis failed', 
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// COMPLETE PIPELINE
+// ============================================
+
+/**
+ * Process complete pipeline: transcribe → intent → analyze
+ * POST /api/process-complete/:callId
+ */
+app.post('/api/process-complete/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`\n🚀 Starting complete processing for call ${callId}...`);
+    
+    const results = {
+      transcription: { success: false },
+      intent: { success: false },
+      analysis: { success: false }
+    };
+    
+    // Step 1: Transcribe
+    try {
+      const transcribeRes = await axios.post(`http://localhost:${PORT}/api/transcribe/${callId}`);
+      results.transcription = {
+        success: true,
+        data: transcribeRes.data
+      };
+    } catch (error) {
+      results.transcription = {
+        success: false,
+        error: error.response?.data?.details || error.message
+      };
+      // If transcription fails, stop here
+      return res.status(500).json({
+        success: false,
+        error: 'Transcription failed',
+        results: results
+      });
+    }
+    
+    // Step 2: Extract Intent
+    try {
+      const intentRes = await axios.post(`http://localhost:${PORT}/api/extract-intent/${callId}`);
+      results.intent = {
+        success: true,
+        data: intentRes.data
+      };
+    } catch (error) {
+      console.warn('⚠️ Intent extraction failed, continuing...');
+      results.intent = {
+        success: false,
+        error: error.response?.data?.details || error.message
+      };
+      // Continue even if intent fails
+    }
+    
+    // Step 3: Analyze
+    try {
+      const analyzeRes = await axios.post(`http://localhost:${PORT}/api/analyze/${callId}`);
+      results.analysis = {
+        success: true,
+        data: analyzeRes.data
+      };
+    } catch (error) {
+      console.warn('⚠️ Analysis failed, continuing...');
+      results.analysis = {
+        success: false,
+        error: error.response?.data?.details || error.message
+      };
+    }
+    
+    // Update final status
+    await db.updateCallStatus(callId, 'completed');
+    
+    console.log(`✅ Complete processing finished for call ${callId}`);
+    console.log(`   Transcription: ${results.transcription.success ? '✅' : '❌'}`);
+    console.log(`   Intent: ${results.intent.success ? '✅' : '⚠️'}`);
+    console.log(`   Analysis: ${results.analysis.success ? '✅' : '⚠️'}`);
+
+    res.json({
+      success: true,
+      message: 'Processing completed',
+      callId: callId,
+      results: results
+    });
+
+  } catch (error) {
+    console.error('Complete processing error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Processing failed', 
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// REPORT DOWNLOAD (PDF)
+// ============================================
+
+/**
+ * Download call report as PDF
+ * GET /api/reports/:callId/download
+ */
+app.get('/api/reports/:callId/download', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    console.log(`📄 Generating PDF for call ${callId}`);
+    
+    // Get full report data
+    const report = await db.getCallReport(callId);
+    
+    if (!report) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Report not found' 
+      });
+    }
+    
+    // Generate PDF
+    const pdfBuffer = await generateReportPDF(report);
+    
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename=call-report-${callId}.pdf`);
+    res.send(pdfBuffer);
+    
+    console.log(`✅ PDF generated and sent`);
+    
+  } catch (error) {
+    console.error('PDF generation error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to generate PDF',
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// GET CALL DETAILS
+// ============================================
+
+/**
+ * Get complete call details
+ * GET /api/call/:callId
+ */
+app.get('/api/call/:callId', async (req, res) => {
+  try {
+    const callId = parseInt(req.params.callId);
+    
+    const call = await db.getCallReport(callId);
+
+    if (!call) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Call not found' 
+      });
+    }
+
+    res.json({ 
+      success: true, 
+      call: call 
+    });
+  } catch (error) {
+    console.error('Get call error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to get call',
+      details: error.message 
+    });
+  }
+});
+
+/**
+ * Get all calls
+ * GET /api/calls
+ */
+app.get('/api/calls', async (req, res) => {
+  try {
+    const query = `
+      SELECT 
+        call_id, customer_id, call_date, call_duration,
+        audio_filename, processing_status, primary_intent,
+        sentiment, quality_score
+      FROM calls
+      ORDER BY call_date DESC
+      LIMIT 100
+    `;
+    
+    const result = await db.pool.query(query);
+    
+    res.json({
+      success: true,
+      totalCalls: result.rows.length,
+      calls: result.rows
+    });
+  } catch (error) {
+    console.error('Get calls error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Failed to get calls',
+      details: error.message 
+    });
+  }
+});
+
+// ============================================
+// START SERVER
+// ============================================
+
+app.listen(PORT, async () => {
+  const hasOpenRouter = !!process.env.OPENROUTER_API_KEY;
+  
+  // Check Whisper service
+  let whisperStatus = '❌ Not Running';
+  try {
+    await axios.get('http://localhost:5000/health', { timeout: 2000 });
+    whisperStatus = '✅ Ready';
+  } catch (error) {
+    whisperStatus = '❌ Not Running';
+  }
+  
+  // Check database
+  let dbStatus = '❌ Not Connected';
+  let dbName = process.env.DB_NAME || 'call_center_ai';
+  try {
+    const result = await db.pool.query('SELECT current_database()');
+    dbName = result.rows[0].current_database;
+    dbStatus = '✅ Connected';
+  } catch (error) {
+    dbStatus = `❌ Error: ${error.message}`;
+  }
+  
+  console.log(`
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║   ✅ Avanza Solutions Backend is Running!                ║
+║                                                           ║
+║   🌐 Server: http://localhost:${PORT}                        ║
+║   💚 Health: http://localhost:${PORT}/health                ║
+║                                                           ║
+║   📡 API Status:                                          ║
+║   • Whisper Service: ${whisperStatus.padEnd(28)} ║
+║   • OpenRouter AI: ${(hasOpenRouter ? '✅ Ready' : '❌ Not Configured').padEnd(30)} ║
+║   • Database (${dbName}): ${dbStatus.padEnd(18)} ║
+║                                                           ║
+║   📋 Core Endpoints:                                      ║
+║   • POST /api/upload-audio                                ║
+║   • POST /api/transcribe/:id                              ║
+║   • POST /api/extract-intent/:id                          ║
+║   • POST /api/analyze/:id                                 ║
+║   • POST /api/process-complete/:id                        ║
+║                                                           ║
+║   🆕 New Endpoints:                                       ║
+║   • GET  /api/customers/search?q=...                      ║
+║   • GET  /api/customers/:cnic/profile                     ║
+║   • GET  /api/customers/:customerId/calls                 ║
+║   • GET  /api/reports/:callId/download                    ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+  `);
+  
+  if (!hasOpenRouter) {
+    console.log(`
+⚠️  WARNING: Missing OpenRouter API Key!
+Add to .env: OPENROUTER_API_KEY=your-key-here
+Get your key at: https://openrouter.ai/keys
+    `);
+  }
+  
+  if (whisperStatus.includes('❌')) {
+    console.log(`
+⚠️  WARNING: Whisper service not running!
+Start it with: python whisper_server.py (in whisper-service folder)
+    `);
+  }
+  
+  if (dbStatus.includes('❌')) {
+    console.log(`
+⚠️  WARNING: Database connection failed!
+Check your .env file and ensure PostgreSQL is running.
+Database: ${dbName}
+    `);
+  }
+});

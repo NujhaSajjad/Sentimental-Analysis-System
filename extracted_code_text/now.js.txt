@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\date\now.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/date/now');
+
+module.exports = parent;

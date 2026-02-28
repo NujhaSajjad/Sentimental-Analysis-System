@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\node_modules\dom-accessibility-api\dist\accessible-description.d.ts
+================================================================================
+
+import { ComputeTextAlternativeOptions } from "./accessible-name-and-description";
+/**
+ * @param root
+ * @param options
+ * @returns
+ */
+export declare function computeAccessibleDescription(root: Element, options?: ComputeTextAlternativeOptions): string;
+//# sourceMappingURL=accessible-description.d.ts.map

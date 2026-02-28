@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\math-intrinsics\isFinite.d.ts
+================================================================================
+
+declare function isFinite(x: unknown): x is number | bigint;
+
+export = isFinite;

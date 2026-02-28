@@ -1,0 +1,4 @@
+Relative path: backend\node_modules\@swc\helpers\esm\_ts_add_disposable_resource.js
+================================================================================
+
+export { __addDisposableResource as _ } from "tslib";

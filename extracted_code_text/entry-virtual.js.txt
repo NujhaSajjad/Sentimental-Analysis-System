@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\internals\entry-virtual.js
+================================================================================
+
+'use strict';
+var globalThis = require('../internals/global-this');
+
+module.exports = function (CONSTRUCTOR) {
+  return globalThis[CONSTRUCTOR].prototype;
+};

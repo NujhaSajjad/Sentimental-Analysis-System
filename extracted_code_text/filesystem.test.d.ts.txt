@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\tsconfig-paths\lib\__tests__\filesystem.test.d.ts
+================================================================================
+
+export {};

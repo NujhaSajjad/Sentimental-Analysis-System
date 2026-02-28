@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\keywords\prohibited.d.ts
+================================================================================
+
+import type { Plugin } from "ajv";
+declare const prohibited: Plugin<undefined>;
+export default prohibited;

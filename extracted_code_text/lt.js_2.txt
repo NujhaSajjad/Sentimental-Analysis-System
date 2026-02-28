@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\lt.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('lt', require('../lt'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

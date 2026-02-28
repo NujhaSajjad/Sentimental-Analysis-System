@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\clean-css\lib\utils\is-import.js
+================================================================================
+
+var IMPORT_PREFIX_PATTERN = /^@import/i;
+
+function isImport(value) {
+  return IMPORT_PREFIX_PATTERN.test(value);
+}
+
+module.exports = isImport;

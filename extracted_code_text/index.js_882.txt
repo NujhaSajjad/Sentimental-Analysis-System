@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\css-tree\lib\definition-syntax\index.js
+================================================================================
+
+module.exports = {
+    SyntaxError: require('./SyntaxError'),
+    parse: require('./parse'),
+    generate: require('./generate'),
+    walk: require('./walk')
+};

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\object\proto.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/object/proto');
+
+module.exports = parent;

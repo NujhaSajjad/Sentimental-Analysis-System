@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\own-keys\index.d.ts
+================================================================================
+
+declare function ownKeys<T extends Record<PropertyKey, V>, V>(object: T): (keyof T)[];
+
+export = ownKeys;

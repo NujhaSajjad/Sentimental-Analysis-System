@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\well-formed-stringify.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-well-formed-stringify
+require('../modules/es.json.stringify');

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\resolve\example\sync.js
+================================================================================
+
+var resolve = require('../');
+var res = resolve.sync('tap', { basedir: __dirname });
+console.log(res);

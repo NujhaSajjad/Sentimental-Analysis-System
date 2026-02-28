@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\1dba6308e1e64052fc99ee27aee0efba42f4078c0f24ea99faebdf56edc8eaad.json
+================================================================================
+
+{"ast":null,"code":"'use strict';\n\nvar parent = require('../es/global-this');\nmodule.exports = parent;","map":{"version":3,"names":["parent","require","module","exports"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/core-js-pure/stable/global-this.js"],"sourcesContent":["'use strict';\nvar parent = require('../es/global-this');\n\nmodule.exports = parent;\n"],"mappings":"AAAA,YAAY;;AACZ,IAAIA,MAAM,GAAGC,OAAO,CAAC,mBAAmB,CAAC;AAEzCC,MAAM,CAACC,OAAO,GAAGH,MAAM","ignoreList":[]},"metadata":{},"sourceType":"script","externalDependencies":[]}

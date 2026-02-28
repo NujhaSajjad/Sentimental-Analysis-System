@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\symbol\unscopables.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/symbol/unscopables');
+
+module.exports = parent;

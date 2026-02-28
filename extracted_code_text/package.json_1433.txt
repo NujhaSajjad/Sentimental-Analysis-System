@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_define_enumerable_properties\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_define_enumerable_properties.cjs",
+    "module": "../../esm/_define_enumerable_properties.js"
+}

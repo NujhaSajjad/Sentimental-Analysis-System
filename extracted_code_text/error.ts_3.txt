@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\src\error.ts
+================================================================================
+
+/** @deprecated Import from ./core/error instead */
+export * from './core/error';

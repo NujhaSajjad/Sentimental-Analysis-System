@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-build\build\lib\cdn-utils.d.ts
+================================================================================
+
+import { BuildType } from '../types';
+export declare function getModuleURL(moduleName: string, buildType: BuildType): string;

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\ajv-formats\node_modules\json-schema-traverse\.github\FUNDING.yml
+================================================================================
+
+github: epoberezkin
+tidelift: "npm/json-schema-traverse"

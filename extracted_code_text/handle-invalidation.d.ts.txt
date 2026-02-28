@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\postcss-image-set-function\dist\lib\handle-invalidation.d.ts
+================================================================================
+
+export declare const handleInvalidation: (opts: any, message: any, word: any) => void;

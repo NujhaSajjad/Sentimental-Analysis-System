@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\neo-async\filterSeries.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./async').filterSeries;

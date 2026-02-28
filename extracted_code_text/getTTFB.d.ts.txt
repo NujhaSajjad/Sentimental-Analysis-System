@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\getTTFB.d.ts
+================================================================================
+
+import { ReportHandler } from './types.js';
+export declare const getTTFB: (onReport: ReportHandler) => void;

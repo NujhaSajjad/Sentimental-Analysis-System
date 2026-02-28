@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_check_private_redeclaration\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_check_private_redeclaration.cjs",
+    "module": "../../esm/_check_private_redeclaration.js"
+}

@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\chat\completions.d.ts
+================================================================================
+
+export * from "./completions/index.js";
+//# sourceMappingURL=completions.d.ts.map

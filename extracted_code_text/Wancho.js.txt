@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Wancho.js
+================================================================================
+
+const set = require('regenerate')(0x1E2FF);
+set.addRange(0x1E2C0, 0x1E2F9);
+exports.characters = set;

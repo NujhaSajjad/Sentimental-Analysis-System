@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\misc\wait.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.wait = wait;
+
+function wait(time) {
+  return new Promise(resolve => setTimeout(() => resolve(), time));
+}

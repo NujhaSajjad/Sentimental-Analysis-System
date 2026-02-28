@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\http-proxy-middleware\dist\context-matcher.d.ts
+================================================================================
+
+import type { Filter, Request } from './types';
+export declare function match(context: Filter, uri: string, req: Request): boolean;

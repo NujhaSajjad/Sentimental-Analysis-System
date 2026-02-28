@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\value-to-string.d.ts
+================================================================================
+
+export = valueToString;
+/**
+ * Returns a string representation of the value
+ *
+ * @param  {*} value
+ * @returns {string}
+ */
+declare function valueToString(value: any): string;

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\weak-set\of.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/weak-set/of');

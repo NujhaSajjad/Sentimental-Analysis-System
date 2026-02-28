@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\regexp\test.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/regexp/test');
+
+module.exports = parent;

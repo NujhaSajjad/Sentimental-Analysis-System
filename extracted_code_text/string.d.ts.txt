@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\prototypes\string.d.ts
+================================================================================
+
+declare const _exports: any;
+export = _exports;

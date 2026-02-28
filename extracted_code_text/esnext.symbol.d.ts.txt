@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\esnext.symbol.d.ts
+================================================================================
+
+import type { ImplicitLibVariableOptions } from '../variable';
+export declare const esnext_symbol: Record<string, ImplicitLibVariableOptions>;
+//# sourceMappingURL=esnext.symbol.d.ts.map

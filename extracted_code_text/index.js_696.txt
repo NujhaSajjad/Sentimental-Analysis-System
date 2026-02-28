@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\weak-set\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/weak-set');
+require('../../modules/web.dom-collections.iterator');
+
+module.exports = parent;

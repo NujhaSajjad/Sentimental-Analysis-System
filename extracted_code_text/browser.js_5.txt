@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\coa\node_modules\supports-color\browser.js
+================================================================================
+
+'use strict';
+module.exports = {
+	stdout: false,
+	stderr: false
+};

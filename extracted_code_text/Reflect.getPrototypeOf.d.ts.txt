@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\get-proto\Reflect.getPrototypeOf.d.ts
+================================================================================
+
+declare const x: typeof Reflect.getPrototypeOf | null;
+
+export = x;

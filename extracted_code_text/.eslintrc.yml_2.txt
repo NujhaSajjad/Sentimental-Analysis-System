@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\ajv-formats\node_modules\json-schema-traverse\spec\.eslintrc.yml
+================================================================================
+
+parserOptions:
+  ecmaVersion: 6
+globals:
+  beforeEach: false
+  describe: false
+  it: false

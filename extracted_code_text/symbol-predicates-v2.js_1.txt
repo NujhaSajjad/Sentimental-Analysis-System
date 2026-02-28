@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\proposals\symbol-predicates-v2.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-symbol-predicates
+require('../modules/esnext.symbol.is-registered-symbol');
+require('../modules/esnext.symbol.is-well-known-symbol');

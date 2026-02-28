@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\internals\add-to-unscopables.js
+================================================================================
+
+'use strict';
+module.exports = function () { /* empty */ };

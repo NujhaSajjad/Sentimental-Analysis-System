@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\asset\AssetGeneratorOptions.check.d.ts
+================================================================================
+
+/*
+ * This file was automatically generated.
+ * DO NOT MODIFY BY HAND.
+ * Run `yarn fix:special` to update
+ */
+declare const check: (options: any) => boolean;
+export = check;

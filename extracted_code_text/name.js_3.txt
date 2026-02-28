@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\function\name.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/function/name');
+
+module.exports = parent;

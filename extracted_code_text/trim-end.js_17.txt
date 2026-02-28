@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\string\virtual\trim-end.js
+================================================================================
+
+'use strict';
+var parent = require('../../../stable/string/virtual/trim-end');
+
+module.exports = parent;

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\es-abstract\helpers\callBound.js
+================================================================================
+
+'use strict';
+
+// TODO; semver-major: remove
+
+module.exports = require('call-bound');

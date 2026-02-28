@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\object\get-own-property-descriptors.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/object/get-own-property-descriptors');

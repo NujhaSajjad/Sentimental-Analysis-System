@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\runtime\timestamp.d.ts
+================================================================================
+
+declare function validTimestamp(str: string, allowDate: boolean): boolean;
+declare namespace validTimestamp {
+    var code: string;
+}
+export default validTimestamp;

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\workbox-background-sync\_version.js
+================================================================================
+
+"use strict";
+// @ts-ignore
+try {
+    self['workbox:background-sync:6.5.4'] && _();
+}
+catch (e) { }

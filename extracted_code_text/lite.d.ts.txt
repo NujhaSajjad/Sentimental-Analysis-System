@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\@types\mime\lite.d.ts
+================================================================================
+
+import { default as Mime } from "./Mime";
+
+declare const mimelite: Mime;
+
+export as namespace mimelite;
+
+export = mimelite;

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\math\clz32.js
+================================================================================
+
+'use strict';
+require('../../modules/es.math.clz32');
+var path = require('../../internals/path');
+
+module.exports = path.Math.clz32;

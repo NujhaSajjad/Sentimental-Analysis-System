@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/object');
+require('../../modules/esnext.object.group-by');
+
+module.exports = parent;

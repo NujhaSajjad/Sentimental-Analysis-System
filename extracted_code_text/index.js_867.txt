@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stage\index.js
+================================================================================
+
+'use strict';
+var proposals = require('./pre');
+
+module.exports = proposals;

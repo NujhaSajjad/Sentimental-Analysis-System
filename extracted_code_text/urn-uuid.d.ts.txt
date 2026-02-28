@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\schemes\urn-uuid.d.ts
+================================================================================
+
+import { URISchemeHandler, URIOptions } from "../uri";
+import { URNComponents } from "./urn";
+export interface UUIDComponents extends URNComponents {
+    uuid?: string;
+}
+declare const handler: URISchemeHandler<UUIDComponents, URIOptions, URNComponents>;
+export default handler;

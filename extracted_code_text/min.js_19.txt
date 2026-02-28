@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\math-intrinsics\min.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./min')} */
+module.exports = Math.min;

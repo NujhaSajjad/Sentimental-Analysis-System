@@ -1,0 +1,15 @@
+Relative path: avanza-frontend\node_modules\underscore\amd\negate.js
+================================================================================
+
+define(function () {
+
+  // Returns a negated version of the passed-in predicate.
+  function negate(predicate) {
+    return function() {
+      return !predicate.apply(this, arguments);
+    };
+  }
+
+  return negate;
+
+});

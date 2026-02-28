@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\lib\configs\flat-config-base.js
+================================================================================
+
+"use strict";
+
+module.exports = {
+  languageOptions: {
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true
+      }
+    }
+  }
+};

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-module-utils\pkgUp.d.ts
+================================================================================
+
+declare function pkgUp(opts?: { cwd?: string }): string | null;
+
+export default pkgUp;

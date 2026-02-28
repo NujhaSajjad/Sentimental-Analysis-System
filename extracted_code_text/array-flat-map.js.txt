@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\array-flat-map.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-flatMap
+require('../modules/es.array.flat');
+require('../modules/es.array.flat-map');
+require('../modules/es.array.unscopables.flat');
+require('../modules/es.array.unscopables.flat-map');

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\regexp\flags.js
+================================================================================
+
+'use strict';
+require('../../modules/es.regexp.flags');
+var getRegExpFlags = require('../../internals/regexp-get-flags');
+
+module.exports = getRegExpFlags;

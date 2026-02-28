@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_identity\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_identity.cjs",
+    "module": "../../esm/_identity.js"
+}

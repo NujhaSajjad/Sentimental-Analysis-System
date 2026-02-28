@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\symbol\description.js
+================================================================================
+
+'use strict';
+require('../../modules/es.symbol.description');

@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_iterable_to_array\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_iterable_to_array.cjs",
+    "module": "../../esm/_iterable_to_array.js"
+}

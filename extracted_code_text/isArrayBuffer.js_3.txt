@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\isArrayBuffer.js
+================================================================================
+
+var _tagTester = require('./_tagTester.js');
+
+var isArrayBuffer = _tagTester('ArrayBuffer');
+
+module.exports = isArrayBuffer;

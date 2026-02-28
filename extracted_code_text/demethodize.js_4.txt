@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\full\function\virtual\demethodize.js
+================================================================================
+
+'use strict';
+require('../../../modules/esnext.function.demethodize');
+var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
+
+module.exports = getBuiltInPrototypeMethod('Function', 'demethodize');

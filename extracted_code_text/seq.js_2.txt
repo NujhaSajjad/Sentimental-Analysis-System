@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\eslint\node_modules\js-yaml\lib\type\seq.js
+================================================================================
+
+'use strict';
+
+var Type = require('../type');
+
+module.exports = new Type('tag:yaml.org,2002:seq', {
+  kind: 'sequence',
+  construct: function (data) { return data !== null ? data : []; }
+});

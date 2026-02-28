@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\csso\lib\clean\Comment.js
+================================================================================
+
+module.exports = function cleanComment(data, item, list) {
+    list.remove(item);
+};

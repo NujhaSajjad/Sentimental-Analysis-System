@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-oklab-function\dist\convert-oklch-to-display-p3.d.ts
+================================================================================
+
+declare type color = [number, number, number];
+export declare function oklchToDisplayP3(oklchRaw: color): [color, boolean];
+export {};

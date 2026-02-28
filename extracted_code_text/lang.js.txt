@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\css-tree\lib\syntax\pseudo\lang.js
+================================================================================
+
+module.exports = {
+    parse: function() {
+        return this.createSingleNodeList(
+            this.Identifier()
+        );
+    }
+};

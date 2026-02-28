@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\node_modules\cosmiconfig\dist\getPropertyByPath.d.ts
+================================================================================
+
+declare function getPropertyByPath(source: {
+    [key: string]: unknown;
+}, path: string | Array<string>): unknown;
+export { getPropertyByPath };
+//# sourceMappingURL=getPropertyByPath.d.ts.map

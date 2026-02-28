@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\core-js\full\string\match-all.js
+================================================================================
+
+'use strict';
+// TODO: remove from `core-js@4`
+require('../../modules/esnext.string.match-all');
+
+var parent = require('../../actual/string/match-all');
+
+module.exports = parent;

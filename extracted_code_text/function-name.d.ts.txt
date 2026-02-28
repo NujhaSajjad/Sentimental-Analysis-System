@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\function-name.d.ts
+================================================================================
+
+declare function _exports(func: Function): string;
+export = _exports;

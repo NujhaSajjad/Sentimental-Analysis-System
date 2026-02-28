@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\get-conditional-atrule-ancestor.d.ts
+================================================================================
+
+import type { AtRule } from 'postcss';
+export declare function getConditionalAtRuleAncestor(layerRule: AtRule): AtRule | null;

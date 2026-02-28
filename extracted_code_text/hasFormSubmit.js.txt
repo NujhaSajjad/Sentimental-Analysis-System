@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\misc\hasFormSubmit.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.hasFormSubmit = void 0;
+
+const hasFormSubmit = form => !!(form && (form.querySelector('input[type="submit"]') || form.querySelector('button[type="submit"]')));
+
+exports.hasFormSubmit = hasFormSubmit;

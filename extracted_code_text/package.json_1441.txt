@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_inherits\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_inherits.cjs",
+    "module": "../../esm/_inherits.js"
+}

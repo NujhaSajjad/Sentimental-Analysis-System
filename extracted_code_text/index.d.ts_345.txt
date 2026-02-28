@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-number-object\index.d.ts
+================================================================================
+
+declare function isNumberObject(value: unknown): value is (number | Number);
+
+export = isNumberObject;

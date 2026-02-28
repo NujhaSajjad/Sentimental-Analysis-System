@@ -1,0 +1,16 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\lib\util\implicitRoles\ul.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = getImplicitRoleForUl;
+/**
+ * Returns the implicit role for a ul tag.
+ */
+function getImplicitRoleForUl() {
+  return 'list';
+}
+module.exports = exports.default;

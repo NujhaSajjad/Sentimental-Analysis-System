@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_possible_constructor_return\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_possible_constructor_return.cjs",
+    "module": "../../esm/_possible_constructor_return.js"
+}

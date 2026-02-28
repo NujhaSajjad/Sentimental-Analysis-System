@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\underscore\amd\reverse.js
+================================================================================
+
+define(['./_unmethodize', './_setup'], function (_unmethodize, _setup) {
+
+	var reverse = _unmethodize(_setup.ArrayProto.reverse);
+
+	return reverse;
+
+});

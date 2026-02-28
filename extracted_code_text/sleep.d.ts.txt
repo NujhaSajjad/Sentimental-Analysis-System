@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\internal\utils\sleep.d.ts
+================================================================================
+
+export declare const sleep: (ms: number) => Promise<void>;
+//# sourceMappingURL=sleep.d.ts.map

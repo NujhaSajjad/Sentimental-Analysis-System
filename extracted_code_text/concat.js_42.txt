@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\concat.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('concat', require('../concat'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

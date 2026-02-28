@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\flat.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/array/flat');
+
+module.exports = parent;

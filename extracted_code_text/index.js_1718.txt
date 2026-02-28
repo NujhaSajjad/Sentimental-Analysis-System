@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\semver\classes\index.js
+================================================================================
+
+'use strict'
+
+module.exports = {
+  SemVer: require('./semver.js'),
+  Range: require('./range.js'),
+  Comparator: require('./comparator.js'),
+}

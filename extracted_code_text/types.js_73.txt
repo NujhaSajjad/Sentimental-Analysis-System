@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\openai\internal\types.js
+================================================================================
+
+"use strict";
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+Object.defineProperty(exports, "__esModule", { value: true });
+//# sourceMappingURL=types.js.map

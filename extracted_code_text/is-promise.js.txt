@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\yargs\build\lib\utils\is-promise.js
+================================================================================
+
+export function isPromise(maybePromise) {
+    return (!!maybePromise &&
+        !!maybePromise.then &&
+        typeof maybePromise.then === 'function');
+}

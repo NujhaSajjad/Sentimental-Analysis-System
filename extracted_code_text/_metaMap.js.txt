@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\lodash\_metaMap.js
+================================================================================
+
+var WeakMap = require('./_WeakMap');
+
+/** Used to store function metadata. */
+var metaMap = WeakMap && new WeakMap;
+
+module.exports = metaMap;

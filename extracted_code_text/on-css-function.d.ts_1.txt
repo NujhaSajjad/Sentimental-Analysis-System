@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-hwb-function\dist\on-css-function.d.ts
+================================================================================
+
+import type { FunctionNode } from 'postcss-value-parser';
+export declare function onCSSFunctionSRgb(node: FunctionNode): void;

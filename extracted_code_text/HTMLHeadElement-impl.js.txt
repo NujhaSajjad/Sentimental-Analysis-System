@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\nodes\HTMLHeadElement-impl.js
+================================================================================
+
+"use strict";
+
+const HTMLElementImpl = require("./HTMLElement-impl").implementation;
+
+class HTMLHeadElementImpl extends HTMLElementImpl { }
+
+module.exports = {
+  implementation: HTMLHeadElementImpl
+};

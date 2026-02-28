@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\postcss-ordered-values\types\lib\vendorUnprefixed.d.ts
+================================================================================
+
+export = vendorUnprefixed;
+/**
+ * @param {string} prop
+ * @return {string}
+ */
+declare function vendorUnprefixed(prop: string): string;

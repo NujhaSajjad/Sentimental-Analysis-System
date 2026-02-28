@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\fast-glob\out\providers\filters\error.d.ts
+================================================================================
+
+import Settings from '../../settings';
+import { ErrorFilterFunction } from '../../types';
+export default class ErrorFilter {
+    private readonly _settings;
+    constructor(_settings: Settings);
+    getFilter(): ErrorFilterFunction;
+    private _isNonFatalError;
+}

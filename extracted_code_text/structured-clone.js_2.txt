@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\structured-clone.js
+================================================================================
+
+'use strict';
+var parent = require('../actual/structured-clone');
+
+module.exports = parent;

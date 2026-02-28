@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\array\group.js
+================================================================================
+
+'use strict';
+require('../../modules/esnext.array.group');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Array', 'group');

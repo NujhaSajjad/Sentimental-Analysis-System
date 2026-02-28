@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\findLast.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('findLast', require('../findLast'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

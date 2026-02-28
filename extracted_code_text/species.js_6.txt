@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\symbol\species.js
+================================================================================
+
+'use strict';
+require('../../modules/es.symbol.species');
+var WrappedWellKnownSymbolModule = require('../../internals/well-known-symbol-wrapped');
+
+module.exports = WrappedWellKnownSymbolModule.f('species');

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-weakset\index.d.ts
+================================================================================
+
+declare function isWeakSet<V extends WeakKey = object>(value: unknown): value is WeakSet<V>;
+
+export = isWeakSet;

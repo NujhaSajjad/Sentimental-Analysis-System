@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\immer\dist\plugins\es5.d.ts
+================================================================================
+
+export declare function enableES5(): void;
+//# sourceMappingURL=es5.d.ts.map

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\util.js
+================================================================================
+
+var convert = require('./convert');
+module.exports = convert(require('../util'));

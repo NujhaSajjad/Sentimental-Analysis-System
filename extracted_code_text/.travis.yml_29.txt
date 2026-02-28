@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\pretty-error\.travis.yml
+================================================================================
+
+language: node_js
+
+node_js:
+  - 10.16
+
+sudo: false

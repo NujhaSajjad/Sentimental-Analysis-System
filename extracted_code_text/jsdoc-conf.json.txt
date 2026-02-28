@@ -1,0 +1,26 @@
+Relative path: backend\node_modules\fluent-ffmpeg\tools\jsdoc-conf.json
+================================================================================
+
+{
+	"opts": {
+		"recurse": true,
+		"verbose": true,
+		"destination": "doc",
+		"template": "tools/jsdoc-template"
+	},
+
+	"source": {
+		"include": ["README.md", "lib"],
+		"excludePattern": "lib\/presets"
+	},
+
+	"plugins": [
+		"plugins/markdown",
+		"tools/jsdoc-aliases.js"
+	],
+
+	"markdown": {
+		"parser": "evilstreak",
+		"dialect": "Markuru"
+	}
+}

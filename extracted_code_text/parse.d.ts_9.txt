@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\postcss\lib\parse.d.ts
+================================================================================
+
+import { Parser } from './postcss.js'
+
+interface Parse extends Parser {
+  default: Parse
+}
+
+declare const parse: Parse
+
+export = parse

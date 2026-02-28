@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\vocabularies\applicator\anyOf.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition, ErrorNoParams, AnySchema } from "../../types";
+export type AnyOfError = ErrorNoParams<"anyOf", AnySchema[]>;
+declare const def: CodeKeywordDefinition;
+export default def;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\binary-extensions\binary-extensions.json.d.ts
+================================================================================
+
+declare const binaryExtensionsJson: readonly string[];
+
+export = binaryExtensionsJson;

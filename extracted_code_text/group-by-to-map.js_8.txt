@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\instance\group-by-to-map.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/instance/group-by-to-map');
+
+module.exports = parent;

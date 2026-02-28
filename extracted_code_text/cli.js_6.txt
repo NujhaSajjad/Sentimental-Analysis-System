@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\is-docker\cli.js
+================================================================================
+
+#!/usr/bin/env node
+'use strict';
+const isDocker = require('.');
+
+process.exitCode = isDocker() ? 0 : 2;

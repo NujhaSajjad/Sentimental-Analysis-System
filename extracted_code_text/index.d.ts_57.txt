@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@sinclair\typebox\value\index.d.ts
+================================================================================
+
+export { ValueError, ValueErrorType } from '../errors/index';
+export * from './pointer';
+export * from './value';

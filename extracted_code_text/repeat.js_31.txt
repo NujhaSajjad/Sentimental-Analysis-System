@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\repeat.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('repeat', require('../repeat'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

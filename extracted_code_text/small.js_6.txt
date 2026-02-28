@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\string\small.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/string/small');
+
+module.exports = parent;

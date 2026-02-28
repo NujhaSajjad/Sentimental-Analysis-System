@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\any-promise\register\lie.js
+================================================================================
+
+'use strict';
+require('../register')('lie', {Promise: require('lie')})

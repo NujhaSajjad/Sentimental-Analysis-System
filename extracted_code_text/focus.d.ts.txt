@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\focus.d.ts
+================================================================================
+
+declare function focus(element: Element): void;
+export { focus };

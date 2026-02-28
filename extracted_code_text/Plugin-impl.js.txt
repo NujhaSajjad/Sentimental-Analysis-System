@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\navigator\Plugin-impl.js
+================================================================================
+
+"use strict";
+
+exports.implementation = class Plugin {};

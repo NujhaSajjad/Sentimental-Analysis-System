@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\logger\Logger.d.ts
+================================================================================
+
+interface Logger {
+    info: (message: string) => void;
+    log: (message: string) => void;
+    error: (message: string) => void;
+}
+export default Logger;

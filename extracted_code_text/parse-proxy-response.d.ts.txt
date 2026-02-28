@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\https-proxy-agent\dist\parse-proxy-response.d.ts
+================================================================================
+
+/// <reference types="node" />
+import { Readable } from 'stream';
+export interface ProxyResponse {
+    statusCode: number;
+    buffered: Buffer;
+}
+export default function parseProxyResponse(socket: Readable): Promise<ProxyResponse>;

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\startCase.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('startCase', require('../startCase'), require('./_falseOptions'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

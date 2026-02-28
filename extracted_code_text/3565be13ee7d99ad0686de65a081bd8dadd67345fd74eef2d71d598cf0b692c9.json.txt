@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\3565be13ee7d99ad0686de65a081bd8dadd67345fd74eef2d71d598cf0b692c9.json
+================================================================================
+
+{"ast":null,"code":"'use strict';\n\nexport default typeof FormData !== 'undefined' ? FormData : null;","map":{"version":3,"names":["FormData"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/axios/lib/platform/browser/classes/FormData.js"],"sourcesContent":["'use strict';\n\nexport default typeof FormData !== 'undefined' ? FormData : null;\n"],"mappings":"AAAA,YAAY;;AAEZ,eAAe,OAAOA,QAAQ,KAAK,WAAW,GAAGA,QAAQ,GAAG,IAAI","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

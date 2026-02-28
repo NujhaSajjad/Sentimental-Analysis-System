@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\detect-port-alt\index.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./lib/detect-port');

@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\openai\src\internal\utils\sleep.ts
+================================================================================
+
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+export const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));

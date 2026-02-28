@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\dom-exception\to-string-tag.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/dom-exception/to-string-tag');
+
+module.exports = parent;

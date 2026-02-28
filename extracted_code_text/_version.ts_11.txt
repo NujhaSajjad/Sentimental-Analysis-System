@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-strategies\src\_version.ts
+================================================================================
+
+// @ts-ignore
+try{self['workbox:strategies:6.6.0']&&_()}catch(e){}

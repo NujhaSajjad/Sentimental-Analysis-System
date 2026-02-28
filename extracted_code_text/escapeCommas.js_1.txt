@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\src\util\escapeCommas.js
+================================================================================
+
+export default function escapeCommas(className) {
+  return className.replace(/\\,/g, '\\2c ')
+}

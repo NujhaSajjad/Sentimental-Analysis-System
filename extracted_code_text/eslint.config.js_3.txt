@@ -1,0 +1,17 @@
+Relative path: avanza-frontend\node_modules\reusify\eslint.config.js
+================================================================================
+
+'use strict'
+
+const base = require('neostandard')({})
+
+module.exports = [
+  ...base,
+  {
+    name: 'old-standard',
+    rules: {
+      'no-var': 'off',
+      'object-shorthand': 'off',
+    }
+  }
+]

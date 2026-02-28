@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-color-functional-notation\dist\on-css-function.d.ts
+================================================================================
+
+import type { FunctionNode } from 'postcss-value-parser';
+declare function onCSSFunction(node: FunctionNode): void;
+export default onCSSFunction;

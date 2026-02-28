@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\rpc-ipc\error\RpcIpcMessagePortClosedError.d.ts
+================================================================================
+
+import { RpcMessagePortClosedError } from '../../error/RpcMessagePortClosedError';
+declare class RpcIpcMessagePortClosedError extends RpcMessagePortClosedError {
+    readonly code?: string | number | null | undefined;
+    readonly signal?: string | null | undefined;
+    constructor(message: string, code?: string | number | null | undefined, signal?: string | null | undefined);
+}
+export { RpcIpcMessagePortClosedError };

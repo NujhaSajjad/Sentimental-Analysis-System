@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\for-each\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"compilerOptions": {
+	},
+	"exclude": [
+		"coverage",
+	],
+}

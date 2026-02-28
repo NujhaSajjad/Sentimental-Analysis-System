@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\ajv-formats\node_modules\ajv\dist\vocabularies\next.d.ts
+================================================================================
+
+import type { Vocabulary } from "../types";
+declare const next: Vocabulary;
+export default next;

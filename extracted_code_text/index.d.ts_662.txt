@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\es-define-property\index.d.ts
+================================================================================
+
+declare const defineProperty: false | typeof Object.defineProperty;
+
+export = defineProperty;

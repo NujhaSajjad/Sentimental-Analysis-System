@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\es-abstract\es7.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./es2016');

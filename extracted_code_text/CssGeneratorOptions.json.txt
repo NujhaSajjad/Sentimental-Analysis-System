@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\css\CssGeneratorOptions.json
+================================================================================
+
+{
+  "$ref": "../../WebpackOptions.json#/definitions/CssGeneratorOptions"
+}

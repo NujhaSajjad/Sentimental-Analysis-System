@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\raf\window.js
+================================================================================
+
+try {
+  module.exports = window
+} catch(e) {
+  module.exports = {}
+}

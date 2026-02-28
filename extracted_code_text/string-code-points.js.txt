@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\string-code-points.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-string-prototype-codepoints
+require('../modules/esnext.string.code-points');

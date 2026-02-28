@@ -1,0 +1,20 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\lib\vocabularies\metadata.ts
+================================================================================
+
+import type {Vocabulary} from "../types"
+
+export const metadataVocabulary: Vocabulary = [
+  "title",
+  "description",
+  "default",
+  "deprecated",
+  "readOnly",
+  "writeOnly",
+  "examples",
+]
+
+export const contentVocabulary: Vocabulary = [
+  "contentMediaType",
+  "contentEncoding",
+  "contentSchema",
+]

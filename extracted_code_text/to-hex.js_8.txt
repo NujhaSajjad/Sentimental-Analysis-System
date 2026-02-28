@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\typed-array\to-hex.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/typed-array/to-hex');
+
+module.exports = parent;

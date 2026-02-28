@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\es-errors\range.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./range')} */
+module.exports = RangeError;

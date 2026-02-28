@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resource.d.ts
+================================================================================
+
+export * from "./core/resource.js";
+//# sourceMappingURL=resource.d.ts.map

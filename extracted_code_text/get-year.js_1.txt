@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\date\get-year.js
+================================================================================
+
+'use strict';
+require('../../modules/es.date.get-year');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Date', 'getYear');

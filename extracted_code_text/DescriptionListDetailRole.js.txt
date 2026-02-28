@@ -1,0 +1,20 @@
+Relative path: avanza-frontend\node_modules\axobject-query\lib\etc\objects\DescriptionListDetailRole.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var DescriptionListDetailRole = {
+  relatedConcepts: [{
+    module: 'HTML',
+    concept: {
+      name: 'dd'
+    }
+  }],
+  type: 'structure'
+};
+var _default = DescriptionListDetailRole;
+exports.default = _default;

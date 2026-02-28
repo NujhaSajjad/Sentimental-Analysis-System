@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\walk.d.ts
+================================================================================
+
+import type { Container } from 'postcss';
+import { options } from './options.js';
+export default function walk(node: Container, opts: options): void;

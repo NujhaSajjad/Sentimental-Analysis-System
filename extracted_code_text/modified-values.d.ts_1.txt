@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\postcss-lab-function\dist\modified-values.d.ts
+================================================================================
+
+import type { Declaration, Result } from 'postcss';
+export declare function modifiedValues(originalValue: string, decl: Declaration, result: Result, preserve: boolean): {
+    rgb: string;
+    displayP3: string;
+} | undefined;

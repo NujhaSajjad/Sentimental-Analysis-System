@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\json5\lib\index.d.ts
+================================================================================
+
+import parse = require('./parse')
+import stringify = require('./stringify')
+
+export {parse, stringify}

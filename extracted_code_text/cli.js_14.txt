@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\lib\cli.js
+================================================================================
+
+#!/usr/bin/env node
+"use strict";
+module.exports = require("./cli/index");

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\math-intrinsics\pow.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./pow')} */
+module.exports = Math.pow;

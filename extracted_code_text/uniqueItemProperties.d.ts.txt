@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\uniqueItemProperties.d.ts
+================================================================================
+
+import type { FuncKeywordDefinition } from "ajv";
+export default function getDef(): FuncKeywordDefinition;

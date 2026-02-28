@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\enhanced-resolve\lib\util\module-browser.js
+================================================================================
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+"use strict";
+
+module.exports = {};

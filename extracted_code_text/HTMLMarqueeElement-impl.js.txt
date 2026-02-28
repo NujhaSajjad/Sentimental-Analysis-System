@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMarqueeElement-impl.js
+================================================================================
+
+"use strict";
+
+const HTMLElementImpl = require("./HTMLElement-impl").implementation;
+
+class HTMLMarqueeElementImpl extends HTMLElementImpl { }
+
+module.exports = {
+  implementation: HTMLMarqueeElementImpl
+};

@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\math-intrinsics\max.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./max')} */
+module.exports = Math.max;

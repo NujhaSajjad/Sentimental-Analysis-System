@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\node_modules\resolve\test\resolver\missing_main\package.json
+================================================================================
+
+{
+  "notmain": "index.js"
+}

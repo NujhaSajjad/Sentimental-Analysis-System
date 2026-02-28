@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\_less.js
+================================================================================
+
+// A version of the `<` operator that can be passed around as a function.
+function less(left, right) {
+  return left < right;
+}
+
+module.exports = less;

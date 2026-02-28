@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\index\package.json
+================================================================================
+
+{
+    "main": "../../cjs/index.cjs",
+    "module": "../../esm/index.js"
+}

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\jtd\enum.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition, ErrorObject } from "../../types";
+export type JTDEnumError = ErrorObject<"enum", {
+    allowedValues: string[];
+}, string[]>;
+declare const def: CodeKeywordDefinition;
+export default def;

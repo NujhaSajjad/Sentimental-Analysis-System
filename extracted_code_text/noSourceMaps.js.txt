@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\css-loader\dist\runtime\noSourceMaps.js
+================================================================================
+
+"use strict";
+
+module.exports = function (i) {
+  return i[1];
+};

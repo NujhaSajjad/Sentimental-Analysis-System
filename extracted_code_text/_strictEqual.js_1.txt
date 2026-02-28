@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\_strictEqual.js
+================================================================================
+
+function strictEqual(left, right) {
+  return left === right;
+}
+
+module.exports = strictEqual;

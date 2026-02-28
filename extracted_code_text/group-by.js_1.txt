@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\array\virtual\group-by.js
+================================================================================
+
+'use strict';
+require('../../../modules/esnext.array.group-by');
+var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
+
+module.exports = getBuiltInPrototypeMethod('Array', 'groupBy');

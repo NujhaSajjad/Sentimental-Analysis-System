@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\data-view-byte-offset\index.d.ts
+================================================================================
+
+declare function dataViewByteOffset(value: DataView): number;
+declare function dataViewByteOffset(value: unknown): never;
+
+export = dataViewByteOffset;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\resolve\test\resolver\symlinked\package\package.json
+================================================================================
+
+{
+    "main": "bar.js"
+}

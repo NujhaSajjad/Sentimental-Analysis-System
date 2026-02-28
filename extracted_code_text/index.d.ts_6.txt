@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-hwb-function\dist\index.d.ts
+================================================================================
+
+import type { PluginCreator } from 'postcss';
+/** Transform hwb() functions in CSS. */
+declare const postcssPlugin: PluginCreator<{
+    preserve: boolean;
+}>;
+export default postcssPlugin;

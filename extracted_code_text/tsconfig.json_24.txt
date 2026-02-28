@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\fast-uri\tsconfig.json
+================================================================================
+
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "target": "es2015"
+    }
+}

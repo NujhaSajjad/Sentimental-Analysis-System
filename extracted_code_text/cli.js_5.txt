@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\import-local\fixtures\cli.js
+================================================================================
+
+#!/usr/bin/env node
+'use strict';
+const importLocal = require('..');
+
+if (importLocal(__filename)) {
+	console.log('local');
+}

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\full\typed-array\from-async.js
+================================================================================
+
+'use strict';
+require('../../modules/esnext.typed-array.from-async');

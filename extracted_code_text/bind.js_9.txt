@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\function\virtual\bind.js
+================================================================================
+
+'use strict';
+module.exports = require('../../../full/function/virtual/bind');

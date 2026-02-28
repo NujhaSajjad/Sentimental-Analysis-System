@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\semver\functions\sort.js
+================================================================================
+
+'use strict'
+
+const compareBuild = require('./compare-build')
+const sort = (list, loose) => list.sort((a, b) => compareBuild(a, b, loose))
+module.exports = sort

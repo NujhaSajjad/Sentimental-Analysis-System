@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@sinclair\typebox\value\equal.d.ts
+================================================================================
+
+export declare namespace ValueEqual {
+    function Equal<T>(left: T, right: unknown): right is T;
+}

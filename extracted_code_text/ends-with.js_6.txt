@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\instance\ends-with.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/instance/ends-with');

@@ -1,0 +1,16 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\lib\util\implicitRoles\dialog.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = getImplicitRoleForDialog;
+/**
+ * Returns the implicit role for a dialog tag.
+ */
+function getImplicitRoleForDialog() {
+  return 'dialog';
+}
+module.exports = exports.default;

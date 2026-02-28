@@ -1,0 +1,16 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\transform.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition } from "ajv";
+declare type TransformName = "trimStart" | "trimEnd" | "trimLeft" | "trimRight" | "trim" | "toLowerCase" | "toUpperCase" | "toEnumCase";
+interface TransformConfig {
+    hash: Record<string, string | undefined>;
+}
+declare type Transform = (s: string, cfg?: TransformConfig) => string;
+declare const transform: {
+    [key in TransformName]: Transform;
+};
+declare const getDef: (() => CodeKeywordDefinition) & {
+    transform: typeof transform;
+};
+export default getDef;

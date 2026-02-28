@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\stylehacks\src\dictionary\identifiers.js
+================================================================================
+
+'use strict';
+const MEDIA_QUERY = 'media query';
+const PROPERTY = 'property';
+const SELECTOR = 'selector';
+const VALUE = 'value';
+
+module.exports = { MEDIA_QUERY, PROPERTY, SELECTOR, VALUE };

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-set\index.d.ts
+================================================================================
+
+declare function isSet<V = unknown>(x: unknown): x is Set<V>;
+
+export = isSet;

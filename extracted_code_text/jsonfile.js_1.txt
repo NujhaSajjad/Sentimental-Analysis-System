@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\fs-extra\lib\json\jsonfile.js
+================================================================================
+
+'use strict'
+
+const jsonFile = require('jsonfile')
+
+module.exports = {
+  // jsonfile exports
+  readJson: jsonFile.readFile,
+  readJsonSync: jsonFile.readFileSync,
+  writeJson: jsonFile.writeFile,
+  writeJsonSync: jsonFile.writeFileSync
+}

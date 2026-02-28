@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@babel\helper-define-polyfill-provider\lib\types.js
+================================================================================
+
+"use strict";
+
+exports.__esModule = true;

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\array\flatten.d.ts
+================================================================================
+
+declare function flatten<T>(matrix: T[][]): T[];
+export default flatten;

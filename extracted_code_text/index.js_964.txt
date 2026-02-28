@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\dunder-proto\test\index.js
+================================================================================
+
+'use strict';
+
+require('./get');
+require('./set');

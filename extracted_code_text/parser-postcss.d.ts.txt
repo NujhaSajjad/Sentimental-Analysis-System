@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\@types\prettier\parser-postcss.d.ts
+================================================================================
+
+import { Parser } from './';
+
+declare const parser: {
+    parsers: {
+        css: Parser;
+        less: Parser;
+        scss: Parser;
+    };
+};
+export = parser;

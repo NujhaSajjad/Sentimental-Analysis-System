@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\globalthis\implementation.js
+================================================================================
+
+'use strict';
+
+module.exports = global;

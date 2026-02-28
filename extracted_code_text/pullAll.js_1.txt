@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\pullAll.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('pullAll', require('../pullAll'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

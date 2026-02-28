@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-font-format-keywords\dist\index.d.ts
+================================================================================
+
+import type { PluginCreator } from 'postcss';
+declare const creator: PluginCreator<{
+    preserve: boolean;
+}>;
+export default creator;

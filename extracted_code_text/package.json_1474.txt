@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_to_array\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_to_array.cjs",
+    "module": "../../esm/_to_array.js"
+}

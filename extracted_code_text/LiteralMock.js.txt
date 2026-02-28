@@ -1,0 +1,20 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\__mocks__\LiteralMock.js
+================================================================================
+
+/**
+ * @flow
+ */
+
+export type LiteralMockType = {|
+  type: 'Literal',
+  value: string,
+  raw: string,
+|};
+
+export default function LiteralMock(value: string): LiteralMockType {
+  return {
+    type: 'Literal',
+    value,
+    raw: value,
+  };
+}

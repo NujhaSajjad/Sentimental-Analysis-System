@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\regexp\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/regexp');
+require('../../modules/esnext.regexp.escape');
+
+module.exports = parent;

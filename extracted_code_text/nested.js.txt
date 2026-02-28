@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\fast-json-stable-stringify\example\nested.js
+================================================================================
+
+var stringify = require('../');
+var obj = { c: 8, b: [{z:6,y:5,x:4},7], a: 3 };
+console.log(stringify(obj));

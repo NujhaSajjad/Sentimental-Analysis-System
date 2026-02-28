@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_jsx\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_jsx.cjs",
+    "module": "../../esm/_jsx.js"
+}

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Inscriptional_Parthian.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x10B40, 0x10B55).addRange(0x10B58, 0x10B5F);
+exports.characters = set;

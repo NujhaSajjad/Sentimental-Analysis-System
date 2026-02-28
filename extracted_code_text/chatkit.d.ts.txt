@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\beta\chatkit.d.ts
+================================================================================
+
+export * from "./chatkit/index.js";
+//# sourceMappingURL=chatkit.d.ts.map

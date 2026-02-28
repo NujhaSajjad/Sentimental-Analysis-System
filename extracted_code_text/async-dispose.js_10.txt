@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\async-iterator\async-dispose.js
+================================================================================
+
+'use strict';
+require('../../stable/async-iterator/async-dispose');
+require('../../modules/esnext.async-iterator.async-dispose');

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\internals\html.js
+================================================================================
+
+'use strict';
+var getBuiltIn = require('../internals/get-built-in');
+
+module.exports = getBuiltIn('document', 'documentElement');

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\es-errors\syntax.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./syntax')} */
+module.exports = SyntaxError;

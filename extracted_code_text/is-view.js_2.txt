@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\array-buffer\is-view.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/array-buffer/is-view');

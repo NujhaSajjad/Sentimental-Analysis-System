@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\fd5211fc9e2aa111d7ccc7cd2367308e197d964b28b3ac33713b3e76f1759686.json
+================================================================================
+
+{"ast":null,"code":"","map":{"version":3,"names":[],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/src/components/UploadCard.jsx"],"sourcesContent":[""],"mappings":"","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\_ts3.4\dist\create-program\createDefaultProgram.d.ts
+================================================================================
+
+import { ParseSettings } from '../parseSettings';
+import { ASTAndProgram } from './shared';
+/**
+ * @param parseSettings Internal settings for parsing the file
+ * @returns If found, returns the source file corresponding to the code and the containing program
+ */
+declare function createDefaultProgram(parseSettings: ParseSettings): ASTAndProgram | undefined;
+export { createDefaultProgram };
+//# sourceMappingURL=createDefaultProgram.d.ts.map

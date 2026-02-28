@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\reflect\has.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/reflect/has');
+
+module.exports = parent;

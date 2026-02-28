@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\reflect.getprototypeof\test\index.js
+================================================================================
+
+'use strict';
+
+var getPrototypeOf = require('../');
+var test = require('tape');
+var runTests = require('./tests');
+
+test('as a function', function (t) {
+	runTests(getPrototypeOf, t);
+
+	t.end();
+});

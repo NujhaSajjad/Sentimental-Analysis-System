@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\array\virtual\filter-reject.js
+================================================================================
+
+'use strict';
+module.exports = require('../../../full/array/virtual/filter-reject');

@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\domexception\index.js
+================================================================================
+
+"use strict";
+const DOMException = require("./webidl2js-wrapper.js");
+
+const sharedGlobalObject = { Error };
+DOMException.install(sharedGlobalObject);
+
+module.exports = sharedGlobalObject.DOMException;

@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\internals\validate-arguments-length.js
+================================================================================
+
+'use strict';
+var $TypeError = TypeError;
+
+module.exports = function (passed, required) {
+  if (passed < required) throw new $TypeError('Not enough arguments');
+  return passed;
+};

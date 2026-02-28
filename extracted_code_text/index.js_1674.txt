@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\resolve\test\resolver\same_names\foo\index.js
+================================================================================
+
+module.exports = 1;

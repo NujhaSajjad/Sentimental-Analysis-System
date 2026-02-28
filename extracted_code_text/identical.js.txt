@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\identical.js
+================================================================================
+
+module.exports = require('./eq');

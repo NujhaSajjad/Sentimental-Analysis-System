@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\keywords\index.d.ts
+================================================================================
+
+import type { Plugin } from "ajv";
+declare const ajvKeywords: Record<string, Plugin<any> | undefined>;
+export default ajvKeywords;

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\stylehacks\types\dictionary\identifiers.d.ts
+================================================================================
+
+export const MEDIA_QUERY: "media query";
+export const PROPERTY: "property";
+export const SELECTOR: "selector";
+export const VALUE: "value";

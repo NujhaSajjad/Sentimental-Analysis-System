@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\schemes\ws.d.ts
+================================================================================
+
+import { URISchemeHandler, URIComponents } from "../uri";
+export interface WSComponents extends URIComponents {
+    resourceName?: string;
+    secure?: boolean;
+}
+declare const handler: URISchemeHandler;
+export default handler;

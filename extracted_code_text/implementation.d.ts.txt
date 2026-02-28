@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\any-promise\implementation.d.ts
+================================================================================
+
+declare var implementation: string;
+
+export = implementation;

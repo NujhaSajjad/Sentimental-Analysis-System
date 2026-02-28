@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\setprototypeof\index.d.ts
+================================================================================
+
+declare function setPrototypeOf(o: any, proto: object | null): any;
+export = setPrototypeOf;

@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\esm\_write_only_error.js
+================================================================================
+
+function _write_only_error(name) {
+    throw new TypeError("\"" + name + "\" is write-only");
+}
+export { _write_only_error as _ };

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\modules\esnext.array.from-async.js
+================================================================================
+
+'use strict';
+// TODO: Remove from `core-js@4`
+require('../modules/es.array.from-async');

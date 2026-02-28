@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-merge-longhand\src\lib\trbl.js
+================================================================================
+
+'use strict';
+module.exports = ['top', 'right', 'bottom', 'left'];

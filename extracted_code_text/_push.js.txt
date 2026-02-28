@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\underscore\amd\_push.js
+================================================================================
+
+define(['./_setup', './_unmethodize'], function (_setup, _unmethodize) {
+
+	var push = _unmethodize(_setup.ArrayProto.push);
+
+	return push;
+
+});

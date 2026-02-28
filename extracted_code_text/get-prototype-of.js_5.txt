@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\reflect\get-prototype-of.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/reflect/get-prototype-of');

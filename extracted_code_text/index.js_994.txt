@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\es-errors\index.js
+================================================================================
+
+'use strict';
+
+/** @type {import('.')} */
+module.exports = Error;

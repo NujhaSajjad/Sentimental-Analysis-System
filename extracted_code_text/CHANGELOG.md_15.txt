@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-stepped-value-functions\CHANGELOG.md
+================================================================================
+
+# Changes to PostCSS Stepped Value Functions
+
+### 1.0.1 (July 8, 2022)
+
+- Fix case insensitive matching.
+
+### 1.0.0 (May 2, 2022)
+
+- Initial version

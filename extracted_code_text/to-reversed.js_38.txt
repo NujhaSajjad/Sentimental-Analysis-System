@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\instance\to-reversed.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/instance/to-reversed');
+
+module.exports = parent;

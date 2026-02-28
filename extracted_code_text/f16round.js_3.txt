@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\math\f16round.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/math/f16round');
+
+module.exports = parent;

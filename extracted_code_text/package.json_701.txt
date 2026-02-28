@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\html-entities\dist\commonjs\package.json
+================================================================================
+
+{
+  "type": "commonjs"
+}

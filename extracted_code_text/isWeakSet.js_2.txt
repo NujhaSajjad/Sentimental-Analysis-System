@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\underscore\amd\isWeakSet.js
+================================================================================
+
+define(['./_tagTester'], function (_tagTester) {
+
+	var isWeakSet = _tagTester('WeakSet');
+
+	return isWeakSet;
+
+});

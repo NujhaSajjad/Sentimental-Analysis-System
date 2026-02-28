@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\number\min-safe-integer.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/number/min-safe-integer');
+
+module.exports = parent;

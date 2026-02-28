@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\src\resource.ts
+================================================================================
+
+/** @deprecated Import from ./core/resource instead */
+export * from './core/resource';

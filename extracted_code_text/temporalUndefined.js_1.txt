@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\temporalUndefined.js
+================================================================================
+
+function _temporalUndefined() {}
+module.exports = _temporalUndefined, module.exports.__esModule = true, module.exports["default"] = module.exports;

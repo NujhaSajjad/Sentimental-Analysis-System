@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\react-dom\client.react-server.js
+================================================================================
+
+'use strict';
+
+throw new Error(
+  'react-dom/client is not supported in React Server Components.'
+);

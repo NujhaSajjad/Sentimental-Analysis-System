@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Kayah_Li.js
+================================================================================
+
+const set = require('regenerate')(0xA92F);
+set.addRange(0xA900, 0xA92D);
+exports.characters = set;

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\math\hypot.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/math/hypot');
+
+module.exports = parent;

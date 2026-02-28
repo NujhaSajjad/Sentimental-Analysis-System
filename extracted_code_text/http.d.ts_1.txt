@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\schemes\http.d.ts
+================================================================================
+
+import { URISchemeHandler } from "../uri";
+declare const handler: URISchemeHandler;
+export default handler;

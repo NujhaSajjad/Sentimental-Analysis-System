@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\tslib\tslib.es6.html
+================================================================================
+
+<script src="tslib.es6.js"></script>

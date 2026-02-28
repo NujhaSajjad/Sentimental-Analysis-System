@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\symbol\description.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/symbol/description');
+
+module.exports = parent;

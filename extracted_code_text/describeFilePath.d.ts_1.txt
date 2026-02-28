@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\_ts3.4\dist\create-program\describeFilePath.d.ts
+================================================================================
+
+export declare function describeFilePath(filePath: string, tsconfigRootDir: string): string;
+//# sourceMappingURL=describeFilePath.d.ts.map

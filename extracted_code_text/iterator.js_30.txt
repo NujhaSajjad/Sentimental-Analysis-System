@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\dom-collections\iterator.js
+================================================================================
+
+'use strict';
+require('../../modules/es.object.to-string');
+require('../../modules/web.dom-collections.iterator');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Array', 'values');

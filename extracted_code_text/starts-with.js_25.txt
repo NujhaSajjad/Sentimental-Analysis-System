@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\string\starts-with.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/string/starts-with');
+
+module.exports = parent;

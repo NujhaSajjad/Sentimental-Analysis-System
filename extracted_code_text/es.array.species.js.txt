@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\modules\es.array.species.js
+================================================================================
+
+'use strict';
+var setSpecies = require('../internals/set-species');
+
+// `Array[@@species]` getter
+// https://tc39.es/ecma262/#sec-get-array-@@species
+setSpecies('Array');

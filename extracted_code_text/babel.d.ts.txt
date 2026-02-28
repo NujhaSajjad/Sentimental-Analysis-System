@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\jiti\dist\babel.d.ts
+================================================================================
+
+import { TransformOptions, TRANSFORM_RESULT } from "./types";
+export default function transform(opts: TransformOptions): TRANSFORM_RESULT;

@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\bonjour-service\dist\lib\service-types.d.ts
+================================================================================
+
+export interface ServiceType {
+    name?: string;
+    protocol?: 'tcp' | 'udp' | string | null | undefined;
+    subtype?: string | undefined;
+}
+export declare const toString: (data: ServiceType) => any;
+export declare const toType: (string: string) => ServiceType;

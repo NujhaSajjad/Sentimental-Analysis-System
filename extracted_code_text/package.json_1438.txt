@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_get\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_get.cjs",
+    "module": "../../esm/_get.js"
+}

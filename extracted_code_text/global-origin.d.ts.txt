@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\undici-types\global-origin.d.ts
+================================================================================
+
+declare function setGlobalOrigin (origin: string | URL | undefined): void
+declare function getGlobalOrigin (): URL | undefined
+
+export {
+  setGlobalOrigin,
+  getGlobalOrigin
+}

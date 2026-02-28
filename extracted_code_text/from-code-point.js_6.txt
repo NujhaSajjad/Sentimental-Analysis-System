@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\string\from-code-point.js
+================================================================================
+
+'use strict';
+require('../../modules/es.string.from-code-point');
+var path = require('../../internals/path');
+
+module.exports = path.String.fromCodePoint;

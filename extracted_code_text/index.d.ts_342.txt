@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-generator-function\index.d.ts
+================================================================================
+
+declare function isGeneratorFunction(fn: unknown): fn is GeneratorFunction;
+
+export = isGeneratorFunction;

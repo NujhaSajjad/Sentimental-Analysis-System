@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\array\filter.js
+================================================================================
+
+'use strict';
+require('../../modules/es.array.filter');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Array', 'filter');

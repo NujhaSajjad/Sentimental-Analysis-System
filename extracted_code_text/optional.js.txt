@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\any-promise\optional.js
+================================================================================
+
+"use strict";
+try {
+  module.exports = require('./register')().Promise || null
+} catch(e) {
+  module.exports = null
+}

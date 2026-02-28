@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\src\keywords\dynamicDefaults.ts
+================================================================================
+
+import type {Plugin} from "ajv"
+import getDef from "../definitions/dynamicDefaults"
+
+const dynamicDefaults: Plugin<undefined> = (ajv) => ajv.addKeyword(getDef())
+
+export default dynamicDefaults
+module.exports = dynamicDefaults

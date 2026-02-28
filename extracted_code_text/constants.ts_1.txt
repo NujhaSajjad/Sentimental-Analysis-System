@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\@apideck\better-ajv-errors\src\constants.ts
+================================================================================
+
+import { DefinedError } from 'ajv';
+
+export const AJV_ERROR_KEYWORD_WEIGHT_MAP: Partial<Record<DefinedError['keyword'], number>> = {
+  enum: 1,
+  type: 0,
+};
+
+export const QUOTES_REGEX = /"/g;
+export const NOT_REGEX = /NOT/g;
+export const SLASH_REGEX = /\//g;

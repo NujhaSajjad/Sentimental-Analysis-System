@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\esnext.weakref.d.ts
+================================================================================
+
+import type { ImplicitLibVariableOptions } from '../variable';
+export declare const esnext_weakref: Record<string, ImplicitLibVariableOptions>;
+//# sourceMappingURL=esnext.weakref.d.ts.map

@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@surma\rollup-plugin-off-main-thread\tests\fixtures\empty.js
+================================================================================
+
+

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\lib\bindReporter.d.ts
+================================================================================
+
+import { Metric, ReportHandler } from '../types.js';
+export declare const bindReporter: (callback: ReportHandler, metric: Metric, reportAllChanges?: boolean | undefined) => (forceReport?: boolean | undefined) => void;

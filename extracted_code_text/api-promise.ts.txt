@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\src\api-promise.ts
+================================================================================
+
+/** @deprecated Import from ./core/api-promise instead */
+export * from './core/api-promise';

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\html-entities\dist\esm\package.json
+================================================================================
+
+{
+  "type": "module"
+}

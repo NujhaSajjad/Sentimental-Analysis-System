@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\es-abstract\helpers\getOwnPropertyDescriptor.js
+================================================================================
+
+'use strict';
+
+// TODO: remove, semver-major
+
+module.exports = require('gopd');

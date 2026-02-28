@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\string\substr.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/string/substr');
+
+module.exports = parent;

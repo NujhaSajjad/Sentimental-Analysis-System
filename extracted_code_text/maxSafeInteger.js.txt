@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\es-abstract\helpers\maxSafeInteger.js
+================================================================================
+
+'use strict';
+
+// TODO, semver-major: delete
+module.exports = require('math-intrinsics/constants/maxSafeInteger');

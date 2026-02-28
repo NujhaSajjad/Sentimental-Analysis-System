@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\ids\OccurrenceModuleIdsPlugin.json
+================================================================================
+
+{
+  "title": "OccurrenceModuleIdsPluginOptions",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "prioritiseInitial": {
+      "description": "Prioritise initial size over total size.",
+      "type": "boolean"
+    }
+  }
+}

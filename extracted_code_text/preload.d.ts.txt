@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@types\semver\preload.d.ts
+================================================================================
+
+import semver = require(".");
+export = semver;

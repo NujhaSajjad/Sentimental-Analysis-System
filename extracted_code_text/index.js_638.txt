@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\dom-collections\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/dom-collections');
+
+module.exports = parent;

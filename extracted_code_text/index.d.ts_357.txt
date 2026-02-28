@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-weakref\index.d.ts
+================================================================================
+
+declare function isWeakRef<T extends WeakKey>(value: unknown): value is WeakRef<T>;
+
+export = isWeakRef;

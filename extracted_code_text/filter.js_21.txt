@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\map\filter.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/map/filter');

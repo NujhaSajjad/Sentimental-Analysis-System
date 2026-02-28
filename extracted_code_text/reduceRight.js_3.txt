@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\neo-async\reduceRight.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./async').reduceRight;

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\function\has-instance.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/function/has-instance');
+
+module.exports = parent;

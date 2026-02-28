@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\identity-obj-proxy\src\test-redirections\idObjES6Export.js
+================================================================================
+
+const idObj = require('..');
+
+export default idObj;

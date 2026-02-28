@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_super_prop_base\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_super_prop_base.cjs",
+    "module": "../../esm/_super_prop_base.js"
+}

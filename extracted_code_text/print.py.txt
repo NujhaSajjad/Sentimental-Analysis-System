@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\shell-quote\print.py
+================================================================================
+
+#!/usr/bin/env python3
+import sys
+print(sys.argv[1])

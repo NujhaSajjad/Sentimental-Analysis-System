@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@webassemblyjs\utf8\src\index.js
+================================================================================
+
+// @flow
+
+export { decode } from "./decoder";
+export { encode } from "./encoder";

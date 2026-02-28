@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\axios\lib\platform\browser\classes\Blob.js
+================================================================================
+
+'use strict'
+
+export default typeof Blob !== 'undefined' ? Blob : null

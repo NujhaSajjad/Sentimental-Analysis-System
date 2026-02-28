@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\instance\replace-all.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/instance/replace-all');
+
+module.exports = parent;

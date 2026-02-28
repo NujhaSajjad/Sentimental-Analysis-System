@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\typescript-reporter\extension\vue\TypeScriptVueExtensionOptions.js
+================================================================================
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });

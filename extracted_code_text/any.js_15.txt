@@ -1,0 +1,10 @@
+Relative path: backend\node_modules\openai\_vendor\zod-to-json-schema\parsers\any.js
+================================================================================
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseAnyDef = parseAnyDef;
+function parseAnyDef() {
+    return {};
+}
+//# sourceMappingURL=any.js.map

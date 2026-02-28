@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\colors.js
+================================================================================
+
+let colors = require('./lib/public/colors')
+module.exports = (colors.__esModule ? colors : { default: colors }).default

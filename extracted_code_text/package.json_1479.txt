@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_ts_decorate\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_ts_decorate.cjs",
+    "module": "../../esm/_ts_decorate.js"
+}

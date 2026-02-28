@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\disposable-stack\constructor.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/disposable-stack/constructor');
+
+module.exports = parent;

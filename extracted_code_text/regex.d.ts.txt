@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\uuid\dist\regex.d.ts
+================================================================================
+
+declare const _default: RegExp;
+export default _default;

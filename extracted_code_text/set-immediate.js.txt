@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\set-immediate.js
+================================================================================
+
+'use strict';
+var parent = require('../stable/set-immediate');
+
+module.exports = parent;

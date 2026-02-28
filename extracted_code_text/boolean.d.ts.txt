@@ -1,0 +1,8 @@
+Relative path: backend\node_modules\openai\_vendor\zod-to-json-schema\parsers\boolean.d.ts
+================================================================================
+
+export type JsonSchema7BooleanType = {
+    type: 'boolean';
+};
+export declare function parseBooleanDef(): JsonSchema7BooleanType;
+//# sourceMappingURL=boolean.d.ts.map

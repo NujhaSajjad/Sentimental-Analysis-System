@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\refs\json-schema-2020-12\index.d.ts
+================================================================================
+
+import type Ajv from "../../core";
+export default function addMetaSchema2020(this: Ajv, $data?: boolean): Ajv;

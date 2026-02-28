@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\node_modules\fs-extra\lib\copy-sync\index.js
+================================================================================
+
+'use strict'
+
+module.exports = {
+  copySync: require('./copy-sync')
+}

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\postcss-image-set-function\dist\index.d.ts
+================================================================================
+
+import type { PluginCreator } from 'postcss';
+declare const creator: PluginCreator<{
+    preserve: boolean;
+    oninvalid: string;
+}>;
+export default creator;

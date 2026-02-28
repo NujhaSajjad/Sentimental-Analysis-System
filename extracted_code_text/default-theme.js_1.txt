@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\src\public\default-theme.js
+================================================================================
+
+import { cloneDeep } from '../util/cloneDeep'
+import defaultFullConfig from '../../stubs/config.full'
+
+export default cloneDeep(defaultFullConfig.theme)

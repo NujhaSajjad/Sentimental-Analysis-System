@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\reflect\construct.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/reflect/construct');
+
+module.exports = parent;

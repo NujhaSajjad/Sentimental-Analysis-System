@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_await_async_generator\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_await_async_generator.cjs",
+    "module": "../../esm/_await_async_generator.js"
+}

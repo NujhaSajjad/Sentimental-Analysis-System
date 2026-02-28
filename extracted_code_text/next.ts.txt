@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\ajv-formats\node_modules\ajv\lib\vocabularies\next.ts
+================================================================================
+
+import type {Vocabulary} from "../types"
+import dependentRequired from "./validation/dependentRequired"
+import dependentSchemas from "./applicator/dependentSchemas"
+import limitContains from "./validation/limitContains"
+
+const next: Vocabulary = [dependentRequired, dependentSchemas, limitContains]
+
+export default next

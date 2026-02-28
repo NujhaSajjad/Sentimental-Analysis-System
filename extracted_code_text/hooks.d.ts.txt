@@ -1,0 +1,20 @@
+Relative path: avanza-frontend\node_modules\mini-css-extract-plugin\types\hooks.d.ts
+================================================================================
+
+export function getCompilationHooks(
+  compilation: Compilation,
+): MiniCssExtractPluginCompilationHooks;
+export type Compilation = import("webpack").Compilation;
+export type VarNames = {
+  tag: string;
+  chunkId: string;
+  href: string;
+  resolve: string;
+  reject: string;
+};
+export type MiniCssExtractPluginCompilationHooks = {
+  beforeTagInsert: import("tapable").SyncWaterfallHook<
+    [string, VarNames],
+    string
+  >;
+};

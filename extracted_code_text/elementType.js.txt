@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\jsx-ast-utils\elementType.js
+================================================================================
+
+module.exports = require('./lib').elementType; // eslint-disable-line import/no-unresolved

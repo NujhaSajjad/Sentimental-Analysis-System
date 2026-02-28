@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\workbox-navigation-preload\tsconfig.json
+================================================================================
+
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "outDir": "./",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts"],
+  "references": [{"path": "../workbox-core/"}]
+}

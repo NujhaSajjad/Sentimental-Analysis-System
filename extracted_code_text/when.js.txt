@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\any-promise\register\when.js
+================================================================================
+
+'use strict';
+require('../register')('when', {Promise: require('when').Promise})

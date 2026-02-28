@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Anatolian_Hieroglyphs.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x14400, 0x14646);
+exports.characters = set;

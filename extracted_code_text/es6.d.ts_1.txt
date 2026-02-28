@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\es-to-primitive\es6.d.ts
+================================================================================
+
+import ES2015 from './es2015';
+
+export = ES2015;

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\string\virtual\trim-left.js
+================================================================================
+
+'use strict';
+require('../../../modules/es.string.trim-start');
+var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
+
+module.exports = getBuiltInPrototypeMethod('String', 'trimLeft');

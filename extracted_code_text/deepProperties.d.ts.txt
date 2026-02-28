@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\deepProperties.d.ts
+================================================================================
+
+import type { MacroKeywordDefinition } from "ajv";
+import type { DefinitionOptions } from "./_types";
+export default function getDef(opts?: DefinitionOptions): MacroKeywordDefinition;

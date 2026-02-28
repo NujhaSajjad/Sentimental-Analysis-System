@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\style-loader\dist\runtime\setAttributesWithAttributesAndNonce.js
+================================================================================
+
+"use strict";
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement, attributes) {
+  Object.keys(attributes).forEach(function (key) {
+    styleElement.setAttribute(key, attributes[key]);
+  });
+}
+module.exports = setAttributesWithoutAttributes;

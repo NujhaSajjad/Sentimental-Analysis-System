@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\openai\resources\fine-tuning\alpha\index.d.ts
+================================================================================
+
+export { Alpha } from "./alpha.js";
+export { Graders, type GraderRunResponse, type GraderValidateResponse, type GraderRunParams, type GraderValidateParams, } from "./graders.js";
+//# sourceMappingURL=index.d.ts.map

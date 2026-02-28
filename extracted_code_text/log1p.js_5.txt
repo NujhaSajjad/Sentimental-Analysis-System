@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\math\log1p.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/math/log1p');
+
+module.exports = parent;

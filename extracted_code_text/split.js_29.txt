@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\string\split.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/string/split');
+
+module.exports = parent;

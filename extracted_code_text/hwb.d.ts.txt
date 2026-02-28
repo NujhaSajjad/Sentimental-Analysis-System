@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-hwb-function\dist\hwb.d.ts
+================================================================================
+
+declare type color = [number, number, number];
+export declare function hwbToRgb(hwb: color): color;
+export {};

@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\lz-string\bower.json
+================================================================================
+
+{
+  "name": "lz-string",
+  "version": "1.4.5",
+  "main": "libs/lz-string.min.js",
+  "ignore": [
+    "bin/",
+    "reference/",
+    "tests/"
+  ],
+  "keywords": ["compression", "lzw", "string"]
+}

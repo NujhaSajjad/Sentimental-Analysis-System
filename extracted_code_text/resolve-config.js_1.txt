@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\src\public\resolve-config.js
+================================================================================
+
+import resolveConfigObjects from '../util/resolveConfig'
+import getAllConfigs from '../util/getAllConfigs'
+
+export default function resolveConfig(...configs) {
+  let [, ...defaultConfigs] = getAllConfigs(configs[0])
+  return resolveConfigObjects([...configs, ...defaultConfigs])
+}

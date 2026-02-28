@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\csso\node_modules\mdn-data\api\index.js
+================================================================================
+
+module.exports = {
+  inheritance: require('./inheritance'),
+}

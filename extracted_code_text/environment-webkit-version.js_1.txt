@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\internals\environment-webkit-version.js
+================================================================================
+
+'use strict';
+var userAgent = require('../internals/environment-user-agent');
+
+var webkit = userAgent.match(/AppleWebKit\/(\d+)\./);
+
+module.exports = !!webkit && +webkit[1];

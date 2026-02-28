@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\typed-array\entries.js
+================================================================================
+
+'use strict';
+require('../../modules/es.object.to-string');
+require('../../modules/es.typed-array.iterator');

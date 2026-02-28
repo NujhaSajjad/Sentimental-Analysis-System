@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\object\define-property.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/object/define-property');

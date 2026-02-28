@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\possible-typed-array-names\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"compilerOptions": {
+		"target": "ESNext",
+	},
+	"exclude": [
+		"coverage",
+	],
+}

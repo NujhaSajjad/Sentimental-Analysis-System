@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\create.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('create', require('../create'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

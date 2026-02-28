@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\underscore\cjs\isNull.js
+================================================================================
+
+// Is a given value equal to null?
+function isNull(obj) {
+  return obj === null;
+}
+
+module.exports = isNull;

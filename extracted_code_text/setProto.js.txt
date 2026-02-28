@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\es-abstract\helpers\setProto.js
+================================================================================
+
+'use strict';
+
+// TODO, semver-major: remove
+module.exports = require('set-proto');

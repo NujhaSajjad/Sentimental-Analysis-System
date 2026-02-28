@@ -1,0 +1,16 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\lib\util\implicitRoles\ol.js
+================================================================================
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = getImplicitRoleForOl;
+/**
+ * Returns the implicit role for an ol tag.
+ */
+function getImplicitRoleForOl() {
+  return 'list';
+}
+module.exports = exports.default;

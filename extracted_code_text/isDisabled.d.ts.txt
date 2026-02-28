@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\misc\isDisabled.d.ts
+================================================================================
+
+export declare function isDisabled(element: Element | null): boolean;

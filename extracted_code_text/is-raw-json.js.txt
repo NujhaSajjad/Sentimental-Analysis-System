@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\json\is-raw-json.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/json/is-raw-json');
+require('../../modules/esnext.json.is-raw-json');
+
+module.exports = parent;

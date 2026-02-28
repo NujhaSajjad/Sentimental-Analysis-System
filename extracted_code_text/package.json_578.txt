@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\node_modules\resolve\test\resolver\browser_field\package.json
+================================================================================
+
+{
+  "name": "browser_field",
+  "main": "a",
+  "browser": "b"
+}

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\identity.js
+================================================================================
+
+function _identity(t) {
+  return t;
+}
+export { _identity as default };

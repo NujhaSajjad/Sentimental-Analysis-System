@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\sortedIndex.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('sortedIndex', require('../sortedIndex'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

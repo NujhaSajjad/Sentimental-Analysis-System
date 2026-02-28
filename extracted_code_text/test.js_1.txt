@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\coa\node_modules\color-name\test.js
+================================================================================
+
+'use strict'
+
+var names = require('./');
+var assert = require('assert');
+
+assert.deepEqual(names.red, [255,0,0]);
+assert.deepEqual(names.aliceblue, [240,248,255]);

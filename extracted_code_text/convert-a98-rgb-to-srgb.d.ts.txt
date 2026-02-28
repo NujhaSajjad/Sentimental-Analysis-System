@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\convert-a98-rgb-to-srgb.d.ts
+================================================================================
+
+declare type color = [number, number, number];
+export declare function a98RgbToSRgb(a98: color): color;
+export {};

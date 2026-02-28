@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\dom-exception\to-string-tag.js
+================================================================================
+
+'use strict';
+require('../../modules/web.dom-exception.to-string-tag');
+
+module.exports = 'DOMException';

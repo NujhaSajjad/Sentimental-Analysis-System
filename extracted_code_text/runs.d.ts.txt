@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\beta\threads\runs.d.ts
+================================================================================
+
+export * from "./runs/index.js";
+//# sourceMappingURL=runs.d.ts.map

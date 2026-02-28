@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\options.d.ts
+================================================================================
+
+export declare type options = {
+    noIsPseudoSelector: boolean;
+};

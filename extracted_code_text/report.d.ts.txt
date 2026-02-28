@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\report.d.ts
+================================================================================
+
+declare function _exports(context: any, message: any, messageId: any, data: any): void;
+export = _exports;
+//# sourceMappingURL=report.d.ts.map

@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\vector-stores.d.ts
+================================================================================
+
+export * from "./vector-stores/index.js";
+//# sourceMappingURL=vector-stores.d.ts.map

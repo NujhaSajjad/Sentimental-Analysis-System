@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\bcryptjs\umd\package.json
+================================================================================
+
+{
+  "type": "commonjs"
+}

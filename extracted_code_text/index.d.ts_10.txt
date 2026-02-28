@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-normalize-display-values\dist\index.d.ts
+================================================================================
+
+import type { PluginCreator } from 'postcss';
+declare const creator: PluginCreator<{
+    preserve: boolean;
+}>;
+export default creator;

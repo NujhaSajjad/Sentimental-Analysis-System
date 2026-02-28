@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\f71c1f198b1aa6fd89b6e09a8029e467d071655962d431d3fded5e2bf79b3895.json
+================================================================================
+
+{"ast":null,"code":"","map":{"version":3,"names":[],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/src/components/LoginPage.jsx"],"sourcesContent":[""],"mappings":"","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-double-position-gradients\dist\is-gradient.d.ts
+================================================================================
+
+export declare function includesGradientsFunction(str: string): boolean;
+export declare function isGradientsFunctions(str: string): boolean;

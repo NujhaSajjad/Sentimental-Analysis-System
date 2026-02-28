@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\array-grouping-v2.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-array-grouping
+require('../modules/esnext.map.group-by');
+require('../modules/esnext.object.group-by');

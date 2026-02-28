@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_assert_this_initialized\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_assert_this_initialized.cjs",
+    "module": "../../esm/_assert_this_initialized.js"
+}

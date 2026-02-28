@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-boolean-object\index.d.ts
+================================================================================
+
+declare function isBooleanObject(value: unknown): value is boolean | Boolean;
+
+export = isBooleanObject;

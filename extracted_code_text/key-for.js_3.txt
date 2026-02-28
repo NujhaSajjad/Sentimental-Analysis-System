@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\symbol\key-for.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/symbol/key-for');
+
+module.exports = parent;

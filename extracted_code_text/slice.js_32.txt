@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\array-buffer\slice.js
+================================================================================
+
+'use strict';
+require('../../modules/es.array-buffer.slice');

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\language-subtag-registry\data\json\special.json
+================================================================================
+
+{
+	"mis": 4300,
+	"mul": 4589,
+	"und": 7114,
+	"zxx": 8255
+}

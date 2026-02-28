@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\sucrase\dist\types\parser\plugins\jsx\index.d.ts
+================================================================================
+
+export declare function jsxParseElement(): void;
+export declare function nextJSXTagToken(): void;

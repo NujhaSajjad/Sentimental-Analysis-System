@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\map\delete-all.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/map/delete-all');

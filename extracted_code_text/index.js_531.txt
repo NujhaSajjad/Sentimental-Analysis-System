@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\index.js
+================================================================================
+
+'use strict';
+require('../stable');
+require('../stage/3');
+
+module.exports = require('../internals/path');

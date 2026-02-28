@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\jiti\register.js
+================================================================================
+
+const jiti = require(".")();
+
+jiti.register();

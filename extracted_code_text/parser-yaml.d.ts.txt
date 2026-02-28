@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\@types\prettier\parser-yaml.d.ts
+================================================================================
+
+import { Parser } from './';
+
+declare const parser: {
+    parsers: {
+        yaml: Parser;
+    };
+};
+export = parser;

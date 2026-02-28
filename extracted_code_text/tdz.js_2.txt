@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\tdz.js
+================================================================================
+
+function _tdzError(e) {
+  throw new ReferenceError(e + " is not defined - temporal dead zone");
+}
+export { _tdzError as default };

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\set\symmetric-difference.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/set/symmetric-difference');
+
+module.exports = parent;

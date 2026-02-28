@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\function.prototype.name\polyfill.js
+================================================================================
+
+'use strict';
+
+var implementation = require('./implementation');
+
+module.exports = function getPolyfill() {
+	return implementation;
+};

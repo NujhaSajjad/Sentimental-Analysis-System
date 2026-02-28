@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Old_North_Arabian.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x10A80, 0x10A9F);
+exports.characters = set;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\mdn-data\l10n\index.js
+================================================================================
+
+module.exports = {
+  css: require('./css'),
+}

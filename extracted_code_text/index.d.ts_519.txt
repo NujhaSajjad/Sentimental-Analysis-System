@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\safe-array-concat\index.d.ts
+================================================================================
+
+declare function safeArrayConcat<T = unknown>(item: T | T[], ...items: (T | T[])[]): T[];
+
+export = safeArrayConcat;

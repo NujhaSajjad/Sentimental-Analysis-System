@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\generator-function\index.d.ts
+================================================================================
+
+declare function getGeneratorFunction(): GeneratorFunctionConstructor | false;
+
+export = getGeneratorFunction;

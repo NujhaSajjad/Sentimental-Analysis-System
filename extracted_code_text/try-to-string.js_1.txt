@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\internals\try-to-string.js
+================================================================================
+
+'use strict';
+var $String = String;
+
+module.exports = function (argument) {
+  try {
+    return $String(argument);
+  } catch (error) {
+    return 'Object';
+  }
+};

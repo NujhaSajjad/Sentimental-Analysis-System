@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\db50e36644d20a7b8e359152719a24f259e3776d08309ffa8eb3d707659c5677.json
+================================================================================
+
+{"ast":null,"code":"'use strict';\n\nexport default typeof Blob !== 'undefined' ? Blob : null;","map":{"version":3,"names":["Blob"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/axios/lib/platform/browser/classes/Blob.js"],"sourcesContent":["'use strict'\n\nexport default typeof Blob !== 'undefined' ? Blob : null\n"],"mappings":"AAAA,YAAY;;AAEZ,eAAe,OAAOA,IAAI,KAAK,WAAW,GAAGA,IAAI,GAAG,IAAI","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

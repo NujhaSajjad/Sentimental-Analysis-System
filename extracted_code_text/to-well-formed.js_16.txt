@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\string\to-well-formed.js
+================================================================================
+
+'use strict';
+// TODO: Remove from `core-js@4`
+require('../../modules/esnext.string.to-well-formed');
+
+var parent = require('../../stable/string/to-well-formed');
+
+module.exports = parent;

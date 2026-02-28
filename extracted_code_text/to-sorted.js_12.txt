@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\array\to-sorted.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/array/to-sorted');
+
+module.exports = parent;

@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\uuid\dist\version.d.ts
+================================================================================
+
+declare function version(uuid: string): number;
+export default version;

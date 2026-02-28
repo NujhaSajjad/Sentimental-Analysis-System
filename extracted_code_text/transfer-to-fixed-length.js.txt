@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\array-buffer\transfer-to-fixed-length.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/array-buffer/transfer-to-fixed-length');
+require('../../modules/esnext.array-buffer.transfer-to-fixed-length');
+
+module.exports = parent;

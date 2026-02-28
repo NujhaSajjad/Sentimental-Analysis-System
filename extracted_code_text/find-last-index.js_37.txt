@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\virtual\find-last-index.js
+================================================================================
+
+'use strict';
+module.exports = require('../../../es/array/virtual/find-last-index');

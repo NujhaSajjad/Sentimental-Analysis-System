@@ -1,0 +1,16 @@
+Relative path: avanza-frontend\node_modules\mz\zlib.js
+================================================================================
+
+
+require('thenify-all').withCallback(
+  require('zlib'),
+  exports, [
+    'deflate',
+    'deflateRaw',
+    'gzip',
+    'gunzip',
+    'inflate',
+    'inflateRaw',
+    'unzip',
+  ]
+)

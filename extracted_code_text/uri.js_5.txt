@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\es-errors\uri.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./uri')} */
+module.exports = URIError;

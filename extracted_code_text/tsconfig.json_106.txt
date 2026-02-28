@@ -1,0 +1,11 @@
+Relative path: backend\node_modules\express-rate-limit\tsconfig.json
+================================================================================
+
+{
+	"include": ["source/"],
+	"exclude": ["node_modules/"],
+	"extends": "@express-rate-limit/tsconfig",
+	"compilerOptions": {
+		"target": "ES2020"
+	}
+}

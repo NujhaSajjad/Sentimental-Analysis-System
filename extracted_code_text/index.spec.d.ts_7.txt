@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\no-case\dist.es2015\index.spec.d.ts
+================================================================================
+
+export {};

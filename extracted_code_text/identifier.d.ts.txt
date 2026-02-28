@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\sucrase\dist\types\parser\util\identifier.d.ts
+================================================================================
+
+export declare const IS_IDENTIFIER_CHAR: Uint8Array;
+export declare const IS_IDENTIFIER_START: Uint8Array;

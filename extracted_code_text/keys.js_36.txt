@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\array\virtual\keys.js
+================================================================================
+
+'use strict';
+module.exports = require('../../../full/array/virtual/keys');

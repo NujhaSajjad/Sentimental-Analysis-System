@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\jiti\dist\plugins\babel-plugin-transform-import-meta.d.ts
+================================================================================
+
+import type { PluginObj } from "@babel/core";
+export declare function TransformImportMetaPlugin(_ctx: any, opts: {
+    filename?: string;
+}): PluginObj;

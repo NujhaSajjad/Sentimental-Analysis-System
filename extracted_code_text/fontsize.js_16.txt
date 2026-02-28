@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\string\fontsize.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/string/fontsize');
+
+module.exports = parent;

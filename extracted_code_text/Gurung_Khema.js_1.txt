@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Gurung_Khema.js
+================================================================================
+
+const set = require('regenerate')(0x965);
+set.addRange(0x16100, 0x16139);
+exports.characters = set;

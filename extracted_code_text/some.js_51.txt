@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\set\some.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/set/some');

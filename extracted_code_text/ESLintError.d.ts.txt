@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\eslint-webpack-plugin\types\ESLintError.d.ts
+================================================================================
+
+export = ESLintError;
+declare class ESLintError extends Error {
+  /**
+   * @param {string=} messages
+   */
+  constructor(messages?: string | undefined);
+  stack: string;
+}

@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\buffer-equal-constant-time\.travis.yml
+================================================================================
+
+language: node_js
+node_js:
+- "0.11"
+- "0.10"

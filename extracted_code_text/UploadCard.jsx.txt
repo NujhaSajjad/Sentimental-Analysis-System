@@ -1,0 +1,60 @@
+Relative path: avanza-frontend\src\components\UploadCard.jsx
+================================================================================
+
+import React, { useCallback } from 'react';
+import { useDropzone } from 'react-dropzone';
+import { Upload, CloudUpload, CheckCircle } from 'lucide-react';
+
+const UploadCard = ({ onFileSelect, uploadStatus, fileInfo }) => {
+  const onDrop = useCallback((acceptedFiles) => {
+    if (acceptedFiles.length > 0) {
+      onFileSelect(acceptedFiles[0]);
+    }
+  }, [onFileSelect]);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      'audio/*': ['.mp3', '.wav', '.m4a', '.ogg']
+    },
+    maxSize: 50 * 1024 * 1024, // 50MB
+    multiple: false
+  });
+
+  return (
+    <div className="card">
+      <div className="card-header">
+        <Upload size={18} />
+        <h3>Upload Audio File</h3>
+      </div>
+      <div className="card-content">
+        {!uploadStatus ? (
+          <div
+            {...getRootProps()}
+            className={`upload-area ${isDragActive ? 'dragover' : ''}`}
+          >
+            <input {...getInputProps()} />
+            <div className="upload-icon">
+              <CloudUpload size={64} />
+            </div>
+            <p className="upload-text">Drag & drop audio file here</p>
+            <p className="upload-subtext">
+              or <span className="browse-link">browse files</span>
+            </p>
+            <p className="upload-info">Supports MP3, WAV, M4A • Max 50MB</p>
+          </div>
+        ) : (
+          <div className="upload-status">
+            <div className="status-message">
+              <CheckCircle size={20} />
+              <span>File uploaded successfully!</span>
+            </div>
+            {fileInfo && <div className="file-info">{fileInfo}</div>}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default UploadCard;

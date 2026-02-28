@@ -1,0 +1,15 @@
+Relative path: avanza-frontend\node_modules\object.assign\test\ses-compat.js
+================================================================================
+
+'use strict';
+
+/* globals lockdown */
+
+// requiring ses exposes "lockdown" on the global
+require('ses');
+
+// lockdown freezes the primordials
+lockdown({ errorTaming: 'unsafe' });
+
+// initialize the module
+require('./');

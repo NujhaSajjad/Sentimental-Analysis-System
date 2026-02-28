@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\virtual\keys.js
+================================================================================
+
+'use strict';
+var parent = require('../../../es/array/virtual/keys');
+
+module.exports = parent;

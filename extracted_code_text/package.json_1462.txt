@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_overload_yield\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_overload_yield.cjs",
+    "module": "../../esm/_overload_yield.js"
+}

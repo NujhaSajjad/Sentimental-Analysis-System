@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\.cache\babel-loader\ba300496eb9e1aabde7cac197ea3a185384c93aa3eef4a5d0aa57f0028df8787.json
+================================================================================
+
+{"ast":null,"code":"var EventEmitter = require(\"events\");\nmodule.exports = new EventEmitter();","map":{"version":3,"names":["EventEmitter","require","module","exports"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/webpack/hot/emitter.js"],"sourcesContent":["var EventEmitter = require(\"events\");\nmodule.exports = new EventEmitter();\n"],"mappings":"AAAA,IAAIA,YAAY,GAAGC,OAAO,CAAC,QAAQ,CAAC;AACpCC,MAAM,CAACC,OAAO,GAAG,IAAIH,YAAY,CAAC,CAAC","ignoreList":[]},"metadata":{},"sourceType":"script","externalDependencies":[]}

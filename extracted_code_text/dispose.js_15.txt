@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\iterator\dispose.js
+================================================================================
+
+'use strict';
+require('../../modules/es.iterator.dispose');

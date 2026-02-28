@@ -1,0 +1,16 @@
+Relative path: backend\node_modules\openai\src\resources\conversations\index.ts
+================================================================================
+
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+export { Conversations } from './conversations';
+export {
+  Items,
+  type ConversationItem,
+  type ConversationItemList,
+  type ItemCreateParams,
+  type ItemRetrieveParams,
+  type ItemListParams,
+  type ItemDeleteParams,
+  type ConversationItemsPage,
+} from './items';

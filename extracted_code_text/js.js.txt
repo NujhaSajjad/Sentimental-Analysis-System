@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\sucrase\register\js.js
+================================================================================
+
+require("../dist/register").registerJS();

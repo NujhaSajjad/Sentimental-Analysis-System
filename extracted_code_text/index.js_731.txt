@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\url-search-params\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/url-search-params');
+
+module.exports = parent;

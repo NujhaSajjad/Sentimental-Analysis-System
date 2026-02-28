@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@rushstack\eslint-patch\lib\custom-config-package-names.d.ts
+================================================================================
+
+export {};
+//# sourceMappingURL=custom-config-package-names.d.ts.map

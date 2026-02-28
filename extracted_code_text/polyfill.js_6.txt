@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\array.prototype.tosorted\polyfill.js
+================================================================================
+
+'use strict';
+
+var implementation = require('./implementation');
+
+module.exports = function getPolyfill() {
+	return Array.prototype.toSorted || implementation;
+};

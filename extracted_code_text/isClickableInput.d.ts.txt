@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\click\isClickableInput.d.ts
+================================================================================
+
+export declare function isClickableInput(element: Element): boolean;

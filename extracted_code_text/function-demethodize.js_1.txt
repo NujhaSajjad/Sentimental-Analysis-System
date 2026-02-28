@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\function-demethodize.js
+================================================================================
+
+'use strict';
+// https://github.com/js-choi/proposal-function-demethodize
+require('../modules/esnext.function.demethodize');

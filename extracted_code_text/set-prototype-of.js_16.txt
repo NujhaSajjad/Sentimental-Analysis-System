@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\object\set-prototype-of.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/object/set-prototype-of');
+
+module.exports = parent;

@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\es-set-tostringtag\index.d.ts
+================================================================================
+
+declare function setToStringTag(
+    object: object & { [Symbol.toStringTag]?: unknown },
+    value: string | unknown,
+    options?: {
+        force?: boolean;
+        nonConfigurable?: boolean;
+    },
+): void;
+
+export = setToStringTag;

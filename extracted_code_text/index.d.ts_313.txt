@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\has-symbols\index.d.ts
+================================================================================
+
+declare function hasNativeSymbols(): boolean;
+
+export = hasNativeSymbols;

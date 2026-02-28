@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\string\cooked.js
+================================================================================
+
+'use strict';
+require('../../modules/esnext.string.cooked');
+var path = require('../../internals/path');
+
+module.exports = path.String.cooked;

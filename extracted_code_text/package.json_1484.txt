@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_ts_rewrite_relative_import_extension\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_ts_rewrite_relative_import_extension.cjs",
+    "module": "../../esm/_ts_rewrite_relative_import_extension.js"
+}

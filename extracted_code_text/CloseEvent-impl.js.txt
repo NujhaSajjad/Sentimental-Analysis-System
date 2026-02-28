@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\events\CloseEvent-impl.js
+================================================================================
+
+"use strict";
+
+const EventImpl = require("./Event-impl").implementation;
+
+const CloseEventInit = require("../generated/CloseEventInit");
+
+class CloseEventImpl extends EventImpl {}
+CloseEventImpl.defaultInit = CloseEventInit.convert(undefined);
+
+exports.implementation = CloseEventImpl;

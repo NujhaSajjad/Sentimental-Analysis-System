@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\math-clamp.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-math-clamp
+require('../modules/esnext.math.clamp');

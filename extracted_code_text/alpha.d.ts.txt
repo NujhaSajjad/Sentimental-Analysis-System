@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\resources\fine-tuning\alpha.d.ts
+================================================================================
+
+export * from "./alpha/index.js";
+//# sourceMappingURL=alpha.d.ts.map

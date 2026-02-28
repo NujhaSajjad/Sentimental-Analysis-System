@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_class_check_private_static_access\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_class_check_private_static_access.cjs",
+    "module": "../../esm/_class_check_private_static_access.js"
+}

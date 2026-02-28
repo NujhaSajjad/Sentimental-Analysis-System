@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\dom-serializer\lib\esm\foreignNames.d.ts
+================================================================================
+
+export declare const elementNames: Map<string, string>;
+export declare const attributeNames: Map<string, string>;
+//# sourceMappingURL=foreignNames.d.ts.map

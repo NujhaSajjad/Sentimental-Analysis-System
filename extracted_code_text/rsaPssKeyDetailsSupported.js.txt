@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\jsonwebtoken\lib\rsaPssKeyDetailsSupported.js
+================================================================================
+
+const semver = require('semver');
+
+module.exports = semver.satisfies(process.version, '>=16.9.0');

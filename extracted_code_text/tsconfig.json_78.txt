@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\unbox-primitive\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"exclude": [
+		"coverage",
+	],
+}

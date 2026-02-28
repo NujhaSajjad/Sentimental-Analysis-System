@@ -1,0 +1,9 @@
+Relative path: backend\node_modules\hasown\tsconfig.json
+================================================================================
+
+{
+  "extends": "@ljharb/tsconfig",
+  "exclude": [
+    "coverage",
+  ],
+}

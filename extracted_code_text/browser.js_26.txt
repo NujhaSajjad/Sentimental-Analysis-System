@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\supports-hyperlinks\browser.js
+================================================================================
+
+'use strict';
+module.exports = {
+	stdin: false,
+	stderr: false,
+	supportsHyperlink: function () { // eslint-disable-line object-shorthand
+		return false;
+	}
+};

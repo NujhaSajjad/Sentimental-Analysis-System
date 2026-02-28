@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\has-proto\accessor.d.ts
+================================================================================
+
+declare function accessor(): boolean;
+
+export = accessor;

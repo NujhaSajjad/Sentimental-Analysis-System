@@ -1,0 +1,17 @@
+Relative path: avanza-frontend\node_modules\postcss-minify-font-values\src\lib\minify-weight.js
+================================================================================
+
+'use strict';
+/**
+ * @param {string} value
+ * @return {string}
+ */
+module.exports = function (value) {
+  const lowerCasedValue = value.toLowerCase();
+
+  return lowerCasedValue === 'normal'
+    ? '400'
+    : lowerCasedValue === 'bold'
+    ? '700'
+    : value;
+};

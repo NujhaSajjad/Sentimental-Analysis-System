@@ -1,0 +1,15 @@
+Relative path: avanza-frontend\node_modules\prompts\lib\util\index.js
+================================================================================
+
+'use strict';
+
+module.exports = {
+  action: require('./action'),
+  clear: require('./clear'),
+  style: require('./style'),
+  strip: require('./strip'),
+  figures: require('./figures'),
+  lines: require('./lines'),
+  wrap: require('./wrap'),
+  entriesToDisplay: require('./entriesToDisplay')
+};

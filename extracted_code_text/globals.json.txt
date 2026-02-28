@@ -1,0 +1,18 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jest\lib\globals.json
+================================================================================
+
+{
+  "afterAll": false,
+  "afterEach": false,
+  "beforeAll": false,
+  "beforeEach": false,
+  "describe": false,
+  "expect": false,
+  "fit": false,
+  "it": false,
+  "jest": false,
+  "test": false,
+  "xdescribe": false,
+  "xit": false,
+  "xtest": false
+}

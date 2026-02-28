@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\math\sum-precise.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/math/sum-precise');
+
+module.exports = parent;

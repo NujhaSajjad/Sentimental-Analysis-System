@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\regexp\split.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/regexp/split');
+
+module.exports = parent;

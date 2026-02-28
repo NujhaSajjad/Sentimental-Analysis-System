@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\object\define-setter.js
+================================================================================
+
+'use strict';
+require('../../modules/es.object.define-setter');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Object', '__defineSetter__');

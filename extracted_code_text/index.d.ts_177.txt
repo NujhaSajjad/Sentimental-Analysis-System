@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\ansi-escapes\node_modules\type-fest\index.d.ts
+================================================================================
+
+// These are all the basic types that's compatible with all supported TypeScript versions.
+export * from './base';

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\lib\vocabularies\format\index.ts
+================================================================================
+
+import type {Vocabulary} from "../../types"
+import formatKeyword from "./format"
+
+const format: Vocabulary = [formatKeyword]
+
+export default format

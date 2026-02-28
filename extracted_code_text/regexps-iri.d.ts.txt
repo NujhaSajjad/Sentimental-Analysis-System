@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\regexps-iri.d.ts
+================================================================================
+
+import { URIRegExps } from "./uri";
+declare const _default: URIRegExps;
+export default _default;

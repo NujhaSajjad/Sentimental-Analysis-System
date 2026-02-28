@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\function\un-this.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/function/un-this');

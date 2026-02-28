@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-ordered-values\src\lib\mathfunctions.js
+================================================================================
+
+'use strict';
+// All of the curently implemented math functions
+module.exports = new Set(['calc', 'clamp', 'max', 'min']);

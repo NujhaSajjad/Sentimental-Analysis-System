@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\matchers.d.ts
+================================================================================
+
+import * as matchers from './types/matchers'
+
+export = matchers

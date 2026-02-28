@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\core-js\internals\enum-bug-keys.js
+================================================================================
+
+'use strict';
+// IE8- don't enum bug keys
+module.exports = [
+  'constructor',
+  'hasOwnProperty',
+  'isPrototypeOf',
+  'propertyIsEnumerable',
+  'toLocaleString',
+  'toString',
+  'valueOf'
+];

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\workbox-webpack-plugin\build\lib\get-manifest-entries-from-compilation.d.ts
+================================================================================
+
+import { Compilation } from 'webpack';
+import { WebpackGenerateSWOptions, WebpackInjectManifestOptions, ManifestEntry } from 'workbox-build';
+export declare function getManifestEntriesFromCompilation(compilation: Compilation, config: WebpackGenerateSWOptions | WebpackInjectManifestOptions): Promise<{
+    size: number;
+    sortedEntries: ManifestEntry[];
+}>;

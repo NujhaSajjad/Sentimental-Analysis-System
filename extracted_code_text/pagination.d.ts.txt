@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\pagination.d.ts
+================================================================================
+
+export * from "./core/pagination.js";
+//# sourceMappingURL=pagination.d.ts.map

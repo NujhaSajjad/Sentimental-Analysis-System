@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\math-intrinsics\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+}

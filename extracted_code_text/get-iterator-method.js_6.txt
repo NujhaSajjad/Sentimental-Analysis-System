@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\get-iterator-method.js
+================================================================================
+
+'use strict';
+var parent = require('../stable/get-iterator-method');
+
+module.exports = parent;

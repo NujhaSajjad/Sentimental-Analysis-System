@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\has-tostringtag\index.d.ts
+================================================================================
+
+declare function hasToStringTag(): boolean;
+
+export = hasToStringTag;

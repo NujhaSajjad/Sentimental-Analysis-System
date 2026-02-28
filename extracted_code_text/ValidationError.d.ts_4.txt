@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\@apideck\better-ajv-errors\dist\types\ValidationError.d.ts
+================================================================================
+
+import { DefinedError } from 'ajv';
+export interface ValidationError {
+    message: string;
+    path: string;
+    suggestion?: string;
+    context: {
+        errorType: DefinedError['keyword'];
+        [additionalContext: string]: unknown;
+    };
+}

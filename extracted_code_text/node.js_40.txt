@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\util-deprecate\node.js
+================================================================================
+
+
+/**
+ * For Node.js, simply re-export the core `util.deprecate` function.
+ */
+
+module.exports = require('util').deprecate;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\rules\no-deprecated.d.ts
+================================================================================
+
+declare const _exports: import('eslint').Rule.RuleModule;
+export = _exports;
+//# sourceMappingURL=no-deprecated.d.ts.map

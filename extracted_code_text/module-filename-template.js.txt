@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\adjust-sourcemap-loader\lib\module-filename-template.js
+================================================================================
+
+'use strict';
+
+var process = require('./process');
+
+function moduleFilenameTemplate(options) {
+  return function templateFn(parameters) {
+    return process(parameters, options, parameters.resourcePath);
+  };
+}
+
+module.exports = moduleFilenameTemplate;

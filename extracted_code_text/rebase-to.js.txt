@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\clean-css\lib\options\rebase-to.js
+================================================================================
+
+var path = require('path');
+
+function rebaseToFrom(option) {
+  return option ? path.resolve(option) : process.cwd();
+}
+
+module.exports = rebaseToFrom;

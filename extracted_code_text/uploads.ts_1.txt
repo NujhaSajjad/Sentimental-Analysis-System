@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\src\core\uploads.ts
+================================================================================
+
+export { type Uploadable } from '../internal/uploads';
+export { toFile, type ToFileInput } from '../internal/to-file';

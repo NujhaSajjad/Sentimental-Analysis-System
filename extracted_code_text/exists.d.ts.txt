@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\stylehacks\types\exists.d.ts
+================================================================================
+
+declare function _exports(selector: import('postcss-selector-parser').Selector, index: number, value: string): boolean | undefined | '';
+export = _exports;

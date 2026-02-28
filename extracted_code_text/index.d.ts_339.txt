@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-finalizationregistry\index.d.ts
+================================================================================
+
+declare function isFinalizationRegistry<T = unknown>(value: unknown): value is FinalizationRegistry<T>;
+
+export = isFinalizationRegistry;

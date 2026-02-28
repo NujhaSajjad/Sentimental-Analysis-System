@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_async_iterator\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_async_iterator.cjs",
+    "module": "../../esm/_async_iterator.js"
+}

@@ -1,0 +1,12 @@
+Relative path: backend\node_modules\openai\_vendor\zod-to-json-schema\parsers\never.js
+================================================================================
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseNeverDef = parseNeverDef;
+function parseNeverDef() {
+    return {
+        not: {},
+    };
+}
+//# sourceMappingURL=never.js.map

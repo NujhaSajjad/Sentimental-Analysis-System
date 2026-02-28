@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_apply_decs_2203_r\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_apply_decs_2203_r.cjs",
+    "module": "../../esm/_apply_decs_2203_r.js"
+}

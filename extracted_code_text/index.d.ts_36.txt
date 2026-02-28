@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@nodelib\fs.scandir\out\utils\index.d.ts
+================================================================================
+
+import * as fs from './fs';
+export { fs };

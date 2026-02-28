@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\nodes\HTMLTableCaptionElement-impl.js
+================================================================================
+
+"use strict";
+
+const HTMLElementImpl = require("./HTMLElement-impl").implementation;
+
+class HTMLTableCaptionElementImpl extends HTMLElementImpl { }
+
+module.exports = {
+  implementation: HTMLTableCaptionElementImpl
+};

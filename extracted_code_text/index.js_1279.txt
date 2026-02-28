@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\is-regexp\index.js
+================================================================================
+
+'use strict';
+module.exports = function (re) {
+	return Object.prototype.toString.call(re) === '[object RegExp]';
+};

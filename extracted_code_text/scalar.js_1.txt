@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\yaml\browser\scalar.js
+================================================================================
+
+module.exports = require('./dist/types').Scalar
+require('./dist/legacy-exports').warnFileDeprecation(__filename)

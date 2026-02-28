@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\split-important-styles.d.ts
+================================================================================
+
+import type { Container } from 'postcss';
+export declare function splitImportantStyles(root: Container): void;

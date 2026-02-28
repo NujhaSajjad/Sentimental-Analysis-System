@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\clone.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('clone', require('../clone'), require('./_falseOptions'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

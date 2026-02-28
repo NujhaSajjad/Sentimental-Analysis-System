@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\array\last-item.js
+================================================================================
+
+'use strict';
+require('../../modules/esnext.array.last-item');

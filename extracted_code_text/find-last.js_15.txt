@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\typed-array\find-last.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/typed-array/find-last');
+
+module.exports = parent;

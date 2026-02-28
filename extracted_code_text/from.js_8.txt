@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\async-iterator\from.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/async-iterator/from');

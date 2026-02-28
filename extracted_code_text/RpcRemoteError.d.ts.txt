@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\error\RpcRemoteError.d.ts
+================================================================================
+
+declare class RpcRemoteError extends Error {
+    readonly stack?: string | undefined;
+    constructor(message: string, stack?: string | undefined);
+    toString(): string;
+}
+export { RpcRemoteError };

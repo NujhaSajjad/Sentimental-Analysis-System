@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@rtsao\scc\index.d.ts
+================================================================================
+
+export default function tarjan<T>(graph: Map<T, Set<T>>): Array<Set<T>>

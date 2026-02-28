@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\resolve\test\module_dir\zmodules\bbb\package.json
+================================================================================
+
+{
+  "main": "main.js"
+}

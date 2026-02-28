@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\css-tree\lib\syntax\atrule\font-face.js
+================================================================================
+
+module.exports = {
+    parse: {
+        prelude: null,
+        block: function() {
+            return this.Block(true);
+        }
+    }
+};

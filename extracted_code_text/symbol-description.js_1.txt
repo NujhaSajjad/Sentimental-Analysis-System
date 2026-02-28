@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\proposals\symbol-description.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-Symbol-description
+require('../modules/es.symbol.description');

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\proposals\async-iteration.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-async-iteration
+require('../modules/es.symbol.async-iterator');

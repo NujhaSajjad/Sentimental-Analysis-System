@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\gopd\gOPD.js
+================================================================================
+
+'use strict';
+
+/** @type {import('./gOPD')} */
+module.exports = Object.getOwnPropertyDescriptor;

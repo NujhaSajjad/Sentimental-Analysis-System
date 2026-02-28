@@ -1,0 +1,10 @@
+Relative path: backend\node_modules\jpeg-exif\.travis.yml
+================================================================================
+
+language: node_js
+node_js:
+  - "10"
+before_script:
+  - "npm i mocha chai coveralls istanbul"
+after_success:
+  - "rm -rf ./coverage && npm r mocha chai istanbul coveralls"

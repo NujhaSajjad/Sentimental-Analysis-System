@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\number.js
+================================================================================
+
+var convert = require('./convert');
+module.exports = convert(require('../number'));

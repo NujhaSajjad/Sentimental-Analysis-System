@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\json5\lib\util.d.ts
+================================================================================
+
+export declare function isSpaceSeparator(c?: string): boolean
+export declare function isIdStartChar(c?: string): boolean
+export declare function isIdContinueChar(c?: string): boolean
+export declare function isDigit(c?: string): boolean
+export declare function isHexDigit(c?: string): boolean

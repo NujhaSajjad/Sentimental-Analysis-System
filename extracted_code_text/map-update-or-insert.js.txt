@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\map-update-or-insert.js
+================================================================================
+
+'use strict';
+// TODO: remove from `core-js@4`
+// https://github.com/tc39/proposal-upsert
+require('./map-upsert');

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\compile\validate\defaults.d.ts
+================================================================================
+
+import type { SchemaObjCxt } from "..";
+export declare function assignDefaults(it: SchemaObjCxt, ty?: string): void;

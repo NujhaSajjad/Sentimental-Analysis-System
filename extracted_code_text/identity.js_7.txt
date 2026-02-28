@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\underscore\modules\identity.js
+================================================================================
+
+// Keep the identity function around for default iteratees.
+export default function identity(value) {
+  return value;
+}

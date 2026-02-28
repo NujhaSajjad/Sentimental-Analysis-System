@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\svgo\node_modules\css-what\lib\stringify.d.ts
+================================================================================
+
+import { Selector } from "./parse";
+export default function stringify(token: Selector[][]): string;
+//# sourceMappingURL=stringify.d.ts.map

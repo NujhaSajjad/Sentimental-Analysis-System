@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@babel\plugin-transform-runtime\node_modules\babel-plugin-polyfill-corejs3\core-js-compat\README.md
+================================================================================
+
+`core-js-compat` exposes some files as JSON, and they cannot be
+imported by Node.js ESM files.
+This folder proxies `core-js-compat` to ensure that every entry
+is CJS and can be safely imported.

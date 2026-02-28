@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@sinclair\typebox\value\clone.d.ts
+================================================================================
+
+export declare namespace ValueClone {
+    function Clone<T extends unknown>(value: T): T;
+}

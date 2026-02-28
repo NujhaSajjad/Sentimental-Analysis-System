@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_initializer_warning_helper\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_initializer_warning_helper.cjs",
+    "module": "../../esm/_initializer_warning_helper.js"
+}

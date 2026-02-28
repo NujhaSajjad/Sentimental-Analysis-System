@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Egyptian_Hieroglyphs.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x13000, 0x13455).addRange(0x13460, 0x143FA);
+exports.characters = set;

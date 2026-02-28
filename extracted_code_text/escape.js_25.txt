@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\underscore\modules\escape.js
+================================================================================
+
+import createEscaper from './_createEscaper.js';
+import escapeMap from './_escapeMap.js';
+
+// Function for escaping strings to HTML interpolation.
+export default createEscaper(escapeMap);

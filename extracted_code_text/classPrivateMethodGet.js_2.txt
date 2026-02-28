@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\classPrivateMethodGet.js
+================================================================================
+
+import assertClassBrand from "./assertClassBrand.js";
+function _classPrivateMethodGet(s, a, r) {
+  return assertClassBrand(a, s), r;
+}
+export { _classPrivateMethodGet as default };

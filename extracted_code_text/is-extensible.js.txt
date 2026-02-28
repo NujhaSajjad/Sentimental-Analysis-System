@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\object\is-extensible.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/object/is-extensible');
+
+module.exports = parent;

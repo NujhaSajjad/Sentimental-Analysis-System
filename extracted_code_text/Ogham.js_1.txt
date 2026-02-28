@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Ogham.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x1680, 0x169C);
+exports.characters = set;

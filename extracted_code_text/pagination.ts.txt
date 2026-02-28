@@ -1,0 +1,5 @@
+Relative path: backend\node_modules\openai\src\pagination.ts
+================================================================================
+
+/** @deprecated Import from ./core/pagination instead */
+export * from './core/pagination';

@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\@pmmmwh\react-refresh-webpack-plugin\loader\utils\index.js
+================================================================================
+
+const getIdentitySourceMap = require('./getIdentitySourceMap');
+const getModuleSystem = require('./getModuleSystem');
+const getRefreshModuleRuntime = require('./getRefreshModuleRuntime');
+const normalizeOptions = require('./normalizeOptions');
+
+module.exports = {
+  getIdentitySourceMap,
+  getModuleSystem,
+  getRefreshModuleRuntime,
+  normalizeOptions,
+};

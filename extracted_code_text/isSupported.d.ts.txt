@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\workbox-navigation-preload\isSupported.d.ts
+================================================================================
+
+import './_version.js';
+/**
+ * @return {boolean} Whether or not the current browser supports enabling
+ * navigation preload.
+ *
+ * @memberof workbox-navigation-preload
+ */
+declare function isSupported(): boolean;
+export { isSupported };

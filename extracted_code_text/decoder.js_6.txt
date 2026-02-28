@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\@webassemblyjs\wasm-parser\lib\types\decoder.js
+================================================================================
+
+"use strict";

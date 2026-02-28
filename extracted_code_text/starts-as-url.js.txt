@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\clean-css\lib\optimizer\level-1\value-optimizers\starts-as-url.js
+================================================================================
+
+var URL_PREFIX_PATTERN = /^url\(/i;
+
+function startsAsUrl(value) {
+  return URL_PREFIX_PATTERN.test(value);
+}
+
+module.exports = startsAsUrl;

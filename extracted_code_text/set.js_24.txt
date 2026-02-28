@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\typed-array\set.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/typed-array/set');
+
+module.exports = parent;

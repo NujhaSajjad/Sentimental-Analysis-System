@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\array-includes\auto.js
+================================================================================
+
+'use strict';
+
+require('./shim')();

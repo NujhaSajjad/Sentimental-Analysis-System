@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\date\index.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/date');
+
+module.exports = parent;

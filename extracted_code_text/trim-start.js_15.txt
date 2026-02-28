@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\instance\trim-start.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/instance/trim-start');
+
+module.exports = parent;

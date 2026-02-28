@@ -1,0 +1,6 @@
+Relative path: backend\node_modules\tslib\modules\package.json
+================================================================================
+
+{
+    "type": "module"
+}

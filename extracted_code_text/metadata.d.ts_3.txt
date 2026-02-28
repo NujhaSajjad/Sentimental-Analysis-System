@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\jtd\metadata.d.ts
+================================================================================
+
+import { KeywordCxt } from "../../ajv";
+import type { CodeKeywordDefinition } from "../../types";
+declare const def: CodeKeywordDefinition;
+export declare function checkMetadata({ it, keyword }: KeywordCxt, metadata?: boolean): void;
+export default def;

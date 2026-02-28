@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\any-promise\register\es6-promise.js
+================================================================================
+
+'use strict';
+require('../register')('es6-promise', {Promise: require('es6-promise').Promise})

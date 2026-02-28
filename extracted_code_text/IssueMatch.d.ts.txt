@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\issue\IssueMatch.d.ts
+================================================================================
+
+import { Issue } from './index';
+import { IssuePredicate } from './IssuePredicate';
+declare type IssueMatch = Partial<Pick<Issue, 'origin' | 'severity' | 'code' | 'file'>>;
+declare function createIssuePredicateFromIssueMatch(context: string, match: IssueMatch): IssuePredicate;
+export { IssueMatch, createIssuePredicateFromIssueMatch };

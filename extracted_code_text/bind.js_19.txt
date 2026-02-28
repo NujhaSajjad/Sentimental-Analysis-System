@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\instance\bind.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/instance/bind');
+
+module.exports = parent;

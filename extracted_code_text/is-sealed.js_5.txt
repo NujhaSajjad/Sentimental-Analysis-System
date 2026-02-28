@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\is-sealed.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/object/is-sealed');
+
+module.exports = parent;

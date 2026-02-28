@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\svgo\node_modules\domutils\.travis.yml
+================================================================================
+
+sudo: true
+language: node_js
+node_js:
+  - 8
+

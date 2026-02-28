@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\slotted.js
+================================================================================
+
+module.exports = {
+    parse: function compoundSelector() {
+        return this.createSingleNodeList(
+            this.Selector()
+        );
+    }
+};

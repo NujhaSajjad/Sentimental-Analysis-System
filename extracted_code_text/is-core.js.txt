@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\resolve\lib\is-core.js
+================================================================================
+
+var isCoreModule = require('is-core-module');
+
+module.exports = function isCore(x) {
+    return isCoreModule(x);
+};

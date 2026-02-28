@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_await_value\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_await_value.cjs",
+    "module": "../../esm/_await_value.js"
+}

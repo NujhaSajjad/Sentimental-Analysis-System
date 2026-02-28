@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\esnext.asynciterable.d.ts
+================================================================================
+
+import type { ImplicitLibVariableOptions } from '../variable';
+export declare const esnext_asynciterable: Record<string, ImplicitLibVariableOptions>;
+//# sourceMappingURL=esnext.asynciterable.d.ts.map

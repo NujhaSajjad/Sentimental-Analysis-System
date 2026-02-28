@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\regexps-iri.js
+================================================================================
+
+import { buildExps } from "./regexps-uri";
+export default buildExps(true);
+//# sourceMappingURL=regexps-iri.js.map

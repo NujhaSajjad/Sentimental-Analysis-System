@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-ordered-values\types\lib\getValue.d.ts
+================================================================================
+
+declare function _exports(values: import('postcss-value-parser').Node[][]): string;
+export = _exports;

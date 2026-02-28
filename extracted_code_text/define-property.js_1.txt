@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\actual\reflect\define-property.js
+================================================================================
+
+'use strict';
+var parent = require('../../stable/reflect/define-property');
+
+module.exports = parent;

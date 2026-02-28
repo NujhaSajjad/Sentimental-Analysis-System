@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\workbox-precaching\utils\printInstallDetails.d.ts
+================================================================================
+
+import '../_version.js';
+/**
+ * @param {Array<string>} urlsToPrecache
+ * @param {Array<string>} urlsAlreadyPrecached
+ *
+ * @private
+ * @memberof workbox-precaching
+ */
+export declare function printInstallDetails(urlsToPrecache: string[], urlsAlreadyPrecached: string[]): void;

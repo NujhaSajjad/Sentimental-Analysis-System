@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\eslint-module-utils\module-require.d.ts
+================================================================================
+
+declare function moduleRequire<T>(p: string): T;
+
+export default moduleRequire;

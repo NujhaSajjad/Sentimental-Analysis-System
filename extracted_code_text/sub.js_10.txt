@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\stable\string\virtual\sub.js
+================================================================================
+
+'use strict';
+var parent = require('../../../es/string/virtual/sub');
+
+module.exports = parent;

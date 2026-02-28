@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\is-array-buffer\index.d.ts
+================================================================================
+
+declare function isArrayBuffer(value: unknown): value is ArrayBuffer;
+
+export = isArrayBuffer;

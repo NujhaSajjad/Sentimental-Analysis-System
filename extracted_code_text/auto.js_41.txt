@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\string.prototype.repeat\auto.js
+================================================================================
+
+/*! https://mths.be/repeat v1.0.0 by @mathias */
+
+require('./shim')();

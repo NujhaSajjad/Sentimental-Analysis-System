@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\postcss-initial\.vscode\settings.json
+================================================================================
+
+{
+    "cSpell.words": [
+        "Koretskiy",
+        "Maksim"
+    ]
+}

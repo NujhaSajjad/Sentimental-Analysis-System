@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\nodes\HTMLAudioElement-impl.js
+================================================================================
+
+"use strict";
+
+const HTMLMediaElementImpl = require("./HTMLMediaElement-impl").implementation;
+
+class HTMLAudioElementImpl extends HTMLMediaElementImpl { }
+
+module.exports = {
+  implementation: HTMLAudioElementImpl
+};

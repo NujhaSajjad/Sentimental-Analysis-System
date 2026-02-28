@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\any-promise\register\native-promise-only.js
+================================================================================
+
+'use strict';
+require('../register')('native-promise-only', {Promise: require('native-promise-only')})

@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\symbol\to-primitive.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/symbol/to-primitive');
+
+module.exports = parent;

@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\bonjour-service\dist\lib\utils\filter-txt.d.ts
+================================================================================
+
+import KeyValue from '../KeyValue';
+declare const _default: (data: KeyValue) => {};
+export default _default;

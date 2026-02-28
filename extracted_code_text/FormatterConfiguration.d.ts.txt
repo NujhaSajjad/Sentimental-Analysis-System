@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\formatter\FormatterConfiguration.d.ts
+================================================================================
+
+import { FormatterOptions } from './FormatterOptions';
+import { Formatter } from './Formatter';
+declare type FormatterConfiguration = Formatter;
+declare function createFormatterConfiguration(options: FormatterOptions | undefined): Formatter;
+export { FormatterConfiguration, createFormatterConfiguration };

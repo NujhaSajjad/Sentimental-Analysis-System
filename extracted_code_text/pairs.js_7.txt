@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\yaml\types\pairs.js
+================================================================================
+
+const legacy = require('../dist/legacy-exports')
+module.exports = legacy.pairs
+legacy.warnFileDeprecation(__filename)

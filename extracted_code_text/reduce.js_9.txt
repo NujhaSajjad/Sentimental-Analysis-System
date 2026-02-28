@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js\es\array\virtual\reduce.js
+================================================================================
+
+'use strict';
+require('../../../modules/es.array.reduce');
+var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
+
+module.exports = getBuiltInPrototypeMethod('Array', 'reduce');

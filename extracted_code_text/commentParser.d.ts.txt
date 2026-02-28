@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-discard-comments\types\lib\commentParser.d.ts
+================================================================================
+
+declare function _exports(input: string): [number, number, number][];
+export = _exports;

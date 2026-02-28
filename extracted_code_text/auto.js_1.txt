@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\array.prototype.findlast\auto.js
+================================================================================
+
+'use strict';
+
+require('./shim')();

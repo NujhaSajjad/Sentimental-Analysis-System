@@ -1,0 +1,8 @@
+Relative path: backend\node_modules\ip-address\dist\address-error.d.ts
+================================================================================
+
+export declare class AddressError extends Error {
+    parseMessage?: string;
+    constructor(message: string, parseMessage?: string);
+}
+//# sourceMappingURL=address-error.d.ts.map

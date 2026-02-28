@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\idb\build\util.d.ts
+================================================================================
+
+export declare type Constructor = new (...args: any[]) => any;
+export declare type Func = (...args: any[]) => any;
+export declare const instanceOfAny: (object: any, constructors: Constructor[]) => boolean;

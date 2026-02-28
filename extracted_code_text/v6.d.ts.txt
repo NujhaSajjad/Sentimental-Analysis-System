@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\uuid\dist\v6.d.ts
+================================================================================
+
+import { Version6Options } from './types.js';
+declare function v6(options?: Version6Options, buf?: undefined, offset?: number): string;
+declare function v6<TBuf extends Uint8Array = Uint8Array>(options: Version6Options | undefined, buf: TBuf, offset?: number): TBuf;
+export default v6;

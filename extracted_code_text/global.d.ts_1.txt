@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\global.d.ts
+================================================================================
+
+export = globalObject;
+/**
+ * A reference to the global object
+ *
+ * @type {object} globalObject
+ */
+declare var globalObject: object;

@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\jsx-ast-utils\hasAnyProp.js
+================================================================================
+
+module.exports = require('./lib').hasAnyProp; // eslint-disable-line import/no-unresolved

@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\babel-plugin-polyfill-corejs3\core-js-compat\get-modules-list-for-target-version.js
+================================================================================
+
+module.exports = require("core-js-compat/get-modules-list-for-target-version");

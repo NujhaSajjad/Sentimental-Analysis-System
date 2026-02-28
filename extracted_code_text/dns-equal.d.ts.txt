@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\bonjour-service\dist\lib\utils\dns-equal.d.ts
+================================================================================
+
+export default function dnsEqual(a: string, b: string): boolean;

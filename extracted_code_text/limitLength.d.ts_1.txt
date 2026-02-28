@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\validation\limitLength.d.ts
+================================================================================
+
+import type { CodeKeywordDefinition } from "../../types";
+declare const def: CodeKeywordDefinition;
+export default def;

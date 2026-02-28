@@ -1,0 +1,18 @@
+Relative path: avanza-frontend\node_modules\mdn-data\css\syntaxes.schema.json
+================================================================================
+
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "syntax"
+    ],
+    "properties": {
+      "syntax": {
+        "type": "string"
+      }
+    }
+  }
+}

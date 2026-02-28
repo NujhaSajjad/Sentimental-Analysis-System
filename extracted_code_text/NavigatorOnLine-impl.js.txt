@@ -1,0 +1,10 @@
+Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\navigator\NavigatorOnLine-impl.js
+================================================================================
+
+"use strict";
+
+exports.implementation = class NavigatorOnLineImpl {
+  get onLine() {
+    return true;
+  }
+};

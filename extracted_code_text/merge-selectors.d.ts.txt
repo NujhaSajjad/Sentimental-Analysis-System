@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\merge-selectors\merge-selectors.d.ts
+================================================================================
+
+import { options } from '../options';
+export default function mergeSelectors(fromSelectors: Array<string>, toSelectors: Array<string>, opts: options): any[];

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\features\regexp\dot-all.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/regexp/dot-all');

@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\node_modules\fs-extra\lib\move-sync\index.js
+================================================================================
+
+'use strict'
+
+module.exports = {
+  moveSync: require('./move-sync')
+}

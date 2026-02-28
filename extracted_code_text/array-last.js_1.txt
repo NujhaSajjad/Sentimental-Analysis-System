@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\proposals\array-last.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-array-last
+require('../modules/esnext.array.last-index');
+require('../modules/esnext.array.last-item');

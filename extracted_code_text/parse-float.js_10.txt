@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\actual\parse-float.js
+================================================================================
+
+'use strict';
+var parent = require('../stable/parse-float');
+
+module.exports = parent;

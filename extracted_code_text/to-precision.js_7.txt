@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\number\virtual\to-precision.js
+================================================================================
+
+'use strict';
+var parent = require('../../../actual/number/virtual/to-precision');
+
+module.exports = parent;

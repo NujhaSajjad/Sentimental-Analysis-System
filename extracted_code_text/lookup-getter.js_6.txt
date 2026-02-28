@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\es\object\lookup-getter.js
+================================================================================
+
+'use strict';
+require('../../modules/es.object.lookup-getter');
+var entryUnbind = require('../../internals/entry-unbind');
+
+module.exports = entryUnbind('Object', '__lookupGetter__');

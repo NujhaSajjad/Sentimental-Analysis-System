@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\valid-atrules.d.ts
+================================================================================
+
+declare const _default: string[];
+export default _default;

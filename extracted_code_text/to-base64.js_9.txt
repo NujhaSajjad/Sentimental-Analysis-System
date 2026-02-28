@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\stable\typed-array\to-base64.js
+================================================================================
+
+'use strict';
+var parent = require('../../es/typed-array/to-base64');
+
+module.exports = parent;

@@ -1,0 +1,14 @@
+Relative path: avanza-frontend\node_modules\has-proto\tsconfig.json
+================================================================================
+
+{
+	"extends": "@ljharb/tsconfig",
+	"exclude": [
+		"coverage",
+	],
+	"compilerOptions": {
+		"typeRoots": [
+			"types",
+		],
+	},
+}

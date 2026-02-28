@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\clean-css\lib\options\rebase.js
+================================================================================
+
+function rebaseFrom(rebaseOption, rebaseToOption) {
+  if (undefined !== rebaseToOption) {
+    return true;
+  } if (undefined === rebaseOption) {
+    return false;
+  }
+  return !!rebaseOption;
+}
+
+module.exports = rebaseFrom;

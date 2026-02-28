@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\eslint\lib\source-code\index.js
+================================================================================
+
+"use strict";
+
+module.exports = {
+    SourceCode: require("./source-code")
+};

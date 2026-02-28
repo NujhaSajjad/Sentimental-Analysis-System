@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\sucrase\dist\types\parser\traverser\index.d.ts
+================================================================================
+
+import type { File } from "../index";
+export declare function parseFile(): File;

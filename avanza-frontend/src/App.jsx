@@ -14,6 +14,7 @@ import AnalysisCard from './components/AnalysisCard';
 import ActionItemsCard from './components/ActionItemsCard';
 import BottomActions from './components/BottomActions';
 import LoadingOverlay from './components/LoadingOverlay';
+import Login from './components/Login';
 
 // New components
 import CustomerSearch from './components/CustomerSearch';
@@ -25,18 +26,19 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
 function App() {
   // State
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [uploadStatus, setUploadStatus] = useState(false);
   const [fileInfo, setFileInfo] = useState('');
   const [loading, setLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
   const [currentCallId, setCurrentCallId] = useState(null);
-  
+
   // Report data
   const [transcription, setTranscription] = useState('');
   const [intent, setIntent] = useState(null);
   const [analysis, setAnalysis] = useState('');
   const [actionItems, setActionItems] = useState([]);
-  
+
   // Metrics
   const [duration, setDuration] = useState('00:00');
   const [sentiment, setSentiment] = useState('0%');
@@ -76,8 +78,8 @@ function App() {
       setLoadingMessage('Loading call details...');
       setShowCallHistory(false);
 
-      const response = await axios.get(`${API_URL}/api/call/${callId}`);
-      
+      const response = await axios.get(`${API_URL}/api/calls/${callId}`);
+
       if (response.data.success) {
         displayCallReport(response.data.call);
         setCurrentCallId(callId);
@@ -106,7 +108,7 @@ function App() {
 
     // Set intent
     if (call.intent_data) {
-      const intentData = typeof call.intent_data === 'string' ? 
+      const intentData = typeof call.intent_data === 'string' ?
         JSON.parse(call.intent_data) : call.intent_data;
       setIntent(intentData);
       if (intentData.primary_intent) {
@@ -156,94 +158,27 @@ function App() {
     setFileInfo(call.audio_filename || 'Call loaded from database');
   };
 
-  // Handle file upload
-  const handleFileSelect = async (file) => {
-    if (!file) return;
-
-    // Validate file
-    if (!file.type.startsWith('audio/')) {
-      alert('Please upload an audio file');
-      return;
-    }
-
-    if (file.size > 50 * 1024 * 1024) {
-      alert('File size must be less than 50MB');
-      return;
-    }
-
-    // Show upload status
-    setUploadStatus(true);
-    setFileInfo(`${file.name} (${formatFileSize(file.size)})`);
-
-    // Upload file (with customer data if available)
-    await uploadAudio(file);
-  };
-
-  // Upload audio to backend
-  const uploadAudio = async (file) => {
-    const formData = new FormData();
-    formData.append('audio', file);
-
-    // Add customer data if available
-    if (selectedCustomer) {
-      formData.append('cnic', selectedCustomer.cnic);
-      formData.append('phone_number', selectedCustomer.phone_number);
-      formData.append('customer_name', selectedCustomer.full_name);
-      formData.append('customer_email', selectedCustomer.email || '');
-    }
-
+  // Handle successful upload and processing from the new UploadCard modal
+  const handleUploadSubmit = async (file, customer, callId) => {
     try {
       setLoading(true);
-      setLoadingMessage('Uploading audio file...');
+      setLoadingMessage('Finalizing report...');
 
-      const response = await axios.post(`${API_URL}/api/upload-audio`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+      // Update selected customer if one was chosen in the modal
+      if (customer) {
+        setSelectedCustomer(customer);
+      }
 
+      // Fetch the complete call data and display it
+      const response = await axios.get(`${API_URL}/api/calls/${callId}`);
       if (response.data.success) {
-        setCurrentCallId(response.data.callId);
-        
-        // If customer was associated, update selected customer
-        if (response.data.customer) {
-          setSelectedCustomer(response.data.customer);
-        }
-
-        // Start processing
-        await processComplete(response.data.callId);
-      } else {
-        throw new Error(response.data.error || 'Upload failed');
+        displayCallReport(response.data.call);
+        setUploadStatus(true);
+        setFileInfo(`${file.name} (${formatFileSize(file.size)})`);
       }
     } catch (error) {
-      console.error('Upload error:', error);
-      alert('Upload failed: ' + error.message);
-      resetAll();
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Process complete pipeline
-  const processComplete = async (callId) => {
-    try {
-      setLoading(true);
-      setLoadingMessage('Processing audio... This may take a moment');
-
-      const response = await axios.post(`${API_URL}/api/process-complete/${callId}`);
-
-      if (response.data.success) {
-        // Fetch the complete call data
-        const callResponse = await axios.get(`${API_URL}/api/call/${callId}`);
-        if (callResponse.data.success) {
-          displayCallReport(callResponse.data.call);
-        }
-      } else {
-        throw new Error(response.data.error || 'Processing failed');
-      }
-    } catch (error) {
-      console.error('Processing error:', error);
-      alert('Processing failed: ' + error.message);
+      console.error('Error in upload submit flow:', error);
+      alert('Failed to display the processed report.');
     } finally {
       setLoading(false);
     }
@@ -277,10 +212,10 @@ function App() {
       setLoadingMessage('Generating PDF report...');
 
       const response = await axios.get(
-        `${API_URL}/api/reports/${currentCallId}/download`,
+        `${API_URL}/api/analysis/reports/${currentCallId}/download`,
         { responseType: 'blob' }
       );
-      
+
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -313,10 +248,17 @@ function App() {
     alert('Share feature coming soon!');
   };
 
+  if (!isAuthenticated) {
+    return <Login onLoginSuccess={(user) => {
+      // Could store user in state if needed
+      setIsAuthenticated(true);
+    }} />;
+  }
+
   return (
     <div className="app">
       <Header />
-      
+
       <div className="container">
         {/* Left Column */}
         <div className="left-column">
@@ -338,7 +280,7 @@ function App() {
                     <span>📞 {selectedCustomer.phone_number}</span>
                     <span>🆔 {selectedCustomer.cnic}</span>
                   </div>
-                  <button 
+                  <button
                     className="btn btn-secondary"
                     style={{ width: '100%', marginTop: '12px' }}
                     onClick={() => setShowCustomerProfile(true)}
@@ -351,7 +293,7 @@ function App() {
           )}
 
           <UploadCard
-            onFileSelect={handleFileSelect}
+            onSubmit={handleUploadSubmit}
             uploadStatus={uploadStatus}
             fileInfo={fileInfo}
           />
@@ -368,12 +310,12 @@ function App() {
             priority={priority}
           />
           <AnalysisCard analysis={analysis} />
-          
+
           {/* Sentiment Timeline - NEW */}
           {selectedCustomer && (
             <SentimentTimeline customerId={selectedCustomer.customer_id} />
           )}
-          
+
           <ActionItemsCard actionItems={actionItems} />
           <BottomActions
             onNewAnalysis={resetAll}

@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\tailwindcss\resolveConfig.js
+================================================================================
+
+let resolveConfig = require('./lib/public/resolve-config')
+module.exports = (resolveConfig.__esModule ? resolveConfig : { default: resolveConfig }).default

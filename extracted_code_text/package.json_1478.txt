@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_ts_add_disposable_resource\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_ts_add_disposable_resource.cjs",
+    "module": "../../esm/_ts_add_disposable_resource.js"
+}

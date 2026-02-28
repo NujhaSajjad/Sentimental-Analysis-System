@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\string\iterator.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/string/iterator');
+
+module.exports = parent;

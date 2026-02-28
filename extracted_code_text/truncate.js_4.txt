@@ -1,0 +1,8 @@
+Relative path: avanza-frontend\node_modules\lodash\fp\truncate.js
+================================================================================
+
+var convert = require('./convert'),
+    func = convert('truncate', require('../truncate'));
+
+func.placeholder = require('./placeholder');
+module.exports = func;

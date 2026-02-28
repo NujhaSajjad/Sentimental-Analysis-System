@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\core-js\internals\environment-ff-version.js
+================================================================================
+
+'use strict';
+var userAgent = require('../internals/environment-user-agent');
+
+var firefox = userAgent.match(/firefox\/(\d+)/i);
+
+module.exports = !!firefox && +firefox[1];

@@ -1,0 +1,9 @@
+Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\compile\ref_error.d.ts
+================================================================================
+
+import type { UriResolver } from "../types";
+export default class MissingRefError extends Error {
+    readonly missingRef: string;
+    readonly missingSchema: string;
+    constructor(resolver: UriResolver, baseId: string, ref: string, msg?: string);
+}

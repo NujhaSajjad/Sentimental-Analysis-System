@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\core-js\features\symbol\metadata-key.js
+================================================================================
+
+'use strict';
+module.exports = require('../../full/symbol/metadata-key');

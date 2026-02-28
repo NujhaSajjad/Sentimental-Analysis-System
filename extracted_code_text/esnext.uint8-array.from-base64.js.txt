@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\modules\esnext.uint8-array.from-base64.js
+================================================================================
+
+'use strict';
+// TODO: Remove from `core-js@4`
+require('../modules/es.uint8-array.from-base64');

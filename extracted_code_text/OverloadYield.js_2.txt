@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\OverloadYield.js
+================================================================================
+
+function _OverloadYield(e, d) {
+  this.v = e, this.k = d;
+}
+export { _OverloadYield as default };

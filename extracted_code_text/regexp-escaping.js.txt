@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\core-js\proposals\regexp-escaping.js
+================================================================================
+
+'use strict';
+// https://github.com/tc39/proposal-regex-escaping
+require('../modules/esnext.regexp.escape');

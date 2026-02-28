@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Binary_Property\Join_Control.js
+================================================================================
+
+const set = require('regenerate')();
+set.addRange(0x200C, 0x200D);
+exports.characters = set;

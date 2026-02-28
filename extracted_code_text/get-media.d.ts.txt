@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\postcss-image-set-function\dist\lib\get-media.d.ts
+================================================================================
+
+import type { Node } from 'postcss-value-parser';
+export declare function getMedia(dpi: number | false, postcss: any, decl: any): any;
+export declare function getMediaDPI(node: Node): number | false;

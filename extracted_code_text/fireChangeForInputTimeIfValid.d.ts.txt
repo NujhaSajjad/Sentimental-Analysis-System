@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\keyboard\shared\fireChangeForInputTimeIfValid.d.ts
+================================================================================
+
+export declare function fireChangeForInputTimeIfValid(el: HTMLInputElement & {
+    type: 'time';
+}, prevValue: unknown, timeNewEntry: string): void;

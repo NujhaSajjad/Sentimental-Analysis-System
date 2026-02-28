@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\source-map-js\lib\source-map-generator.d.ts
+================================================================================
+
+export { SourceMapGenerator } from '..';

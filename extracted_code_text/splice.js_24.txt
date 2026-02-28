@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\full\array\splice.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/array/splice');
+
+module.exports = parent;

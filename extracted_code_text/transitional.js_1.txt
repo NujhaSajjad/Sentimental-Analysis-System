@@ -1,0 +1,11 @@
+Relative path: backend\node_modules\axios\lib\defaults\transitional.js
+================================================================================
+
+'use strict';
+
+export default {
+  silentJSONParsing: true,
+  forcedJSONParsing: true,
+  clarifyTimeoutError: false,
+  legacyInterceptorReqResOrdering: true
+};

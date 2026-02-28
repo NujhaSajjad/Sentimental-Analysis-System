@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\bonjour-service\dist\lib\KeyValue.d.ts
+================================================================================
+
+type KeyValue = {
+    [key: string]: any;
+};
+export default KeyValue;

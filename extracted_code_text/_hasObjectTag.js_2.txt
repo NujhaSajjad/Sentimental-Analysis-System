@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\underscore\modules\_hasObjectTag.js
+================================================================================
+
+import tagTester from './_tagTester.js';
+
+export default tagTester('Object');

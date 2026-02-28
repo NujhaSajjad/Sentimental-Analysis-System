@@ -1,0 +1,11 @@
+Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\issue\IssueLocation.d.ts
+================================================================================
+
+import { IssuePosition } from './IssuePosition';
+interface IssueLocation {
+    start: IssuePosition;
+    end: IssuePosition;
+}
+declare function compareIssueLocations(locationA?: IssueLocation, locationB?: IssueLocation): number;
+declare function formatIssueLocation(location: IssueLocation): string;
+export { IssueLocation, compareIssueLocations, formatIssueLocation };

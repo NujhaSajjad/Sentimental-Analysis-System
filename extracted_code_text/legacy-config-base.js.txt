@@ -1,0 +1,12 @@
+Relative path: avanza-frontend\node_modules\eslint-plugin-jsx-a11y\lib\configs\legacy-config-base.js
+================================================================================
+
+"use strict";
+
+module.exports = {
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    }
+  }
+};

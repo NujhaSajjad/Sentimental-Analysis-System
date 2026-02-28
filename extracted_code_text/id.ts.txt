@@ -1,0 +1,13 @@
+Relative path: avanza-frontend\node_modules\ajv-formats\node_modules\ajv\lib\vocabularies\core\id.ts
+================================================================================
+
+import type {CodeKeywordDefinition} from "../../types"
+
+const def: CodeKeywordDefinition = {
+  keyword: "id",
+  code() {
+    throw new Error('NOT SUPPORTED: keyword "id", use "$id" for schema ID')
+  },
+}
+
+export default def

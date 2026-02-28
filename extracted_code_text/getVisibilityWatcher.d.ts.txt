@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\lib\getVisibilityWatcher.d.ts
+================================================================================
+
+export declare const getVisibilityWatcher: () => {
+    readonly firstHiddenTime: number;
+};

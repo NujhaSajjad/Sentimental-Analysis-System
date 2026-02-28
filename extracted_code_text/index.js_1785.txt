@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\strip-ansi\index.js
+================================================================================
+
+'use strict';
+const ansiRegex = require('ansi-regex');
+
+module.exports = string => typeof string === 'string' ? string.replace(ansiRegex(), '') : string;

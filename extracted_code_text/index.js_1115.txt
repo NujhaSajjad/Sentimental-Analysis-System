@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\file-selector\dist\es2015\index.js
+================================================================================
+
+export { fromEvent } from './file-selector';
+//# sourceMappingURL=index.js.map

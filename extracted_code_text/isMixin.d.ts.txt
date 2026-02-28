@@ -1,0 +1,5 @@
+Relative path: avanza-frontend\node_modules\stylehacks\types\isMixin.d.ts
+================================================================================
+
+declare function _exports(node: import('postcss').Rule): boolean;
+export = _exports;

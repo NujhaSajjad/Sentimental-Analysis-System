@@ -1,0 +1,6 @@
+Relative path: avanza-frontend\node_modules\react-dom\static.js
+================================================================================
+
+'use strict';
+
+module.exports = require('./static.node');

@@ -1,0 +1,19 @@
+Relative path: avanza-frontend\node_modules\eslint\lib\cli-engine\formatters\json-with-metadata.js
+================================================================================
+
+/**
+ * @fileoverview JSON reporter, including rules metadata
+ * @author Chris Meyer
+ */
+"use strict";
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+module.exports = function(results, data) {
+    return JSON.stringify({
+        results,
+        metadata: data
+    });
+};

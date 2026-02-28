@@ -1,0 +1,4 @@
+Relative path: avanza-frontend\node_modules\hpack.js\node_modules\readable-stream\transform.js
+================================================================================
+
+module.exports = require('./readable').Transform

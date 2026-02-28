@@ -1,0 +1,7 @@
+Relative path: backend\node_modules\@swc\helpers\_\_class_private_field_loose_key\package.json
+================================================================================
+
+{
+    "main": "../../cjs/_class_private_field_loose_key.cjs",
+    "module": "../../esm/_class_private_field_loose_key.js"
+}

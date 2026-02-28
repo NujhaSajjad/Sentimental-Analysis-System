@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js\full\promise\try.js
+================================================================================
+
+'use strict';
+var parent = require('../../actual/promise/try');
+
+module.exports = parent;

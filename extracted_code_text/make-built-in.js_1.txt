@@ -1,0 +1,7 @@
+Relative path: avanza-frontend\node_modules\core-js-pure\internals\make-built-in.js
+================================================================================
+
+'use strict';
+module.exports = function (value) {
+  return value;
+};
