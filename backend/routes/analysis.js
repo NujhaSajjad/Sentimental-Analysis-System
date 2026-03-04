@@ -7,6 +7,40 @@ const transcriptionService = require('../services/transcriptionService');
 const analysisService = require('../services/analysisService');
 const { generateReportPDF } = require('../utils/pdfGenerator');
 
+// Retry config for background DB saves
+const MAX_RETRIES = 3;
+const RETRY_DELAY_MS = 1000;
+
+/**
+ * Diarize call transcription into Agent/Customer turns using AI
+ * POST /api/analysis/diarize/:callId
+ */
+router.post('/diarize/:callId', async (req, res) => {
+    try {
+        const callId = parseInt(req.params.callId);
+        console.log(`\n💬 Starting diarization for call ${callId}`);
+
+        const call = await db.getCallReport(callId);
+        if (!call || !call.transcription_text) {
+            return res.status(404).json({ success: false, error: 'Call or transcription not found' });
+        }
+
+        const turns = await analysisService.diarizeConversation(call.transcription_text);
+        await db.saveDiarization(callId, turns);
+
+        res.json({
+            success: true,
+            callId,
+            turns,
+            turnCount: turns.length
+        });
+    } catch (error) {
+        console.error('❌ Diarization route error:', error.message);
+        res.status(500).json({ success: false, error: 'Diarization failed', details: error.message });
+    }
+});
+
+
 /**
  * Transcribe audio
  * POST /api/analysis/transcribe/:callId
@@ -89,57 +123,78 @@ router.post('/analyze/:callId', async (req, res) => {
 
         const call = await db.getCallReport(callId);
         if (!call || !call.transcription_text) {
-            return res.status(404).json({ success: false, error: 'Call data incomplete' });
+            return res.status(404).json({ success: false, error: 'Call data incomplete — transcription missing' });
         }
 
-        let intentData = typeof call.intent_data === 'string' ? JSON.parse(call.intent_data) : (call.intent_data || {
-            primary_intent: call.primary_intent,
-            sentiment: call.sentiment,
-            sentiment_score: call.sentiment_score,
-            urgency: call.urgency,
-            topics: [],
-            entities: []
-        });
+        let intentData = typeof call.intent_data === 'string'
+            ? JSON.parse(call.intent_data)
+            : (call.intent_data || {
+                primary_intent: call.primary_intent,
+                sentiment: call.sentiment,
+                sentiment_score: call.sentiment_score,
+                urgency: call.urgency,
+                topics: [],
+                entities: []
+            });
 
         const analysisText = await analysisService.generateAnalysis(call.transcription_text, intentData);
         const analysisStructure = analysisService.parseAnalysisStructure(analysisText);
         const qualityScore = analysisService.calculateQualityScore(intentData, analysisStructure);
         const csatEstimate = analysisService.estimateCSAT(intentData, analysisStructure);
 
-        await db.saveCallReport(callId, {
-            intent_data: intentData,
-            ai_analysis: analysisText,
-            call_summary: analysisStructure.call_summary,
-            customer_pain_points: analysisStructure.customer_pain_points,
-            emotional_tone: analysisStructure.emotional_tone,
-            primary_sensitivity: analysisStructure.primary_sensitivity,
-            churn_risk_assessment: analysisStructure.churn_risk_assessment || 'low',
-            churn_risk_score: analysisStructure.churn_risk_score || 0,
-            recommended_communication_style: analysisStructure.recommended_communication_style,
-            escalation_risk: analysisStructure.churn_risk_assessment === 'critical' ? 'high' : 'low',
-            escalation_risk_score: analysisStructure.escalation_risk_score || 0,
-            refund_likelihood: 'low',
-            refund_likelihood_score: analysisStructure.refund_likelihood_score || 0,
-            quality_score: qualityScore,
-            csat_estimate: csatEstimate,
-            resolution_status: 'pending',
-            agent_opening_line: analysisStructure.agent_opening_line,
-            agent_approach_do: analysisStructure.agent_approach_do,
-            agent_approach_avoid: analysisStructure.agent_approach_avoid,
-            crm_tags: analysisStructure.crm_tags,
-            key_insights: [],
-            conversation_highlights: []
-        });
+        // Save to DB synchronously (with retry on failure) before responding.
+        // This is required because process-complete calls this route and then
+        // immediately fetches the report — the data must exist in DB by then.
+        const saveWithRetry = async (attempt = 1) => {
+            try {
+                await db.saveCallReport(callId, {
+                    intent_data: intentData,
+                    ai_analysis: analysisText,
+                    call_summary: analysisStructure.call_summary,
+                    customer_pain_points: analysisStructure.customer_pain_points,
+                    emotional_tone: analysisStructure.emotional_tone,
+                    primary_sensitivity: analysisStructure.primary_sensitivity,
+                    churn_risk_assessment: analysisStructure.churn_risk_assessment || 'low',
+                    churn_risk_score: analysisStructure.churn_risk_score || 0,
+                    recommended_communication_style: analysisStructure.recommended_communication_style,
+                    escalation_risk: analysisStructure.churn_risk_assessment === 'critical' ? 'high' : 'low',
+                    escalation_risk_score: analysisStructure.escalation_risk_score || 0,
+                    refund_likelihood: 'low',
+                    refund_likelihood_score: analysisStructure.refund_likelihood_score || 0,
+                    quality_score: qualityScore,
+                    csat_estimate: csatEstimate,
+                    resolution_status: 'pending',
+                    agent_opening_line: analysisStructure.agent_opening_line,
+                    agent_approach_do: analysisStructure.agent_approach_do,
+                    agent_approach_avoid: analysisStructure.agent_approach_avoid,
+                    crm_tags: analysisStructure.crm_tags,
+                    key_insights: [],
+                    conversation_highlights: []
+                });
 
-        await db.updateCallStatus(callId, 'analyzed', {
-            quality_score: qualityScore,
-            csat_estimate: csatEstimate,
-            resolution_status: 'pending'
-        });
+                await db.updateCallStatus(callId, 'analyzed', {
+                    quality_score: qualityScore,
+                    csat_estimate: csatEstimate,
+                    resolution_status: 'pending'
+                });
 
-        if (call.customer_id) {
-            await db.updateCustomerSentiment(call.customer_id);
-        }
+                if (call.customer_id) {
+                    await db.updateCustomerSentiment(call.customer_id);
+                }
+                console.log(`✅ Analysis for call ${callId} saved to DB.`);
+            } catch (dbError) {
+                console.error(`❌ DB save attempt ${attempt}/${MAX_RETRIES} failed for call ${callId}:`, dbError.message);
+                if (attempt < MAX_RETRIES) {
+                    await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+                    await saveWithRetry(attempt + 1);
+                } else {
+                    console.error(`🚨 All ${MAX_RETRIES} DB save attempts exhausted for call ${callId}.`);
+                    throw dbError; // propagate so the HTTP response reflects failure
+                }
+            }
+        };
+
+        await saveWithRetry();
 
         res.json({
             success: true,
@@ -148,6 +203,7 @@ router.post('/analyze/:callId', async (req, res) => {
             qualityScore,
             csatEstimate
         });
+
     } catch (error) {
         console.error('❌ Analysis error:', error.message);
         res.status(500).json({ success: false, error: 'Analysis failed', details: error.message });
@@ -156,7 +212,6 @@ router.post('/analyze/:callId', async (req, res) => {
 
 /**
  * Process complete pipeline: transcribe → intent → analyze
- * POST /api/analysis/process-complete/:callId
  */
 router.post('/process-complete/:callId', async (req, res) => {
     try {
@@ -193,6 +248,12 @@ router.post('/process-complete/:callId', async (req, res) => {
             const analyzeRes = await axios.post(`${internalUrl}/analyze/${callId}`);
             results.analysis = { success: true, data: analyzeRes.data };
         } catch (error) { console.warn('⚠️ Analysis failed'); }
+
+        // Step 4: Diarize (speaker separation)
+        try {
+            const diarizeRes = await axios.post(`${internalUrl}/diarize/${callId}`);
+            results.diarization = { success: true, data: diarizeRes.data };
+        } catch (error) { console.warn('⚠️ Diarization failed (non-fatal)'); }
 
         await db.updateCallStatus(callId, 'completed');
         res.json({ success: true, message: 'Processing completed', callId, results });

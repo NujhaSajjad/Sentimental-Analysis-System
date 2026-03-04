@@ -10,7 +10,7 @@ const AI_MODEL = process.env.AI_MODEL || 'deepseek/deepseek-chat';
 async function extractIntent(transcription) {
   try {
     console.log('🎯 Extracting intent from transcription...');
-    
+
     if (!OPENROUTER_API_KEY) {
       throw new Error('OpenRouter API key not configured');
     }
@@ -259,16 +259,16 @@ function parseAnalysisStructure(analysisText) {
     const profileMatch = analysisText.match(/### Customer Interaction Profile\s+([\s\S]*?)(?=###|$)/);
     if (profileMatch) {
       const profile = profileMatch[1];
-      
+
       const toneMatch = profile.match(/\*\*Emotional Tone\*\*:\s*(.+)/);
       if (toneMatch) structure.emotional_tone = toneMatch[1].trim();
-      
+
       const sensitivityMatch = profile.match(/\*\*Primary Sensitivity\*\*:\s*(.+)/);
       if (sensitivityMatch) structure.primary_sensitivity = sensitivityMatch[1].trim();
-      
+
       const churnMatch = profile.match(/\*\*Churn Risk\*\*:\s*(.+)/);
       if (churnMatch) structure.churn_risk_assessment = churnMatch[1].trim().toLowerCase();
-      
+
       const styleMatch = profile.match(/\*\*Recommended Communication Style\*\*:\s*(.+)/);
       if (styleMatch) structure.recommended_communication_style = styleMatch[1].trim();
     }
@@ -301,13 +301,13 @@ function parseAnalysisStructure(analysisText) {
     const riskMatch = analysisText.match(/### AI Risk Assessment\s+([\s\S]*?)(?=###|$)/);
     if (riskMatch) {
       const risks = riskMatch[1];
-      
+
       const churnRiskMatch = risks.match(/Churn Risk\*\*:\s*(\d+)%/);
       if (churnRiskMatch) structure.churn_risk_score = parseInt(churnRiskMatch[1]);
-      
+
       const escalationMatch = risks.match(/Escalation Risk\*\*:\s*(\d+)%/);
       if (escalationMatch) structure.escalation_risk_score = parseInt(escalationMatch[1]);
-      
+
       const refundMatch = risks.match(/Refund Likelihood\*\*:\s*(\d+)%/);
       if (refundMatch) structure.refund_likelihood_score = parseInt(refundMatch[1]);
     }
@@ -325,7 +325,7 @@ function parseAnalysisStructure(analysisText) {
     const actionsMatch = analysisText.match(/### Action Items\s+([\s\S]*?)(?=###|$)/);
     if (actionsMatch) {
       const actions = actionsMatch[1];
-      
+
       const duringMatch = actions.match(/\*\*During the Call:\*\*\s+([\s\S]*?)(?=\*\*After the Call:\*\*|$)/);
       if (duringMatch) {
         const duringPoints = duringMatch[1].match(/- (.+)/g);
@@ -333,7 +333,7 @@ function parseAnalysisStructure(analysisText) {
           structure.action_items_during = duringPoints.map(p => p.replace(/^- /, '').trim());
         }
       }
-      
+
       const afterMatch = actions.match(/\*\*After the Call:\*\*\s+([\s\S]*?)(?=###|$)/);
       if (afterMatch) {
         const afterPoints = afterMatch[1].match(/- (.+)/g);
@@ -380,11 +380,103 @@ function calculateQualityScore(intentData, analysisStructure) {
 function estimateCSAT(intentData, analysisStructure) {
   if (intentData.sentiment === 'Positive') return 4.5;
   if (intentData.sentiment === 'Neutral') return 3.5;
-  
+
   const churnRisk = analysisStructure.churn_risk_assessment?.toLowerCase();
   if (churnRisk === 'critical' || churnRisk === 'high') return 2.0;
-  
+
   return 2.5;
+}
+
+/**
+ * Diarize a call transcription into Agent / Customer turns using AI
+ * @param {string} transcription - Raw plain-text transcription
+ * @returns {Promise<Array>} Array of { speaker: 'Agent'|'Customer', text: string }
+ */
+async function diarizeConversation(transcription) {
+  try {
+    console.log('💬 Diarizing conversation...');
+
+    if (!OPENROUTER_API_KEY) {
+      throw new Error('OpenRouter API key not configured');
+    }
+
+    const diarizePrompt = `You are an expert at analyzing customer service call transcriptions.
+You will receive a raw, unsegmented call transcription. Your task is to split it into individual speaker turns.
+
+Rules:
+1. There are exactly TWO speakers: "Agent" (call center representative) and "Customer".
+2. Agents typically: greet formally, use scripts, ask clarifying questions, mention policies, offer solutions.
+3. Customers typically: state problems, ask questions, express frustration or satisfaction, give personal info.
+4. Split the text into natural conversation turns. Each turn is a continuous block spoken by one speaker.
+5. If multiple sentences belong to the same speaker in a row, keep them together as one turn.
+6. Respond ONLY with a valid JSON array. No markdown, no code blocks, no explanation.
+
+Output format:
+[
+  { "speaker": "Agent", "text": "Thank you for calling..." },
+  { "speaker": "Customer", "text": "Hi, I have a problem..." }
+]
+
+Transcription to diarize:
+${transcription}
+
+Respond ONLY with the JSON array.`;
+
+    const response = await axios.post(
+      'https://openrouter.ai/api/v1/chat/completions',
+      {
+        model: AI_MODEL,
+        messages: [
+          {
+            role: 'system',
+            content: 'You are an expert at speaker diarization for customer service calls. Always respond with ONLY a valid JSON array, no markdown or extra text.'
+          },
+          { role: 'user', content: diarizePrompt }
+        ],
+        temperature: 0.1,
+        max_tokens: 4000
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': 'http://localhost:3000',
+          'X-Title': 'Avanza Call Analytics'
+        }
+      }
+    );
+
+    const content = response.data.choices[0].message.content;
+    const cleaned = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+
+    let turns;
+    try {
+      turns = JSON.parse(cleaned);
+    } catch (parseErr) {
+      console.error('❌ Failed to parse diarization JSON:', parseErr.message);
+      // Fallback: return entire transcription as a single block
+      return [{ speaker: 'Customer', text: transcription }];
+    }
+
+    // Basic validation
+    if (!Array.isArray(turns) || turns.length === 0) {
+      return [{ speaker: 'Customer', text: transcription }];
+    }
+
+    // Normalize speaker names
+    turns = turns.map(t => ({
+      speaker: String(t.speaker || 'Unknown').includes('Agent') || String(t.speaker || '').toLowerCase().includes('agent') ? 'Agent' : 'Customer',
+      text: String(t.text || '').trim()
+    })).filter(t => t.text.length > 0);
+
+    console.log(`✅ Diarization complete: ${turns.length} turns identified`);
+    return turns;
+
+  } catch (error) {
+    console.error('❌ Diarization failed:', error.message);
+    // Graceful fallback — return the raw text as one turn
+    return [{ speaker: 'Customer', text: transcription }];
+  }
 }
 
 module.exports = {
@@ -392,5 +484,6 @@ module.exports = {
   generateAnalysis,
   parseAnalysisStructure,
   calculateQualityScore,
-  estimateCSAT
+  estimateCSAT,
+  diarizeConversation
 };

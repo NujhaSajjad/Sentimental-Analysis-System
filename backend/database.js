@@ -1,21 +1,37 @@
-// database.js - Avanza Solutions DB Module (FIXED)
+// database.js - Avanza Solutions DB Module
 require('dotenv').config();
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user:     process.env.DB_USER     || 'postgres',
-  host:     process.env.DB_HOST     || 'localhost',
-  database: process.env.DB_NAME     || 'call_center_ai',
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'call_center_ai',
   password: process.env.DB_PASSWORD,
-  port:     parseInt(process.env.DB_PORT) || 5432,
+  port: parseInt(process.env.DB_PORT) || 5432,
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
 });
 
 pool.on('connect', () => console.log('✅ Connected to PostgreSQL'));
-pool.on('error',   (err) => { console.error('❌ DB error:', err); process.exit(-1); });
+pool.on('error', (err) => { console.error('❌ DB error:', err); process.exit(-1); });
 process.on('SIGTERM', () => pool.end(() => console.log('🔌 Pool closed')));
+
+/**
+ * Ensure any schema columns that are added dynamically exist on startup.
+ * Safe to call every time — uses IF NOT EXISTS.
+ */
+async function initSchema() {
+  try {
+    await pool.query(`
+      ALTER TABLE call_transcriptions
+      ADD COLUMN IF NOT EXISTS diarized_conversation JSONB
+    `);
+    console.log('✅ Schema init complete (diarized_conversation column ensured)');
+  } catch (err) {
+    console.warn('⚠️ Schema init warning (non-fatal):', err.message);
+  }
+}
 
 // ============================================
 // CUSTOMER OPERATIONS
@@ -87,11 +103,11 @@ async function findOrCreateCustomer(cnic, phoneNumber, additionalData = {}) {
     const result = await pool.query(insertQuery, [
       cnic && !cnic.startsWith('TEMP-') ? cnic : null,
       phoneNumber,
-      additionalData.email        || null,
-      additionalData.full_name    || 'Unknown Customer',
+      additionalData.email || null,
+      additionalData.full_name || 'Unknown Customer',
       additionalData.company_name || null,
-      additionalData.city         || null,
-      additionalData.address      || null,
+      additionalData.city || null,
+      additionalData.address || null,
     ]);
     console.log(`✨ Created new customer (phone: ${phoneNumber})`);
     return result.rows[0];
@@ -102,12 +118,36 @@ async function findOrCreateCustomer(cnic, phoneNumber, additionalData = {}) {
 }
 
 /**
- * Search customers — used by the search bar in the frontend
- * Calls the search_customers() SQL function
+ * Search customers — direct SQL with ILIKE.
+ * NOTE: We intentionally bypass the search_customers() PostgreSQL stored function
+ * because its RETURNS TABLE declaration uses varchar but the actual table columns
+ * are text after the schema migration, which causes a type-mismatch error.
  */
 async function searchCustomers(searchTerm) {
   try {
-    const result = await pool.query('SELECT * FROM search_customers($1)', [searchTerm]);
+    const pattern = `%${searchTerm}%`;
+    const result = await pool.query(
+      `SELECT
+         customer_id,
+         cnic,
+         phone_number,
+         full_name,
+         company_name,
+         email,
+         total_calls,
+         overall_sentiment,
+         sentiment_trend,
+         churn_risk
+       FROM customers
+       WHERE
+         cnic         ILIKE $1
+         OR phone_number ILIKE $1
+         OR full_name    ILIKE $1
+         OR company_name ILIKE $1
+       ORDER BY total_calls DESC, full_name ASC
+       LIMIT 20`,
+      [pattern]
+    );
     return result.rows;
   } catch (error) {
     console.error('Error searching customers:', error);
@@ -123,28 +163,37 @@ async function getCustomerByCNIC(cnic) {
 }
 
 /**
- * Get full customer profile (uses the customer_complete_profile view)
+ * Get full customer profile — queries customers table directly
+ * (the customer_complete_profile view does not exist in the current schema)
  */
 async function getCustomerCompleteProfile(cnic) {
   try {
     const result = await pool.query(
-      'SELECT * FROM customer_complete_profile WHERE cnic = $1',
+      `SELECT
+         c.*,
+         (SELECT COUNT(*) FROM calls WHERE customer_id = c.customer_id) AS total_calls_count
+       FROM customers c
+       WHERE c.cnic = $1`,
       [cnic]
     );
     return result.rows[0] || null;
   } catch (error) {
-    console.error('Error getting customer complete profile:', error);
+    console.error('Error getting customer profile by CNIC:', error);
     throw error;
   }
 }
 
 /**
- * Get customer profile by ID
+ * Get customer profile by ID — queries customers table directly
  */
 async function getCustomerProfile(customerId) {
   try {
     const result = await pool.query(
-      'SELECT * FROM customer_complete_profile WHERE customer_id = $1',
+      `SELECT
+         c.*,
+         (SELECT COUNT(*) FROM calls WHERE customer_id = c.customer_id) AS total_calls_count
+       FROM customers c
+       WHERE c.customer_id = $1`,
       [customerId]
     );
     return result.rows[0] || null;
@@ -156,11 +205,17 @@ async function getCustomerProfile(customerId) {
 
 /**
  * Get all calls for a customer (calls + report summary)
+ * includes a calculated customer_call_number sequence.
  */
 async function getCustomerAllCalls(customerId) {
   try {
     const result = await pool.query(
-      `SELECT * FROM customer_call_history WHERE customer_id = $1 ORDER BY call_date DESC`,
+      `SELECT 
+         *,
+         ROW_NUMBER() OVER (ORDER BY call_date ASC) as customer_call_number
+       FROM customer_call_history 
+       WHERE customer_id = $1 
+       ORDER BY call_date DESC`,
       [customerId]
     );
     return result.rows;
@@ -229,33 +284,73 @@ async function getCustomerSentimentTimeline(customerId) {
 }
 
 /**
- * Calculate and persist overall customer sentiment
+ * Calculate and persist overall customer sentiment.
+ * NOTE: We bypass the calculate_customer_sentiment() stored function because
+ * its RETURNS TABLE uses varchar but calls table columns are now text.
+ * Inline SQL avoids the type mismatch entirely.
  */
 async function updateCustomerSentiment(customerId) {
   try {
-    const result = await pool.query(
-      'SELECT * FROM calculate_customer_sentiment($1)',
+    // 1. Count sentiments
+    const countsRes = await pool.query(
+      `SELECT
+         COUNT(*) FILTER (WHERE sentiment = 'Positive') AS pos,
+         COUNT(*) FILTER (WHERE sentiment = 'Negative') AS neg,
+         COUNT(*) FILTER (WHERE sentiment = 'Neutral')  AS neu,
+         AVG(sentiment_score)                           AS avg_score
+       FROM calls
+       WHERE customer_id = $1`,
       [customerId]
     );
-    if (result.rows.length > 0) {
-      const { overall_sentiment, overall_score, sentiment_trend } = result.rows[0];
-      await pool.query(
-        `UPDATE customers
-         SET overall_sentiment       = $1,
-             overall_sentiment_score = $2,
-             sentiment_trend         = $3,
-             last_analyzed_at        = CURRENT_TIMESTAMP,
-             updated_at              = CURRENT_TIMESTAMP
-         WHERE customer_id = $4`,
-        [overall_sentiment, overall_score, sentiment_trend, customerId]
-      );
-      console.log(`📊 Updated sentiment for customer ${customerId}: ${overall_sentiment}`);
-      return result.rows[0];
+    const { pos, neg, neu, avg_score } = countsRes.rows[0];
+    const posN = parseInt(pos) || 0;
+    const negN = parseInt(neg) || 0;
+    const neuN = parseInt(neu) || 0;
+
+    let overall_sentiment;
+    if (posN >= negN && posN >= neuN) overall_sentiment = 'Positive';
+    else if (negN > posN && negN >= neuN) overall_sentiment = 'Negative';
+    else overall_sentiment = 'Neutral';
+
+    // 2. Calculate trend (recent 3 vs previous 3)
+    const trendRes = await pool.query(
+      `SELECT
+         AVG(recent.sentiment_score) AS recent_avg,
+         AVG(prev.sentiment_score)   AS prev_avg
+       FROM (
+         SELECT sentiment_score FROM calls
+         WHERE customer_id = $1 AND sentiment_score IS NOT NULL
+         ORDER BY call_date DESC LIMIT 3
+       ) recent
+       CROSS JOIN (
+         SELECT sentiment_score FROM calls
+         WHERE customer_id = $1 AND sentiment_score IS NOT NULL
+         ORDER BY call_date DESC LIMIT 3 OFFSET 3
+       ) prev`,
+      [customerId]
+    );
+    const { recent_avg, prev_avg } = trendRes.rows[0] || {};
+    let sentiment_trend = 'stable';
+    if (recent_avg != null && prev_avg != null) {
+      if (parseFloat(recent_avg) > parseFloat(prev_avg)) sentiment_trend = 'improving';
+      else if (parseFloat(recent_avg) < parseFloat(prev_avg)) sentiment_trend = 'declining';
     }
-    return null;
+
+    // 3. Persist
+    await pool.query(
+      `UPDATE customers
+       SET overall_sentiment       = $1,
+           overall_sentiment_score = $2,
+           sentiment_trend         = $3,
+           last_analyzed_at        = CURRENT_TIMESTAMP,
+           updated_at              = CURRENT_TIMESTAMP
+       WHERE customer_id = $4`,
+      [overall_sentiment, parseFloat(avg_score) || 0, sentiment_trend, customerId]
+    );
+    console.log(`📊 Updated sentiment for customer ${customerId}: ${overall_sentiment} (${sentiment_trend})`);
+    return { overall_sentiment, overall_score: parseFloat(avg_score) || 0, sentiment_trend };
   } catch (error) {
-    console.error('Error updating customer sentiment:', error);
-    // Non-fatal — don't break the pipeline
+    console.error('Error updating customer sentiment (non-fatal):', error.message);
     return null;
   }
 }
@@ -293,7 +388,7 @@ async function createCall(customerId, agentId, audioFileInfo) {
        RETURNING *`,
       [
         customerId || null,
-        agentId    || null,
+        agentId || null,
         audioFileInfo.filename,
         audioFileInfo.filepath,
         audioFileInfo.size,
@@ -329,13 +424,13 @@ async function updateCallStatus(callId, status, additionalData = {}) {
        RETURNING *`,
       [
         status,
-        additionalData.duration          || null,
-        additionalData.primary_intent    || null,
-        additionalData.sentiment         || null,
-        additionalData.sentiment_score   || null,
-        additionalData.urgency           || null,
-        additionalData.quality_score     || null,
-        additionalData.csat_estimate     || null,
+        additionalData.duration || null,
+        additionalData.primary_intent || null,
+        additionalData.sentiment || null,
+        additionalData.sentiment_score || null,
+        additionalData.urgency || null,
+        additionalData.quality_score || null,
+        additionalData.csat_estimate || null,
         additionalData.resolution_status || null,
         callId,
       ]
@@ -375,8 +470,8 @@ async function saveTranscription(callId, transcriptionData) {
 
     const quality =
       (transcriptionData.confidence >= 0.9) ? 'excellent' :
-      (transcriptionData.confidence >= 0.7) ? 'good'      :
-      (transcriptionData.confidence >= 0.5) ? 'fair'      : 'poor';
+        (transcriptionData.confidence >= 0.7) ? 'good' :
+          (transcriptionData.confidence >= 0.5) ? 'fair' : 'poor';
 
     const result = await pool.query(
       `INSERT INTO call_transcriptions
@@ -394,9 +489,9 @@ async function saveTranscription(callId, transcriptionData) {
         callId,
         transcriptionData.text,
         wordCount,
-        transcriptionData.duration   || null,
+        transcriptionData.duration || null,
         transcriptionData.confidence || null,
-        transcriptionData.language   || 'en',
+        transcriptionData.language || 'en',
         quality,
       ]
     );
@@ -405,6 +500,35 @@ async function saveTranscription(callId, transcriptionData) {
   } catch (error) {
     console.error('Error saving transcription:', error);
     throw error;
+  }
+}
+
+/**
+ * Save diarized conversation JSON for a call
+ * @param {number} callId
+ * @param {Array} turns - [{speaker, text}, ...]
+ */
+async function saveDiarization(callId, turns) {
+  try {
+    // AUTO-CREATE the column if it doesn't exist (safe to run every time)
+    await pool.query(`
+      ALTER TABLE call_transcriptions
+      ADD COLUMN IF NOT EXISTS diarized_conversation JSONB
+    `);
+
+    const result = await pool.query(
+      `UPDATE call_transcriptions
+       SET diarized_conversation = $1
+       WHERE call_id = $2
+       RETURNING *`,
+      [JSON.stringify(turns), callId]
+    );
+    console.log(`💬 Saved diarization for call ${callId} (${turns.length} turns)`);
+    return result.rows[0];
+  } catch (error) {
+    console.error('Error saving diarization:', error);
+    // Non-fatal — don't break the pipeline
+    return null;
   }
 }
 
@@ -427,8 +551,8 @@ async function saveCallSegment(callId, segmentData) {
         segmentData.segment_end_time,
         segmentData.segment_duration,
         segmentData.segment_transcription,
-        segmentData.segment_summary         || null,
-        segmentData.segment_sentiment       || null,
+        segmentData.segment_summary || null,
+        segmentData.segment_sentiment || null,
         segmentData.segment_sentiment_score || null,
       ]
     );
@@ -488,29 +612,29 @@ async function saveCallReport(callId, reportData) {
       [
         callId,
         JSON.stringify(reportData.intent_data || {}),
-        reportData.ai_analysis                || null,  // field from server is ai_analysis
-        reportData.call_summary               || null,
-        reportData.customer_pain_points       || [],
-        reportData.customer_expectations      || [],
-        reportData.emotional_tone             || null,
-        reportData.emotional_intensity        || 'medium',
-        reportData.primary_sensitivity        || null,
-        reportData.churn_risk_assessment      || 'low',
-        reportData.churn_risk_score           || 0,
-        reportData.escalation_risk            || 'low',
-        reportData.escalation_risk_score      || 0,
-        reportData.refund_likelihood          || 'low',
-        reportData.refund_likelihood_score    || 0,
-        reportData.quality_score              || null,
-        reportData.csat_estimate              || null,
-        reportData.nps_estimate               || null,
-        reportData.resolution_status          || 'pending',
-        reportData.crm_tags                   || [],
-        reportData.agent_opening_line         || null,
-        reportData.agent_approach_do          || [],
-        reportData.agent_approach_avoid       || [],
-        reportData.key_insights               || [],
-        reportData.conversation_highlights    || [],
+        reportData.ai_analysis || null,  // field from server is ai_analysis
+        reportData.call_summary || null,
+        reportData.customer_pain_points || [],
+        reportData.customer_expectations || [],
+        reportData.emotional_tone || null,
+        reportData.emotional_intensity || 'medium',
+        reportData.primary_sensitivity || null,
+        reportData.churn_risk_assessment || 'low',
+        reportData.churn_risk_score || 0,
+        reportData.escalation_risk || 'low',
+        reportData.escalation_risk_score || 0,
+        reportData.refund_likelihood || 'low',
+        reportData.refund_likelihood_score || 0,
+        reportData.quality_score || null,
+        reportData.csat_estimate || null,
+        reportData.nps_estimate || null,
+        reportData.resolution_status || 'pending',
+        reportData.crm_tags || [],
+        reportData.agent_opening_line || null,
+        reportData.agent_approach_do || [],
+        reportData.agent_approach_avoid || [],
+        reportData.key_insights || [],
+        reportData.conversation_highlights || [],
       ]
     );
     console.log(`📊 Saved report for call ${callId}`);
@@ -523,7 +647,8 @@ async function saveCallReport(callId, reportData) {
 
 /**
  * Get full report for a call — JOINs all relevant tables.
- * This is what the frontend calls to display everything.
+ * NOTE: diarized_conversation is fetched via a sub-select so the query
+ * never crashes even if the column hasn't been added to the DB yet.
  */
 async function getCallReport(callId) {
   try {
@@ -580,7 +705,23 @@ async function getCallReport(callId) {
        WHERE c.call_id = $1`,
       [callId]
     );
-    return result.rows[0] || null;
+
+    if (!result.rows[0]) return null;
+    const row = result.rows[0];
+
+    // Fetch diarized_conversation separately — column may not exist yet.
+    // initSchema() adds it on startup; this guard prevents any crash.
+    try {
+      const dRes = await pool.query(
+        `SELECT diarized_conversation FROM call_transcriptions WHERE call_id = $1`,
+        [callId]
+      );
+      row.diarized_conversation = dRes.rows[0]?.diarized_conversation || null;
+    } catch {
+      row.diarized_conversation = null; // column not yet added — safe fallback
+    }
+
+    return row;
   } catch (error) {
     console.error('Error getting call report:', error);
     throw error;
@@ -603,10 +744,10 @@ async function createActionItems(callId, customerId, actionItems) {
         [
           callId,
           customerId || null,
-          item.type       || 'after_call',
-          item.category   || null,
+          item.type || 'after_call',
+          item.category || null,
           item.description,
-          item.priority   || 'medium',
+          item.priority || 'medium',
         ]
       );
       results.push(result.rows[0]);
@@ -684,6 +825,9 @@ async function getDashboardStats() {
 module.exports = {
   pool,
 
+  // Schema init — call once on server startup
+  initSchema,
+
   // Customer
   findOrCreateCustomer,
   findCustomerByPhone,
@@ -695,7 +839,7 @@ module.exports = {
   getCustomerCallHistory,
   getCustomerAllCalls,
   getCustomerSentimentTimeline,
-  getCustomerLastCall,       // ← was missing! used in server.js upload handler
+  getCustomerLastCall,
   updateCustomerSentiment,
   updateCustomerChurnRisk,
 
@@ -706,6 +850,7 @@ module.exports = {
 
   // Transcription
   saveTranscription,
+  saveDiarization,
   saveCallSegment,
   getCallSegments,
 

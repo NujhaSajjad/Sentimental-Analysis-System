@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { 
-  Phone, Calendar, Clock, TrendingUp, Download, 
-  ChevronRight, Filter, Search 
+import {
+  Phone, Calendar, Clock, TrendingUp, Download,
+  ChevronRight, Filter, Search
 } from 'lucide-react';
 import axios from 'axios';
 
@@ -18,7 +18,7 @@ const CallHistory = ({ customerId, onCallSelect, onClose }) => {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/api/customers/${customerId}/calls`);
-      
+
       if (response.data.success) {
         setCalls(response.data.calls);
         setFilteredCalls(response.data.calls);
@@ -35,7 +35,7 @@ const CallHistory = ({ customerId, onCallSelect, onClose }) => {
 
     // Filter by sentiment
     if (filterSentiment !== 'all') {
-      filtered = filtered.filter(call => 
+      filtered = filtered.filter(call =>
         call.sentiment?.toLowerCase() === filterSentiment.toLowerCase()
       );
     }
@@ -46,7 +46,8 @@ const CallHistory = ({ customerId, onCallSelect, onClose }) => {
       filtered = filtered.filter(call =>
         call.primary_intent?.toLowerCase().includes(search) ||
         call.call_category?.toLowerCase().includes(search) ||
-        call.call_id?.toString().includes(search)
+        call.call_id?.toString().includes(search) ||
+        call.customer_call_number?.toString().includes(search)
       );
     }
 
@@ -105,7 +106,7 @@ const CallHistory = ({ customerId, onCallSelect, onClose }) => {
         `${API_URL}/api/reports/${callId}/download`,
         { responseType: 'blob' }
       );
-      
+
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -200,15 +201,15 @@ const CallHistory = ({ customerId, onCallSelect, onClose }) => {
                 <div className="call-icon">
                   <Phone size={20} />
                 </div>
-                
+
                 <div className="call-details">
                   <div className="call-header-row">
-                    <h4>Call #{call.call_id}</h4>
+                    <h4>Call #{call.customer_call_number || call.call_id}</h4>
                     <span className={`status-badge ${getStatusBadgeClass(call.processing_status)}`}>
                       {call.processing_status || 'Pending'}
                     </span>
                   </div>
-                  
+
                   <div className="call-meta">
                     <span>
                       <Calendar size={14} />

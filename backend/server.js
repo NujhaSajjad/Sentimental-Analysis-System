@@ -75,6 +75,9 @@ if (!hasOpenRouter) {
 
 // Start Server
 app.listen(PORT, async () => {
+  // Initialize schema (ensure dynamic columns exist)
+  await db.initSchema();
+
   // Test database connection on startup
   let dbStatus = '⏳ Connecting...';
   try {

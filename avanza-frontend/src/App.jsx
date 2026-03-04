@@ -8,6 +8,7 @@ import './components/NewComponents.css';
 import Header from './components/Header';
 import UploadCard from './components/UploadCard';
 import TranscriptionCard from './components/TranscriptionCard';
+import ConversationCard from './components/ConversationCard';
 import IntentCard from './components/IntentCard';
 import MetricsRow from './components/MetricsRow';
 import AnalysisCard from './components/AnalysisCard';
@@ -35,6 +36,7 @@ function App() {
 
   // Report data
   const [transcription, setTranscription] = useState('');
+  const [diarizedConversation, setDiarizedConversation] = useState(null);
   const [intent, setIntent] = useState(null);
   const [analysis, setAnalysis] = useState('');
   const [actionItems, setActionItems] = useState([]);
@@ -99,6 +101,16 @@ function App() {
       setTranscription(call.transcription_text);
     }
 
+    // Set diarized conversation (chat bubbles)
+    if (call.diarized_conversation) {
+      const diarized = typeof call.diarized_conversation === 'string'
+        ? JSON.parse(call.diarized_conversation)
+        : call.diarized_conversation;
+      setDiarizedConversation(diarized);
+    } else {
+      setDiarizedConversation(null);
+    }
+
     // Set duration
     if (call.call_duration) {
       const mins = Math.floor(call.call_duration / 60);
@@ -158,6 +170,25 @@ function App() {
     setFileInfo(call.audio_filename || 'Call loaded from database');
   };
 
+  // Poll for the call report until transcription_text is present (max 10 attempts, 2s apart).
+  // Needed because the AI pipeline saves to DB asynchronously, and we might fetch
+  // the report before the write has landed.
+  const pollCallReport = async (callId, maxAttempts = 10, delayMs = 2000) => {
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      const response = await axios.get(`${API_URL}/api/calls/${callId}`);
+      const call = response.data?.call;
+      if (call && call.transcription_text) {
+        return call; // data is ready
+      }
+      if (attempt < maxAttempts) {
+        await new Promise(r => setTimeout(r, delayMs));
+      }
+    }
+    // Return whatever we have even if transcription isn't ready yet
+    const finalResponse = await axios.get(`${API_URL}/api/calls/${callId}`);
+    return finalResponse.data?.call || null;
+  };
+
   // Handle successful upload and processing from the new UploadCard modal
   const handleUploadSubmit = async (file, customer, callId) => {
     try {
@@ -169,16 +200,19 @@ function App() {
         setSelectedCustomer(customer);
       }
 
-      // Fetch the complete call data and display it
-      const response = await axios.get(`${API_URL}/api/calls/${callId}`);
-      if (response.data.success) {
-        displayCallReport(response.data.call);
+      // Poll until the DB has the transcription + analysis (handles async save race condition)
+      setLoadingMessage('Loading analysis results...');
+      const call = await pollCallReport(callId);
+      if (call) {
+        displayCallReport(call);
         setUploadStatus(true);
         setFileInfo(`${file.name} (${formatFileSize(file.size)})`);
+      } else {
+        throw new Error('Could not retrieve call report from server.');
       }
     } catch (error) {
       console.error('Error in upload submit flow:', error);
-      alert('Failed to display the processed report.');
+      alert('Failed to display the processed report. Please refresh and try again.');
     } finally {
       setLoading(false);
     }
@@ -190,6 +224,7 @@ function App() {
     setFileInfo('');
     setCurrentCallId(null);
     setTranscription('');
+    setDiarizedConversation(null);
     setIntent(null);
     setAnalysis('');
     setActionItems([]);
@@ -297,7 +332,10 @@ function App() {
             uploadStatus={uploadStatus}
             fileInfo={fileInfo}
           />
-          <TranscriptionCard transcription={transcription} />
+          <ConversationCard
+            transcription={transcription}
+            diarizedConversation={diarizedConversation}
+          />
           <IntentCard intent={intent} />
         </div>
 
