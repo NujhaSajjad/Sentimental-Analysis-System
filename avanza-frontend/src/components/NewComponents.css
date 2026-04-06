@@ -305,6 +305,45 @@
   color: var(--text-dark);
 }
 
+.profile-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.sentiment-emoji-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.sentiment-emoji {
+  font-size: 36px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.sentiment-emoji-badge:hover .sentiment-emoji {
+  transform: scale(1.15);
+}
+
+.sentiment-emoji-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-gray);
+  text-align: center;
+  margin-top: 2px;
+  line-height: 1;
+}
+
 .profile-quick-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

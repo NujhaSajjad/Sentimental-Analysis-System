@@ -1,227 +1,94 @@
-// transcriptionService.js - Enhanced Transcription Service
-// Handles both short and long calls with automatic chunking
+// transcriptionService.js
+// ─────────────────────────────────────────────────────────────────────────────
+// Sends the full audio file directly to the Python Gladia transcription service.
+// Gladia handles transcription + diarization (agent vs customer) natively.
+// No local chunking needed — Gladia processes the file server-side.
+// ─────────────────────────────────────────────────────────────────────────────
+
 const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs');
 const path = require('path');
-const { 
-  splitAudioIntoChunks, 
-  isLongAudio, 
-  cleanupChunks,
-  getAudioMetadata,
-  estimateProcessingTime 
-} = require('../utils/audioProcessor');
-const db = require('../database');
 
-const WHISPER_SERVICE_URL = process.env.WHISPER_SERVICE_URL || 'http://localhost:5000';
-const LONG_CALL_THRESHOLD = parseInt(process.env.LONG_CALL_THRESHOLD) || 300; // 5 minutes
+const GLADIA_SERVICE_URL = process.env.WHISPER_SERVICE_URL || 'http://localhost:5000';
+
+// 10 minutes — Gladia is cloud-based but long calls may still take time to upload + process
+const TRANSCRIBE_TIMEOUT_MS = parseInt(process.env.GLADIA_TIMEOUT_MS || process.env.WHISPER_TIMEOUT_MS) || 600_000;
 
 /**
- * Transcribe a single audio file (short call)
- * @param {string} audioPath - Path to audio file
- * @returns {Promise<Object>} Transcription result
+ * Transcribe an audio file using the Gladia-powered Python service.
+ * Sends the full file in one request. Gladia handles upload, transcription,
+ * and diarization (Speaker 1 = Agent, Speaker 2 = Customer) server-side.
+ *
+ * @param {string} audioPath  - Absolute path to the audio file on disk
+ * @returns {Promise<Object>} - { success, transcription, utterances, language, duration, ... }
  */
-async function transcribeSingleFile(audioPath) {
-  try {
-    console.log(`📝 Transcribing: ${path.basename(audioPath)}`);
-    
-    const formData = new FormData();
-    formData.append('audio', fs.createReadStream(audioPath));
+async function transcribeFile(audioPath) {
+  const filename = path.basename(audioPath);
+  console.log(`\n🎤 [transcriptionService] Sending to Gladia: ${filename}`);
 
-    const response = await axios.post(`${WHISPER_SERVICE_URL}/transcribe`, formData, {
-      headers: formData.getHeaders(),
-      maxContentLength: Infinity,
-      maxBodyLength: Infinity,
-      timeout: 120000 // 2 minutes timeout
-    });
+  const form = new FormData();
+  form.append('audio', fs.createReadStream(audioPath), { filename });
 
-    if (response.data.success) {
-      console.log(`✅ Transcription completed: ${response.data.duration.toFixed(2)}s`);
-      return response.data;
-    } else {
-      throw new Error('Transcription failed - no success flag');
-    }
-  } catch (error) {
-    console.error('❌ Transcription error:', error.message);
-    throw error;
+  const response = await axios.post(`${GLADIA_SERVICE_URL}/transcribe`, form, {
+    headers: {
+      ...form.getHeaders(),
+    },
+    maxContentLength: Infinity,
+    maxBodyLength: Infinity,
+    timeout: TRANSCRIBE_TIMEOUT_MS,
+  });
+
+  if (!response.data.success) {
+    throw new Error(`Gladia service returned failure: ${JSON.stringify(response.data)}`);
   }
+
+  const { transcription, language, duration, chunks_processed, word_count } = response.data;
+  console.log(`✅ Gladia transcription done | ${duration}s | ${chunks_processed} utterances | lang=${language} | ${word_count} words`);
+
+  return response.data;
 }
 
 /**
- * Transcribe long audio by chunking into segments
- * @param {number} callId - Database call ID
- * @param {string} audioPath - Path to audio file
- * @returns {Promise<Object>} Combined transcription result
- */
-async function transcribeLongAudio(callId, audioPath) {
-  console.log(`🎬 Processing long audio for call ${callId}...`);
-  
-  const chunkDir = path.join(path.dirname(audioPath), 'chunks');
-  
-  try {
-    // Get audio metadata
-    const metadata = await getAudioMetadata(audioPath);
-    console.log(`📊 Audio info: ${Math.floor(metadata.duration / 60)}m, ${(metadata.size / 1024 / 1024).toFixed(2)}MB`);
-    
-    // Estimate processing time
-    const estimate = estimateProcessingTime(metadata.duration);
-    console.log(`⏱️ Estimated processing time: ~${estimate.totalMinutes} minutes`);
-    
-    // Split into chunks (4-minute chunks for optimal processing)
-    const chunks = await splitAudioIntoChunks(audioPath, 240);
-    console.log(`✂️ Created ${chunks.length} chunks`);
-    
-    let fullTranscription = '';
-    const segments = [];
-    let totalTranscriptionTime = 0;
-    
-    // Transcribe each chunk
-    for (const chunk of chunks) {
-      console.log(`\n📝 Transcribing chunk ${chunk.index + 1}/${chunks.length}...`);
-      
-      const startTime = Date.now();
-      const result = await transcribeSingleFile(chunk.path);
-      const processingTime = (Date.now() - startTime) / 1000;
-      
-      if (result.success) {
-        fullTranscription += result.transcription + ' ';
-        totalTranscriptionTime += processingTime;
-        
-        // Save segment to database
-        const segmentData = {
-          segment_number: chunk.index + 1,
-          segment_start_time: Math.floor(chunk.startTime),
-          segment_end_time: Math.floor(chunk.startTime + chunk.duration),
-          segment_duration: Math.floor(chunk.duration),
-          segment_transcription: result.transcription
-        };
-        
-        await db.saveCallSegment(callId, segmentData);
-        segments.push(segmentData);
-        
-        console.log(`✅ Chunk ${chunk.index + 1} done in ${processingTime.toFixed(1)}s`);
-      } else {
-        console.warn(`⚠️ Chunk ${chunk.index + 1} failed, continuing...`);
-      }
-    }
-    
-    // Cleanup chunk files
-    cleanupChunks(chunkDir);
-    
-    const avgTranscriptionTime = totalTranscriptionTime / chunks.length;
-    
-    console.log(`\n✅ Long audio transcribed successfully!`);
-    console.log(`   - Segments: ${chunks.length}`);
-    console.log(`   - Total time: ${totalTranscriptionTime.toFixed(1)}s`);
-    console.log(`   - Avg per chunk: ${avgTranscriptionTime.toFixed(1)}s`);
-    
-    return {
-      success: true,
-      transcription: fullTranscription.trim(),
-      segments: segments.length,
-      totalDuration: metadata.duration,
-      processingTime: totalTranscriptionTime,
-      isLongCall: true
-    };
-    
-  } catch (error) {
-    console.error('❌ Long audio transcription failed:', error);
-    
-    // Cleanup on error
-    try {
-      cleanupChunks(chunkDir);
-    } catch (cleanupError) {
-      console.warn('⚠️ Cleanup failed:', cleanupError.message);
-    }
-    
-    throw error;
-  }
-}
-
-/**
- * Main transcription router - handles both short and long calls
- * @param {number} callId - Database call ID
- * @param {string} audioPath - Path to audio file
- * @returns {Promise<Object>} Transcription result
+ * Main entry point — transcribes any call (short or long).
+ * The Python service auto-adjusts chunking based on audio length.
+ *
+ * @param {number} callId    - Database call ID (used for logging only)
+ * @param {string} audioPath - Absolute path to audio file
+ * @returns {Promise<Object>}
  */
 async function transcribeCall(callId, audioPath) {
+  console.log(`\n📞 [transcribeCall → Gladia] call_id=${callId}`);
+
+  // Quick health check before spending time uploading
   try {
-    console.log(`\n🎤 Starting transcription for call ${callId}`);
-    
-    // Check if Whisper service is available
-    try {
-      await axios.get(`${WHISPER_SERVICE_URL}/health`, { timeout: 2000 });
-      console.log('✅ Whisper service is available');
-    } catch (healthError) {
-      throw new Error('Whisper service not available. Please start: python whisper_server.py');
-    }
-    
-    // Check if audio is long
-    const isLong = await isLongAudio(audioPath, LONG_CALL_THRESHOLD);
-    
-    let result;
-    
-    if (isLong) {
-      console.log(`⏱️ Call ${callId} is LONG - using chunked processing`);
-      result = await transcribeLongAudio(callId, audioPath);
-    } else {
-      console.log(`⏱️ Call ${callId} is SHORT - using direct transcription`);
-      result = await transcribeSingleFile(audioPath);
-      result.isLongCall = false;
-    }
-    
-    return result;
-    
-  } catch (error) {
-    console.error(`❌ Transcription failed for call ${callId}:`, error.message);
-    throw error;
+    await axios.get(`${GLADIA_SERVICE_URL}/health`, { timeout: 3000 });
+    console.log('✅ Gladia service available');
+  } catch {
+    throw new Error(
+      'Gladia service is not running. Start it with: python whisper_server.py (now Gladia-powered)'
+    );
   }
+
+  const result = await transcribeFile(audioPath);
+  return result;
 }
 
 /**
- * Check if Whisper service is running
- * @returns {Promise<boolean>} True if service is available
+ * Check if the Gladia transcription service is reachable.
+ * @returns {Promise<boolean>}
  */
 async function checkWhisperService() {
   try {
-    const response = await axios.get(`${WHISPER_SERVICE_URL}/health`, { timeout: 2000 });
-    return response.status === 200;
-  } catch (error) {
+    const res = await axios.get(`${GLADIA_SERVICE_URL}/health`, { timeout: 3000 });
+    return res.status === 200;
+  } catch {
     return false;
-  }
-}
-
-/**
- * Get transcription statistics
- * @param {number} callId - Database call ID
- * @returns {Promise<Object>} Transcription stats
- */
-async function getTranscriptionStats(callId) {
-  try {
-    const query = `
-      SELECT 
-        ct.word_count,
-        ct.transcription_duration,
-        ct.confidence_score,
-        ct.transcription_quality,
-        ct.language_detected,
-        (SELECT COUNT(*) FROM call_segments WHERE call_id = $1) as segment_count
-      FROM call_transcriptions ct
-      WHERE ct.call_id = $1
-    `;
-    
-    const result = await db.pool.query(query, [callId]);
-    return result.rows[0] || null;
-  } catch (error) {
-    console.error('Error getting transcription stats:', error);
-    return null;
   }
 }
 
 module.exports = {
   transcribeCall,
-  transcribeSingleFile,
-  transcribeLongAudio,
+  transcribeFile,
   checkWhisperService,
-  getTranscriptionStats
 };

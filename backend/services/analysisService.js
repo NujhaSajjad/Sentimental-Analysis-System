@@ -111,74 +111,55 @@ ${transcription}
 INTENT DATA:
 ${JSON.stringify(intentData, null, 2)}
 
-Provide the analysis using EXACTLY the following sections and headings:
+You are an AI Call Intelligence Analyst used in enterprise contact centers:
 
-### Call Summary
-Briefly explain why the customer called and what the core problem was (2-3 sentences).
+Analyze the call transcript and generate a SHORT AI call analysis report.
 
-### Customer Pain Points
-List the key concerns raised by the customer.
-Focus on financial, emotional, policy, or service-related issues.
-- Pain point 1
-- Pain point 2
-- Pain point 3
+IMPORTANT RULES:
 
-### Customer Interaction Profile
-Describe the customer so a new agent knows how to deal with them.
+* Keep the report concise and easy to read in under 10 seconds.
+* Focus only on the most important insights for support agents.
+* Do NOT add extra sections or explanations.
+* Follow the EXACT structure below.
+* Use simple, professional language.
 
-- **Emotional Tone**: (e.g., anxious, frustrated, calm, angry, happy)
-- **Primary Sensitivity**: (price, billing, delays, trust, quality, service)
-- **Churn Risk**: (Low / Medium / High / Critical)
-- **Recommended Communication Style**: (reassuring, direct, empathetic, brief, professional, etc.)
+Use EXACTLY the following format:
 
-### Recommended Agent Approach
-Give clear guidance for handling THIS CUSTOMER.
+📞 Call Intelligence Snapshot
 
-**Do:**
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
+Customer: (plan or type of customer if known)
+Issue: (main issue in 3–5 words)
+Sentiment: (emotion + emoji if appropriate)
+Priority: (🟢 Low / 🟡 Medium / 🔴 High)
 
-**Avoid:**
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
+🔍 Key Insight
 
-### Suggested Opening Line
-Provide ONE natural, empathetic sentence the agent can use verbatim when calling this customer back.
+Provide ONE short sentence explaining the most important insight from the conversation.
 
-Example: "Hi [Name], I understand you've been experiencing issues with [X], and I'm here to make sure we resolve this for you today."
+⚠ Risk Score
 
-### AI Risk Assessment
-Provide percentage estimates:
+| Risk           | Score |
+| -------------- | ----- |
+| Churn          | X%    |
+| Escalation     | X%    |
+| Refund Request | X%    |
 
-- **Churn Risk**: X% (based on frustration level, issue severity, previous history)
-- **Escalation Risk**: X% (likelihood this will escalate to manager)
-- **Refund Likelihood**: X% (likelihood customer will request refund)
+🎯 Agent Action
 
-### CRM Tags
-Provide 3-5 short, standardized hashtags for CRM categorization.
-Example: #Billing #PriceSensitive #ChurnRisk #FollowUpRequired
+* Action the agent should take immediately
+* Action the agent should take immediately
+* Action the agent should take immediately
+* Follow-up step if needed
 
-### Action Items
-**During the Call:**
-- Action item 1
-- Action item 2
+🧠 AI Recommendation
 
-**After the Call:**
-- Action item 1
-- Action item 2
+Provide ONE short recommendation summarizing the best resolution strategy.
 
-### Compliance & Follow-Up Status
-Use these symbols:
-✔ Completed  
-⚠ Pending  
-❌ Missing
+🏷 Tags
 
-- Call recording consent: 
-- Customer data verified: 
-- Follow-up scheduled: 
-- CRM updated: 
+Provide 3–5 CRM hashtags related to the issue.
+Example:
+#TechnicalIssue #PremiumCustomer #ChurnRisk #FollowUpRequired
 `;
 
     const response = await axios.post(

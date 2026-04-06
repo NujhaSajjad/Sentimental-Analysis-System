@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  User, Phone, Mail, MapPin, Building, Calendar, 
-  TrendingUp, AlertTriangle, CheckCircle, XCircle 
+import {
+  User, Phone, Mail, MapPin, Building, Calendar,
+  TrendingUp, AlertTriangle, CheckCircle, XCircle
 } from 'lucide-react';
 import axios from 'axios';
 
@@ -21,7 +21,7 @@ const CustomerProfile = ({ customer, onViewCalls, onClose }) => {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/api/customers/${cnic}/profile`);
-      
+
       if (response.data.success) {
         setProfile(response.data.profile);
       }
@@ -46,6 +46,50 @@ const CustomerProfile = ({ customer, onViewCalls, onClose }) => {
     if (lowerSentiment === 'positive') return '#10B981';
     if (lowerSentiment === 'negative') return '#EF4444';
     return '#F59E0B';
+  };
+
+  const getSentimentEmoji = (sentiment, score, trend) => {
+    const s = (sentiment || '').toLowerCase();
+    const n = parseFloat(score);
+
+    // Use numeric score for precision when available
+    if (!isNaN(n)) {
+      if (n >= 70) return '🤩'; // Ecstatic / Delighted
+      if (n >= 40) return '😊'; // Happy
+      if (n >= 15) return '🙂'; // Content / Satisfied
+      if (n >= -15) return '😐'; // Neutral
+      if (n >= -40) return '😕'; // Disappointed
+      if (n >= -65) return '😤'; // Frustrated
+      return '😡';               // Angry
+    }
+
+    // Fallback to label if score missing
+    if (s === 'positive') {
+      if (trend === 'improving') return '🤩';
+      return '😊';
+    }
+    if (s === 'negative') {
+      if (trend === 'declining') return '😡';
+      return '😤';
+    }
+    return '😐'; // Neutral
+  };
+
+  const getSentimentLabel = (sentiment, score, trend) => {
+    const n = parseFloat(score);
+    if (!isNaN(n)) {
+      if (n >= 70) return 'Delighted';
+      if (n >= 40) return 'Happy';
+      if (n >= 15) return 'Satisfied';
+      if (n >= -15) return 'Neutral';
+      if (n >= -40) return 'Disappointed';
+      if (n >= -65) return 'Frustrated';
+      return 'Angry';
+    }
+    const s = (sentiment || '').toLowerCase();
+    if (s === 'positive') return trend === 'improving' ? 'Delighted' : 'Happy';
+    if (s === 'negative') return trend === 'declining' ? 'Angry' : 'Frustrated';
+    return 'Neutral';
   };
 
   const formatDate = (date) => {
@@ -84,7 +128,16 @@ const CustomerProfile = ({ customer, onViewCalls, onClose }) => {
             <h2>{profile.full_name || 'Unknown Customer'}</h2>
             <p className="profile-subtitle">Complete Customer Intelligence</p>
           </div>
-          <button className="close-button" onClick={onClose}>Ã—</button>
+          <div className="profile-header-right">
+            <div
+              className="sentiment-emoji-badge"
+              title={`Customer Personality: ${getSentimentLabel(profile.overall_sentiment, profile.overall_sentiment_score, profile.sentiment_trend)}`}
+            >
+              <span className="sentiment-emoji">{getSentimentEmoji(profile.overall_sentiment, profile.overall_sentiment_score, profile.sentiment_trend)}</span>
+              <span className="sentiment-emoji-label">{getSentimentLabel(profile.overall_sentiment, profile.overall_sentiment_score, profile.sentiment_trend)}</span>
+            </div>
+            <button className="close-button" onClick={onClose}>×</button>
+          </div>
         </div>
 
         {/* Quick Stats */}
@@ -219,9 +272,9 @@ const CustomerProfile = ({ customer, onViewCalls, onClose }) => {
                 <span>Positive</span>
               </div>
               <div className="sentiment-bar">
-                <div 
+                <div
                   className="sentiment-fill"
-                  style={{ 
+                  style={{
                     width: `${((parseFloat(profile.overall_sentiment_score) + 100) / 200) * 100}%`,
                     background: getSentimentColor(profile.overall_sentiment)
                   }}
@@ -255,7 +308,7 @@ const CustomerProfile = ({ customer, onViewCalls, onClose }) => {
 
         {/* Actions */}
         <div className="profile-actions">
-          <button 
+          <button
             className="btn btn-primary"
             onClick={() => onViewCalls(profile.customer_id)}
           >

@@ -61,20 +61,41 @@ router.post('/transcribe/:callId', async (req, res) => {
 
         await db.saveTranscription(callId, {
             text: result.transcription,
-            duration: result.totalDuration || result.duration,
+            duration: result.duration,
             confidence: 0.95,
-            language: 'en'
+            language: result.language || 'ur+en'  // use auto-detected language(s)
         });
 
         await db.updateCallStatus(callId, 'transcribed', {
-            duration: Math.floor(result.totalDuration || result.duration || 0)
+            duration: Math.floor(result.duration || 0)
         });
+
+        // If Gladia returned native diarization, save it immediately so the
+        // diarize step in process-complete can be skipped.
+        if (result.utterances && result.utterances.length > 0) {
+            // Map Gladia speakers (Speaker 1/2) to Agent/Customer convention
+            const turns = result.utterances.map(u => ({
+                speaker: u.speaker === 'Speaker 1' ? 'Agent' : 'Customer',
+                text: u.text
+            }));
+            try {
+                await db.saveDiarization(callId, turns);
+                console.log(`✅ Gladia diarization saved (${turns.length} turns) for call ${callId}`);
+            } catch (diarErr) {
+                console.warn('⚠️ Could not save Gladia diarization (non-fatal):', diarErr.message);
+            }
+        }
 
         res.json({
             success: true,
             callId,
             transcription: result.transcription,
-            duration: result.totalDuration || result.duration
+            transcription_with_speakers: result.transcription_with_speakers || null,
+            utterances: result.utterances || [],
+            language: result.language,
+            languages_detected: result.languages_detected || [],
+            duration: result.duration,
+            diarization_enabled: result.diarization_enabled || false
         });
     } catch (error) {
         console.error('❌ Transcription error:', error.message);
@@ -249,11 +270,21 @@ router.post('/process-complete/:callId', async (req, res) => {
             results.analysis = { success: true, data: analyzeRes.data };
         } catch (error) { console.warn('⚠️ Analysis failed'); }
 
-        // Step 4: Diarize (speaker separation)
-        try {
-            const diarizeRes = await axios.post(`${internalUrl}/diarize/${callId}`);
-            results.diarization = { success: true, data: diarizeRes.data };
-        } catch (error) { console.warn('⚠️ Diarization failed (non-fatal)'); }
+        // Step 4: Diarization
+        // Gladia returns speaker-separated utterances during transcription above,
+        // which are already saved by the /transcribe route. We only fall back to
+        // LLM-based diarization if Gladia did NOT return utterances.
+        const transcribeData = results.transcription.data;
+        if (transcribeData && transcribeData.utterances && transcribeData.utterances.length > 0) {
+            console.log(`ℹ️  Skipping LLM diarize — Gladia native diarization already saved.`);
+            results.diarization = { success: true, source: 'gladia', turns: transcribeData.utterances.length };
+        } else {
+            // Fallback: LLM-based diarization for edge cases
+            try {
+                const diarizeRes = await axios.post(`${internalUrl}/diarize/${callId}`);
+                results.diarization = { success: true, source: 'llm', data: diarizeRes.data };
+            } catch (error) { console.warn('⚠️ Diarization failed (non-fatal)'); }
+        }
 
         await db.updateCallStatus(callId, 'completed');
         res.json({ success: true, message: 'Processing completed', callId, results });

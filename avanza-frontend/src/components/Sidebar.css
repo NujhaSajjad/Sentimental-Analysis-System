@@ -1,0 +1,225 @@
+/* ============================================================
+   Sidebar — Avanza Solutions
+   ============================================================ */
+
+.sidebar {
+    width: 230px;
+    min-width: 230px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+        min-width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    z-index: 200;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar--collapsed {
+    width: 68px;
+    min-width: 68px;
+}
+
+/* ── Header ── */
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px 16px;
+    min-height: 80px;
+    flex-shrink: 0;
+}
+
+.sidebar__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar__logo-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.sidebar__logo-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar__logo-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+    white-space: nowrap;
+    line-height: 1.3;
+}
+
+.sidebar__logo-sub {
+    font-size: 11px;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* ── Toggle button ── */
+.sidebar__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-gray);
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar__toggle:hover {
+    background: var(--background);
+    color: var(--primary-purple);
+}
+
+/* ── Divider ── */
+.sidebar__divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 16px;
+    flex-shrink: 0;
+}
+
+.sidebar__divider--footer {
+    margin-bottom: 12px;
+}
+
+/* ── Navigation ── */
+.sidebar__nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 10px;
+    overflow: hidden;
+}
+
+.sidebar__nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border: none;
+    border-radius: 12px;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background 0.18s, color 0.18s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar__nav-item:hover {
+    background: var(--background);
+}
+
+.sidebar__nav-item--active {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(185, 55, 117, 0.25);
+}
+
+.sidebar__nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    min-width: 24px;
+    color: var(--text-gray);
+    transition: color 0.18s;
+}
+
+.sidebar__nav-item--active .sidebar__nav-icon {
+    color: #fff;
+}
+
+.sidebar__nav-item:not(.sidebar__nav-item--active):hover .sidebar__nav-icon {
+    color: var(--primary-purple);
+}
+
+.sidebar__nav-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray);
+    transition: color 0.18s;
+}
+
+.sidebar__nav-item--active .sidebar__nav-label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.sidebar__nav-item:not(.sidebar__nav-item--active):hover .sidebar__nav-label {
+    color: var(--text-dark);
+}
+
+/* ── Footer ── */
+.sidebar__footer {
+    padding: 0 10px 16px;
+    flex-shrink: 0;
+}
+
+.sidebar__logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background 0.18s;
+}
+
+.sidebar__logout:hover {
+    background: #FFF0F0;
+}
+
+.sidebar__logout-icon {
+    color: #E05555 !important;
+}
+
+.sidebar__logout .sidebar__nav-label {
+    color: #E05555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar__logout:hover .sidebar__nav-label {
+    color: #c0392b;
+}
+
+/* Tooltip for collapsed mode */
+.sidebar--collapsed .sidebar__nav-item,
+.sidebar--collapsed .sidebar__logout {
+    justify-content: center;
+    padding: 11px 0;
+}
