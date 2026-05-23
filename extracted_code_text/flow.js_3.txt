@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\flow.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('flow', require('../flow'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

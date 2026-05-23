@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\is.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/is');
-
-module.exports = parent;

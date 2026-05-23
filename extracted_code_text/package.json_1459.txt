@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_object_spread_props\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_object_spread_props.cjs",
-    "module": "../../esm/_object_spread_props.js"
-}

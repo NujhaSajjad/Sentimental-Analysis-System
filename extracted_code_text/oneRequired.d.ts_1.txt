@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\keywords\oneRequired.d.ts
-================================================================================
-
-import type { Plugin } from "ajv";
-declare const oneRequired: Plugin<undefined>;
-export default oneRequired;

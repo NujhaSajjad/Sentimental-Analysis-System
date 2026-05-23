@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\reflect\own-keys.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/reflect/own-keys');
-
-module.exports = parent;

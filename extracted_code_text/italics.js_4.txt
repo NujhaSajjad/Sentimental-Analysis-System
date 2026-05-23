@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\string\italics.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/string/italics');

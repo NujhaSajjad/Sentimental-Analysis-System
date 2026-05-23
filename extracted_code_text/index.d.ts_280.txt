@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-json-stable-stringify\index.d.ts
-================================================================================
-
-declare module 'fast-json-stable-stringify' {
-  function stringify(obj: any): string;
-  export = stringify;
-}

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\object\define-getter.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/define-getter');
-
-module.exports = parent;

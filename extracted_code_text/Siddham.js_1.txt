@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Siddham.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x11580, 0x115B5).addRange(0x115B8, 0x115DD);
-exports.characters = set;

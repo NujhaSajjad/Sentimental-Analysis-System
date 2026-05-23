@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@surma\rollup-plugin-off-main-thread\tests\fixtures\public-path\config.json
-================================================================================
-
-{
-  "publicPath": "/base/tests/fixtures/public-path/build"
-}

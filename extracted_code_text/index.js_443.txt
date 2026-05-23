@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\clean-css\index.js
-================================================================================
-
-module.exports = require('./lib/clean');

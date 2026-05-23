@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\bluebird\changelog.md
-================================================================================
-
-[http://bluebirdjs.com/docs/changelog.html](http://bluebirdjs.com/docs/changelog.html)

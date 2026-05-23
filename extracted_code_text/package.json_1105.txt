@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\test\resolver\baz\package.json
-================================================================================
-
-{
-    "name": "baz",
-    "main": "quux.js"
-}

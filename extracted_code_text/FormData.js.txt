@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\axios\lib\env\classes\FormData.js
-================================================================================
-
-import _FormData from 'form-data';
-export default typeof FormData !== 'undefined' ? FormData : _FormData;

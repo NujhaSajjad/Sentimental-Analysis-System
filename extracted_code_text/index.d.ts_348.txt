@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-regex\index.d.ts
-================================================================================
-
-declare function isRegex(value: unknown): value is RegExp;
-
-export = isRegex;

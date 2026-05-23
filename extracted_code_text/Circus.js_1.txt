@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jest-watch-typeahead\node_modules\@jest\types\build\Circus.js
-================================================================================
-
-'use strict';

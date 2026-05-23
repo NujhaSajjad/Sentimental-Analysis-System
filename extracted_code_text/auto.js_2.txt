@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\array.prototype.findlastindex\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\babel-loader\node_modules\schema-utils\declarations\index.d.ts
-================================================================================
-
-declare const _exports: typeof import('./validate').default;
-export = _exports;

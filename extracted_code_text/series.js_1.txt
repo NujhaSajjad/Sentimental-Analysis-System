@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\neo-async\series.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./async').series;

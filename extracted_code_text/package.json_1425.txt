@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_class_static_private_field_update\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_class_static_private_field_update.cjs",
-    "module": "../../esm/_class_static_private_field_update.js"
-}

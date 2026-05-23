@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\data-view\get-float16.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/data-view/get-float16');
-
-module.exports = parent;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-negative-zero\index.d.ts
-================================================================================
-
-declare function isNegativeZero(number: unknown): number is -0;
-
-export = isNegativeZero;

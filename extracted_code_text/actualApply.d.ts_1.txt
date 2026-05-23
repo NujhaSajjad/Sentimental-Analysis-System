@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\call-bind-apply-helpers\actualApply.d.ts
-================================================================================
-
-export = Reflect.apply;

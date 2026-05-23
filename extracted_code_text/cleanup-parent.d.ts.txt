@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\cleanup-parent.d.ts
-================================================================================
-
-import type { ChildNode, Container } from 'postcss';
-export default function cleanupParent(parent: Container<ChildNode>): void;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\lib\polyfills\getFirstHiddenTimePolyfill.d.ts
-================================================================================
-
-export declare const getFirstHiddenTime: () => number;

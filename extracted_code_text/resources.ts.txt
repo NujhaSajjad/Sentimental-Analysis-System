@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\openai\src\resources.ts
-================================================================================
-
-export * from './resources/index';

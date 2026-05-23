@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\flatten.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('flatten', require('../flatten'), require('./_falseOptions'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

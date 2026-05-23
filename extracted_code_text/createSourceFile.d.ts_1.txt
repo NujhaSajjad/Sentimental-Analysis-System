@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\_ts3.4\dist\create-program\createSourceFile.d.ts
-================================================================================
-
-import * as ts from 'typescript';
-import { ParseSettings } from '../parseSettings';
-declare function createSourceFile(parseSettings: ParseSettings): ts.SourceFile;
-export { createSourceFile };
-//# sourceMappingURL=createSourceFile.d.ts.map

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\convert-display-p3-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function displayP3ToSRgb(displayP3: color): color;
-export {};

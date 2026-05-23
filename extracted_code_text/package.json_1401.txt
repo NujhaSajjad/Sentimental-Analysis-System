@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_call_super\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_call_super.cjs",
-    "module": "../../esm/_call_super.js"
-}

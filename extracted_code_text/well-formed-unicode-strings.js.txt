@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\well-formed-unicode-strings.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-is-usv-string
-require('../modules/esnext.string.is-well-formed');
-require('../modules/esnext.string.to-well-formed');

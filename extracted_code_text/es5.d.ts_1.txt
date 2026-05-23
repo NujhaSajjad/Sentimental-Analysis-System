@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-to-primitive\es5.d.ts
-================================================================================
-
-declare function ToPrimitive(input: unknown, hint?: StringConstructor | NumberConstructor): null | undefined | string | symbol | number | boolean | bigint;
-
-export = ToPrimitive;

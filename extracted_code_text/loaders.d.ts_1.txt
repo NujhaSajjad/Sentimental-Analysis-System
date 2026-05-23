@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\node_modules\cosmiconfig\dist\loaders.d.ts
-================================================================================
-
-import { LoadersSync } from './types';
-declare const loaders: LoadersSync;
-export { loaders };
-//# sourceMappingURL=loaders.d.ts.map

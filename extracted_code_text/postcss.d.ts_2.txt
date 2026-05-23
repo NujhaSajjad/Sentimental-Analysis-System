@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\stylehacks\types\dictionary\postcss.d.ts
-================================================================================
-
-export const ATRULE: "atrule";
-export const DECL: "decl";
-export const RULE: "rule";

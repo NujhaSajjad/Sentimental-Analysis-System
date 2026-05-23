@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-lab-function\dist\convert-lab-to-display-p3.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function labToDisplayP3(labRaw: color): [color, boolean];
-export {};

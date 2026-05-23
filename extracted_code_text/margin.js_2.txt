@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-merge-longhand\src\lib\decl\margin.js
-================================================================================
-
-'use strict';
-const base = require('./boxBase.js');
-
-module.exports = base('margin');

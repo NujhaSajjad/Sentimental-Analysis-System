@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Pau_Cin_Hau.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x11AC0, 0x11AF8);
-exports.characters = set;

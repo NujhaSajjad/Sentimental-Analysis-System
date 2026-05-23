@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\traverse\lib\types.js
-================================================================================
-
-"use strict";
-
-//# sourceMappingURL=types.js.map

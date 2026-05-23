@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\call-bind-apply-helpers\reflectApply.d.ts
-================================================================================
-
-declare const reflectApply: false | typeof Reflect.apply;
-
-export = reflectApply;

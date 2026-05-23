@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\pg-protocol\dist\inbound-parser.test.d.ts
-================================================================================
-
-export {};

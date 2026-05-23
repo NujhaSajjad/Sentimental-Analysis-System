@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\http-proxy-middleware\dist\handlers\index.d.ts
-================================================================================
-
-export * from './public';

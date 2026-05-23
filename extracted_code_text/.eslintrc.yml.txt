@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\ajv\scripts\.eslintrc.yml
-================================================================================
-
-rules:
-  no-console: 0
-  no-empty: [2, allowEmptyCatch: true]

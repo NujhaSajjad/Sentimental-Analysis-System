@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\bigint\index.js
-================================================================================
-
-'use strict';
-require('../../modules/es.object.to-string');
-require('../../modules/esnext.bigint.range');
-var BigInt = require('../../internals/path').BigInt;
-
-module.exports = BigInt;

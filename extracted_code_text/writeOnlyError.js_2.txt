@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\writeOnlyError.js
-================================================================================
-
-function _writeOnlyError(r) {
-  throw new TypeError('"' + r + '" is write-only');
-}
-export { _writeOnlyError as default };

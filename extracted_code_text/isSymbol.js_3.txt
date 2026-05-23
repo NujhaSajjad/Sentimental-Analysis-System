@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\cjs\isSymbol.js
-================================================================================
-
-var _tagTester = require('./_tagTester.js');
-
-var isSymbol = _tagTester('Symbol');
-
-module.exports = isSymbol;

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\array\index-of.js
-================================================================================
-
-'use strict';
-require('../../modules/es.array.index-of');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Array', 'indexOf');

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\refs\jtd-schema.d.ts
-================================================================================
-
-import { SchemaObject } from "../types";
-declare const jtdMetaSchema: SchemaObject;
-export default jtdMetaSchema;

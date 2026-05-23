@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\isValidInputTimeValue.d.ts
-================================================================================
-
-export declare function isValidInputTimeValue(element: HTMLInputElement & {
-    type: 'time';
-}, timeValue: string): boolean;

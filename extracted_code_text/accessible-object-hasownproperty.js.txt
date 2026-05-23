@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\accessible-object-hasownproperty.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-accessible-object-hasownproperty
-require('../modules/esnext.object.has-own');

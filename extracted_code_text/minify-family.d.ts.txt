@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-minify-font-values\types\lib\minify-family.d.ts
-================================================================================
-
-declare function _exports(nodes: import('postcss-value-parser').Node[], opts: import('../index').Options): import('postcss-value-parser').WordNode[];
-export = _exports;

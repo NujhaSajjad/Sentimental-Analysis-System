@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\temporalUndefined.js
-================================================================================
-
-function _temporalUndefined() {}
-export { _temporalUndefined as default };

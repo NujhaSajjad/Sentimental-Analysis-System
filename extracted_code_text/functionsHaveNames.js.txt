@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\function.prototype.name\helpers\functionsHaveNames.js
-================================================================================
-
-'use strict';
-
-module.exports = require('functions-have-names')();
-
-// TODO: semver-major, remove

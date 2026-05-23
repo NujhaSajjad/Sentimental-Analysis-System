@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\modules\isArrayBuffer.js
-================================================================================
-
-import tagTester from './_tagTester.js';
-
-export default tagTester('ArrayBuffer');

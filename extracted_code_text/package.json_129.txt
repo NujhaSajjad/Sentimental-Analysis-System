@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\preset-env\data\package.json
-================================================================================
-
-{ "type": "commonjs" }

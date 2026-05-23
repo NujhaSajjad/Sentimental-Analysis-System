@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\array\index-of.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/array/index-of');
-
-module.exports = parent;

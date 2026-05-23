@@ -1,8 +1,0 @@
-Relative path: backend\node_modules\dunder-proto\set.d.ts
-================================================================================
-
-declare function setDunderProto<P extends null | object>(target: {}, proto: P): P;
-
-declare const x: false | typeof setDunderProto;
-
-export = x;

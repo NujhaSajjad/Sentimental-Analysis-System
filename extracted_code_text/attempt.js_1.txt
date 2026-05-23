@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\attempt.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('attempt', require('../attempt'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

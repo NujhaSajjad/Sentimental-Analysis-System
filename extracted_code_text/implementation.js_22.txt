@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-iterator-helpers\Iterator.prototype.constructor\implementation.js
-================================================================================
-
-'use strict';
-
-var $Iterator = require('../Iterator/polyfill')();
-
-module.exports = $Iterator;

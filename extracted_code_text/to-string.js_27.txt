@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\error\to-string.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/error/to-string');
-
-module.exports = parent;

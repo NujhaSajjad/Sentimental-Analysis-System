@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\async\wait.d.ts
-================================================================================
-
-declare function wait(timeout: number): Promise<unknown>;
-export default wait;

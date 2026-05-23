@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\src\rollup-plugin-off-main-thread.d.ts
-================================================================================
-
-declare module '@surma/rollup-plugin-off-main-thread';

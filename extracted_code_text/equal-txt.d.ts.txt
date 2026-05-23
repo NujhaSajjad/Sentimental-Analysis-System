@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\bonjour-service\dist\lib\utils\equal-txt.d.ts
-================================================================================
-
-export default function equalTxt(a: Record<string, string>, b: Record<string, string>): boolean;

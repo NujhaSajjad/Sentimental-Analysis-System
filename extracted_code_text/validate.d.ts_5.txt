@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\uuid\dist\validate.d.ts
-================================================================================
-
-declare function validate(uuid: unknown): boolean;
-export default validate;

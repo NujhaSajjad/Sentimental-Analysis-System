@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\reflect\get-prototype-of.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/reflect/get-prototype-of');
-
-module.exports = parent;

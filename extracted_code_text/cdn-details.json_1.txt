@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\src\cdn-details.json
-================================================================================
-
-{
-  "origin": "https://storage.googleapis.com",
-  "bucketName": "workbox-cdn",
-  "releasesDir": "releases",
-  "latestVersion": "6.6.0"
-}

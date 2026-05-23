@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-google-analytics\index.d.ts
-================================================================================
-
-import { initialize, GoogleAnalyticsInitializeOptions } from './initialize.js';
-import './_version.js';
-/**
- * @module workbox-google-analytics
- */
-export { initialize, GoogleAnalyticsInitializeOptions };

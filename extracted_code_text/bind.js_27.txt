@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\function\virtual\bind.js
-================================================================================
-
-'use strict';
-var parent = require('../../../actual/function/virtual/bind');
-
-module.exports = parent;

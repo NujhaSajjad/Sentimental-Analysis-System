@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\internals\well-known-symbol-wrapped.js
-================================================================================
-
-'use strict';
-var wellKnownSymbol = require('../internals/well-known-symbol');
-
-exports.f = wellKnownSymbol;

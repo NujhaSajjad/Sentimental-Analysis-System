@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\hpack.js\node_modules\readable-stream\writable-browser.js
-================================================================================
-
-module.exports = require('./lib/_stream_writable.js');

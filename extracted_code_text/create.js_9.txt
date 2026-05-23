@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\create.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/create');
-
-module.exports = parent;

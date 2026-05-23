@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\jest-globals.d.ts
-================================================================================
-
-/// <reference path="types/jest-globals.d.ts" />

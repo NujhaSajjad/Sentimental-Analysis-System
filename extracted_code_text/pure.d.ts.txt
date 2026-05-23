@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\react\pure.d.ts
-================================================================================
-
-export * from './types/pure'

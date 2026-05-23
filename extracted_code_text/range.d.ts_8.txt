@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\es-errors\range.d.ts
-================================================================================
-
-declare const RangeError: RangeErrorConstructor;
-
-export = RangeError;

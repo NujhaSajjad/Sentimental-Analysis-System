@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\runtime\quote.d.ts
-================================================================================
-
-declare function quote(s: string): string;
-declare namespace quote {
-    var code: string;
-}
-export default quote;

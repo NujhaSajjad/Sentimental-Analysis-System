@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\src\public\create-plugin.js
-================================================================================
-
-import createPlugin from '../util/createPlugin'
-export default createPlugin

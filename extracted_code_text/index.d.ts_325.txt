@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\idb\build\index.d.ts
-================================================================================
-
-export * from './entry.js';
-import './database-extras.js';

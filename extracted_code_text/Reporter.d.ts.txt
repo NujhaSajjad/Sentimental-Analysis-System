@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\reporter\Reporter.d.ts
-================================================================================
-
-import { FilesChange } from './FilesChange';
-import { Report } from './Report';
-interface Reporter {
-    getReport(change: FilesChange): Promise<Report>;
-}
-export { Reporter };

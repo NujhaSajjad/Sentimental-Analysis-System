@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\call-bind-apply-helpers\functionApply.d.ts
-================================================================================
-
-export = Function.prototype.apply;

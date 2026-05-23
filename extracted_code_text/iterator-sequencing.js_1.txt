@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\proposals\iterator-sequencing.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-iterator-sequencing
-require('../modules/esnext.iterator.concat');

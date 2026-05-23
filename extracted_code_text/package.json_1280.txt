@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsutils\node_modules\tslib\test\validateModuleExportsMatchCommonJS\package.json
-================================================================================
-
-{
-  "type": "module",
-  "scripts": {
-    "test": "node index.js"
-  }
-}

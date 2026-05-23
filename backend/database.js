@@ -2,7 +2,7 @@
 require('dotenv').config();
 const { Pool } = require('pg');
 
-const pool = new Pool({
+const poolConfig = {
   user: process.env.DB_USER || 'postgres',
   host: process.env.DB_HOST || 'localhost',
   database: process.env.DB_NAME || 'call_center_ai',
@@ -11,7 +11,14 @@ const pool = new Pool({
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
-});
+};
+
+// Enable SSL for production environments (e.g. Supabase, Render, Neon)
+if (process.env.NODE_ENV === 'production' || process.env.DB_SSL === 'true') {
+  poolConfig.ssl = { rejectUnauthorized: false };
+}
+
+const pool = new Pool(poolConfig);
 
 pool.on('connect', () => console.log('✅ Connected to PostgreSQL'));
 pool.on('error', (err) => { console.error('❌ DB error:', err); process.exit(-1); });

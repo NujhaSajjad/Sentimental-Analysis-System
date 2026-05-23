@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\pretty-error\.mocharc.yaml
-================================================================================
-
-require: 'coffee-script/register'
-recursive: true
-reporter: 'spec'
-ui: 'bdd'
-timeout: 20000

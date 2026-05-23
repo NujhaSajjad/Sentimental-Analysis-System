@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsonpath\.travis.yml
-================================================================================
-
-language: node_js
-node_js:
-  - "0.10"

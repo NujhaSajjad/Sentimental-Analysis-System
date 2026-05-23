@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\uuid\dist\max.d.ts
-================================================================================
-
-declare const _default: "ffffffff-ffff-ffff-ffff-ffffffffffff";
-export default _default;

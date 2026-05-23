@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\getLCP.d.ts
-================================================================================
-
-import { ReportHandler } from './types.js';
-export declare const getLCP: (onReport: ReportHandler, reportAllChanges?: boolean | undefined) => void;

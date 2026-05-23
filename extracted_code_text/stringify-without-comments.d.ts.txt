@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\stringify-without-comments.d.ts
-================================================================================
-
-export declare function stringifyWithoutComments(obj: {
-    [key: string]: any;
-}): string;

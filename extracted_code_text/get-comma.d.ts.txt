@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-image-set-function\dist\lib\get-comma.d.ts
-================================================================================
-
-export declare function getComma(node: any): boolean;

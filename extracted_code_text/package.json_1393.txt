@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_array_with_holes\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_array_with_holes.cjs",
-    "module": "../../esm/_array_with_holes.js"
-}

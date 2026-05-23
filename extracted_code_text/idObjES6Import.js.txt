@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\identity-obj-proxy\src\test-redirections\idObjES6Import.js
-================================================================================
-
-import idObj from '..';
-
-module.exports = idObj;

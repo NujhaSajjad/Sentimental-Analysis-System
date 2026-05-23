@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\object\lookup-getter.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/object/lookup-getter');
-
-module.exports = parent;

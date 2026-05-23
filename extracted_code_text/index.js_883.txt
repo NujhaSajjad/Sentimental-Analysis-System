@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\css-tree\lib\generator\index.js
-================================================================================
-
-var createGenerator = require('./create');
-var config = require('../syntax/config/parser');
-
-module.exports = createGenerator(config);

@@ -1,8 +1,0 @@
-Relative path: backend\node_modules\semver\functions\major.js
-================================================================================
-
-'use strict'
-
-const SemVer = require('../classes/semver')
-const major = (a, loose) => new SemVer(a, loose).major
-module.exports = major

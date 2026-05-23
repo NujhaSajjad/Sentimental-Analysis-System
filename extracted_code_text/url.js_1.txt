@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\url.js
-================================================================================
-
-'use strict';
-// https://github.com/jasnell/proposal-url
-require('../web/url');

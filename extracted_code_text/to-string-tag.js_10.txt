@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\json\to-string-tag.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/json/to-string-tag');

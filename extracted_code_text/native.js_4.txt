@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\uuid\dist-node\native.js
-================================================================================
-
-import { randomUUID } from 'node:crypto';
-export default { randomUUID };

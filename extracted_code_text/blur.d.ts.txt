@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\blur.d.ts
-================================================================================
-
-declare function blur(element: Element): void;
-export { blur };

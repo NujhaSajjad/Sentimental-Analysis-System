@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\fluent-ffmpeg\index.js
-================================================================================
-
-module.exports = require('./lib/fluent-ffmpeg');

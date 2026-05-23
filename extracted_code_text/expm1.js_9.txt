@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\math\expm1.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/math/expm1');
-
-module.exports = parent;

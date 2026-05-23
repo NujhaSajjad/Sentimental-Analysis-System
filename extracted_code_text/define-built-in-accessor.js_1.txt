@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\internals\define-built-in-accessor.js
-================================================================================
-
-'use strict';
-var defineProperty = require('../internals/object-define-property');
-
-module.exports = function (target, name, descriptor) {
-  return defineProperty.f(target, name, descriptor);
-};

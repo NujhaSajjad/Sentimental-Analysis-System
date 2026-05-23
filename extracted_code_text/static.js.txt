@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\builtin-modules\static.js
-================================================================================
-
-'use strict';
-module.exports = require('./builtin-modules');

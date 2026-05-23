@@ -1,8 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_identity.js
-================================================================================
-
-function _identity(x) {
-    return x;
-}
-
-export { _identity as _ };

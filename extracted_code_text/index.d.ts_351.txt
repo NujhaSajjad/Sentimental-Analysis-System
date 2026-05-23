@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-shared-array-buffer\index.d.ts
-================================================================================
-
-declare function isSharedArrayBuffer(obj: unknown): obj is SharedArrayBuffer;
-
-export = isSharedArrayBuffer;

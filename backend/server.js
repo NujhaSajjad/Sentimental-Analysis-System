@@ -6,6 +6,8 @@ const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
 const db = require('./database');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 
 // Import routers
 const authRoutes = require('./routes/auth');
@@ -18,12 +20,27 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+const allowedOrigins = process.env.FRONTEND_URL 
+  ? [process.env.FRONTEND_URL] 
+  : ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:5173']; // default fallback
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:5173'], // Added Vite default just in case
+  origin: allowedOrigins,
   credentials: true
 }));
+app.use(helmet()); // Set security HTTP headers
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
+// Apply basic rate-limiting to all API requests
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 200, // limit each IP to 200 requests per windowMs
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use('/api', apiLimiter);
 
 // Create uploads folder if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');

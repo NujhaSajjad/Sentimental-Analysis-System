@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-nested-calc\dist\occurrences.d.ts
-================================================================================
-
-export declare function numberOfCalcOccurrences(value: string): number;

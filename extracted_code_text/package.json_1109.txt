@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\test\resolver\false_main\package.json
-================================================================================
-
-{
-	"name": "false_main",
-	"main": false
-}

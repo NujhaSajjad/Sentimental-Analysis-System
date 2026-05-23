@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\css-tree\lib\parser\index.js
-================================================================================
-
-var createParser = require('./create');
-var config = require('../syntax/config/parser');
-
-module.exports = createParser(config);

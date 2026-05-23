@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\prop-types\lib\has.js
-================================================================================
-
-module.exports = Function.call.bind(Object.prototype.hasOwnProperty);

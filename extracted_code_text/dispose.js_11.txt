@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\iterator\dispose.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/iterator/dispose');
-
-module.exports = parent;

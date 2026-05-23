@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\dom-helpers.d.ts
-================================================================================
-
-declare module '@testing-library/dom/dist/helpers' {
-  export function getWindowFromNode(node: Node): Window
-}

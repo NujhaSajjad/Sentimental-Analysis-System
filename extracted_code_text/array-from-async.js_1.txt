@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\array-from-async.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-array-from-async
-require('../modules/esnext.array.from-async');
-// TODO: Remove from `core-js@4`
-require('../modules/esnext.typed-array.from-async');

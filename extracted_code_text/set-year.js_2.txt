@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\date\set-year.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/date/set-year');

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\mapValues.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('mapValues', require('../mapValues'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\options.d.ts
-================================================================================
-
-export declare type pluginOptions = {
-    onRevertLayerKeyword: 'warn' | false;
-    onConditionalRulesChangingLayerOrder: 'warn' | false;
-    onImportLayerRule: 'warn' | false;
-};

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\utils\_ts3.4\dist\ts-eslint\ParserOptions.d.ts
-================================================================================
-
-export { DebugLevel, EcmaVersion, ParserOptions, SourceType, } from '@typescript-eslint/types';
-//# sourceMappingURL=ParserOptions.d.ts.map

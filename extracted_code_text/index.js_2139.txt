@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\pg\lib\native\index.js
-================================================================================
-
-'use strict'
-module.exports = require('./client')

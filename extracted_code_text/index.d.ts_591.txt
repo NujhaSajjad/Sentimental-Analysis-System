@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsutils\index.d.ts
-================================================================================
-
-export * from './typeguard';
-export * from './util';

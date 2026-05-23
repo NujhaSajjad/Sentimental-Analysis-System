@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\typescript-reporter\extension\vue\TypeScriptVueExtensionSupport.d.ts
-================================================================================
-
-import { TypeScriptVueExtensionConfiguration } from './TypeScriptVueExtensionConfiguration';
-declare function assertTypeScriptVueExtensionSupport(configuration: TypeScriptVueExtensionConfiguration): void;
-export { assertTypeScriptVueExtensionSupport };

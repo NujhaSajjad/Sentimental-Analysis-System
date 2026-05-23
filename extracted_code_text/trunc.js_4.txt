@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\math\trunc.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/math/trunc');
-
-module.exports = parent;

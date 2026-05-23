@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\symbol\index.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/symbol');
-require('../../modules/web.dom-collections.iterator');
-
-module.exports = parent;

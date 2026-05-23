@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\helpers\isObject.js
-================================================================================
-
-'use strict';
-
-// TODO: remove, semver-major
-
-module.exports = require('es-object-atoms/isObject');

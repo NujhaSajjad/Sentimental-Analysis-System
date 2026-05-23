@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\dom-collections\for-each.js
-================================================================================
-
-'use strict';
-require('../../modules/web.dom-collections.for-each');
-
-var parent = require('../../internals/array-for-each');
-
-module.exports = parent;

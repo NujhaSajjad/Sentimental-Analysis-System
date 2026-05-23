@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\typed-array\join.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/typed-array/join');
-
-module.exports = parent;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\on-css-function.d.ts
-================================================================================
-
-import type { Declaration, Result } from 'postcss';
-import type { FunctionNode } from 'postcss-value-parser';
-export declare function onCSSFunctionSRgb(node: FunctionNode, decl: Declaration, result: Result, preserve: boolean): void;

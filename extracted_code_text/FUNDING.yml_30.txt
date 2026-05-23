@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-json-stable-stringify\.github\FUNDING.yml
-================================================================================
-
-tidelift: "npm/fast-json-stable-stringify"

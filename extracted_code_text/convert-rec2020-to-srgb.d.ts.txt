@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\convert-rec2020-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function rec2020ToSRgb(rec: color): color;
-export {};

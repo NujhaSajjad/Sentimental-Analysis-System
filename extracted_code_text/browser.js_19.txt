@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\form-data\lib\browser.js
-================================================================================
-
-'use strict';
-
-/* eslint-env browser */
-module.exports = typeof self === 'object' ? self.FormData : window.FormData;

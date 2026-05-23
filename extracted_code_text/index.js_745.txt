@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\function\virtual\index.js
-================================================================================
-
-'use strict';
-require('../../../modules/es.function.bind');
-var entryVirtual = require('../../../internals/entry-virtual');
-
-module.exports = entryVirtual('Function');

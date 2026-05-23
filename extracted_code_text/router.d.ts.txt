@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\http-proxy-middleware\dist\router.d.ts
-================================================================================
-
-export declare function getTarget(req: any, config: any): Promise<any>;

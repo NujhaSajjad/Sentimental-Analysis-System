@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\clear.d.ts
-================================================================================
-
-declare function clear(element: Element): void;
-export { clear };

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\@apideck\better-ajv-errors\dist\lib\filter.d.ts
-================================================================================
-
-import { DefinedError } from 'ajv';
-export declare const filterSingleErrorPerProperty: (errors: DefinedError[]) => DefinedError[];

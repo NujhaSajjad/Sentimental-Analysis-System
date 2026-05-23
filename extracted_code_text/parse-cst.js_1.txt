@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\parse-cst.js
-================================================================================
-
-module.exports = require('./dist/parse-cst').parse

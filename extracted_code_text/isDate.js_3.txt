@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\cjs\isDate.js
-================================================================================
-
-var _tagTester = require('./_tagTester.js');
-
-var isDate = _tagTester('Date');
-
-module.exports = isDate;

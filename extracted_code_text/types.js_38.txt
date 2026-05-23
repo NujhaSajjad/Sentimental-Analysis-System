@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jest-message-util\build\types.js
-================================================================================
-
-'use strict';

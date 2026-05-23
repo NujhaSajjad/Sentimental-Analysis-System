@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\stylehacks\types\dictionary\tags.d.ts
-================================================================================
-
-export const BODY: "body";
-export const HTML: "html";

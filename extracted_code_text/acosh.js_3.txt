@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\math\acosh.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/math/acosh');
-
-module.exports = parent;

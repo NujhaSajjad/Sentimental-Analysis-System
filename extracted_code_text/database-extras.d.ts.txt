@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\idb\build\database-extras.d.ts
-================================================================================
-
-export {};

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\_ts3.4\dist\parseSettings\warnAboutTSVersion.d.ts
-================================================================================
-
-import { ParseSettings } from './index';
-export declare function warnAboutTSVersion(parseSettings: ParseSettings): void;
-//# sourceMappingURL=warnAboutTSVersion.d.ts.map

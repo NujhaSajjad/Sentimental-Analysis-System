@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\isCreateElement.d.ts
-================================================================================
-
-declare function _exports(context: Context, node: ASTNode): boolean;
-export = _exports;
-//# sourceMappingURL=isCreateElement.d.ts.map

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\symbol\dispose.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/symbol/dispose');
-require('../../modules/esnext.symbol.dispose');
-
-module.exports = parent;

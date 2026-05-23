@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\array\to-reversed.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/array/to-reversed');

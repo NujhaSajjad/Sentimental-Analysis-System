@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\unicode-version.js
-================================================================================
-
-module.exports = '17.0.0';

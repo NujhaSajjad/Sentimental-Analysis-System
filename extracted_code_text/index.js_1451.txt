@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\nanoid\url-alphabet\index.js
-================================================================================
-
-let urlAlphabet =
-  'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict'
-export { urlAlphabet }

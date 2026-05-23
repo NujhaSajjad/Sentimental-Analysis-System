@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\helpers\OwnPropertyKeys.js
-================================================================================
-
-'use strict';
-
-// TODO, semver-major: remove
-module.exports = require('own-keys');

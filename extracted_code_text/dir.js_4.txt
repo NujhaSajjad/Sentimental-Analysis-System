@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\neo-async\dir.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./async').dir;

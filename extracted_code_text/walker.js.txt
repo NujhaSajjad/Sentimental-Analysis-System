@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\css-tree\lib\syntax\config\walker.js
-================================================================================
-
-module.exports = {
-    node: require('../node')
-};

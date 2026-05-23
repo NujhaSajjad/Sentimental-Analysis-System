@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\math\index.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/math');
-
-module.exports = parent;

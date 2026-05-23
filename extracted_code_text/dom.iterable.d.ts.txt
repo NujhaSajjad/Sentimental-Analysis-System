@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\dom.iterable.d.ts
-================================================================================
-
-import type { ImplicitLibVariableOptions } from '../variable';
-export declare const dom_iterable: Record<string, ImplicitLibVariableOptions>;
-//# sourceMappingURL=dom.iterable.d.ts.map

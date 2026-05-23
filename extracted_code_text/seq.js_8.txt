@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\seq.js
-================================================================================
-
-module.exports = require('./dist/types').YAMLSeq
-require('./dist/legacy-exports').warnFileDeprecation(__filename)

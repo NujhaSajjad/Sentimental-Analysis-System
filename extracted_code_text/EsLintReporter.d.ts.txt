@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\eslint-reporter\reporter\EsLintReporter.d.ts
-================================================================================
-
-import { EsLintReporterConfiguration } from '../EsLintReporterConfiguration';
-import { Reporter } from '../../reporter';
-declare function createEsLintReporter(configuration: EsLintReporterConfiguration): Reporter;
-export { createEsLintReporter };

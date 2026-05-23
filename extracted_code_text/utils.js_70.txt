@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\scripts\utils.js
-================================================================================
-
-export function root(...p) {
-    return path.resolve(__dirname, "..", ...p);
-}

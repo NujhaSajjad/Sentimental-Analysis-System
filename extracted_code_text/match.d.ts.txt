@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-progressive-custom-properties\dist\match.d.ts
-================================================================================
-
-export declare function matches(a: any, b: any): boolean;

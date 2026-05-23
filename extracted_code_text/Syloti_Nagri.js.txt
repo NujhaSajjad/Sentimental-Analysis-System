@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Syloti_Nagri.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0xA800, 0xA82C);
-exports.characters = set;

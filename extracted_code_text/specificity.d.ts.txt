@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\merge-selectors\specificity.d.ts
-================================================================================
-
-export declare function nodesAreEquallySpecific(nodes: Array<string>): boolean;

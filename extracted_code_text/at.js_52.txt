@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\string\at.js
-================================================================================
-
-'use strict';
-require('../../actual/string/at');
-// TODO: Remove from `core-js@4`
-require('../../modules/esnext.string.at');
-
-module.exports = require('../../internals/entry-unbind')('String', 'at');

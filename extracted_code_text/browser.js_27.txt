@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\supports-preserve-symlinks-flag\browser.js
-================================================================================
-
-'use strict';
-
-module.exports = null;

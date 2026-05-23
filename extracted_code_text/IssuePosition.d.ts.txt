@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\issue\IssuePosition.d.ts
-================================================================================
-
-interface IssuePosition {
-    line: number;
-    column: number;
-}
-declare function compareIssuePositions(positionA?: IssuePosition, positionB?: IssuePosition): number;
-export { IssuePosition, compareIssuePositions };

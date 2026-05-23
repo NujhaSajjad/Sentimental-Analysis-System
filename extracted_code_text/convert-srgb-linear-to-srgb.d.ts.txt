@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\convert-srgb-linear-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function sRgbLinearToSRgb(linearSRgb: color): color;
-export {};

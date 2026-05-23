@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-window\_version.d.ts
-================================================================================
-
-

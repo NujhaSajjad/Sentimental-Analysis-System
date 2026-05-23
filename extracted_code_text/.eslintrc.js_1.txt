@@ -1,8 +1,0 @@
-Relative path: backend\node_modules\streamsearch\.eslintrc.js
-================================================================================
-
-'use strict';
-
-module.exports = {
-  extends: '@mscdex/eslint-config',
-};

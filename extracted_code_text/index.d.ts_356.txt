@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-weakmap\index.d.ts
-================================================================================
-
-declare function isWeakMap<K extends WeakKey = object, V = unknown>(value: unknown): value is WeakMap<K, V>;
-
-export = isWeakMap;

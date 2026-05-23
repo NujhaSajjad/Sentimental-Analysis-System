@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\instance\slice.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/instance/slice');
-
-module.exports = parent;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\proposals\keys-composition.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-richer-keys/tree/master/compositeKey
-require('../modules/esnext.composite-key');
-require('../modules/esnext.composite-symbol');

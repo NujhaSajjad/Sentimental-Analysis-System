@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\rpc-ipc\RpcIpcMessageChannel.d.ts
-================================================================================
-
-import { RpcMessageChannel } from '../index';
-declare function createRpcIpcMessageChannel(servicePath: string, memoryLimit?: number): RpcMessageChannel;
-export { createRpcIpcMessageChannel };

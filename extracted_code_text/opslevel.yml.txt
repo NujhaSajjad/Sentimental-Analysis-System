@@ -1,9 +1,0 @@
-Relative path: backend\node_modules\jwa\opslevel.yml
-================================================================================
-
----
-version: 1
-repository:
-  owner: iam_protocols
-  tier:
-  tags:

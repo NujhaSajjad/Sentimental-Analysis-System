@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\text-table\example\table.js
-================================================================================
-
-var table = require('../');
-var t = table([
-    [ 'master', '0123456789abcdef' ],
-    [ 'staging', 'fedcba9876543210' ]
-]);
-console.log(t);

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\promise\with-resolvers.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/promise/with-resolvers');
-
-module.exports = parent;

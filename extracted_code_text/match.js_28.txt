@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\symbol\match.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/symbol/match');
-
-module.exports = parent;

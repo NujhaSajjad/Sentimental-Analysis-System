@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\symbol\is-concat-spreadable.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/symbol/is-concat-spreadable');
-
-module.exports = parent;

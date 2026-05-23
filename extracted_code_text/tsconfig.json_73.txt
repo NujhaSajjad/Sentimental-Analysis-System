@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\stop-iteration-iterator\tsconfig.json
-================================================================================
-
-{
-	"extends": "@ljharb/tsconfig",
-	"exclude": [
-		"coverage",
-	],
-}

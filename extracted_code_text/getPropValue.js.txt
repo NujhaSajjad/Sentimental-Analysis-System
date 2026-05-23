@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsx-ast-utils\getPropValue.js
-================================================================================
-
-module.exports = require('./lib').getPropValue; // eslint-disable-line import/no-unresolved

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-oklab-function\dist\convert-oklch-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function oklchToSRgb(oklchRaw: color): color;
-export {};

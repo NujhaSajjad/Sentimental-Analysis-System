@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\error\RpcMessagePortClosedError.d.ts
-================================================================================
-
-declare class RpcMessagePortClosedError extends Error {
-}
-export { RpcMessagePortClosedError };

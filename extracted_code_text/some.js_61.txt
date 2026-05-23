@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\some.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/array/some');
-
-module.exports = parent;

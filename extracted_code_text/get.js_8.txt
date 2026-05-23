@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\reflect\get.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/reflect/get');
-
-module.exports = parent;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\nth-check\lib\esm\package.json
-================================================================================
-
-{"type":"module"}

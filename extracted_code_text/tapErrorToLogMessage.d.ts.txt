@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\hooks\tapErrorToLogMessage.d.ts
-================================================================================
-
-import webpack from 'webpack';
-import { ForkTsCheckerWebpackPluginConfiguration } from '../ForkTsCheckerWebpackPluginConfiguration';
-declare function tapErrorToLogMessage(compiler: webpack.Compiler, configuration: ForkTsCheckerWebpackPluginConfiguration): void;
-export { tapErrorToLogMessage };

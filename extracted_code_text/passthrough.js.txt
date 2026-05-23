@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\hpack.js\node_modules\readable-stream\passthrough.js
-================================================================================
-
-module.exports = require('./readable').PassThrough

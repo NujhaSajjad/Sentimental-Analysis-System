@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\date\set-year.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/date/set-year');
-
-module.exports = parent;

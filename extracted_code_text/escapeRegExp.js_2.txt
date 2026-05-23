@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\escapeRegExp.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('escapeRegExp', require('../escapeRegExp'), require('./_falseOptions'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

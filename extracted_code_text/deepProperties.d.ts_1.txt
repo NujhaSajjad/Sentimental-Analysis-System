@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\keywords\deepProperties.d.ts
-================================================================================
-
-import type { Plugin } from "ajv";
-import type { DefinitionOptions } from "../definitions/_types";
-declare const deepProperties: Plugin<DefinitionOptions>;
-export default deepProperties;

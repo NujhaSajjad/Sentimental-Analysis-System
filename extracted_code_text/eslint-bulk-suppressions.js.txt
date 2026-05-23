@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@rushstack\eslint-patch\eslint-bulk-suppressions.js
-================================================================================
-
-require('./lib/eslint-bulk-suppressions');

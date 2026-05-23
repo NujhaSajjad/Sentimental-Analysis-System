@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\number\parse-int.js
-================================================================================
-
-'use strict';
-require('../../modules/es.number.parse-int');
-var path = require('../../internals/path');
-
-module.exports = path.Number.parseInt;

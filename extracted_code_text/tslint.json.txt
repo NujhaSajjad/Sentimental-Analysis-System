@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\dotenv\types\tslint.json
-================================================================================
-
-{
-  "extends": "dtslint/dtslint.json",
-  "rules": {
-    "strict-export-declare-modifiers": false
-  }
-}

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\isEqualWith.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('isEqualWith', require('../isEqualWith'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

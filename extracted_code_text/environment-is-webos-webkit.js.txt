@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\internals\environment-is-webos-webkit.js
-================================================================================
-
-'use strict';
-var userAgent = require('../internals/environment-user-agent');
-
-module.exports = /web0s(?!.*chrome)/i.test(userAgent);

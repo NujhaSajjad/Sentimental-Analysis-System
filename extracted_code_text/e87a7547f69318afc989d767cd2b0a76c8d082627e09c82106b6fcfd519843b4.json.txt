@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\.cache\babel-loader\e87a7547f69318afc989d767cd2b0a76c8d082627e09c82106b6fcfd519843b4.json
-================================================================================
-
-{"ast":null,"code":"export const VERSION = \"1.13.4\";","map":{"version":3,"names":["VERSION"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/axios/lib/env/data.js"],"sourcesContent":["export const VERSION = \"1.13.4\";"],"mappings":"AAAA,OAAO,MAAMA,OAAO,GAAG,QAAQ","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

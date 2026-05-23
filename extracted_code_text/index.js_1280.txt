@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-root\index.js
-================================================================================
-
-'use strict';
-
-module.exports = () => process.getuid && process.getuid() === 0;

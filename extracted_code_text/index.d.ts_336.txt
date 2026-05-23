@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-data-view\index.d.ts
-================================================================================
-
-declare function isDataView(value: unknown): value is DataView;
-
-export = isDataView;

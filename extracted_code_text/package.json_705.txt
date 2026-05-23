@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\html-escaper\test\package.json
-================================================================================
-
-{"type":"commonjs"}

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\extend.js
-================================================================================
-
-module.exports = require('./assignIn');

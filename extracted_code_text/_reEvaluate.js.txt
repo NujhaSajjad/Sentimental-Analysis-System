@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\_reEvaluate.js
-================================================================================
-
-/** Used to match template delimiters. */
-var reEvaluate = /<%([\s\S]+?)%>/g;
-
-module.exports = reEvaluate;

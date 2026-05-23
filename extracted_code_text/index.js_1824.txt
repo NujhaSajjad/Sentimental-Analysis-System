@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\lib\index.js
-================================================================================
-
-"use strict";
-module.exports = require("./plugin");

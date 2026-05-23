@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\regexp\sticky.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/regexp/sticky');
-
-module.exports = parent;

@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\scripts\errors.js
-================================================================================
-
-export const errors = [];

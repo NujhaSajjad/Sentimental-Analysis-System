@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-initial\~\.config\configstore\update-notifier-npm.json
-================================================================================
-
-{
-	"optOut": false,
-	"lastUpdateCheck": 1618430037808
-}

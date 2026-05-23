@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\set\intersection.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/set/intersection');
-require('../../modules/esnext.set.intersection.v2');
-
-module.exports = parent;

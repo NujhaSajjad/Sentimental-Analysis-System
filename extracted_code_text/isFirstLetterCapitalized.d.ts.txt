@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\isFirstLetterCapitalized.d.ts
-================================================================================
-
-declare function _exports(word: string): boolean;
-export = _exports;
-//# sourceMappingURL=isFirstLetterCapitalized.d.ts.map

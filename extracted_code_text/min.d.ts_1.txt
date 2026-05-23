@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\math-intrinsics\min.d.ts
-================================================================================
-
-export = Math.min;

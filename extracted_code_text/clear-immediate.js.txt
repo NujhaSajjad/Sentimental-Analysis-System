@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\clear-immediate.js
-================================================================================
-
-'use strict';
-var parent = require('../stable/clear-immediate');
-
-module.exports = parent;

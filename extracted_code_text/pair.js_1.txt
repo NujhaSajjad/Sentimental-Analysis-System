@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\pair.js
-================================================================================
-
-module.exports = require('./dist/types').Pair
-require('./dist/legacy-exports').warnFileDeprecation(__filename)

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\reflect\is-extensible.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/reflect/is-extensible');
-
-module.exports = parent;

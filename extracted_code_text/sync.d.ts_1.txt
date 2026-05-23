@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@nodelib\fs.stat\out\providers\sync.d.ts
-================================================================================
-
-import type Settings from '../settings';
-import type { Stats } from '../types';
-export declare function read(path: string, settings: Settings): Stats;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\cjs\noop.js
-================================================================================
-
-// Predicate-generating function. Often useful outside of Underscore.
-function noop(){}
-
-module.exports = noop;

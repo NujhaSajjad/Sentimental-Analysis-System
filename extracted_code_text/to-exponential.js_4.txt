@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\number\to-exponential.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/number/to-exponential');

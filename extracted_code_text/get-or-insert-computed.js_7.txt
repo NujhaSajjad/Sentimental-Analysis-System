@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\weak-map\get-or-insert-computed.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/weak-map/get-or-insert-computed');
-
-module.exports = parent;

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\promise\finally.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/promise/finally');

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\countBy.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('countBy', require('../countBy'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

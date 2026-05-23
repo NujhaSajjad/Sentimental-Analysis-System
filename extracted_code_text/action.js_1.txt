@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsonpath\include\action.js
-================================================================================
-
-if (!yy.ast) {
-    yy.ast = _ast;
-    _ast.initialize();
-}

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-merge-longhand\types\lib\insertCloned.d.ts
-================================================================================
-
-declare function _exports(rule: import('postcss').Rule, decl: import('postcss').Declaration, props?: Partial<import('postcss').DeclarationProps> | undefined): import('postcss').Declaration;
-export = _exports;

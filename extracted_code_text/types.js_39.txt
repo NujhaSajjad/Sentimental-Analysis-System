@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jest-resolve\build\types.js
-================================================================================
-
-'use strict';

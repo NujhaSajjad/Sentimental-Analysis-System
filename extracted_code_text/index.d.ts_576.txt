@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\nesting\index.d.ts
-================================================================================
-
-import type { AcceptedPlugin, PluginCreator } from 'postcss'
-
-declare const plugin: PluginCreator<AcceptedPlugin | string | void>
-export = plugin

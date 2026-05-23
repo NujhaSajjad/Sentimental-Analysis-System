@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsutils\node_modules\tslib\tslib.html
-================================================================================
-
-<script src="tslib.js"></script>

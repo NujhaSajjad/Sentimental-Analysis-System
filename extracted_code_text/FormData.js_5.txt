@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\axios\lib\platform\browser\classes\FormData.js
-================================================================================
-
-'use strict';
-
-export default typeof FormData !== 'undefined' ? FormData : null;

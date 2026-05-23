@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\stylehacks\types\plugins\index.d.ts
-================================================================================
-
-declare const _exports: ({
-    new (result?: import("postcss").Result | undefined): important;
-} | {
-    new (result?: import("postcss").Result | undefined): trailingSlashComma;
-})[];
-export = _exports;

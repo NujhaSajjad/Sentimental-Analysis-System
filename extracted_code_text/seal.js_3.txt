@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\object\seal.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/object/seal');
-
-module.exports = parent;

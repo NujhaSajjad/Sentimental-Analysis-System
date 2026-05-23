@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsonpath\fig.yml
-================================================================================
-
-test:
-  build: .
-  command: node /usr/src/app/node_modules/.bin/mocha -u tdd test/
-  volumes:
-    - .:/usr/src/app

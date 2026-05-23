@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_type_of\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_type_of.cjs",
-    "module": "../../esm/_type_of.js"
-}

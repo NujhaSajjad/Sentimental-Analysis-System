@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-oklab-function\dist\convert-oklab-to-display-p3.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function oklabToDisplayP3(oklabRaw: color): [color, boolean];
-export {};

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\global-this.js
-================================================================================
-
-'use strict';
-require('../modules/es.global-this');
-
-module.exports = require('../internals/global-this');

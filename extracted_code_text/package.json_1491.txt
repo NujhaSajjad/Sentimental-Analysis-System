@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_wrap_async_generator\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_wrap_async_generator.cjs",
-    "module": "../../esm/_wrap_async_generator.js"
-}

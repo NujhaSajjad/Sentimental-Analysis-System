@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-iterator-helpers\Iterator.zip\index.js
-================================================================================
-
-'use strict';
-
-var getPolyfill = require('./polyfill');
-
-module.exports = getPolyfill();

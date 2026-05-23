@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\instance\copy-within.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/instance/copy-within');

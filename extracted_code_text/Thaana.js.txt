@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Thaana.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x780, 0x7B1);
-exports.characters = set;

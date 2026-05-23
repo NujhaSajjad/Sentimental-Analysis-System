@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\string\from-code-point.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/string/from-code-point');

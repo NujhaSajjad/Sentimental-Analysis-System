@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\every.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/array/every');
-
-module.exports = parent;

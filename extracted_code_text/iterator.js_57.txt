@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\dom-collections\iterator.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/dom-collections/iterator');
-
-module.exports = parent;

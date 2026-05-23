@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_ts_dispose_resources\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_ts_dispose_resources.cjs",
-    "module": "../../esm/_ts_dispose_resources.js"
-}

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\caniuse-lite\dist\unpacker\browsers.js
-================================================================================
-
-module.exports.browsers = require('../../data/browsers')

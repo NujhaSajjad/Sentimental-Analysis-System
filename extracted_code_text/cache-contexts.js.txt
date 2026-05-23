@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\core\lib\config\cache-contexts.js
-================================================================================
-
-"use strict";
-
-0 && 0;
-
-//# sourceMappingURL=cache-contexts.js.map

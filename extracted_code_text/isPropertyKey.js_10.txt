@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\helpers\isPropertyKey.js
-================================================================================
-
-'use strict';
-
-module.exports = function isPropertyKey(argument) {
-	return typeof argument === 'string' || typeof argument === 'symbol';
-};

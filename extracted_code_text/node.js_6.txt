@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\detect-port-alt\node_modules\debug\node.js
-================================================================================
-
-module.exports = require('./src/node');

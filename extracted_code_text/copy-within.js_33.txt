@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\array\virtual\copy-within.js
-================================================================================
-
-'use strict';
-var parent = require('../../../actual/array/virtual/copy-within');
-
-module.exports = parent;

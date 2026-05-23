@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\no-revision-for-urls-matching-transform.d.ts
-================================================================================
-
-import { ManifestTransform } from '../types';
-export declare function noRevisionForURLsMatchingTransform(regexp: RegExp): ManifestTransform;

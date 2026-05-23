@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Tai_Viet.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0xAA80, 0xAAC2).addRange(0xAADB, 0xAADF);
-exports.characters = set;

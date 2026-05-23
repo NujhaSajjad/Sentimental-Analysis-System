@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\_ts3.4\dist\jsx\xhtml-entities.d.ts
-================================================================================
-
-export declare const xhtmlEntities: Record<string, string>;
-//# sourceMappingURL=xhtml-entities.d.ts.map

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\object\iterate-values.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/object/iterate-values');

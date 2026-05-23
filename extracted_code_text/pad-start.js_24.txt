@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\instance\pad-start.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/instance/pad-start');
-
-module.exports = parent;

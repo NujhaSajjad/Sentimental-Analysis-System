@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\stubs\tailwind.config.js
-================================================================================
-
-/** @type {import('tailwindcss').Config} */
-export default __CONFIG__

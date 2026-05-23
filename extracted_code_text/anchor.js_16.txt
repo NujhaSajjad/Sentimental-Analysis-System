@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\string\anchor.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/string/anchor');
-
-module.exports = parent;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-cascade-layers\dist\adjust-selector-specificity.d.ts
-================================================================================
-
-export declare function adjustSelectorSpecificity(selector: string, amount: number): string;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\any-promise\register\native-promise-only.d.ts
-================================================================================
-
-export {}

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\merge-params.d.ts
-================================================================================
-
-export default function mergeParams(fromParams: string, toParams: string): string;

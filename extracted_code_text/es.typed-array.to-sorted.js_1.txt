@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\modules\es.typed-array.to-sorted.js
-================================================================================
-
-// empty

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\types\omap.js
-================================================================================
-
-const legacy = require('../dist/legacy-exports')
-module.exports = legacy.omap
-legacy.warnFileDeprecation(__filename)

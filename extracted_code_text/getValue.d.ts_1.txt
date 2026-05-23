@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-merge-longhand\types\lib\getValue.d.ts
-================================================================================
-
-declare function _exports({ value }: import('postcss').Declaration): string;
-export = _exports;

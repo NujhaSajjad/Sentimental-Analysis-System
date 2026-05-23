@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-streams\_types.d.ts
-================================================================================
-
-import './_version.js';
-export type StreamSource = Response | ReadableStream | BodyInit;
-/**
- * @typedef {Response|ReadableStream|BodyInit} StreamSource
- * @memberof workbox-streams
- */

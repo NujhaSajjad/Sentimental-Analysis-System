@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_export_star\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_export_star.cjs",
-    "module": "../../esm/_export_star.js"
-}

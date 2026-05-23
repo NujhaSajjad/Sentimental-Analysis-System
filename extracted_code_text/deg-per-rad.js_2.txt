@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\math\deg-per-rad.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/math/deg-per-rad');

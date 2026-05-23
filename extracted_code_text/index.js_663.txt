@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\index.js
-================================================================================
-
-'use strict';
-// TODO: Remove this entry from `core-js@4`
-require('../stage');

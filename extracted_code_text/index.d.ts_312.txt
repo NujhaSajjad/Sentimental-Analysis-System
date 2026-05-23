@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\has-proto\index.d.ts
-================================================================================
-
-declare function hasProto(): boolean;
-
-export = hasProto;

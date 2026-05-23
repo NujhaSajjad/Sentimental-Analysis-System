@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\clean-css\lib\reader\restore-import.js
-================================================================================
-
-function restoreImport(uri, mediaQuery) {
-  return ('@import ' + uri + ' ' + mediaQuery).trim();
-}
-
-module.exports = restoreImport;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\types.js
-================================================================================
-
-module.exports = require('./dist/types')

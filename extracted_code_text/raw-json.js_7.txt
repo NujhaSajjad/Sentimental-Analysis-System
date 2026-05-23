@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\json\raw-json.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/json/raw-json');

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\dequal\index.d.ts
-================================================================================
-
-export function dequal(foo: any, bar: any): boolean;

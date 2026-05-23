@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\string-replace-all.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-string-replaceall
-require('../modules/esnext.string.replace-all');
-// TODO: remove from `core-js@4`
-require('../modules/esnext.symbol.replace-all');

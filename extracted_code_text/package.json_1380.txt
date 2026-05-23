@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\dist\package.json
-================================================================================
-
-{ "type": "module" }

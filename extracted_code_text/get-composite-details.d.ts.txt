@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\get-composite-details.d.ts
-================================================================================
-
-import { FileDetails } from '../types';
-export declare function getCompositeDetails(compositeURL: string, dependencyDetails: Array<FileDetails>): FileDetails;

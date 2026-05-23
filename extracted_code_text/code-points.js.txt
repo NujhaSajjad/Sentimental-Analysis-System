@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\instance\code-points.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/instance/code-points');

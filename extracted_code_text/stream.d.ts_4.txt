@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-glob\out\utils\stream.d.ts
-================================================================================
-
-/// <reference types="node" />
-/// <reference types="node" />
-import { Readable } from 'stream';
-export declare function merge(streams: Readable[]): NodeJS.ReadableStream;

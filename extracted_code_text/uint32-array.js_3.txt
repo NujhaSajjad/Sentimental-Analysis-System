@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\typed-array\uint32-array.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/typed-array/uint32-array');
-require('../../full/typed-array/methods');
-
-module.exports = parent;

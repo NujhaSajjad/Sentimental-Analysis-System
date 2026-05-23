@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\readable-stream\lib\internal\streams\stream.js
-================================================================================
-
-module.exports = require('stream');

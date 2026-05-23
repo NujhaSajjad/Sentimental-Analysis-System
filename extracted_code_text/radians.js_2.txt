@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\math\radians.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/math/radians');

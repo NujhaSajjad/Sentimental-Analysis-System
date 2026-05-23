@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-bigint\index.d.ts
-================================================================================
-
-declare function isBigInt(value: unknown): value is (bigint | BigInt);
-
-export = isBigInt;

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\object-keys\test\index.js
-================================================================================
-
-'use strict';
-
-require('./isArguments');
-
-require('./shim');

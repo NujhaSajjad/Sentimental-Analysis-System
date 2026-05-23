@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-broadcast-update\src\_version.ts
-================================================================================
-
-// @ts-ignore
-try{self['workbox:broadcast-update:6.6.0']&&_()}catch(e){}

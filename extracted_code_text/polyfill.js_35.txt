@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\raf\polyfill.js
-================================================================================
-
-require('./').polyfill()

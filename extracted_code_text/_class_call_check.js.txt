@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_class_call_check.js
-================================================================================
-
-function _class_call_check(instance, Constructor) {
-    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
-}
-export { _class_call_check as _ };

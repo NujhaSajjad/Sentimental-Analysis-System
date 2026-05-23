@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\5\ToObject.js
-================================================================================
-
-'use strict';
-
-// http://262.ecma-international.org/5.1/#sec-9.9
-
-module.exports = require('es-object-atoms/ToObject');

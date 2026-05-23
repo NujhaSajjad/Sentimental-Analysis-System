@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@jest\schemas\README.md
-================================================================================
-
-# `@jest/schemas`
-
-Experimental and currently incomplete module for JSON schemas for [Jest's](https://jestjs.io/) configuration.

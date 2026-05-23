@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\_realNames.js
-================================================================================
-
-/** Used to lookup unminified function names. */
-var realNames = {};
-
-module.exports = realNames;

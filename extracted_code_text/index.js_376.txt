@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\asynckit\index.js
-================================================================================
-
-module.exports =
-{
-  parallel      : require('./parallel.js'),
-  serial        : require('./serial.js'),
-  serialOrdered : require('./serialOrdered.js')
-};

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\typed-array\to-string.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/typed-array/to-string');
-
-module.exports = parent;

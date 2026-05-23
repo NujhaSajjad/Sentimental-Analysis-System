@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\es-errors\index.d.ts
-================================================================================
-
-declare const Error: ErrorConstructor;
-
-export = Error;

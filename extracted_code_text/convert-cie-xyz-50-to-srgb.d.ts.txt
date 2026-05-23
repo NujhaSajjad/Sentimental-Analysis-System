@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\convert-cie-xyz-50-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function cieXyz50ToSRgb(xyz: color): color;
-export {};

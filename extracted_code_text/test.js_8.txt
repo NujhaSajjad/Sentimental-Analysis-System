@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\regexp\test.js
-================================================================================
-
-'use strict';
-require('../../modules/es.regexp.exec');
-require('../../modules/es.regexp.test');
-var uncurryThis = require('../../internals/function-uncurry-this');
-
-module.exports = uncurryThis(/./.test);

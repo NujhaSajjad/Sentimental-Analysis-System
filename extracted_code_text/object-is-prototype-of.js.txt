@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\internals\object-is-prototype-of.js
-================================================================================
-
-'use strict';
-var uncurryThis = require('../internals/function-uncurry-this');
-
-module.exports = uncurryThis({}.isPrototypeOf);

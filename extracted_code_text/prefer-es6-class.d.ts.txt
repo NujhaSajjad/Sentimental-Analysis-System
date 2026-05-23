@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\rules\prefer-es6-class.d.ts
-================================================================================
-
-declare const _exports: import('eslint').Rule.RuleModule;
-export = _exports;
-//# sourceMappingURL=prefer-es6-class.d.ts.map

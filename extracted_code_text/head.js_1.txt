@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\head.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('head', require('../head'), require('./_falseOptions'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

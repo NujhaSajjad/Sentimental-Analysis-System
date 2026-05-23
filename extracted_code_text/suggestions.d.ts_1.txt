@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\@apideck\better-ajv-errors\dist\lib\suggestions.d.ts
-================================================================================
-
-export declare const getSuggestion: ({ value, suggestions, format, }: {
-    value: string | null;
-    suggestions: string[];
-    format?: ((suggestion: string) => string) | undefined;
-}) => string;

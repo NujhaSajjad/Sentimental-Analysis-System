@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\array\slice.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/array/slice');
-
-module.exports = parent;

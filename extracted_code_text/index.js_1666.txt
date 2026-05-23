@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\test\precedence\aaa\index.js
-================================================================================
-
-module.exports = 'okok';

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\object\get-own-property-names.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/get-own-property-names');
-
-module.exports = parent;

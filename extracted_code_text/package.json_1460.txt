@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_object_without_properties\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_object_without_properties.cjs",
-    "module": "../../esm/_object_without_properties.js"
-}

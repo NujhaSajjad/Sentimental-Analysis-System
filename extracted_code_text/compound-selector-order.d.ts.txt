@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-is-pseudo-class\dist\split-selectors\compound-selector-order.d.ts
-================================================================================
-
-export declare function sortCompoundSelectorsInsideComplexSelector(node: any): void;

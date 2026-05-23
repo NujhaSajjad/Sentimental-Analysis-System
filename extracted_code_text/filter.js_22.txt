@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\set\filter.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/set/filter');

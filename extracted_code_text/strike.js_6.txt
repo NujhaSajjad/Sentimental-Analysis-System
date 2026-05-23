@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\string\strike.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/string/strike');
-
-module.exports = parent;

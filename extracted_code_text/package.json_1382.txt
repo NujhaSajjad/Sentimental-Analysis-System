@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\yargs\helpers\package.json
-================================================================================
-
-{
-  "type": "commonjs"
-}

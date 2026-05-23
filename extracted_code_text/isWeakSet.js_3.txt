@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\cjs\isWeakSet.js
-================================================================================
-
-var _tagTester = require('./_tagTester.js');
-
-var isWeakSet = _tagTester('WeakSet');
-
-module.exports = isWeakSet;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Ol_Onal.js
-================================================================================
-
-const set = require('regenerate')(0x1E5FF);
-set.addRange(0x1E5D0, 0x1E5FA);
-exports.characters = set;

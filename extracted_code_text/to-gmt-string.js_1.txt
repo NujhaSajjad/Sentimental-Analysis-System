@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\date\to-gmt-string.js
-================================================================================
-
-'use strict';
-require('../../modules/es.date.to-gmt-string');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Date', 'toGMTString');

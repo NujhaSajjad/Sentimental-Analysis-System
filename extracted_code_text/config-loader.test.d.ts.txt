@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsconfig-paths\lib\__tests__\config-loader.test.d.ts
-================================================================================
-
-export {};

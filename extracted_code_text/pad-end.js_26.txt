@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\string\virtual\pad-end.js
-================================================================================
-
-'use strict';
-var parent = require('../../../actual/string/virtual/pad-end');
-
-module.exports = parent;

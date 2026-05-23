@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\node_modules\resolve\async.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./lib/async');

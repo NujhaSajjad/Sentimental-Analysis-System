@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Lycian.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x10280, 0x1029C);
-exports.characters = set;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\dot-case\dist.es2015\index.d.ts
-================================================================================
-
-import { Options } from "no-case";
-export { Options };
-export declare function dotCase(input: string, options?: Options): string;

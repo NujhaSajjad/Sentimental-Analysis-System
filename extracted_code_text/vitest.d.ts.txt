@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\vitest.d.ts
-================================================================================
-
-/// <reference path="types/vitest.d.ts" />

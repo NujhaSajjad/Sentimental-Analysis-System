@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\typescript-reporter\reporter\TypeScriptReporterRpcService.d.ts
-================================================================================
-
-export {};

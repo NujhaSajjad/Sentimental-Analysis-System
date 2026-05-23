@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_create_class\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_create_class.cjs",
-    "module": "../../esm/_create_class.js"
-}

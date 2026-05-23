@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\get-symbol-description\getInferredName.d.ts
-================================================================================
-
-declare function getInferredName(key: PropertyKey): string;
-
-declare const x: typeof getInferredName | undefined | null;
-
-export = x;

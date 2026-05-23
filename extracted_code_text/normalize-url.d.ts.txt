@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\mini-css-extract-plugin\types\hmr\normalize-url.d.ts
-================================================================================
-
-declare function _exports(urlString: string): string;
-export = _exports;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\instance\match-all.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/instance/match-all');
-
-module.exports = parent;

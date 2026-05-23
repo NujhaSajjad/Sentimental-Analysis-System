@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\.cache\babel-loader\a1d0c5762a40e646a7eeff213e2ecb582c6f4aae2b64a8e1fa15e360e7d9e5fe.json
-================================================================================
-
-{"ast":null,"code":"'use strict';\n\nexport default {\n  silentJSONParsing: true,\n  forcedJSONParsing: true,\n  clarifyTimeoutError: false\n};","map":{"version":3,"names":["silentJSONParsing","forcedJSONParsing","clarifyTimeoutError"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/axios/lib/defaults/transitional.js"],"sourcesContent":["'use strict';\n\nexport default {\n  silentJSONParsing: true,\n  forcedJSONParsing: true,\n  clarifyTimeoutError: false\n};\n"],"mappings":"AAAA,YAAY;;AAEZ,eAAe;EACbA,iBAAiB,EAAE,IAAI;EACvBC,iBAAiB,EAAE,IAAI;EACvBC,mBAAmB,EAAE;AACvB,CAAC","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}

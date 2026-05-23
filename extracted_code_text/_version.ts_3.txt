@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-core\src\_version.ts
-================================================================================
-
-// @ts-ignore
-try{self['workbox:core:6.6.0']&&_()}catch(e){}

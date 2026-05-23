@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\get-string-hash.d.ts
-================================================================================
-
-/// <reference types="node" />
-import crypto from 'crypto';
-export declare function getStringHash(input: crypto.BinaryLike): string;

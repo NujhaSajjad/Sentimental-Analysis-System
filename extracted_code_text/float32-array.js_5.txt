@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\typed-array\float32-array.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/typed-array/float32-array');
-require('../../actual/typed-array/methods');
-
-module.exports = parent;

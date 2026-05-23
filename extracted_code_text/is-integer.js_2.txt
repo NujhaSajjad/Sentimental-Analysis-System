@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\number\is-integer.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/number/is-integer');

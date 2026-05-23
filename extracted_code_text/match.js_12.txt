@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\string\match.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/string/match');
-
-module.exports = parent;

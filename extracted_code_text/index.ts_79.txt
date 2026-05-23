@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\openai\src\realtime\index.ts
-================================================================================
-
-export { OpenAIRealtimeError } from './internal-base';

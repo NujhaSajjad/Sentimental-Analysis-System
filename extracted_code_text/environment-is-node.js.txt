@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\internals\environment-is-node.js
-================================================================================
-
-'use strict';
-var ENVIRONMENT = require('../internals/environment');
-
-module.exports = ENVIRONMENT === 'NODE';

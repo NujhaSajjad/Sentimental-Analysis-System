@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Old_Sogdian.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x10F00, 0x10F27);
-exports.characters = set;

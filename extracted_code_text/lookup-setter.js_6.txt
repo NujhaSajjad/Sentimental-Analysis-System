@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\object\lookup-setter.js
-================================================================================
-
-'use strict';
-require('../../modules/es.object.lookup-setter');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Object', '__lookupSetter__');

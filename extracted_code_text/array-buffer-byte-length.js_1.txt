@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\internals\array-buffer-byte-length.js
-================================================================================
-
-// empty

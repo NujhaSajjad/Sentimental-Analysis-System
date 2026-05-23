@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Palmyrene.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x10860, 0x1087F);
-exports.characters = set;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsconfig-paths\lib\options.d.ts
-================================================================================
-
-export interface Options {
-    cwd: string;
-}
-export declare const options: Options;

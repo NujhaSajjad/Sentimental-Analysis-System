@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\sucrase\register\tsx.js
-================================================================================
-
-require("../dist/register").registerTSX();

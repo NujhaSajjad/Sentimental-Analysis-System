@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\merge-selectors\combinations-of-size-n.d.ts
-================================================================================
-
-export declare function combinationsWithSizeN(set: Array<string>, n: number): Array<Array<string>>;

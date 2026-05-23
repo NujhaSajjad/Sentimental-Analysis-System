@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\resources\beta.d.ts
-================================================================================
-
-export * from "./beta/index.js";
-//# sourceMappingURL=beta.d.ts.map

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\date\to-iso-string.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/date/to-iso-string');
-
-module.exports = parent;

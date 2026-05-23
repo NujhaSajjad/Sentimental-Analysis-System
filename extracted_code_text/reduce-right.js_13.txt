@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\array\virtual\reduce-right.js
-================================================================================
-
-'use strict';
-var parent = require('../../../actual/array/virtual/reduce-right');
-
-module.exports = parent;

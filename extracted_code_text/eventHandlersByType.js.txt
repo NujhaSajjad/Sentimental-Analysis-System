@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsx-ast-utils\eventHandlersByType.js
-================================================================================
-
-module.exports = require('./lib').eventHandlersByType; // eslint-disable-line import/no-unresolved

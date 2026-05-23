@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\internals\is-possible-prototype.js
-================================================================================
-
-'use strict';
-var isObject = require('../internals/is-object');
-
-module.exports = function (argument) {
-  return isObject(argument) || argument === null;
-};

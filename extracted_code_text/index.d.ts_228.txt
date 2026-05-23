@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\data-view-byte-length\index.d.ts
-================================================================================
-
-declare function dataViewByteLength(value: DataView): number;
-declare function dataViewByteLength(value: unknown): never;
-
-export = dataViewByteLength;

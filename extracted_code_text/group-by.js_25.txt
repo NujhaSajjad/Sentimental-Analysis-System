@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\object\group-by.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/group-by');
-require('../../modules/esnext.object.group-by');
-
-module.exports = parent;

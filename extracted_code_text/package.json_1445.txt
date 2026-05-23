@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_instanceof\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_instanceof.cjs",
-    "module": "../../esm/_instanceof.js"
-}

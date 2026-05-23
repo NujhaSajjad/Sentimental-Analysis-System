@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\test\node_path\y\bbb\index.js
-================================================================================
-
-module.exports = 'B';

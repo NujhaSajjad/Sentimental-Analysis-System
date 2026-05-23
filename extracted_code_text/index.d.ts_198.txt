@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\browser-process-hrtime\index.d.ts
-================================================================================
-
-declare module "browser-process-hrtime" {
-  function hrtime(time?: [number, number]): [number, number];
-  export = hrtime;
-}

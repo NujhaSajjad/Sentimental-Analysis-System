@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\symbol\async-iterator.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/symbol/async-iterator');
-
-module.exports = parent;

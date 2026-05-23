@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\openai\_vendor\zod-to-json-schema\parsers\unknown.d.ts
-================================================================================
-
-export type JsonSchema7UnknownType = {};
-export declare function parseUnknownDef(): JsonSchema7UnknownType;
-//# sourceMappingURL=unknown.d.ts.map

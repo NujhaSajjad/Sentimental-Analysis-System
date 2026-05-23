@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_non_iterable_rest\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_non_iterable_rest.cjs",
-    "module": "../../esm/_non_iterable_rest.js"
-}

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\object\is-frozen.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/object/is-frozen');
-
-module.exports = parent;

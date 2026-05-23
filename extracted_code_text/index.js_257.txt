@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\typescript-estree\dist\parseSettings\index.js
-================================================================================
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-//# sourceMappingURL=index.js.map

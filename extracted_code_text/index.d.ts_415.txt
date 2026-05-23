@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\klona\json\index.d.ts
-================================================================================
-
-export function klona<T>(input: T): T;

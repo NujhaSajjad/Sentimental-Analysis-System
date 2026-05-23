@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\definitions\range.d.ts
-================================================================================
-
-import type { MacroKeywordDefinition } from "ajv";
-import type { GetDefinition } from "./_types";
-declare const getDef: GetDefinition<MacroKeywordDefinition>;
-export default getDef;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\array\includes.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/array/includes');
-
-module.exports = parent;

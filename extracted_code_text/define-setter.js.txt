@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\object\define-setter.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/define-setter');
-
-module.exports = parent;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\json\JsonModulesPluginGenerator.json
-================================================================================
-
-{
-  "$ref": "../../WebpackOptions.json#/definitions/JsonGeneratorOptions"
-}

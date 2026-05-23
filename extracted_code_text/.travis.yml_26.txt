@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\multicast-dns\.travis.yml
-================================================================================
-
-language: node_js
-node_js:
-  - "6"
-  - "8"
-  - "9"
-  - "node"

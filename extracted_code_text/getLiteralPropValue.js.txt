@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsx-ast-utils\getLiteralPropValue.js
-================================================================================
-
-module.exports = require('./lib').getLiteralPropValue; // eslint-disable-line import/no-unresolved

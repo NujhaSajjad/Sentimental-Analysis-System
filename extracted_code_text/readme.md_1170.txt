@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\svgo\node_modules\domutils\node_modules\domelementtype\readme.md
-================================================================================
-
-all the types of nodes in htmlparser2's dom

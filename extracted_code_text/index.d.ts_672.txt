@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\has-symbols\index.d.ts
-================================================================================
-
-declare function hasNativeSymbols(): boolean;
-
-export = hasNativeSymbols;

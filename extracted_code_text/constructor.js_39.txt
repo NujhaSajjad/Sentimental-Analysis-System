@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\number\constructor.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/number/constructor');
-
-module.exports = parent;

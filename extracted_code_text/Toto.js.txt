@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Toto.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x1E290, 0x1E2AE);
-exports.characters = set;

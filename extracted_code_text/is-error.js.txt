@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\error\is-error.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/error/is-error');
-require('../../modules/esnext.error.is-error');
-
-module.exports = parent;

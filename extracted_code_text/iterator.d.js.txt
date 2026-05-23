@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\node_modules\dom-accessibility-api\dist\polyfills\iterator.d.js
-================================================================================
-
-"use strict";
-//# sourceMappingURL=iterator.d.js.map

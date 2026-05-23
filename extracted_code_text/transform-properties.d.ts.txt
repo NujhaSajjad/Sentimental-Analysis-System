@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-custom-properties\dist\lib\transform-properties.d.ts
-================================================================================
-
-declare const _default: (decl: any, customProperties: any, opts: any) => void;
-export default _default;

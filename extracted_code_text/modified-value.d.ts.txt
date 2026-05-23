@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-color-function\dist\modified-value.d.ts
-================================================================================
-
-import type { Declaration, Result } from 'postcss';
-export declare function modifiedValues(originalValue: string, decl: Declaration, result: Result, preserve: boolean): string | undefined;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\safe-regex-test\index.d.ts
-================================================================================
-
-declare function regexTester(regex: RegExp): (string: string) => boolean;
-
-export = regexTester;

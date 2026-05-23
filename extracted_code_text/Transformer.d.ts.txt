@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\sucrase\dist\types\transformers\Transformer.d.ts
-================================================================================
-
-export default abstract class Transformer {
-    abstract process(): boolean;
-    getPrefixCode(): string;
-    getHoistedCode(): string;
-    getSuffixCode(): string;
-}

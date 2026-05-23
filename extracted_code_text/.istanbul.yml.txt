@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-arrayish\.istanbul.yml
-================================================================================
-
-instrumentation:
-  excludes:
-    - test.js
-    - test/**/*

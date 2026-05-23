@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\jest-globals.js
-================================================================================
-
-const globals = require('@jest/globals')
-const extensions = require('./dist/matchers')
-
-globals.expect.extend(extensions)

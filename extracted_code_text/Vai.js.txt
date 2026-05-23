@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Vai.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0xA500, 0xA62B);
-exports.characters = set;

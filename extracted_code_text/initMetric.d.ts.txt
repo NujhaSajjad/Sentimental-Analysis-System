@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\lib\initMetric.d.ts
-================================================================================
-
-import { Metric } from '../types.js';
-export declare const initMetric: (name: Metric['name'], value?: number | undefined) => Metric;

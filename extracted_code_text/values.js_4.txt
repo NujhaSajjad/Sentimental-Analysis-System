@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\object\values.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/object/values');
-
-module.exports = parent;

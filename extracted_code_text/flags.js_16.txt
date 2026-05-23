@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\instance\flags.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/instance/flags');
-
-module.exports = parent;

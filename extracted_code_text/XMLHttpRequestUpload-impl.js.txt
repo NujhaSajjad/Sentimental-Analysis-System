@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\jsdom\lib\jsdom\living\xhr\XMLHttpRequestUpload-impl.js
-================================================================================
-
-"use strict";
-const XMLHttpRequestEventTargetImpl = require("./XMLHttpRequestEventTarget-impl").implementation;
-
-exports.implementation = class XMLHttpRequestUploadImpl extends XMLHttpRequestEventTargetImpl {};

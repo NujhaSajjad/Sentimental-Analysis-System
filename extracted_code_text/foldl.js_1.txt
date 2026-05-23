@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\neo-async\foldl.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./async').foldl;

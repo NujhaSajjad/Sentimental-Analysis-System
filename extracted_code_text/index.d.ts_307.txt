@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\graphemer\lib\index.d.ts
-================================================================================
-
-import Graphemer from './Graphemer';
-export default Graphemer;
-//# sourceMappingURL=index.d.ts.map

@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\pg-protocol\src\types\chunky.d.ts
-================================================================================
-
-declare module 'chunky'

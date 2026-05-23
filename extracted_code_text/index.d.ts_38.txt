@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@nodelib\fs.stat\out\types\index.d.ts
-================================================================================
-
-/// <reference types="node" />
-import type * as fs from 'fs';
-export declare type Stats = fs.Stats;
-export declare type ErrnoException = NodeJS.ErrnoException;

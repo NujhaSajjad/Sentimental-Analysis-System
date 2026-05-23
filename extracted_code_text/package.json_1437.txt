@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_extends\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_extends.cjs",
-    "module": "../../esm/_extends.js"
-}

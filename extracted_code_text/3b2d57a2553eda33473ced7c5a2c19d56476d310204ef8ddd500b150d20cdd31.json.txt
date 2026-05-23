@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\.cache\babel-loader\3b2d57a2553eda33473ced7c5a2c19d56476d310204ef8ddd500b150d20cdd31.json
-================================================================================
-
-{"ast":null,"code":"'use strict';\n\nmodule.exports = {};","map":{"version":3,"names":["module","exports"],"sources":["C:/Users/hp/Desktop/callCenterAI/avanza-frontend/node_modules/core-js-pure/internals/path.js"],"sourcesContent":["'use strict';\nmodule.exports = {};\n"],"mappings":"AAAA,YAAY;;AACZA,MAAM,CAACC,OAAO,GAAG,CAAC,CAAC","ignoreList":[]},"metadata":{},"sourceType":"script","externalDependencies":[]}

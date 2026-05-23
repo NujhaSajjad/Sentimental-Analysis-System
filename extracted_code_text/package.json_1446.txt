@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_interop_require_default\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_interop_require_default.cjs",
-    "module": "../../esm/_interop_require_default.js"
-}

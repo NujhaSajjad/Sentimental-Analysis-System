@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\date\to-json.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/date/to-json');
-
-module.exports = parent;

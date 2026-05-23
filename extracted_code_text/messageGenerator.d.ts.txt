@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-core\models\messages\messageGenerator.d.ts
-================================================================================
-
-import '../../_version.js';
-export declare const messageGenerator: ((code: string, ...args: any[]) => string) | ((code: string, details?: {}) => string);

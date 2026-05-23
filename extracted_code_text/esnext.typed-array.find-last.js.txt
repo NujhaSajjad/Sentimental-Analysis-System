@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\modules\esnext.typed-array.find-last.js
-================================================================================
-
-'use strict';
-// TODO: Remove from `core-js@4`
-require('../modules/es.typed-array.find-last');

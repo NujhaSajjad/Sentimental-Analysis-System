@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\instance\unique-by.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/instance/unique-by');

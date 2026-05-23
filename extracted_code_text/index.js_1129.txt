@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\index.js
-================================================================================
-
-"use strict";
-const ForkTsCheckerWebpackPlugin_1 = require("./ForkTsCheckerWebpackPlugin");
-module.exports = ForkTsCheckerWebpackPlugin_1.ForkTsCheckerWebpackPlugin;

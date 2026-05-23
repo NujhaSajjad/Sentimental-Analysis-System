@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\preset-env\data\shipped-proposals.js
-================================================================================
-
-// TODO: Remove in Babel 8
-
-const { pluginSyntaxMap, proposalPlugins, proposalSyntaxPlugins } = require("../lib/shipped-proposals");
-module.exports = { pluginSyntaxMap, proposalPlugins, proposalSyntaxPlugins };

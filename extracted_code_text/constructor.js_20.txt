@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\array-buffer\constructor.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/array-buffer/constructor');
-
-module.exports = parent;

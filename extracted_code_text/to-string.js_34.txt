@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\regexp\to-string.js
-================================================================================
-
-'use strict';
-require('../../modules/es.regexp.to-string');
-var uncurryThis = require('../../internals/function-uncurry-this');
-
-module.exports = uncurryThis(/./.toString);

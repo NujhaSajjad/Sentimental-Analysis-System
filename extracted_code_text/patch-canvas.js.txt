@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\png-js\test\patch-canvas.js
-================================================================================
-
-HTMLCanvasElement.prototype.getContext = function() {};

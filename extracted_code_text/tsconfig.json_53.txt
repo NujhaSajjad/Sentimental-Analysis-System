@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-typed-array\tsconfig.json
-================================================================================
-
-{
-	"extends": "@ljharb/tsconfig",
-	"exclude": [
-		"coverage",
-	],
-}

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\modules\_getLength.js
-================================================================================
-
-import shallowProperty from './_shallowProperty.js';
-
-// Internal helper to obtain the `length` property of an object.
-export default shallowProperty('length');

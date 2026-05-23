@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\globals\index.js
-================================================================================
-
-'use strict';
-module.exports = require('./globals.json');

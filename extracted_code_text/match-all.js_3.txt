@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\symbol\match-all.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/symbol/match-all');
-
-module.exports = parent;

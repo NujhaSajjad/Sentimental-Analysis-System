@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-errors\type.d.ts
-================================================================================
-
-declare const TypeError: TypeErrorConstructor
-
-export = TypeError;

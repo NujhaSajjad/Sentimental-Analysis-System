@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\placeholder.js
-================================================================================
-
-/**
- * The default argument placeholder value for methods.
- *
- * @type {Object}
- */
-module.exports = {};

@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\watch\CompilerWithWatchFileSystem.d.ts
-================================================================================
-
-import webpack from 'webpack';
-import { WatchFileSystem } from './WatchFileSystem';
-interface CompilerWithWatchFileSystem<TWatchFileSystem extends WatchFileSystem = WatchFileSystem> extends webpack.Compiler {
-    watchFileSystem?: TWatchFileSystem;
-}
-export { CompilerWithWatchFileSystem };

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\keyboard\shared\index.d.ts
-================================================================================
-
-export * from './carryValue';
-export * from './fireChangeForInputTimeIfValid';
-export * from './fireInputEvent';

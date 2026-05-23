@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\dom\types\wait-for-element-to-be-removed.d.ts
-================================================================================
-
-import {waitForOptions} from './wait-for'
-
-export function waitForElementToBeRemoved<T>(
-  callback: T | (() => T),
-  options?: waitForOptions,
-): Promise<void>

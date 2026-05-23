@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\babel-preset-current-node-syntax\.github\FUNDING.yml
-================================================================================
-
-# These are supported funding model platforms
-
-github: [nicolo-ribaudo]

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\internals\promise-native-constructor.js
-================================================================================
-
-'use strict';
-var globalThis = require('../internals/global-this');
-
-module.exports = globalThis.Promise;

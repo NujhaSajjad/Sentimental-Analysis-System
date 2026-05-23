@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\axios\lib\platform\browser\classes\Blob.js
-================================================================================
-
-'use strict'
-
-export default typeof Blob !== 'undefined' ? Blob : null

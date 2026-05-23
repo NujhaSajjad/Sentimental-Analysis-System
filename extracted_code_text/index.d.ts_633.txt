@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\vocabularies\core\index.d.ts
-================================================================================
-
-import type { Vocabulary } from "../../types";
-declare const core: Vocabulary;
-export default core;

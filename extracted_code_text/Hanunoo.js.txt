@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Hanunoo.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x1720, 0x1734);
-exports.characters = set;

@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\modules\esnext.data-view.get-float16.js
-================================================================================
-
-// empty

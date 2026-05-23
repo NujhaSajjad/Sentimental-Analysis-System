@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\compile\jtd\types.d.ts
-================================================================================
-
-import type { SchemaObject } from "../../types";
-export type SchemaObjectMap = {
-    [Ref in string]?: SchemaObject;
-};
-export declare const jtdForms: readonly ["elements", "values", "discriminator", "properties", "optionalProperties", "enum", "type", "ref"];
-export type JTDForm = (typeof jtdForms)[number];

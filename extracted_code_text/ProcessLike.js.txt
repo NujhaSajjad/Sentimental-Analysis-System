@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\rpc\rpc-ipc\ProcessLike.js
-================================================================================
-
-"use strict";
-/* eslint-disable @typescript-eslint/no-explicit-any */
-Object.defineProperty(exports, "__esModule", { value: true });

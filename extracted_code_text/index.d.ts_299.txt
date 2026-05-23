@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\get-caller-file\index.d.ts
-================================================================================
-
-declare const _default: (position?: number) => any;
-export = _default;

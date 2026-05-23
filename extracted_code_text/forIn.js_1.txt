@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\forIn.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('forIn', require('../forIn'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\promise\all-settled.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/promise/all-settled');
-
-module.exports = parent;

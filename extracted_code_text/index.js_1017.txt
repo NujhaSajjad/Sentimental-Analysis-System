@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-object-atoms\index.js
-================================================================================
-
-'use strict';
-
-/** @type {import('.')} */
-module.exports = Object;

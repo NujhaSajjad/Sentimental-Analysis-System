@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\is-error.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-is-error
-require('../modules/esnext.error.is-error');

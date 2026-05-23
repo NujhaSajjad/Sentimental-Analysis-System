@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\semver\functions\patch.js
-================================================================================
-
-'use strict'
-
-const SemVer = require('../classes/semver')
-const patch = (a, loose) => new SemVer(a, loose).patch
-module.exports = patch

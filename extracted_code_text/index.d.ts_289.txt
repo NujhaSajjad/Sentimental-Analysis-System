@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\index.d.ts
-================================================================================
-
-import { ForkTsCheckerWebpackPlugin } from './ForkTsCheckerWebpackPlugin';
-export = ForkTsCheckerWebpackPlugin;

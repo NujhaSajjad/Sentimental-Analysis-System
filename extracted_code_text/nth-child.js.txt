@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\css-tree\lib\syntax\pseudo\nth-child.js
-================================================================================
-
-module.exports = require('./common/nthWithOfClause');

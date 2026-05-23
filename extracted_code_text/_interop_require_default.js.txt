@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_interop_require_default.js
-================================================================================
-
-function _interop_require_default(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
-export { _interop_require_default as _ };

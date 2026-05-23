@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\object\is-extensible.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/object/is-extensible');

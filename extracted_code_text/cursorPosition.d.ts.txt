@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\cursorPosition.d.ts
-================================================================================
-
-export declare function isCursorAtEnd(element: Element): boolean;
-export declare function isCursorAtStart(element: Element): boolean;

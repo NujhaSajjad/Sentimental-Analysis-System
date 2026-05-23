@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\src\util\hashConfig.js
-================================================================================
-
-import hash from 'object-hash'
-
-export default function hashConfig(config) {
-  return hash(config, { ignoreUnknown: true })
-}

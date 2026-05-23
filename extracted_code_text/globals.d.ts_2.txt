@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-svgo\src\globals.d.ts
-================================================================================
-
-declare var URL: typeof import('url').URL;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\reflect\to-string-tag.js
-================================================================================
-
-'use strict';
-require('../../modules/es.reflect.to-string-tag');
-
-module.exports = 'Reflect';

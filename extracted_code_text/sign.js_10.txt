@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\helpers\sign.js
-================================================================================
-
-'use strict';
-
-// TODO, semver-major: delete
-module.exports = require('math-intrinsics/sign');

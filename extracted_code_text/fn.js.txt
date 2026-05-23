@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\object-inspect\example\fn.js
-================================================================================
-
-'use strict';
-
-var inspect = require('../');
-var obj = [1, 2, function f(n) { return n + 5; }, 4];
-console.log(inspect(obj));

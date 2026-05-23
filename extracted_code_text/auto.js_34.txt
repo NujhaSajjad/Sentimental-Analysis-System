@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\object.getownpropertydescriptors\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

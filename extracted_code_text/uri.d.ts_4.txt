@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\runtime\uri.d.ts
-================================================================================
-
-import * as uri from "fast-uri";
-type URI = typeof uri & {
-    code: string;
-};
-declare const _default: URI;
-export default _default;

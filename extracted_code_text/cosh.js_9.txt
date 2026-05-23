@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\math\cosh.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/math/cosh');
-
-module.exports = parent;

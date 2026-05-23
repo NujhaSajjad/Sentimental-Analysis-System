@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\tap.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('tap', require('../tap'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\regexp\flags.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/regexp/flags');
-
-module.exports = parent;

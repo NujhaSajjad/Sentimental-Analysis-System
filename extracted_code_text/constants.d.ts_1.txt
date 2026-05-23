@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@nodelib\fs.scandir\out\constants.d.ts
-================================================================================
-
-/**
- * IS `true` for Node.js 10.10 and greater.
- */
-export declare const IS_SUPPORT_READDIR_WITH_FILE_TYPES: boolean;

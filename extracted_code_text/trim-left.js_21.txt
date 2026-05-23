@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\instance\trim-left.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/instance/trim-left');

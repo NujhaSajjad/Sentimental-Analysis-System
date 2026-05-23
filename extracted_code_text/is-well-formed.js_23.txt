@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\string\virtual\is-well-formed.js
-================================================================================
-
-'use strict';
-module.exports = require('../../../full/string/virtual/is-well-formed');

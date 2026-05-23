@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\reflect\get-metadata-keys.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/reflect/get-metadata-keys');

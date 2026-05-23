@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\loadConfig.js
-================================================================================
-
-let loadConfig = require('./lib/public/load-config')
-module.exports = (loadConfig.__esModule ? loadConfig : { default: loadConfig }).default

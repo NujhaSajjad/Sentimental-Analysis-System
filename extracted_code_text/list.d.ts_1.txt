@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\list.d.ts
-================================================================================
-
-export declare function comma(string: string): string[];

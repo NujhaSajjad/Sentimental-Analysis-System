@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\math-intrinsics\round.d.ts
-================================================================================
-
-export = Math.round;

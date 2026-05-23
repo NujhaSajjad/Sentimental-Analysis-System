@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-lab-function\dist\has-supports-at-rule-ancestor.d.ts
-================================================================================
-
-import type { Node } from 'postcss';
-export declare function hasSupportsAtRuleAncestor(node: Node): boolean;

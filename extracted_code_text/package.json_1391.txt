@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_array_like_to_array\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_array_like_to_array.cjs",
-    "module": "../../esm/_array_like_to_array.js"
-}

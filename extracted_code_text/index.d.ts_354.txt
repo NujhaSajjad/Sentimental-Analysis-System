@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-symbol\index.d.ts
-================================================================================
-
-declare function isSymbol(value: unknown): value is (symbol | Symbol);
-
-export = isSymbol;

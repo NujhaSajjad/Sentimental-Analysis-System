@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@pmmmwh\react-refresh-webpack-plugin\sockets\package.json
-================================================================================
-
-{
-  "type": "commonjs"
-}

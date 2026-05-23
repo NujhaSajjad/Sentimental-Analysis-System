@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\es5.d.ts
-================================================================================
-
-import type { ImplicitLibVariableOptions } from '../variable';
-export declare const es5: Record<string, ImplicitLibVariableOptions>;
-//# sourceMappingURL=es5.d.ts.map

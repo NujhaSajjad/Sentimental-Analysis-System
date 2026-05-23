@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\omitAll.js
-================================================================================
-
-module.exports = require('./omit');

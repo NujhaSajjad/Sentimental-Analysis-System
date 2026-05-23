@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\react-dropzone\commitlint.config.js
-================================================================================
-
-module.exports = { extends: ["@commitlint/config-angular"] };

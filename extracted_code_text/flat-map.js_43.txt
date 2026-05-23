@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\array\virtual\flat-map.js
-================================================================================
-
-'use strict';
-var parent = require('../../../es/array/virtual/flat-map');
-
-module.exports = parent;

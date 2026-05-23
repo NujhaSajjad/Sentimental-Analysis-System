@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\url\to-json.js
-================================================================================
-
-'use strict';
-require('../../modules/web.url.to-json');

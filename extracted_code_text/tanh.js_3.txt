@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\math\tanh.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/math/tanh');
-
-module.exports = parent;

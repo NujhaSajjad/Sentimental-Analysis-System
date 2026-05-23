@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_write_only_error\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_write_only_error.cjs",
-    "module": "../../esm/_write_only_error.js"
-}

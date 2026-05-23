@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@rollup\plugin-node-resolve\dist\es\package.json
-================================================================================
-
-{"type":"module"}

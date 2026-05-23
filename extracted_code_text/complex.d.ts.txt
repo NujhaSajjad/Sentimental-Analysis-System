@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-is-pseudo-class\dist\split-selectors\complex.d.ts
-================================================================================
-
-export default function complexSelectors(selectors: string[], pluginOptions: {
-    onComplexSelector?: 'warning';
-}, warnOnComplexSelector: () => void, warnOnPseudoElements: () => void): string[];

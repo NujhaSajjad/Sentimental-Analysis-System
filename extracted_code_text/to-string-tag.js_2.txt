@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\math\to-string-tag.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/math/to-string-tag');
-
-module.exports = parent;

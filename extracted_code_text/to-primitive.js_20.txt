@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\date\to-primitive.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/date/to-primitive');
-
-module.exports = parent;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\has-tostringtag\shams.d.ts
-================================================================================
-
-declare function hasToStringTagShams(): boolean;
-
-export = hasToStringTagShams;

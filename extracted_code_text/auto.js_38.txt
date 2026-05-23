@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regexp.prototype.flags\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-trigonometric-functions\dist\sin.d.ts
-================================================================================
-
-import type { Declaration } from 'postcss';
-declare const sinFunctionCheck = "sin(";
-declare function transformSinFunction(decl: Declaration): string | undefined;
-export { sinFunctionCheck, transformSinFunction };

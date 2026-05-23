@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\array\reverse.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/array/reverse');
-
-module.exports = parent;

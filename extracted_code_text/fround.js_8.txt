@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\math\fround.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/math/fround');
-
-module.exports = parent;

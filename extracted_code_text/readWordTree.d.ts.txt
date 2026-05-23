@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\sucrase\dist\types\parser\tokenizer\readWordTree.d.ts
-================================================================================
-
-export declare const READ_WORD_TREE: Int32Array;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\util.promisify\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

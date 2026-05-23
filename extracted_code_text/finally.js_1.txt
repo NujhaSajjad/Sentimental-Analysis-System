@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\promise\finally.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/promise/finally');
-
-module.exports = parent;

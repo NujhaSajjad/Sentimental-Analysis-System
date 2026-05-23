@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\property.js
-================================================================================
-
-module.exports = require('./get');

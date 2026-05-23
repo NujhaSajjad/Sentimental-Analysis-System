@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\instance\starts-with.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/instance/starts-with');

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\expect\build\types.js
-================================================================================
-
-'use strict';
-
-var _jestMatchersObject = require('./jestMatchersObject');

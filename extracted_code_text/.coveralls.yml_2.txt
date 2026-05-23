@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\detect-port-alt\node_modules\debug\.coveralls.yml
-================================================================================
-
-repo_token: SIAeZjKYlHK74rbcFvNHMUzjRiMpflxve

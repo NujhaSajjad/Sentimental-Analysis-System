@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\follow-redirects\https.js
-================================================================================
-
-module.exports = require("./").https;

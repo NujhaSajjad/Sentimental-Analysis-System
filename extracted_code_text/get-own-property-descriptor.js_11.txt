@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\reflect\get-own-property-descriptor.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/reflect/get-own-property-descriptor');
-
-module.exports = parent;

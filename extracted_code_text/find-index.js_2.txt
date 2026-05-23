@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\instance\find-index.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/instance/find-index');
-
-module.exports = parent;

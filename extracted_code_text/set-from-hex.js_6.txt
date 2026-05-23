@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\typed-array\set-from-hex.js
-================================================================================
-
-'use strict';
-require('../../modules/es.uint8-array.set-from-hex');

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Zanabazar_Square.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x11A00, 0x11A47);
-exports.characters = set;

@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_using\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_using.cjs",
-    "module": "../../esm/_using.js"
-}

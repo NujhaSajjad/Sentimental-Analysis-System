@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-minify-gradients\types\isColorStop.d.ts
-================================================================================
-
-declare function _exports(color: string, stop?: string | undefined): boolean;
-export = _exports;

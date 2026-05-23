@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-glob\out\utils\errno.d.ts
-================================================================================
-
-import { ErrnoException } from '../types';
-export declare function isEnoentCodeError(error: ErrnoException): boolean;

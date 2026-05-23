@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\modules\_unescapeMap.js
-================================================================================
-
-import invert from './invert.js';
-import escapeMap from './_escapeMap.js';
-
-// Internal list of HTML entities for unescaping.
-export default invert(escapeMap);

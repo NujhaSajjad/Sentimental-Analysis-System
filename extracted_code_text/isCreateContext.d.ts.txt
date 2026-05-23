@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\isCreateContext.d.ts
-================================================================================
-
-declare function _exports(node: ASTNode): boolean;
-export = _exports;
-//# sourceMappingURL=isCreateContext.d.ts.map

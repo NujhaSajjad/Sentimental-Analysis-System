@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\iterator\every.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/iterator/every');
-
-module.exports = parent;

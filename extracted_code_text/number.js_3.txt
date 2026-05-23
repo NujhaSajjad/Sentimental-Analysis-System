@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\number.js
-================================================================================
-
-module.exports = {
-  'clamp': require('./clamp'),
-  'inRange': require('./inRange'),
-  'random': require('./random')
-};

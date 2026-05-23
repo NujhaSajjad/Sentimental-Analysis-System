@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\btoa.js
-================================================================================
-
-'use strict';
-var parent = require('../actual/btoa');
-
-module.exports = parent;

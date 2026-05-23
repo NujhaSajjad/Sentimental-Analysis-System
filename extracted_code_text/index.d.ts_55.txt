@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@sinclair\typebox\format\index.d.ts
-================================================================================
-
-export * from './format';

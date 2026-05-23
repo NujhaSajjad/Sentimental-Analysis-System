@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\filelist\node_modules\minimatch\lib\path.js
-================================================================================
-
-const isWindows = typeof process === 'object' &&
-  process &&
-  process.platform === 'win32'
-module.exports = isWindows ? { sep: '\\' } : { sep: '/' }

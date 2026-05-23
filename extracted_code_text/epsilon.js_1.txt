@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\number\epsilon.js
-================================================================================
-
-'use strict';
-require('../../modules/es.number.epsilon');
-
-module.exports = Math.pow(2, -52);

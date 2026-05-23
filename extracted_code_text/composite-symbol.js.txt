@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\composite-symbol.js
-================================================================================
-
-'use strict';
-module.exports = require('../full/composite-symbol');

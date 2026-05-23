@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\instance\filter.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/instance/filter');
-
-module.exports = parent;

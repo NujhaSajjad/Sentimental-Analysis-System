@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\array-union\index.js
-================================================================================
-
-'use strict';
-
-module.exports = (...arguments_) => {
-	return [...new Set([].concat(...arguments_))];
-};

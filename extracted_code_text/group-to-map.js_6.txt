@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\array\group-to-map.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/array/group-to-map');
-
-module.exports = parent;

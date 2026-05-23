@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-svgo\node_modules\css-tree\lib\lexer\index.js
-================================================================================
-
-module.exports = {
-    Lexer: require('./Lexer')
-};

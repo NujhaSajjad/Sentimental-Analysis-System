@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stable\instance\trim-end.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/instance/trim-end');
-
-module.exports = parent;

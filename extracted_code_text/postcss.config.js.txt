@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\stubs\postcss.config.js
-================================================================================
-
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}

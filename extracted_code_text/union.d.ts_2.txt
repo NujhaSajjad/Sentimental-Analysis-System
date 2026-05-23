@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\node_modules\ajv\dist\vocabularies\jtd\union.d.ts
-================================================================================
-
-import type { CodeKeywordDefinition } from "../../types";
-declare const def: CodeKeywordDefinition;
-export default def;

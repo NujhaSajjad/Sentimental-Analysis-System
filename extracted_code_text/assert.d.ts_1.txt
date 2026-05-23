@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\assert.d.ts
-================================================================================
-
-declare function assert(value: unknown, message?: string): asserts value;
-export { assert };
-//# sourceMappingURL=assert.d.ts.map

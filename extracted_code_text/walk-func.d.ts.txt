@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-nesting\dist\lib\walk-func.d.ts
-================================================================================
-
-import type { Container } from 'postcss';
-export declare type walkFunc = (node: Container, opts: {
-    noIsPseudoSelector: boolean;
-}) => void;

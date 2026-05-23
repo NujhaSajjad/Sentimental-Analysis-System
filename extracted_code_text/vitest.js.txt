@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\jest-dom\vitest.js
-================================================================================
-
-import {expect} from 'vitest'
-import * as extensions from './dist/matchers'
-
-expect.extend(extensions)

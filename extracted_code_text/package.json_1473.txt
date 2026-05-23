@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_throw\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_throw.cjs",
-    "module": "../../esm/_throw.js"
-}

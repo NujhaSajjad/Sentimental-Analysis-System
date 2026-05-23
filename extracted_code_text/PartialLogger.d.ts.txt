@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\logger\PartialLogger.d.ts
-================================================================================
-
-import Logger from './Logger';
-declare type LoggerMethods = 'info' | 'log' | 'error';
-declare function createPartialLogger(methods: LoggerMethods[], logger: Logger): Logger;
-export { createPartialLogger };

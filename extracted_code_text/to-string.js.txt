@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\date\to-string.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/date/to-string');
-
-module.exports = parent;

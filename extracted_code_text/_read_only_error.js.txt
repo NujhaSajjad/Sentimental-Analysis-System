@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_read_only_error.js
-================================================================================
-
-function _read_only_error(name) {
-    throw new TypeError("\"" + name + "\" is read-only");
-}
-export { _read_only_error as _ };

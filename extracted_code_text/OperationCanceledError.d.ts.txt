@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\error\OperationCanceledError.d.ts
-================================================================================
-
-declare class OperationCanceledError extends Error {
-    readonly canceled = true;
-}
-export { OperationCanceledError };

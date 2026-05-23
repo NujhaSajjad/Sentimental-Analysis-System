@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\2020\min.js
-================================================================================
-
-'use strict';
-
-// https://262.ecma-international.org/6.0/#sec-algorithm-conventions
-
-module.exports = require('math-intrinsics/min');

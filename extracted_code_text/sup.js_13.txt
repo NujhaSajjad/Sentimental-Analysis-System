@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\string\virtual\sup.js
-================================================================================
-
-'use strict';
-require('../../../modules/es.string.sup');
-var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
-
-module.exports = getBuiltInPrototypeMethod('String', 'sup');

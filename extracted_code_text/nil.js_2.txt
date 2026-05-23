@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\uuid\dist\esm-node\nil.js
-================================================================================
-
-export default '00000000-0000-0000-0000-000000000000';

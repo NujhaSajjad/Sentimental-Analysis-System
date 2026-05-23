@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_to_primitive\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_to_primitive.cjs",
-    "module": "../../esm/_to_primitive.js"
-}

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\symbol\is-registered.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/symbol/is-registered');

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\helpers\isStringOrUndefined.js
-================================================================================
-
-'use strict';
-
-module.exports = function isStringOrUndefined(item) {
-	return typeof item === 'string' || typeof item === 'undefined';
-};

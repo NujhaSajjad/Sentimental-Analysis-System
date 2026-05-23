@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\set\is-superset-of.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/set/is-superset-of');
-require('../../modules/esnext.set.is-superset-of.v2');
-
-module.exports = parent;

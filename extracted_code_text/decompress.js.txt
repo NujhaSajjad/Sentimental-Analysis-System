@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\brotli\decompress.js
-================================================================================
-
-module.exports = require('./dec/decode').BrotliDecompressBuffer;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\array.prototype.tosorted\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

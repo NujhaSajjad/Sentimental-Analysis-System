@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\transform.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('transform', require('../transform'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

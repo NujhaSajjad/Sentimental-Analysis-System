@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\assignIn.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('assignIn', require('../assignIn'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

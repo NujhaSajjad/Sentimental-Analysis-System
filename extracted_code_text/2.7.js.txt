@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stage\2.7.js
-================================================================================
-
-'use strict';
-var parent = require('./3');
-
-require('../proposals/iterator-chunking');
-
-module.exports = parent;

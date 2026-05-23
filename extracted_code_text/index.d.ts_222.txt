@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\css-what\lib\commonjs\index.d.ts
-================================================================================
-
-export * from "./types";
-export { isTraversal, parse } from "./parse";
-export { stringify } from "./stringify";
-//# sourceMappingURL=index.d.ts.map

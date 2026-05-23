@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\sass-loader\dist\cjs.js
-================================================================================
-
-"use strict";
-
-const loader = require("./index");
-
-module.exports = loader.default;

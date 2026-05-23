@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\uploads.d.ts
-================================================================================
-
-export * from "./core/uploads.js";
-//# sourceMappingURL=uploads.d.ts.map

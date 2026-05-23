@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\uuid\dist\rng.d.ts
-================================================================================
-
-export default function rng(): Uint8Array;

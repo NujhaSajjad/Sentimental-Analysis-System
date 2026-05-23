@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\iterator\to-async.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/iterator/to-async');
-
-module.exports = parent;

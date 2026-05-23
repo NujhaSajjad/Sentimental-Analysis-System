@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\symbol\for.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/symbol/for');
-
-module.exports = parent;

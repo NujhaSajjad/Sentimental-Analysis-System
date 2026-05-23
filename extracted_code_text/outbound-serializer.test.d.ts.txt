@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\pg-protocol\dist\outbound-serializer.test.d.ts
-================================================================================
-
-export {};

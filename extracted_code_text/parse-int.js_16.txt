@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\parse-int.js
-================================================================================
-
-'use strict';
-var parent = require('../actual/parse-int');
-
-module.exports = parent;

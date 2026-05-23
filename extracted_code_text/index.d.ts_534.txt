@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\dynamic\index.d.ts
-================================================================================
-
-import type { Vocabulary } from "../../types";
-declare const dynamic: Vocabulary;
-export default dynamic;

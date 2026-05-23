@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\tailwindcss\colors.d.ts
-================================================================================
-
-import type { DefaultColors } from './types/generated/colors'
-declare const colors: DefaultColors
-export = colors

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\array\group-by.js
-================================================================================
-
-'use strict';
-require('../../modules/esnext.array.group-by');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Array', 'groupBy');

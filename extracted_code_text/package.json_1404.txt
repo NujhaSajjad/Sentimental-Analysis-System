@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_class_apply_descriptor_get\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_class_apply_descriptor_get.cjs",
-    "module": "../../esm/_class_apply_descriptor_get.js"
-}

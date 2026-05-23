@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\queue-microtask.js
-================================================================================
-
-'use strict';
-var parent = require('../stable/queue-microtask');
-
-module.exports = parent;

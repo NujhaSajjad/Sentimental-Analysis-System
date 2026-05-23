@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\array\is-template-object.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/array/is-template-object');

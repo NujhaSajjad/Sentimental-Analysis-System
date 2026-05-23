@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\dotenv\SECURITY.md
-================================================================================
-
-Please report any security vulnerabilities to security@dotenvx.com. 

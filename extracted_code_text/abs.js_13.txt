@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\math-intrinsics\abs.js
-================================================================================
-
-'use strict';
-
-/** @type {import('./abs')} */
-module.exports = Math.abs;

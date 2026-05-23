@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-custom-properties\dist\lib\get-custom-properties-from-imports.d.ts
-================================================================================
-
-import type { ImportOptions } from './options';
-import valuesParser from 'postcss-value-parser';
-export default function getCustomPropertiesFromImports(sources: Array<ImportOptions>): Promise<Map<string, valuesParser.ParsedValue>>;

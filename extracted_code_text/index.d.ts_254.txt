@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-object-atoms\index.d.ts
-================================================================================
-
-declare const Object: ObjectConstructor;
-
-export = Object;

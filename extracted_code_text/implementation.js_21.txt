@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-iterator-helpers\Iterator.prototype\implementation.js
-================================================================================
-
-'use strict';
-
-module.exports = require('iterator.prototype');

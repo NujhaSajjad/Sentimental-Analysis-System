@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\object-from-entries.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-object-from-entries
-require('../modules/es.object.from-entries');

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@sinonjs\commons\types\type-of.d.ts
-================================================================================
-
-declare function _exports(value: any): string;
-export = _exports;

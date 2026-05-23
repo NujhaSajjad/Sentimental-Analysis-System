@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-oklab-function\dist\has-fallback-decl.d.ts
-================================================================================
-
-import type { Declaration } from 'postcss';
-export declare function hasFallback(node: Declaration): boolean;

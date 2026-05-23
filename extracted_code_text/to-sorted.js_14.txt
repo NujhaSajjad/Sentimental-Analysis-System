@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\instance\to-sorted.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/instance/to-sorted');
-
-module.exports = parent;

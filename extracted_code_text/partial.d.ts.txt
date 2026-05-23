@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-glob\out\providers\matchers\partial.d.ts
-================================================================================
-
-import Matcher from './matcher';
-export default class PartialMatcher extends Matcher {
-    match(filepath: string): boolean;
-}

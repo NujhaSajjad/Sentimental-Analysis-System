@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\resources\evals\runs.d.ts
-================================================================================
-
-export * from "./runs/index.js";
-//# sourceMappingURL=runs.d.ts.map

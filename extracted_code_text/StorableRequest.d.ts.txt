@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-background-sync\StorableRequest.d.ts
-================================================================================
-
-import './_version.js';
-export { StorableRequest } from './lib/StorableRequest';

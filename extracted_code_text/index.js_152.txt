@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\types\lib\ast-types\generated\index.js
-================================================================================
-
-"use strict";
-
-//# sourceMappingURL=index.js.map

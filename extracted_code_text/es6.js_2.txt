@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-abstract\es6.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./es2015');

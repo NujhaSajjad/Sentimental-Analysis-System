@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\webpack\hot\emitter.js
-================================================================================
-
-var EventEmitter = require("events");
-module.exports = new EventEmitter();

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-svgo\node_modules\svgo\lib\svgo\css-select-adapter.d.ts
-================================================================================
-
-declare let obj: any;
-export = obj;

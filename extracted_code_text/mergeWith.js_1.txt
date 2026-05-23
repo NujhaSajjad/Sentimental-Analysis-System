@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\mergeWith.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('mergeWith', require('../mergeWith'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

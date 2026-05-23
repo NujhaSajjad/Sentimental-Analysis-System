@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\detect-port-alt\.vscode\settings.json
-================================================================================
-
-{
-  "prettier.semi": true
-}

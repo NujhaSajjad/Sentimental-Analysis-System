@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\joint-iteration.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-joint-iteration
-require('../modules/esnext.iterator.zip');
-require('../modules/esnext.iterator.zip-keyed');

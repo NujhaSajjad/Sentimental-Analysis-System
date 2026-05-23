@@ -365,4 +365,11 @@ if __name__ == "__main__":
         print(f"  API Key     : ****{GLADIA_API_KEY[-4:]}")
     print("=" * 52 + "\n")
 
-    app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)
+    env = os.environ.get("FLASK_ENV", "development")
+    if env == "production":
+        print("  Starting with Waitress WSGI Server (Production Mode)...")
+        from waitress import serve
+        serve(app, host="0.0.0.0", port=5000)
+    else:
+        print("  Starting with Flask Dev Server (Development Mode)...")
+        app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)

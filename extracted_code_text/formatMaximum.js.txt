@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\ajv-keywords\keywords\formatMaximum.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./_formatLimit')('Maximum');

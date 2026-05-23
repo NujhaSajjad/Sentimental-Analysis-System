@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-minify-selectors\types\lib\canUnquote.d.ts
-================================================================================
-
-declare function _exports(value: string): boolean;
-export = _exports;

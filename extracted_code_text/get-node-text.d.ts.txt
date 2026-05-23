@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\dom\types\get-node-text.d.ts
-================================================================================
-
-export function getNodeText(node: HTMLElement): string

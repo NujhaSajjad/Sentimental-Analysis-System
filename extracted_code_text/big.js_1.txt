@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\string\big.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/string/big');
-
-module.exports = parent;

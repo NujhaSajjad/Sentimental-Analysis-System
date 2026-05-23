@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\typed-array\includes.js
-================================================================================
-
-'use strict';
-require('../../modules/es.typed-array.includes');

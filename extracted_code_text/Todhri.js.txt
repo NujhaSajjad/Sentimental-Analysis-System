@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Todhri.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x105C0, 0x105F3);
-exports.characters = set;

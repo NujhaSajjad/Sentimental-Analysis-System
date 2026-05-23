@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\underscore\modules\noop.js
-================================================================================
-
-// Predicate-generating function. Often useful outside of Underscore.
-export default function noop(){}

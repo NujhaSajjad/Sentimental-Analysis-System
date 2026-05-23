@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\array\filter-reject.js
-================================================================================
-
-'use strict';
-require('../../modules/esnext.array.filter-reject');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Array', 'filterReject');

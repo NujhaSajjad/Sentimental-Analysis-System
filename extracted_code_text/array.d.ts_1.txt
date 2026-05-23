@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\fast-glob\out\utils\array.d.ts
-================================================================================
-
-export declare function flatten<T>(items: T[][]): T[];
-export declare function splitWhen<T>(items: T[], predicate: (item: T) => boolean): T[][];

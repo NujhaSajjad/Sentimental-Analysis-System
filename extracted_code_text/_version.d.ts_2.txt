@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-cacheable-response\_version.d.ts
-================================================================================
-
-

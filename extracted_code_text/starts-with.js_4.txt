@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\string\starts-with.js
-================================================================================
-
-'use strict';
-require('../../modules/es.string.starts-with');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('String', 'startsWith');

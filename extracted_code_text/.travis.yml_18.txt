@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\http-deceiver\.travis.yml
-================================================================================
-
-language: node_js
-node_js:
-  - "0.10"
-  - "0.12"
-  - "iojs"

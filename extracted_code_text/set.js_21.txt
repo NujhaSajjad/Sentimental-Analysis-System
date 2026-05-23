@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\reflect\set.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/reflect/set');
-
-module.exports = parent;

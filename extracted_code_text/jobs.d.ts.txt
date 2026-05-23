@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\resources\fine-tuning\jobs.d.ts
-================================================================================
-
-export * from "./jobs/index.js";
-//# sourceMappingURL=jobs.d.ts.map

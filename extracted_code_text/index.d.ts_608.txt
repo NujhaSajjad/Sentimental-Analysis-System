@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\update-browserslist-db\index.d.ts
-================================================================================
-
-/**
- * Run update and print output to terminal.
- */
-declare function updateDb(print?: (str: string) => void): void
-
-export = updateDb

@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_iterable_to_array_limit\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_iterable_to_array_limit.cjs",
-    "module": "../../esm/_iterable_to_array_limit.js"
-}

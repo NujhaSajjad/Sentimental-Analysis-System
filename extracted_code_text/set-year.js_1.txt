@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\date\set-year.js
-================================================================================
-
-'use strict';
-require('../../modules/es.date.set-year');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Date', 'setYear');

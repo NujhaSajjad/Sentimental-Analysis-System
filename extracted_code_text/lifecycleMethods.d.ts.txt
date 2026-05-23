@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\util\lifecycleMethods.d.ts
-================================================================================
-
-declare const _exports: {
-    instance: string[];
-    static: string[];
-};
-export = _exports;
-//# sourceMappingURL=lifecycleMethods.d.ts.map

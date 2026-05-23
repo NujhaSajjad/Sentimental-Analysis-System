@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\string\virtual\iterator.js
-================================================================================
-
-'use strict';
-require('../../../modules/es.object.to-string');
-require('../../../modules/es.string.iterator');
-var Iterators = require('../../../internals/iterators');
-
-module.exports = Iterators.String;

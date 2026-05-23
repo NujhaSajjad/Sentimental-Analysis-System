@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\observable.js
-================================================================================
-
-'use strict';
-// https://github.com/tc39/proposal-observable
-require('../modules/esnext.observable');
-require('../modules/esnext.symbol.observable');

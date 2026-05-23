@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\pg-cloudflare\dist\empty.d.ts
-================================================================================
-
-declare const _default: {};
-export default _default;

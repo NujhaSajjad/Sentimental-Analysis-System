@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\dom-exception\index.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/dom-exception');

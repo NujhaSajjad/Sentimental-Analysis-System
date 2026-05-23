@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\node_modules\fs-extra\lib\move\index.js
-================================================================================
-
-'use strict'
-
-const u = require('universalify').fromCallback
-module.exports = {
-  move: u(require('./move'))
-}

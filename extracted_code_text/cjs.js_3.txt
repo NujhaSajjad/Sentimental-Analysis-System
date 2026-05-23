@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-loader\dist\cjs.js
-================================================================================
-
-"use strict";
-
-module.exports = require("./index").default;

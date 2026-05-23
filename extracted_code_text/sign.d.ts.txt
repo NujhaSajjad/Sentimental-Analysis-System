@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\math-intrinsics\sign.d.ts
-================================================================================
-
-declare function sign(x: number): number;
-
-export = sign;

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\value.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('value', require('../value'), require('./_falseOptions'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

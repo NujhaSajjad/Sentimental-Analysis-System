@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_tagged_template_literal_loose\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_tagged_template_literal_loose.cjs",
-    "module": "../../esm/_tagged_template_literal_loose.js"
-}

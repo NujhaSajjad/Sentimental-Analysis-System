@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\get-file-hash.d.ts
-================================================================================
-
-export declare function getFileHash(file: string): string;

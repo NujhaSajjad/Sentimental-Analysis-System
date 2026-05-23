@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\sucrase\dist\types\util\formatTokens.d.ts
-================================================================================
-
-import type { Token } from "../parser/tokenizer";
-export default function formatTokens(code: string, tokens: Array<Token>): string;

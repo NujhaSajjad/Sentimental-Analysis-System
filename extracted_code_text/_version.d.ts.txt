@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-background-sync\_version.d.ts
-================================================================================
-
-

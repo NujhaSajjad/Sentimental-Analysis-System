@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\immer\src\types\globals.d.ts
-================================================================================
-
-declare const __DEV__: boolean

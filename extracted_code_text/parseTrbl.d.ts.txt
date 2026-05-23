@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-merge-longhand\types\lib\parseTrbl.d.ts
-================================================================================
-
-declare const _exports: (v: string | string[]) => [string, string, string, string];
-export = _exports;

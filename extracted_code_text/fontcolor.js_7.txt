@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\string\virtual\fontcolor.js
-================================================================================
-
-'use strict';
-var parent = require('../../../actual/string/virtual/fontcolor');
-
-module.exports = parent;

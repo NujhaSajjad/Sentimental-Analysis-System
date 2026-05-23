@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-custom-properties\dist\lib\write-custom-properties-to-exports.d.ts
-================================================================================
-
-import type { ExportOptions } from './options';
-export default function writeCustomPropertiesToExports(customProperties: any, destinations: Array<ExportOptions>): Promise<void[]>;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-merge-longhand\types\lib\decl\index.d.ts
-================================================================================
-
-declare const _exports: (typeof borders)[];
-export = _exports;
-import borders = require("./borders");

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\preset-env\data\plugins.js
-================================================================================
-
-// TODO: Remove in Babel 8
-
-module.exports = require("@babel/compat-data/plugins");

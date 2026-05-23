@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\yaml\browser\util.js
-================================================================================
-
-module.exports = require('./dist/util')

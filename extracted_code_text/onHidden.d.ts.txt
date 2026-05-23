@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\web-vitals\dist\modules\lib\onHidden.d.ts
-================================================================================
-
-export interface OnHiddenCallback {
-    (event: Event): void;
-}
-export declare const onHidden: (cb: OnHiddenCallback, once?: boolean | undefined) => void;

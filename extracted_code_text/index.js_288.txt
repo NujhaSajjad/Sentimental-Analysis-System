@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@webassemblyjs\helper-wasm-section\esm\index.js
-================================================================================
-
-export { resizeSectionByteSize, resizeSectionVecSize } from "./resize";
-export { createEmptySection } from "./create";
-export { removeSections } from "./remove";

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script_Extensions\Bassa_Vah.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x16AD0, 0x16AED).addRange(0x16AF0, 0x16AF5);
-exports.characters = set;

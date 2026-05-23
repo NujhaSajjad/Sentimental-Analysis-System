@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv-keywords\dist\keywords\exclusiveRange.d.ts
-================================================================================
-
-import type { Plugin } from "ajv";
-declare const exclusiveRange: Plugin<undefined>;
-export default exclusiveRange;

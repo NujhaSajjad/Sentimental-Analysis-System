@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\uuid\dist\v6ToV1.d.ts
-================================================================================
-
-export default function v6ToV1(uuid: string): string;
-export default function v6ToV1(uuid: Uint8Array): Uint8Array;

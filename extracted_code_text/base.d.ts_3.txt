@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\web-vitals\base.d.ts
-================================================================================
-
-export * from './dist/modules/index.js';

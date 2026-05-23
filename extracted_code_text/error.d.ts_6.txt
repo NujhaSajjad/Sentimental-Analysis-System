@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\error.d.ts
-================================================================================
-
-export * from "./core/error.js";
-//# sourceMappingURL=error.d.ts.map

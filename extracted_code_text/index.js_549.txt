@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\number\index.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/number');
-
-module.exports = parent;

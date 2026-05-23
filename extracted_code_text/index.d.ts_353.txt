@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-string\index.d.ts
-================================================================================
-
-declare function isString(value: unknown): value is string | String;
-
-export = isString;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\has-proto\mutator.d.ts
-================================================================================
-
-declare function mutator(): boolean;
-
-export = mutator;

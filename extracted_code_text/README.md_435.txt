@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\modules\README.md
-================================================================================
-
-This folder contains implementations of polyfills. It's not recommended to include in your projects directly if you don't completely understand what are you doing.

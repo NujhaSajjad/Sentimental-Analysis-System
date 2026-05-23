@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@rushstack\eslint-patch\custom-config-package-names.js
-================================================================================
-
-require('./lib/custom-config-package-names');

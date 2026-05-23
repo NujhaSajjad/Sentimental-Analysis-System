@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-build\build\lib\translate-url-to-sourcemap-paths.d.ts
-================================================================================
-
-export declare function translateURLToSourcemapPaths(url: string | null, swSrc: string, swDest: string): {
-    destPath: string | undefined;
-    srcPath: string | undefined;
-    warning: string | undefined;
-};

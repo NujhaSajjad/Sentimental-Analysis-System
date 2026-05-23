@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_inherits_loose\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_inherits_loose.cjs",
-    "module": "../../esm/_inherits_loose.js"
-}

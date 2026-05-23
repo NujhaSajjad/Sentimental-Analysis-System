@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\url\to-json.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/url/to-json');
-
-module.exports = parent;

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\http-proxy-middleware\dist\handlers\public.d.ts
-================================================================================
-
-export { responseInterceptor } from './response-interceptor';
-export { fixRequestBody } from './fix-request-body';

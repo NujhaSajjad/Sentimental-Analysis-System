@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\issue\index.d.ts
-================================================================================
-
-export * from './Issue';
-export * from './IssueSeverity';
-export * from './IssueLocation';

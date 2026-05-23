@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-webpack-plugin\README.md
-================================================================================
-
-This module's documentation can be found at https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/

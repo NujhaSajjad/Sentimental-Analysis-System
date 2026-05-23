@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\json\is-raw-json.js
-================================================================================
-
-'use strict';
-require('../../modules/es.json.is-raw-json');
-var path = require('../../internals/path');
-
-module.exports = path.JSON.isRawJSON;

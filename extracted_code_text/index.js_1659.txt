@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\test\dotdot\abc\index.js
-================================================================================
-
-var x = require('..');
-console.log(x);

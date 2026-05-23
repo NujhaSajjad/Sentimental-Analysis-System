@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\full\instance\find-last.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/instance/find-last');
-
-module.exports = parent;

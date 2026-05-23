@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-core\models\quotaErrorCallbacks.d.ts
-================================================================================
-
-import '../_version.js';
-declare const quotaErrorCallbacks: Set<Function>;
-export { quotaErrorCallbacks };

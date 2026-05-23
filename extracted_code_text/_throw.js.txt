@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_throw.js
-================================================================================
-
-function _throw(e) {
-    throw e;
-}
-export { _throw as _ };

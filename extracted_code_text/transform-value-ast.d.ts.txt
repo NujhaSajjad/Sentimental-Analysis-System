@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-custom-properties\dist\lib\transform-value-ast.d.ts
-================================================================================
-
-export default function transformValueAST(root: any, customProperties: any): any;

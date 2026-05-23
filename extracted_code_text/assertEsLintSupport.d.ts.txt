@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\eslint-reporter\assertEsLintSupport.d.ts
-================================================================================
-
-import { EsLintReporterConfiguration } from './EsLintReporterConfiguration';
-declare function assertEsLintSupport(configuration: EsLintReporterConfiguration): void;
-export { assertEsLintSupport };

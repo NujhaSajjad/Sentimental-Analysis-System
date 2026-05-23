@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\formatter\Formatter.d.ts
-================================================================================
-
-import { Issue } from '../issue';
-declare type Formatter = (issue: Issue) => string;
-export { Formatter };

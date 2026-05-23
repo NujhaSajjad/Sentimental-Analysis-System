@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\immer\dist\plugins\patches.d.ts
-================================================================================
-
-export declare function enablePatches(): void;
-//# sourceMappingURL=patches.d.ts.map

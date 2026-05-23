@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\has-tostringtag\index.d.ts
-================================================================================
-
-declare function hasToStringTag(): boolean;
-
-export = hasToStringTag;

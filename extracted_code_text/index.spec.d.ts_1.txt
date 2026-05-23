@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\camel-case\dist.es2015\index.spec.d.ts
-================================================================================
-
-export {};

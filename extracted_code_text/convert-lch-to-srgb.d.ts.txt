@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\postcss-lab-function\dist\convert-lch-to-srgb.d.ts
-================================================================================
-
-declare type color = [number, number, number];
-export declare function lchToSRgb(lchRaw: color): color;
-export {};

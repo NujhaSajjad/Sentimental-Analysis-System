@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\container\ExternalsType.json
-================================================================================
-
-{
-  "$ref": "./ModuleFederationPlugin.json#/definitions/ExternalsType"
-}

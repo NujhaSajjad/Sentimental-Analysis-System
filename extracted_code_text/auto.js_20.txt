@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-iterator-helpers\Iterator.prototype.forEach\auto.js
-================================================================================
-
-'use strict';
-
-require('./shim')();

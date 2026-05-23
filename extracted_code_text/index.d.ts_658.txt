@@ -1,6 +1,0 @@
-Relative path: backend\node_modules\bcryptjs\index.d.ts
-================================================================================
-
-import * as bcrypt from "./types.js";
-export * from "./types.js";
-export default bcrypt;

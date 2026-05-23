@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\unset.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('unset', require('../unset'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

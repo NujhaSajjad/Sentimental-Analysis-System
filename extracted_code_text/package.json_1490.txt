@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_using_ctx\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_using_ctx.cjs",
-    "module": "../../esm/_using_ctx.js"
-}

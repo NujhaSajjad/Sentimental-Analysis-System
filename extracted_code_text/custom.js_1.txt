@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\loose-envify\custom.js
-================================================================================
-
-// envify compatibility
-'use strict';
-
-module.exports = require('./loose-envify');

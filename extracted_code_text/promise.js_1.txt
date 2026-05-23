@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\bfj\src\promise.js
-================================================================================
-
-'use strict'
-
-module.exports = (options = {}) => options.Promise || require('bluebird')

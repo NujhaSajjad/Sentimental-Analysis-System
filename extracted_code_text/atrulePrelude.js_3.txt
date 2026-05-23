@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\csso\node_modules\css-tree\lib\syntax\scope\atrulePrelude.js
-================================================================================
-
-module.exports = {
-    getNode: require('./default')
-};

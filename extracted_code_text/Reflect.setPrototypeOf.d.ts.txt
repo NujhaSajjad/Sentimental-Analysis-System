@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\set-proto\Reflect.setPrototypeOf.d.ts
-================================================================================
-
-declare const x: typeof Reflect.setPrototypeOf | null;
-
-export = x;

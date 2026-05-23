@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\cssstyle\lib\constants.js
-================================================================================
-
-'use strict';
-
-module.exports.POSITION_AT_SHORTHAND = {
-  first: 0,
-  second: 1,
-};

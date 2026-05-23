@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_apply_decorated_descriptor\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_apply_decorated_descriptor.cjs",
-    "module": "../../esm/_apply_decorated_descriptor.js"
-}

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\async-iterator\index.js
-================================================================================
-
-'use strict';
-require('../../es/async-iterator');

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\schema-utils\node_modules\ajv\dist\vocabularies\metadata.d.ts
-================================================================================
-
-import type { Vocabulary } from "../types";
-export declare const metadataVocabulary: Vocabulary;
-export declare const contentVocabulary: Vocabulary;

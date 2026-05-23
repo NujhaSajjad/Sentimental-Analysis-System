@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\typedarray\.travis.yml
-================================================================================
-
-language: node_js
-node_js:
-  - "0.8"
-  - "0.10"

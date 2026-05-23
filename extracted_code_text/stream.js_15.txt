@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\readable-stream\lib\internal\streams\stream.js
-================================================================================
-
-module.exports = require('stream');

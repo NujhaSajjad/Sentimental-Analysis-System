@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\array\virtual\to-sorted.js
-================================================================================
-
-'use strict';
-var parent = require('../../../stable/array/virtual/to-sorted');
-// TODO: Remove from `core-js@4`
-require('../../../modules/esnext.array.to-sorted');
-
-module.exports = parent;

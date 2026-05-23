@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\instance\unshift.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/instance/unshift');
-
-module.exports = parent;

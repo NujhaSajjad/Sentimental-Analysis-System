@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Meroitic_Hieroglyphs.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0x10980, 0x1099F);
-exports.characters = set;

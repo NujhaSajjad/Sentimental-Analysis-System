@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\react-scripts\template-typescript\README.md
-================================================================================
-
-This file has moved [here](https://github.com/facebook/create-react-app/blob/main/packages/cra-template-typescript/template/README.md)

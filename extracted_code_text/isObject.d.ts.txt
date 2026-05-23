@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\es-object-atoms\isObject.d.ts
-================================================================================
-
-declare function isObject(x: unknown): x is object;
-
-export = isObject;

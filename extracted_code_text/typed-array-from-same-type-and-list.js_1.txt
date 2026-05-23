@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\internals\typed-array-from-same-type-and-list.js
-================================================================================
-
-// empty

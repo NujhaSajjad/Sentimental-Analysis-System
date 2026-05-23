@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\invoke.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('invoke', require('../invoke'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

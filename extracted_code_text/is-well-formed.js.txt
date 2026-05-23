@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\instance\is-well-formed.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/instance/is-well-formed');
-
-module.exports = parent;

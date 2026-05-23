@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\async-iterator\flat-map.js
-================================================================================
-
-'use strict';
-var parent = require('../../actual/async-iterator/flat-map');
-
-module.exports = parent;

@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_object_destructuring_empty\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_object_destructuring_empty.cjs",
-    "module": "../../esm/_object_destructuring_empty.js"
-}

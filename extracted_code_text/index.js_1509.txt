@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\picomatch\index.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./lib/picomatch');

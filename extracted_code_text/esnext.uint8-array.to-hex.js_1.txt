@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\modules\esnext.uint8-array.to-hex.js
-================================================================================
-
-// empty

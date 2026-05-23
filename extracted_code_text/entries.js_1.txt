@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\babel-plugin-polyfill-corejs3\core-js-compat\entries.js
-================================================================================
-
-module.exports = require("core-js-compat/entries");

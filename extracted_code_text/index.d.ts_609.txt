@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\uri-js\dist\esnext\index.d.ts
-================================================================================
-
-export * from "./uri";

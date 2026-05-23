@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\stylehacks\src\dictionary\postcss.js
-================================================================================
-
-'use strict';
-const ATRULE = 'atrule';
-const DECL = 'decl';
-const RULE = 'rule';
-
-module.exports = { ATRULE, DECL, RULE };

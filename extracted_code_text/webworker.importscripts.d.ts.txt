@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@typescript-eslint\scope-manager\dist\lib\webworker.importscripts.d.ts
-================================================================================
-
-import type { ImplicitLibVariableOptions } from '../variable';
-export declare const webworker_importscripts: Record<string, ImplicitLibVariableOptions>;
-//# sourceMappingURL=webworker.importscripts.d.ts.map

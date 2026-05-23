@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\actual\set-interval.js
-================================================================================
-
-'use strict';
-var parent = require('../stable/set-interval');
-
-module.exports = parent;

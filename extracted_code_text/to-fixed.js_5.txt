@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\features\number\virtual\to-fixed.js
-================================================================================
-
-'use strict';
-module.exports = require('../../../full/number/virtual/to-fixed');

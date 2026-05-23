@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\@webassemblyjs\utf8\esm\index.js
-================================================================================
-
-export { decode } from "./decoder";
-export { encode } from "./encoder";

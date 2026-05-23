@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\react-dropzone\.gitpod.yml
-================================================================================
-
-tasks:
-  - init: yarn install && yarn run build
-    command: yarn run start
-ports:
-  - port: 8080
-    onOpen: open-preview

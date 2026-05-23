@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@rushstack\eslint-patch\modern-module-resolution.js
-================================================================================
-
-require('./lib/modern-module-resolution');

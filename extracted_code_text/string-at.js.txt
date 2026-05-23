@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\proposals\string-at.js
-================================================================================
-
-'use strict';
-// https://github.com/mathiasbynens/String.prototype.at
-require('../modules/esnext.string.at');

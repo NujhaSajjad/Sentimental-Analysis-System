@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\es\array\to-reversed.js
-================================================================================
-
-'use strict';
-require('../../modules/es.array.to-reversed');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Array', 'toReversed');

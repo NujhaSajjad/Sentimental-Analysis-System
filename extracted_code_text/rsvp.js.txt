@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\any-promise\register\rsvp.js
-================================================================================
-
-'use strict';
-require('../register')('rsvp', {Promise: require('rsvp').Promise})

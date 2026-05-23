@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_define_property\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_define_property.cjs",
-    "module": "../../esm/_define_property.js"
-}

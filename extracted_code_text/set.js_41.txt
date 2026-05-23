@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\set.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('set', require('../set'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

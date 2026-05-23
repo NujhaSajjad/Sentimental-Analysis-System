@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Thai.js
-================================================================================
-
-const set = require('regenerate')();
-set.addRange(0xE01, 0xE3A).addRange(0xE40, 0xE5B);
-exports.characters = set;

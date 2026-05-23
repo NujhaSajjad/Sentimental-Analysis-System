@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\http-proxy-middleware\dist\index.d.ts
-================================================================================
-
-import { Filter, Options } from './types';
-export declare function createProxyMiddleware(context: Filter | Options, options?: Options): import("./types").RequestHandler;
-export * from './handlers';
-export { Filter, Options, RequestHandler } from './types';

@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\unzip.js
-================================================================================
-
-var convert = require('./convert'),
-    func = convert('unzip', require('../unzip'), require('./_falseOptions'));
-
-func.placeholder = require('./placeholder');
-module.exports = func;

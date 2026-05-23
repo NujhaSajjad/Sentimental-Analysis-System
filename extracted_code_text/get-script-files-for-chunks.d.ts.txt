@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\workbox-webpack-plugin\build\lib\get-script-files-for-chunks.d.ts
-================================================================================
-
-import { Compilation } from 'webpack';
-export declare function getScriptFilesForChunks(compilation: Compilation, chunkNames: Array<string>): Array<string>;

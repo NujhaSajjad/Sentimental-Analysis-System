@@ -1,7 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\_\_dispose\package.json
-================================================================================
-
-{
-    "main": "../../cjs/_dispose.cjs",
-    "module": "../../esm/_dispose.js"
-}

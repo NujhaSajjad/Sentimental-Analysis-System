@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@csstools\postcss-is-pseudo-class\dist\split-selectors\split-selectors.d.ts
-================================================================================
-
-export default function splitSelectors(selectors: string[], pluginOptions: {
-    specificityMatchingName: string;
-}, recursionDepth?: number): any[];

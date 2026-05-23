@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\es\number\to-exponential.js
-================================================================================
-
-'use strict';
-require('../../modules/es.number.to-exponential');
-var entryUnbind = require('../../internals/entry-unbind');
-
-module.exports = entryUnbind('Number', 'toExponential');

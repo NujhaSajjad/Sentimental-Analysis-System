@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@babel\runtime\helpers\esm\readOnlyError.js
-================================================================================
-
-function _readOnlyError(r) {
-  throw new TypeError('"' + r + '" is read-only');
-}
-export { _readOnlyError as default };

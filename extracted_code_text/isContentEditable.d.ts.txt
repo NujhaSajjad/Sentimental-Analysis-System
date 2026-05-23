@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\isContentEditable.d.ts
-================================================================================
-
-export declare function isContentEditable(element: Element): element is HTMLElement & {
-    contenteditable: 'true';
-};

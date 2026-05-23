@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\balanced-match\.github\FUNDING.yml
-================================================================================
-
-tidelift: "npm/balanced-match"
-patreon: juliangruber

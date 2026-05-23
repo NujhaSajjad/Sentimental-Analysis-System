@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\resolve\sync.js
-================================================================================
-
-'use strict';
-
-module.exports = require('./lib/sync');

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\url\parse.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/url/parse');

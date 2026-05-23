@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\acorn-globals\node_modules\acorn\dist\acorn.mjs.d.ts
-================================================================================
-
-import * as acorn from "./acorn";
-export = acorn;

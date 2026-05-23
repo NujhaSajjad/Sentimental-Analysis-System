@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\@surma\rollup-plugin-off-main-thread\tests\fixtures\module-worker\rollup.config.js
-================================================================================
-
-module.exports = (config, outputOptions, omt) => {
-  outputOptions.format = "esm";
-  config.plugins = [omt()];
-};

@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\file-selector\src\index.ts
-================================================================================
-
-export {fromEvent} from './file-selector';
-export {FileWithPath} from './file';

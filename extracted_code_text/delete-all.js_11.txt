@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\features\weak-set\delete-all.js
-================================================================================
-
-'use strict';
-module.exports = require('../../full/weak-set/delete-all');

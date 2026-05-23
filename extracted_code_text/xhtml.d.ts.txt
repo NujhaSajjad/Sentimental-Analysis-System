@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\sucrase\dist\types\parser\plugins\jsx\xhtml.d.ts
-================================================================================
-
-declare const _default: Map<string, string>;
-export default _default;

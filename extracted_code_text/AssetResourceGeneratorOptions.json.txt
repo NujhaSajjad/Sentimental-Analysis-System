@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\webpack\schemas\plugins\asset\AssetResourceGeneratorOptions.json
-================================================================================
-
-{
-  "$ref": "../../WebpackOptions.json#/definitions/AssetResourceGeneratorOptions"
-}

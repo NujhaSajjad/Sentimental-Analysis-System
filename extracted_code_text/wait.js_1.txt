@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\fork-ts-checker-webpack-plugin\lib\utils\async\wait.js
-================================================================================
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function wait(timeout) {
-    return new Promise((resolve) => setTimeout(resolve, timeout));
-}
-exports.default = wait;

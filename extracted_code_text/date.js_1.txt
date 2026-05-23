@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\fp\date.js
-================================================================================
-
-var convert = require('./convert');
-module.exports = convert(require('../date'));

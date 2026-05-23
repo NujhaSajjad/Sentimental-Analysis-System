@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\is-date-object\index.d.ts
-================================================================================
-
-declare function isDateObject(value: unknown): value is Date;
-
-export = isDateObject;

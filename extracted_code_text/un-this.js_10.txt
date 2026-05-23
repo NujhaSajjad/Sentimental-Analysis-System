@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\full\function\virtual\un-this.js
-================================================================================
-
-'use strict';
-require('../../../modules/esnext.function.un-this');
-var getBuiltInPrototypeMethod = require('../../../internals/get-built-in-prototype-method');
-
-module.exports = getBuiltInPrototypeMethod('Function', 'unThis');

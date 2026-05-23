@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\@testing-library\user-event\dist\utils\edit\getValue.d.ts
-================================================================================
-
-export declare function getValue(element: Element | null): string | null;

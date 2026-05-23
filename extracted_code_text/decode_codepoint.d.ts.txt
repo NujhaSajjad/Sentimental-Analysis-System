@@ -1,5 +1,0 @@
-Relative path: avanza-frontend\node_modules\entities\lib\decode_codepoint.d.ts
-================================================================================
-
-export default function decodeCodePoint(codePoint: number): string;
-//# sourceMappingURL=decode_codepoint.d.ts.map

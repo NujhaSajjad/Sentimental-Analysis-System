@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\tsutils\node_modules\tslib\modules\package.json
-================================================================================
-
-{
-    "type": "module"
-}

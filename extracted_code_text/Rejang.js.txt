@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\regenerate-unicode-properties\Script\Rejang.js
-================================================================================
-
-const set = require('regenerate')(0xA95F);
-set.addRange(0xA930, 0xA953);
-exports.characters = set;

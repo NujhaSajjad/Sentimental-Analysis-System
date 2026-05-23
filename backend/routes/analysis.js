@@ -237,7 +237,6 @@ router.post('/analyze/:callId', async (req, res) => {
 router.post('/process-complete/:callId', async (req, res) => {
     try {
         const callId = parseInt(req.params.callId);
-        const PORT = process.env.PORT || 3000;
 
         console.log(`\n🚀 Starting complete processing for call ${callId}...`);
 
@@ -247,43 +246,103 @@ router.post('/process-complete/:callId', async (req, res) => {
             analysis: { success: false }
         };
 
-        // Step 1: Transcribe
-        // Note: Calling via internal URL might be tricky with routers, 
-        // better to invoke the logic directly or use the router instance.
-        // For simplicity in refactoring, we'll hit the localhost URL as before.
-        const internalUrl = `http://localhost:${PORT}/api/analysis`;
-
+        // Helper to simulate request/response for internal route logic
+        // without making network calls.
+        const mockReq = { params: { callId } };
+        
+        // --- Step 1: Transcribe ---
+        let transcribeData = null;
         try {
-            const transcribeRes = await axios.post(`${internalUrl}/transcribe/${callId}`);
-            results.transcription = { success: true, data: transcribeRes.data };
+            const call = await db.getCallById(callId);
+            if (!call || !fs.existsSync(call.audio_filepath)) throw new Error('Audio file missing');
+            const result = await transcriptionService.transcribeCall(callId, call.audio_filepath);
+            await db.saveTranscription(callId, {
+                text: result.transcription,
+                duration: result.duration,
+                confidence: 0.95,
+                language: result.language || 'ur+en'
+            });
+            await db.updateCallStatus(callId, 'transcribed', { duration: Math.floor(result.duration || 0) });
+            if (result.utterances && result.utterances.length > 0) {
+                const turns = result.utterances.map(u => ({
+                    speaker: u.speaker === 'Speaker 1' ? 'Agent' : 'Customer',
+                    text: u.text
+                }));
+                try { await db.saveDiarization(callId, turns); } catch (e) {}
+            }
+            transcribeData = result;
+            results.transcription = { success: true, data: result };
         } catch (error) {
+            console.error('Transcription step failed:', error.message);
             return res.status(500).json({ success: false, error: 'Transcription failed', results });
         }
 
+        // --- Step 2: Intent ---
+        let intentDataResult = null;
         try {
-            const intentRes = await axios.post(`${internalUrl}/extract-intent/${callId}`);
-            results.intent = { success: true, data: intentRes.data };
-        } catch (error) { console.warn('⚠️ Intent extraction failed'); }
+            const call = await db.getCallReport(callId);
+            const intentData = await analysisService.extractIntent(call.transcription_text);
+            await db.updateCallStatus(callId, 'intent_extracted', {
+                primary_intent: intentData.primary_intent,
+                sentiment: intentData.sentiment,
+                sentiment_score: intentData.sentiment_score || 0,
+                urgency: intentData.urgency
+            });
+            intentDataResult = intentData;
+            results.intent = { success: true, data: intentData };
+        } catch (error) { console.warn('⚠️ Intent extraction failed:', error.message); }
 
+        // --- Step 3: Analysis ---
         try {
-            const analyzeRes = await axios.post(`${internalUrl}/analyze/${callId}`);
-            results.analysis = { success: true, data: analyzeRes.data };
-        } catch (error) { console.warn('⚠️ Analysis failed'); }
+            const call = await db.getCallReport(callId);
+            const intentToUse = intentDataResult || { primary_intent: call.primary_intent, sentiment: call.sentiment, sentiment_score: call.sentiment_score, urgency: call.urgency, topics: [], entities: [] };
+            const analysisText = await analysisService.generateAnalysis(call.transcription_text, intentToUse);
+            const analysisStructure = analysisService.parseAnalysisStructure(analysisText);
+            const qualityScore = analysisService.calculateQualityScore(intentToUse, analysisStructure);
+            const csatEstimate = analysisService.estimateCSAT(intentToUse, analysisStructure);
+            
+            await db.saveCallReport(callId, {
+                intent_data: intentToUse,
+                ai_analysis: analysisText,
+                call_summary: analysisStructure.call_summary,
+                customer_pain_points: analysisStructure.customer_pain_points,
+                emotional_tone: analysisStructure.emotional_tone,
+                primary_sensitivity: analysisStructure.primary_sensitivity,
+                churn_risk_assessment: analysisStructure.churn_risk_assessment || 'low',
+                churn_risk_score: analysisStructure.churn_risk_score || 0,
+                recommended_communication_style: analysisStructure.recommended_communication_style,
+                escalation_risk: analysisStructure.churn_risk_assessment === 'critical' ? 'high' : 'low',
+                escalation_risk_score: analysisStructure.escalation_risk_score || 0,
+                refund_likelihood: 'low',
+                refund_likelihood_score: analysisStructure.refund_likelihood_score || 0,
+                quality_score: qualityScore,
+                csat_estimate: csatEstimate,
+                resolution_status: 'pending',
+                agent_opening_line: analysisStructure.agent_opening_line,
+                agent_approach_do: analysisStructure.agent_approach_do,
+                agent_approach_avoid: analysisStructure.agent_approach_avoid,
+                crm_tags: analysisStructure.crm_tags,
+                key_insights: [],
+                conversation_highlights: []
+            });
+            await db.updateCallStatus(callId, 'analyzed', { quality_score: qualityScore, csat_estimate: csatEstimate, resolution_status: 'pending' });
+            if (call.customer_id) await db.updateCustomerSentiment(call.customer_id);
+            results.analysis = { success: true, data: { analysis: analysisText, qualityScore, csatEstimate } };
+        } catch (error) { console.warn('⚠️ Analysis failed:', error.message); }
 
-        // Step 4: Diarization
-        // Gladia returns speaker-separated utterances during transcription above,
-        // which are already saved by the /transcribe route. We only fall back to
-        // LLM-based diarization if Gladia did NOT return utterances.
-        const transcribeData = results.transcription.data;
+        // --- Step 4: Diarization ---
         if (transcribeData && transcribeData.utterances && transcribeData.utterances.length > 0) {
             console.log(`ℹ️  Skipping LLM diarize — Gladia native diarization already saved.`);
             results.diarization = { success: true, source: 'gladia', turns: transcribeData.utterances.length };
         } else {
-            // Fallback: LLM-based diarization for edge cases
             try {
-                const diarizeRes = await axios.post(`${internalUrl}/diarize/${callId}`);
-                results.diarization = { success: true, source: 'llm', data: diarizeRes.data };
-            } catch (error) { console.warn('⚠️ Diarization failed (non-fatal)'); }
+                const call = await db.getCallReport(callId);
+                if (call && call.transcription_text) {
+                    const turns = await analysisService.diarizeConversation(call.transcription_text);
+                    await db.saveDiarization(callId, turns);
+                    results.diarization = { success: true, source: 'llm', data: turns };
+                }
+            } catch (error) { console.warn('⚠️ Diarization failed (non-fatal):', error.message); }
         }
 
         await db.updateCallStatus(callId, 'completed');

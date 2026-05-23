@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-scope\lib\version.js
-================================================================================
-
-const version = "7.2.2";
-
-export default version;

@@ -1,6 +1,0 @@
-Relative path: avanza-frontend\node_modules\eslint-plugin-react\lib\rules\prefer-exact-props.d.ts
-================================================================================
-
-declare const _exports: import('eslint').Rule.RuleModule;
-export = _exports;
-//# sourceMappingURL=prefer-exact-props.d.ts.map

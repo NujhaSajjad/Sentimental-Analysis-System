@@ -1,4 +1,0 @@
-Relative path: backend\node_modules\tslib\tslib.html
-================================================================================
-
-<script src="tslib.js"></script>

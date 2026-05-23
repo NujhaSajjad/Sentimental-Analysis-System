@@ -1,7 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\actual\symbol\to-string-tag.js
-================================================================================
-
-'use strict';
-var parent = require('../../stable/symbol/to-string-tag');
-
-module.exports = parent;

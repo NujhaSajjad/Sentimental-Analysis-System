@@ -1,9 +1,0 @@
-Relative path: backend\node_modules\@swc\helpers\esm\_inherits_loose.js
-================================================================================
-
-function _inherits_loose(subClass, superClass) {
-    subClass.prototype = Object.create(superClass.prototype);
-    subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
-}
-export { _inherits_loose as _ };

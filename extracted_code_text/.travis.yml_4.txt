@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\deep-is\.travis.yml
-================================================================================
-
-language: node_js
-node_js:
-  - 0.6
-  - 0.8
-  - 0.10

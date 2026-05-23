@@ -1,5 +1,0 @@
-Relative path: backend\node_modules\openai\resources\conversations.d.ts
-================================================================================
-
-export * from "./conversations/index.js";
-//# sourceMappingURL=conversations.d.ts.map

@@ -1,9 +1,0 @@
-Relative path: avanza-frontend\node_modules\lodash\_Symbol.js
-================================================================================
-
-var root = require('./_root');
-
-/** Built-in value references. */
-var Symbol = root.Symbol;
-
-module.exports = Symbol;

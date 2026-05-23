@@ -1,8 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js\stable\promise\any.js
-================================================================================
-
-'use strict';
-var parent = require('../../es/promise/any');
-require('../../modules/web.dom-collections.iterator');
-
-module.exports = parent;

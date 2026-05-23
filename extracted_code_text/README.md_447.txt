@@ -1,4 +1,0 @@
-Relative path: avanza-frontend\node_modules\core-js-pure\stage\README.md
-================================================================================
-
-This folder contains entry points for [ECMAScript proposals](https://github.com/zloirock/core-js#ecmascript-proposals) with dependencies.
