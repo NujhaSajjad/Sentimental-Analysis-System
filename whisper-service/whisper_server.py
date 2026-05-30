@@ -366,10 +366,11 @@ if __name__ == "__main__":
     print("=" * 52 + "\n")
 
     env = os.environ.get("FLASK_ENV", "development")
+    port = int(os.environ.get("PORT", 5000))
     if env == "production":
-        print("  Starting with Waitress WSGI Server (Production Mode)...")
+        print(f"  Starting with Waitress WSGI Server on port {port} (Production Mode)...")
         from waitress import serve
-        serve(app, host="0.0.0.0", port=5000)
+        serve(app, host="0.0.0.0", port=port)
     else:
-        print("  Starting with Flask Dev Server (Development Mode)...")
-        app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)
+        print(f"  Starting with Flask Dev Server on port {port} (Development Mode)...")
+        app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
