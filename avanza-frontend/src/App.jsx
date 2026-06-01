@@ -7,7 +7,6 @@ import './components/NewComponents.css';
 
 import Header from './components/Header';
 import UploadCard from './components/UploadCard';
-import TranscriptionCard from './components/TranscriptionCard';
 import ConversationCard from './components/ConversationCard';
 import IntentCard from './components/IntentCard';
 import MetricsRow from './components/MetricsRow';
